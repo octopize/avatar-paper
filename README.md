@@ -53,7 +53,7 @@ avatar_paper
 |
 └─── dimension
         |
-        | Multidimensionnal function such as PCA, MCA or FAMD
+        | Multidimensionnal functions such as PCA, MCA or FAMD
         |
 |
 └─── metrics
@@ -63,7 +63,7 @@ avatar_paper
 |
 └─── figure  : folder that contains all the figure of the article
         │   
-        |   multiple figures presented in the article
+        | Multiple figures presented in the article
         |
 |
 └─── color.csv : A csv file that contains color for the figures
