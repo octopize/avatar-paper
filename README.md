@@ -6,7 +6,7 @@ The aim of the paper is to present the avatarization method.
 
 We really recommand to have a look to the scientific paper (link) before to explore the repository.
 
-# How to use it
+# How to use it (a developper)
 
 This code is mainly jupyter notebooks and dataset.
 It is written in Python and R. 
@@ -21,11 +21,10 @@ scikit-learn==0.24.2
 scipy==1.6.3
 seaborn==0.11.1
 ```
-there is alos a `requirements.txt`.
+there is also a `requirements.txt`.
 
 ## R packages :   
 Install all required packages on the top of each R notebooks with the command `install.packages('PACKAGE_NAME')`, nothing special.
-
 
 # Strucutre  
 
@@ -35,40 +34,26 @@ avatar_paper
 └─── README.md
 |
 └─── datasets
-        └─── AIDS : all aids datasets, original and avatarized 
+        └─── AIDS : all AIDS datasets, original and avatarized 
         └─── WBCD : all WBCD datasets, original and avatarized 
-        └─── results_df : dataframe of the results of computationally expensive analysis.
+        └─── results_df : result dataframes of computationally expensive analysis.
 |
 └─── notebooks 
         └─── final_figure  
-                |
-                | Folder that contains all the notebook that analyse and generate the article graphs.
-                |
-
-        └─── avatarization 
-                |
-                | Folder that contains all the notebooks that have avatarised the AIDS and WBCD data set. These notebooks
-                | require the avatarisation package, which is a private package of octopize's own.
-                
+                | analysis and graphs generation.               
 |
 └─── dimension
-        |
         | Multidimensionnal functions such as PCA, MCA or FAMD
-        |
 |
 └─── metrics
-        |
         | Multiple function used to compute avatarization metrics 
-        |
 |
-└─── figure  : folder that contains all the figure of the article
-        │   
-        | Multiple figures presented in the article
-        |
+└─── figure
+        │ Figures presented in the article
 |
 └─── color.csv : A csv file that contains color for the figures
 |
-└─── requirements.txt : requirements that contains python package of the project.
+└─── requirements.txt : requirements for python packages.
 ```
 
 
