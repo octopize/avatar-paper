@@ -1,0 +1,7 @@
+"","Hazard Ratio","95% Confidence Interval","Pr(>|z|)"
+"Avatar arms1","0.47","0.37-0.6","<0.001"
+"Original arms1","0.49","0.39-0.63","<0.001"
+"Avatar arms2","0.51","0.4-0.65","<0.001"
+"Original arms2","0.52","0.41-0.67","<0.001"
+"Avatar arms3","0.49","0.38-0.62","<0.001"
+"Original arms3","0.59","0.47-0.73","<0.001"
