@@ -7,8 +7,8 @@ import warnings
 warnings.filterwarnings("ignore")
 from itertools import repeat, chain
 
-from dimension_reduction import DimensionReduction
-from svd import SVD
+from dimension.dimension_reduction import DimensionReduction
+from dimension.svd import SVD
 
 
 class MCA(DimensionReduction):
