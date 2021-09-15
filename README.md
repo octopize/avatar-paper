@@ -34,8 +34,8 @@ avatar_paper
 └─── README.md
 |
 └─── datasets
-        └─── AIDS : all AIDS datasets, original and avatarized 
-        └─── WBCD : all WBCD datasets, original and avatarized 
+        └─── AIDS : original and avatarized AIDS datasets
+        └─── WBCD : original and avatarized WBCD datasets 
         └─── results_df : result dataframes of computationally expensive analysis.
 |
 └─── notebooks 
