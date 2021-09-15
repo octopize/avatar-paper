@@ -6,12 +6,7 @@ The aim of the paper is to present the avatarization method.
 
 We really recommand to have a look to the scientific paper (link) before to explore the repository.
 
-# How to use it (a developper)
-
-This code is mainly jupyter notebooks and dataset.
-It is written in Python and R. 
-
-## Python package : 
+## Python package
 ```
 matplotlib==3.4.2
 matplotlib-inline==0.1.2
@@ -23,8 +18,22 @@ seaborn==0.11.1
 ```
 there is also a `requirements.txt`.
 
-## R packages :   
-Install all required packages on the top of each R notebooks with the command `install.packages('PACKAGE_NAME')`, nothing special.
+## R packages   
+Install all required packages on the top of each R notebooks with the command `install.packages('PACKAGE_NAME')`.  
+They are also presented in the `sessioninfo.txt` with their dependencies.
+
+# How to use it 
+
+This code is mainly jupyter notebooks and dataset.  
+It is written in Python and R.  
+Run the following command in a terminal  
+```
+jupyter notebook # open a notebook
+```
+open a file in the notebook folder - such as `messageAB_aids.ipynb`
+install requiered packages with the command line `install.packages('PACKAGE_NAME')` if it was not done previously.
+
+Run the following cells.
 
 # Strucutre  
 
@@ -34,9 +43,9 @@ avatar_paper
 └─── README.md
 |
 └─── datasets
-        └─── AIDS : original and avatarized AIDS datasets
-        └─── WBCD : original and avatarized WBCD datasets 
-        └─── results_df : result dataframes of computationally expensive analysis.
+        └─── AIDS: original and avatarized AIDS datasets
+        └─── WBCD: original and avatarized WBCD datasets 
+        └─── results_df: result dataframes of computationally expensive analysis.
 |
 └─── notebooks 
         └─── final_figure  
