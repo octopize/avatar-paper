@@ -1,9 +1,9 @@
-from avatars_are_first_hit import avatars_are_first_hit
-from hidden_rate import hidden_rate
-from local_cloaking import local_cloaking
-from record_to_avatar_distance import record_to_avatar_distance
+from metrics.avatars_are_first_hit import avatars_are_first_hit
+from metrics.hidden_rate import hidden_rate
+from metrics.local_cloaking import local_cloaking
+from metrics.record_to_avatar_distance import record_to_avatar_distance
 
-from projection import Projection
+from dimension.projection import Projection
 
 
 class Security_metrics:

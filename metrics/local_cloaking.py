@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-from radius_knn import radius_knn
+from metrics.radius_knn import radius_knn
 
 
 def local_cloaking(
