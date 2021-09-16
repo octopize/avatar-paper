@@ -19,21 +19,18 @@ seaborn==0.11.1
 there is also a `requirements.txt`.
 
 ## R packages   
-Install all required packages on the top of each R notebooks with the command `install.packages('PACKAGE_NAME')`.  
+Install all required packages on the top of each R notebooks with the command `install.packages('PACKAGE_NAME')`.    
 They are also presented in the `sessioninfo.txt` with their dependencies.
 
 # How to use it 
 
-This code is mainly jupyter notebooks and dataset.  
-It is written in Python and R.  
-Run the following command in a terminal  
-```
-jupyter notebook # open a notebook
-```
-open a file in the notebook folder - such as `messageAB_aids.ipynb`
-install requiered packages with the command line `install.packages('PACKAGE_NAME')` if it was not done previously.
-
-Run the following cells.
+This code is mainly jupyter notebooks and dataset.    
+It is written in Python and R.    
+- Run the following command in a terminal.  
+        `jupyter notebook # open a notebook`
+- Open notebook - such as `messageAB_aids.ipynb`.  
+- For R kernel: Install required packages with the command line `install.packages('PACKAGE_NAME')` if it was not done previously.
+- Run the cells.
 
 # Strucutre  
 
@@ -45,17 +42,18 @@ avatar_paper
 └─── datasets
         └─── AIDS: original and avatarized AIDS datasets
         └─── WBCD: original and avatarized WBCD datasets 
-        └─── results_df: result dataframes of computationally expensive analysis.
+        └─── results_df: computationally expensive analysis results.
+        └─── messageD: dataset for figure 5 message 
 |
 └─── notebooks 
         └─── final_figure  
-                | analysis and graphs generation.               
+                | analysis and graphs generation. 
 |
-└─── dimension
-        | Multidimensionnal functions such as PCA, MCA or FAMD
-|
-└─── metrics
-        | Multiple function used to compute avatarization metrics 
+└─── lsg
+        └─── dimension
+                | Multidimensionnal functions such as PCA, MCA or FAMD
+        └─── metrics
+                | Multiple function used to compute avatarization metrics 
 |
 └─── figure
         │ Figures presented in the article
@@ -63,6 +61,9 @@ avatar_paper
 └─── color.csv : A csv file that contains color for the figures
 |
 └─── requirements.txt : requirements for python packages.
+|
+└─── sessioninfo.txt : R session information.
+
 ```
 
 
