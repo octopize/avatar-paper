@@ -1,8 +1,8 @@
 type,color
-avatar,#67C6A7
-original,#f5f5f5
-k_small,#c6eade
-k_high,#407c68
+avatar,#3bd6b0
+original,#F5F5F5
+k_small,#00ffa9
+k_high,#2b705e
 benign,#6786c6
 malignant,#e19252
 wbcd,#a767c6
