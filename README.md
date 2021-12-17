@@ -1,12 +1,12 @@
-# Description 
+# Description
 
 Avatar paper is an analysis project that allows researchers to see, re do, or explore figure and data of the "PAPER_NAME".
 The aim of the paper is to present the avatarization method.
 
-
 We really recommand to have a look to the scientific paper (link) before to explore the repository.
 
 ## Python package
+
 ```
 matplotlib==3.4.2
 matplotlib-inline==0.1.2
@@ -16,23 +16,26 @@ scikit-learn==0.24.2
 scipy==1.6.3
 seaborn==0.11.1
 ```
+
 there is also a `requirements.txt`.
 
-## R packages   
-Install all required packages on the top of each R notebooks with the command `install.packages('PACKAGE_NAME')`.    
+## R packages
+
+Install all required packages on the top of each R notebooks with the command `install.packages('PACKAGE_NAME')`.  
 They are also presented in the `sessioninfo.txt` with their dependencies.
 
-# How to use it 
+# How to use it
 
-This code is mainly jupyter notebooks and dataset.    
-It is written in Python and R.    
+This code is mainly jupyter notebooks and dataset.  
+It is written in Python and R.
+
 - Run the following command in a terminal.  
-        `jupyter notebook # open a notebook`
-- Open notebook - such as `messageAB_aids.ipynb`.  
+   `jupyter notebook # open a notebook`
+- Open notebook - such as `messageAB_aids.ipynb`.
 - For R kernel: Install required packages with the command line `install.packages('PACKAGE_NAME')` if it was not done previously.
 - Run the cells.
 
-# Strucutre  
+# Strucutre
 
 ```
 avatar_paper
@@ -41,19 +44,19 @@ avatar_paper
 |
 └─── datasets
         └─── AIDS: original and avatarized AIDS datasets
-        └─── WBCD: original and avatarized WBCD datasets 
+        └─── WBCD: original and avatarized WBCD datasets
         └─── results_df: computationally expensive analysis results.
-        └─── messageD: dataset for figure 5 message 
+        └─── messageD: dataset for figure 5 message
 |
-└─── notebooks 
-        └─── final_figure  
-                | analysis and graphs generation. 
+└─── notebooks
+        └─── final_figure
+                | analysis and graphs generation.
 |
 └─── lsg
         └─── dimension
                 | Multidimensionnal functions such as PCA, MCA or FAMD
         └─── metrics
-                | Multiple function used to compute avatarization metrics 
+                | Multiple function used to compute avatarization metrics
 |
 └─── figure
         │ Figures presented in the article
@@ -66,12 +69,11 @@ avatar_paper
 
 ```
 
-
-# Contributing / use data 
+# Contributing / use data
 
 Feel free to redo our analyses or to explore avatarized datasets.
 
-# Contributors 
+# Contributors
 
 @Jpetot
 @mguillaudeux
