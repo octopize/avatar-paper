@@ -3,7 +3,11 @@
 Avatar paper is an analysis project that allows researchers to see, re do, or explore figure and data of the "PAPER_NAME".
 The aim of the paper is to present the avatarization method.
 
-We really recommand to have a look to the scientific paper (link) before to explore the repository.
+We really recommend to have a look to the scientific paper (link) before to explore the repository.
+
+## Prerequisites
+
+This repo uses Git LFS (Large File Storage) to handle large datasets. Make sure to install it for your platform, following the instructions at https://git-lfs.github.com/
 
 ## Python package
 
@@ -17,25 +21,24 @@ scipy==1.6.3
 seaborn==0.11.1
 ```
 
-there is also a `requirements.txt`.
+There is also a `requirements.txt`.
 
 ## R packages
 
-Install all required packages on the top of each R notebooks with the command `install.packages('PACKAGE_NAME')`.  
+Install all required packages on the top of each R notebooks with the command `install.packages('PACKAGE_NAME')`.
 They are also presented in the `sessioninfo.txt` with their dependencies.
 
 # How to use it
 
-This code is mainly jupyter notebooks and dataset.  
+This code is mainly jupyter notebooks and dataset.
 It is written in Python and R.
 
-- Run the following command in a terminal.  
-   `jupyter notebook # open a notebook`
+- Run the following command in a terminal.  `jupyter notebook # open a notebook`
 - Open notebook - such as `messageAB_aids.ipynb`.
 - For R kernel: Install required packages with the command line `install.packages('PACKAGE_NAME')` if it was not done previously.
 - Run the cells.
 
-# Strucutre
+# Structure
 
 ```
 avatar_paper
