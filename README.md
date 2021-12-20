@@ -33,6 +33,7 @@ They are also presented in the `sessioninfo.txt` with their dependencies.
 This code is mainly jupyter notebooks and dataset.
 It is written in Python and R.
 
+- `git lfs pull` download large file using `git lfs`, can take around 30min.
 - Run the following command in a terminal.  `jupyter notebook # open a notebook`
 - Open notebook - such as `messageAB_aids.ipynb`.
 - For R kernel: Install required packages with the command line `install.packages('PACKAGE_NAME')` if it was not done previously.
@@ -72,13 +73,13 @@ avatar_paper
 
 ```
 
-# Contributing / use data
+# Contributing / data usage.
 
-Feel free to redo our analyses or to explore avatarized datasets.
+Feel free to redo our analysis or to explore avatarized datasets.
 
 # Contributors
 
-@Jpetot
-@mguillaudeux
-@oliviarousseau
-@pagchun
+- [Julien Petot](https://github.com/jpetot)
+- [Morgan Guillaudeux](https://github.com/mguillaudeux)  
+- [Olivia Rousseau](https://github.com/oliviarousseau)  
+- [Pierre-Antoine Gourraud](https://github.com/gourraud)
