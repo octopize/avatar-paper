@@ -5,3 +5,5 @@
 .RData
 __pycache__/
 *.pyc
+
+datasets/tmp
