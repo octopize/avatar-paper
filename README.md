@@ -19,6 +19,7 @@ pandas==1.2.4
 scikit-learn==0.24.2
 scipy==1.6.3
 seaborn==0.11.1
+saiph==0.2.5
 ```
 
 There is also a `requirements.txt`.
