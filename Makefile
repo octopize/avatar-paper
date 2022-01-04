@@ -7,7 +7,7 @@ MAKEFLAGS += --no-builtin-rules
 
 install:  ## Install everything
 	poetry install
-	Rscript -e 'install.packages("IRkernel", repos="https://cloud.r-project.org")'
+	Rscript -e 'install.packages(c("IRkernel", "librarian"), repos="https://cloud.r-project.org")'
 	RScript -e 'IRkernel::installspec(user = TRUE)'
 .PHONY: install
 

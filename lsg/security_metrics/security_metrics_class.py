@@ -1,6 +1,6 @@
 import pandas as pd
+import saiph
 
-from lsg.dimension.projection import Projection
 from lsg.security_metrics.avatars_are_first_hit import avatars_are_first_hit
 from lsg.security_metrics.hidden_rate import hidden_rate
 from lsg.security_metrics.local_cloaking import local_cloaking
@@ -8,9 +8,6 @@ from lsg.security_metrics.record_to_avatar_distance import record_to_avatar_dist
 
 
 class Security_metrics:
-    def __init__(self):
-        pass
-
     def fit(self, records_set, avatars_set, nf):
         """Fit the metrics class.
 
@@ -20,9 +17,9 @@ class Security_metrics:
         """
         self._records_set = records_set
         self._avatars_set = avatars_set
-        pr = Projection()
-        self._coord_original, _ = pr.fit_transform(records_set, nf=nf)
-        self._coord_avatar = pr.transform(avatars_set)
+        _, model, param = saiph.fit(records_set, nf=nf)
+        self._coord_original = saiph.transform(records_set, model, param)
+        self._coord_avatar = saiph.transform(avatars_set, model, param)
 
         are_first_hit = avatars_are_first_hit(
             self._coord_original, self._coord_avatar, distance_metric="minkowski"
@@ -39,7 +36,6 @@ class Security_metrics:
             self._coord_original,
             self._coord_avatar,
             self._distances,
-            subset_indices=None,
         )
 
     def correlation_protection_rate(self, variable_list):
