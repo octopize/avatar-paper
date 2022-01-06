@@ -54,8 +54,8 @@ def radius_knn(
         # Count the number of avatar an records in the radius
         # if index is upper than N-1 then avatar
         # else : record
-        avatars_count = sum(1 for k in inside_radius_list[1][0] if k > (N - 1))
-        records_count = (len(inside_radius_list[1][0]) - avatars_count) - 1
+        avatars_count = sum(1 for k in inside_radius_list[1][0] if k > (N - 1) and k != i + N)
+        records_count = sum(1 for k in inside_radius_list[1][0] if k < (N - 1))
 
         hit_counts.append((avatars_count, records_count))
 
