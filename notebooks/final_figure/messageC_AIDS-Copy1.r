@@ -1,22 +1,27 @@
+library(librarian)
+
 # Main libraries
-library(reticulate)
-library(tidyverse)
-library(mice)
-library(reshape2)
+librarian::shelf( mice, reshape2)
 
-# Multidimensionnal reduction method libary
-library(FactoMineR)
-
-# Survival analysis libraries
-library(survival)
-library(survminer)
+# Library to use Python with R
+librarian::shelf(reticulate,
+                # Multidimensional reduction method libary
+                FactoMineR,
+                # Survival analysis
+                survival,
+                survminer,
+                # Display a corrplot
+                corrplot, 
+                 # data manipulation
+                 tibble,
+                 dplyr
+                )
 
 # import specific function to compute metrics 
 py_run_string("import sys")
 py_run_string("sys.path.append('../..')")
 
 py_run_string("from lsg.security_metrics.security_metrics_class import Security_metrics ")
-py_run_string("from lsg.dimension.projection import Projection")
 py_run_string("from lsg.security_metrics.record_to_avatar_distance import record_to_avatar_distance")
 py_run_string("from lsg.security_metrics.local_cloaking import local_cloaking")
 py_run_string("from lsg.security_metrics.avatars_are_first_hit import avatars_are_first_hit")
