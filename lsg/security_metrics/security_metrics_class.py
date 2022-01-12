@@ -38,13 +38,12 @@ class Security_metrics:
             self._distances,
         )
 
-    def fit_transform(self, records_set, avatars_set, variable_list):
+    def fit_transform(self, records_set, avatars_set):
         """Apply all the metrics and builds a report dataframe.
 
         Arguments:
             records_set {dataframe} -- original data
             avatars_set {dataframe} -- avatarized data
-            variable_list {list} -- name of the variables known by the attacker
 
         Returns:
             dataframe -- report of the metrics
@@ -77,7 +76,7 @@ class Security_metrics:
             "median": [
                 None,
                 None,
-                (local_cloak["avatars_median"] + local_cloak["records_median"]) / 2,FloatingPointErro
+                (local_cloak["avatars_median"] + local_cloak["records_median"]) / 2,
             ]
         }
 
