@@ -23,7 +23,7 @@ make install
 
 ## R packages
 
-Install all required packages on the top of each R notebooks with the command `install.packages('PACKAGE_NAME')`.  They are also presented in the `sessioninfo.txt` with their dependencies.
+All required packages will be installed using the R package `librarian`.
 
 ## How to use it
 
@@ -32,9 +32,8 @@ This code mainly consists in Jupyter notebooks and datasets.
 It is written in Python and R.
 
 - `git lfs pull` download large file using `git lfs`, can take around 30min.
-- Run the following command in a terminal.  `jupyter notebook # open a notebook`
-- Open notebook - such as `messageAB_aids.ipynb`.
-- For R kernel: install required packages with the command line `install.packages('PACKAGE_NAME')` if it was not done previously.
+- Run the following command in a terminal.  `make notebook # open a notebook`
+- Open notebook - such as `Panel_ABC.ipynb`.
 - Run the cells.
 
 ## Structure
@@ -50,12 +49,10 @@ notebooks/
    final_figure/  # analysis and graph generation
 
 lsg/
-   dimension/     # multidimensionnal functions such as PCA, MCA or FAMD
-   metrics/       # multiple function used to compute avatarization metrics
+   security_metrics/       # multiple function used to compute avatarization metrics
 
 figure/           # figures presented in the article
 color.csv         # colors for the figures
-sessioninfo.txt   # R session information.
 ```
 
 ## Contributing
