@@ -387,7 +387,7 @@ options(repr.plot.width = 8, repr.plot.height = 8)
 #if (save) {svglite("../../figure/aids_Probabilities.svg", width = 8, height = 8)}
 
 options(repr.plot.width = 8, repr.plot.height = 8)
-corrplot(table_recap, method = 'color', is.corr = FALSE, addCoef.col = 'black', addCoefasPercent = TRUE, number.cex = 1.2, cl.pos = 'n', tl.col = 'black', tl.cex = 1.5, tl.srt = 0,
+corrplot <- corrplot(table_recap, method = 'color', is.corr = FALSE, addCoef.col = 'black', addCoefasPercent = TRUE, number.cex = 1.2, cl.pos = 'n', tl.col = 'black', tl.cex = 1.5, tl.srt = 0,
          col = colorRampPalette(c("white", "#f5f5f5", colors["avatar", "color"]))(50))
 mtext(text = "Local cloaking first iteration", side = 2, line = -2, las = 0, cex = 1.9, adj = 0.28)
 mtext(text = "Local cloaking second iteration", side = 3, line = 2, las = 0, cex = 1.8, adj = 0.51)

@@ -127,6 +127,9 @@ auc_original <- df[df$test == "auc", "X0"]
 
 result_k <- read.csv("../../datasets/results_df/accuracy_k_wbcd.csv")
 
+
+
+
 # subset to plot only avatar train - avatar test
 # (and remove avatar train, original test)
 result_k <- result_k[result_k["test_type"] == "avatar",]
@@ -159,7 +162,7 @@ plotCd <- ggplot() +
     theme_minimal() +
     theme(legend.position = c(0.12, 0.15),
           axis.title.y = element_text(angle = 90, vjust = 2, size = axis_title_size, family = "sans"),
-          axis.text = element_text(size = axis_text_size_small, colour = "black", family = "sans"), 
+          axis.text = element_text(size = axis_text_size, colour = "black", family = "sans"), 
           axis.title.x = element_text(size = axis_title_size, family = "sans"),
           legend.text = element_text(size = legend_text_size, family = "sans"),
           legend.key.size = unit(1, 'cm'),
