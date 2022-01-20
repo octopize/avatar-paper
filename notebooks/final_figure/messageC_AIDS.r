@@ -13,7 +13,7 @@ librarian::shelf(reticulate,
                 # data table manipulation
                  tibble, 
                  dplyr, 
-                 #svg visualization 
+                 #svg visualizationD
                  svglite
                 )
 
@@ -142,10 +142,10 @@ plotCa <- ggplot(res_ind_2D, aes(x = Dim.1, y = Dim.2, fill = type)) +
     labs(fill = "") +
     theme_bw() +
     theme(legend.position = c(0.86, 0.15),
-          legend.text = element_text(size = legend_text_size, color = "black", family = "sans"),
+          legend.text = element_text(size = legend_text_size, color = "black", family = ""),
           legend.key.size = unit(0.8, "cm"),
-          axis.text = element_text(size = axis_text_size, color = "black", family = "sans"),
-          axis.title = element_text(size = axis_title_size, color = "black", family = "sans"),
+          axis.text = element_text(size = axis_text_size, color = "black", family = ""),
+          axis.title = element_text(size = axis_title_size, color = "black", family = ""),
           legend.background = element_rect(fill = "white", linetype = "solid"))
 
 
@@ -172,7 +172,7 @@ rownames(table2_data) <- c("N", "Event", "Hazard ratio", "95% confidence interva
 table2_data
 
 data[categorical] <- lapply(data[categorical], factor)
-coord_original <- FAMD(data, ncp = 5)
+coord_original <- FAMD(data, ncp = 5, graph = FALSE)
 coord_original <- as.data.frame(coord_original$ind$coord)
 
 
@@ -321,10 +321,10 @@ plotCc <- ggplot() +
     #xlim(4, )
     scale_x_continuous(breaks = seq_k)  +
     coord_cartesian(xlim = c(0, 1075)) +
-    theme(axis.title.y = element_text(angle = 90, vjust = 1, size = axis_title_size, family = "sans"),
+    theme(axis.title.y = element_text(angle = 90, vjust = 1, size = axis_title_size, family = ""),
           axis.text = element_text(size = axis_text_size), 
-          axis.title.x = element_text(size = axis_title_size, family = "sans"),
-          legend.text = element_text(size = legend_text_size, family = "sans"),
+          axis.title.x = element_text(size = axis_title_size, family = ""),
+          legend.text = element_text(size = legend_text_size, family = ""),
           legend.key.size = unit(1, 'cm'),
           axis.line = element_line(colour = "black", size = 0.5, linetype = "solid", 
                                    arrow = arrow(type = 'closed', length = unit(5,'pt'))))
@@ -339,7 +339,7 @@ hidden_rate_list <- c()
 
 
 # coord_original <- pr$fit_transform(data, nf = 5L)[[1]]
-coord_original <- FAMD(data, ncp = 5)
+coord_original <- FAMD(data, ncp = 5, graph = FALSE)
 coord_original <- as.data.frame(coord_original$ind$coord)
 for (k in seq_k) {
     iter <- 0

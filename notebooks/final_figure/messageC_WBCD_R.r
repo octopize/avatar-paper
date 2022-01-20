@@ -116,9 +116,9 @@ plotCb <- ggplot(res_ind_2D, aes(x = Dim.1, y = Dim.2, fill = type)) +
     theme(legend.position = c(0.9, 0.12), 
           legend.title = element_blank(),
           legend.key.size = unit(0.8, "cm"),
-          legend.text = element_text(size = legend_text_size, color = "black", family = "sans"),
-          axis.text = element_text(size =  axis_text_size, color = "black", family = "sans"),
-          axis.title = element_text(size = axis_title_size, color = "black", family = "sans"))
+          legend.text = element_text(size = legend_text_size, color = "black", family = ""),
+          axis.text = element_text(size =  axis_text_size, color = "black", family = ""),
+          axis.title = element_text(size = axis_title_size, color = "black", family = ""))
 
 #ggsave(file="../../figure/WBCD_pca2D_Ksmall_high.svg", plot = plot, width = 10, height = 7, dpi = 320)
 
@@ -161,10 +161,10 @@ plotCd <- ggplot() +
     scale_color_identity(guide = 'legend', name = NULL, breaks= c(colors["original", "color"], colors["avatar", "color"]), labels= c('Original', 'Avatar')) +
     theme_minimal() +
     theme(legend.position = c(0.12, 0.15),
-          axis.title.y = element_text(angle = 90, vjust = 2, size = axis_title_size, family = "sans"),
-          axis.text = element_text(size = axis_text_size, colour = "black", family = "sans"), 
-          axis.title.x = element_text(size = axis_title_size, family = "sans"),
-          legend.text = element_text(size = legend_text_size, family = "sans"),
+          axis.title.y = element_text(angle = 90, vjust = 2, size = axis_title_size, family = ""),
+          axis.text = element_text(size = axis_text_size, colour = "black", family = ""), 
+          axis.title.x = element_text(size = axis_title_size, family = ""),
+          legend.text = element_text(size = legend_text_size, family = ""),
           legend.key.size = unit(1, 'cm'),
           axis.line = element_line(colour = "black", size = 0.5, linetype = "solid", 
                                    arrow = arrow(type = 'closed', length = unit(5,'pt'))))
@@ -176,7 +176,7 @@ data$Class <- as.factor(data$Class)
 hidden_rate_list <- c()
 
 # Original projection
-coord_original <- FAMD(data, ncp = 2)
+coord_original <- FAMD(data, ncp = 2, graph = FALSE)
 coord_original <- as.data.frame(coord_original$ind$coord)
 
 for (k in seq_k) {
