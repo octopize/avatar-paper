@@ -224,10 +224,10 @@ res_concat
 
 metrics_aids <- py$Security_metrics()
 metrics_aids$fit(data, avatar, nf = 5L)
-df_local_cloaking_aids <- data.frame(metrics_aids$local_cloaking["hit_counts"])
+df_ref_local_cloaking_aids <- data.frame(metrics_aids$local_cloaking["hit_counts"])
 
 color_vector <- c(rep("#c14f4f", 2), rep(colors["avatar", "color"], 98))
-intersect_median_density <- 44
+intersect_median_density_aids <- 42
 
 axis_title_size <- 21
 axis_text_size <- 22
@@ -236,7 +236,7 @@ legend_title_size <- 19
 
 
 options(repr.plot.width = 10, repr.plot.height = 7)
-plotBa <- ggplot(df_local_cloaking_aids, aes(hit_counts.1)) + 
+plotBa <- ggplot(df_ref_local_cloaking_aids, aes(hit_counts.1)) + 
     # add histogram
     geom_histogram(bins = 100, fill = color_vector, color = "#1D1D1B") + 
     #  add density
@@ -247,8 +247,8 @@ plotBa <- ggplot(df_local_cloaking_aids, aes(hit_counts.1)) +
     theme_minimal() + 
     xlab("Local cloaking") + 
     ylab("Number of individuals") + 
-    theme(axis.title = element_text(size = axis_title_size, family = "sans"), 
-          axis.text = element_text(size = axis_title_size, family = "sans"), 
+    theme(axis.title = element_text(size = axis_title_size, family = ""), 
+          axis.text = element_text(size = axis_title_size, family = ""), 
           axis.line = element_line(colour = "black", size = 0.5, linetype = "solid", arrow = arrow(type = "closed", length = unit(5, "pt")))) + 
     xlim(c(-1, 100))  +
 
@@ -256,43 +256,42 @@ plotBa <- ggplot(df_local_cloaking_aids, aes(hit_counts.1)) +
     ## segment median 
     geom_segment(aes(x = median(hit_counts.1),
                      y = 0, xend = median(hit_counts.1),
-                     yend = 45), 
+                     yend = intersect_median_density_aids), 
                  color = '#1D1D1B', size = 2) +
     ## arrow median
     geom_segment(aes(x = median(hit_counts.1) + 25,
-                     y = intersect_median_density +12, 
+                     y = intersect_median_density_aids +100, 
                      xend = median(hit_counts.1)+1,
-                     yend = 45+2), 
+                     yend = intersect_median_density_aids), 
                  color = '#1D1D1B', size = 0.8, 
                  arrow = arrow(type='closed', length = unit(10,'pt'))) +
     ## text median
     geom_label(aes(x =  median(hit_counts.1) + 39., 
-                   y =  intersect_median_density +14,
+                   y =  intersect_median_density_aids +100,
                    label =paste0("Median = ", median(hit_counts.1))), 
                size = 9, 
-               family = "sans", 
+               family = "", 
                label.size = NA) + 
     ## arrow hidden rate
     geom_segment(aes(x = median(hit_counts.1) + 25, 
-                     y = intersect_median_density + 38, 
-                     xend = 1, yend = sum(df_local_cloaking_aids[,1] == 0) ), 
+                     y = intersect_median_density_aids + 138, 
+                     xend = 1, yend = sum(df_ref_local_cloaking_aids[,1] == 0) ), 
                  color = '#1D1D1B', size = 0.8, 
                  arrow = arrow(type='closed', 
                                length = unit(10,'pt'))) +
     ## text hidden rate
     geom_label(aes(x =  median(hit_counts.1) + 45, 
-                   y = intersect_median_density + 41,
+                   y = intersect_median_density_aids + 141,
                    label = paste0("Hidden rate = ", round(metrics_aids$hidden_rate, 0), " %")), 
                size = 9, 
                label.size = NA) +
         xlim(c(-1, 100)) 
 
- 
-
 # ggsave(file="../../figure/aids_local_cloaking.tiff", plot=plot, width=10, height=7, dpi = 290)
 
+
 # Proportion of individuals with a local cloaking under 5
-sum( df_local_cloaking_aids$hit_counts.1 < 5) / dim( df_local_cloaking_aids )[1] *100
+prop_aids = sum( df_ref_local_cloaking_aids$hit_counts.1 <= 5) / dim( df_ref_local_cloaking_aids )[1] *100
 
 avatar_tot <- read.csv('../../datasets/AIDS/aids_avatarized_25time_k20_nf_5.csv')
 avatar_tot[categorical] <- lapply(avatar_tot[categorical], factor)
@@ -304,8 +303,7 @@ coord_original <- reticulate::r_to_py(as.data.frame(coord_original))
 
 
 # Computation time: about 2 minutes
-defaultW <- getOption("warn")
-options(warn = -1)
+
 df_local_cloaking_aids <- data.frame(row.names = 1:nrow(data))
 for (k in unique(avatar_tot$iter)) {
     avatar <- avatar_tot[avatar_tot$iter == k,]
@@ -322,11 +320,10 @@ for (k in unique(avatar_tot$iter)) {
     local_cloaking <- py$local_cloaking(coord_original, coord_avatar, distances)
     df_local_cloaking_aids[paste0("local_cloaking_", k, "_", 20)] <- local_cloaking$hit_counts[, 1]
 }   
-options(warn = defaultW)
 
 df_local_cloaking_aids_LC0 <- as.data.frame(table(rowSums(df_local_cloaking_aids == 0)))
 df_local_cloaking_aids_LC0 <- tibble(df_local_cloaking_aids_LC0 %>% 
-    mutate(Var1 = as.character(fct_collapse(Var1, "5" = as.character(5:max(as.numeric(df_local_cloaking_aids_LC0$Var1) - 1))))) %>%
+    mutate(Var1 = as.character(fct_collapse(Var1, "5" = as.character(5:max(as.numeric(df_local_cloaking_aids_LC0$Var1)))))) %>%
     group_by(Var1) %>%
     mutate(Freq = sum(Freq)) %>%
     distinct())
@@ -341,8 +338,8 @@ plotBc <- ggplot(df_local_cloaking_aids_LC0, aes(x = as.factor(Var1), y = Freq))
     ylab("Number of individuals") + 
     xlab("Number of local cloaking at zero over 25 avatarizations") + 
     theme_minimal() + 
-    theme(axis.title = element_text(size = axis_title_size, family = "sans"), 
-          axis.text = element_text(size = axis_text_size, family = "sans"), 
+    theme(axis.title = element_text(size = axis_title_size, family = ""), 
+          axis.text = element_text(size = axis_text_size, family = ""), 
           axis.line = element_line(colour = "black", size = 0.5, 
                                    linetype = "solid", 
                                    arrow = arrow(type = "closed", 

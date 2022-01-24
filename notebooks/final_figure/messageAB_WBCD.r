@@ -70,9 +70,9 @@ plotAb <- ggplot(res_ind_tot, aes(x = Dim.1, y = Dim.2, fill = type)) +
     theme(legend.position = c(0.9, 0.12), 
           legend.title = element_blank(),
           legend.key.size = unit(0.8, "cm"),
-          legend.text = element_text(size = legend_text_size, color = "black", family = "sans"),
-          axis.text = element_text(size =  axis_text_size, color = "black", family = "sans"),
-          axis.title = element_text(size = axis_title_size, color = "black", family = "sans"))
+          legend.text = element_text(size = legend_text_size, color = "black", family = ""),
+          axis.text = element_text(size =  axis_text_size, color = "black", family = ""),
+          axis.title = element_text(size = axis_title_size, color = "black", family = ""))
 
 
 #ggsave(file="../../figure/WBCD_pca_2D.svg", plot=plot, width=10, height=7, dpi = 320)
@@ -105,10 +105,10 @@ plotAd <- ggplot(data = df_scores_70, aes(x = reorder(feature, order), y = mean,
     theme(legend.position = c(0.75, 0.1), 
           legend.title = element_blank(),
           legend.key.size = unit(0.8, "cm"),
-          legend.text = element_text(size = legend_text_size, color = "black", family = "sans"),
-          axis.text.x = element_text(size =  axis_text_size, color = "black", family = "sans"),
-          axis.text.y = element_text(size =  axis_text_size, color = "black", family = "sans"),
-          axis.title = element_text(size = axis_title_size, color = "black", family = "sans"),
+          legend.text = element_text(size = legend_text_size, color = "black", family = ""),
+          axis.text.x = element_text(size =  axis_text_size, color = "black", family = ""),
+          axis.text.y = element_text(size =  axis_text_size, color = "black", family = ""),
+          axis.title = element_text(size = axis_title_size, color = "black", family = ""),
           axis.ticks.y = element_blank())
 
 metrics <- py$Security_metrics()
@@ -136,8 +136,8 @@ plotBb <- ggplot(df_local_cloaking, aes(hit_counts.1)) +
     theme_minimal() +
     xlab("Local cloaking") +
     ylab("Number of individuals") +
-    theme(axis.title = element_text(size = axis_title_size, family = "sans"),
-          axis.text = element_text(size = axis_text_size, family = "sans"),
+    theme(axis.title = element_text(size = axis_title_size, family = ""),
+          axis.text = element_text(size = axis_text_size, family = ""),
           axis.line = element_line(colour = "black", 
                                    size = 0.8, 
                                    linetype = "solid", 
@@ -162,21 +162,21 @@ plotBb <- ggplot(df_local_cloaking, aes(hit_counts.1)) +
                    y =  intersect_median_density + 15,
                    label =paste0("Median = ", median(hit_counts.1))), 
                size = 9, 
-               family = "sans", 
+               family = "", 
                label.size = NA) + 
 
     # hidden rate arrow and text 
     geom_segment(aes(x = median(hit_counts.1) + 25, 
-                     y = intersect_median_density + 23, 
+                     y = intersect_median_density + 30, 
                      xend = 0.5, 
                      yend = sum(df_local_cloaking[,1] == 0) ), 
                  color = '#1D1D1B', size = 0.8, 
                  arrow = arrow(type='closed', length = unit(10,'pt'))) +
     geom_label(aes(x =  median(hit_counts.1) + 45, 
-                   y = intersect_median_density + 22,
+                   y = intersect_median_density + 30,
                    label = paste0("Hidden rate = ", round(metrics$hidden_rate, 0), " %")), 
                size = 9, 
-               family = "sans", 
+               family = "", 
                label.size = NA) +
     
     scale_color_manual(name = "statistics", values = c(median = "red"))
@@ -187,7 +187,7 @@ plotBb <- ggplot(df_local_cloaking, aes(hit_counts.1)) +
 # ggsave(file="../../figure/WBCD_local_cloaking.svg", plot=plot, width=10, height=7, dpi = 320)
 
 # Number of individuals with a local cloaking under 5
-sum(df_local_cloaking$hit_counts.1 < 5) / dim( df_local_cloaking )[1] *100
+prop_wbcd = sum(df_local_cloaking$hit_counts.1 <= 5) / dim( df_local_cloaking )[1] *100
 
 avatar_tot <- read.csv('../../datasets/WBCD/wbcd_avatarized_25time_k20_nf_2.csv')
 avatar_tot["Class"] <- lapply(avatar_tot["Class"], factor)
@@ -227,8 +227,8 @@ plotBd <- ggplot(df_local_cloaking_k2_LC0, aes(x = Var1, y = Freq)) +
     ylab("Number of individuals") + 
     xlab("Number of local cloaking at zero over 25 avatarizations") +
     theme_minimal() +
-    theme(axis.title = element_text(size = axis_title_size, family = "sans"),
-          axis.text = element_text(size = axis_text_size, family = "sans"),
+    theme(axis.title = element_text(size = axis_title_size, family = ""),
+          axis.text = element_text(size = axis_text_size, family = ""),
           axis.line = element_line(colour = "black", 
                                    size = 0.5, 
                                    linetype = "solid", 
