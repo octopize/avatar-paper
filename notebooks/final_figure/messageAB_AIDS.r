@@ -164,9 +164,9 @@ plotAc <- ggsurv$plot <- ggsurv$plot +
           axis.line = element_line(colour = "black", size = 0.5, linetype = "solid", arrow = arrow(type = "closed", length = unit(5, "pt"))),
           text = element_text(size = 14))
 
-plot
 
-# ggsave(file="../../figure/aids_avatar_survival.tiff", plot=plot, width=10, height=7, dpi = 290)
+
+# ggsave(file="../../figure/aids_avatar_survival.tiff", plot=plotAc, width=10, height=7, dpi = 290)
 
 data$type <- "Original"
 avatar$type <- "Avatar"
@@ -321,18 +321,24 @@ for (k in unique(avatar_tot$iter)) {
     df_local_cloaking_aids[paste0("local_cloaking_", k, "_", 20)] <- local_cloaking$hit_counts[, 1]
 }   
 
-df_local_cloaking_aids_LC0 <- as.data.frame(table(rowSums(df_local_cloaking_aids == 0)))
-df_local_cloaking_aids_LC0 <- tibble(df_local_cloaking_aids_LC0 %>% 
-    mutate(Var1 = as.character(fct_collapse(Var1, "5" = as.character(5:max(as.numeric(df_local_cloaking_aids_LC0$Var1)))))) %>%
+df_local_cloaking_aids_LC0_total <- as.data.frame(table(rowSums(df_local_cloaking_aids == 0)))
+df_local_cloaking_aids_LC0_cum <- tibble(df_local_cloaking_aids_LC0_total %>% 
+    mutate(
+        Var1 = as.character(fct_collapse(
+            Var1, "10" = as.character(10:max(as.numeric(df_local_cloaking_aids_LC0_total$Var1)))))) %>%
     group_by(Var1) %>%
     mutate(Freq = sum(Freq)) %>%
     distinct())
-df_local_cloaking_aids_LC0["Freq2"] <- paste0(formatC(df_local_cloaking_aids_LC0$Freq/sum(df_local_cloaking_aids_LC0$Freq)*100, format = "f", digits = 1), "%")
-df_local_cloaking_aids_LC0[df_local_cloaking_aids_LC0$Var1 == 5, "Var1"] <- "\U2265 5"
-df_local_cloaking_aids_LC0$Var1 <- factor(df_local_cloaking_aids_LC0$Var1, levels = c(as.numeric(0:4), "\U2265 5"))
+
+df_local_cloaking_aids_LC0_cum["Freq2"] <- paste0(
+    formatC(df_local_cloaking_aids_LC0_cum$Freq/sum(df_local_cloaking_aids_LC0_cum$Freq
+                                                     )*100, format = "f", digits = 1), "%")
+
+df_local_cloaking_aids_LC0_cum[df_local_cloaking_aids_LC0_cum$Var1 == 10, "Var1"] <- "\U2265 10"
+df_local_cloaking_aids_LC0_cum$Var1 <- factor(df_local_cloaking_aids_LC0_cum$Var1, levels = c(as.numeric(0:8), "\U2265 10"))
 
 options(repr.plot.width = 10, repr.plot.height = 7)
-plotBc <- ggplot(df_local_cloaking_aids_LC0, aes(x = as.factor(Var1), y = Freq)) + 
+plotBc <- ggplot(df_local_cloaking_aids_LC0_cum, aes(x = as.factor(Var1), y = Freq)) + 
     geom_bar(stat = "identity", fill = colors["original", "color"], colour = "black", show.legend = FALSE) + 
     geom_text(aes(label = Freq2), stat = "identity", vjust = -0.5, size = 6) + 
     ylab("Number of individuals") + 
@@ -343,7 +349,8 @@ plotBc <- ggplot(df_local_cloaking_aids_LC0, aes(x = as.factor(Var1), y = Freq))
           axis.line = element_line(colour = "black", size = 0.5, 
                                    linetype = "solid", 
                                    arrow = arrow(type = "closed", 
-                                                 length = unit(5, "pt"))))
+                                                 length = unit(5, "pt"))))+
+    scale_x_discrete(breaks = c("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "\U2265 10"), limits = c("0", "1", "2", "3", "4",  "5", "6", "7", "8", "9", "\U2265 10"))
 
 
 

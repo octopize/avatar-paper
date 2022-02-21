@@ -213,15 +213,18 @@ for (k in unique(avatar_tot$iter)) {
     df_local_cloaking_k2[paste0("local_cloaking_", k)] <- local_cloaking$hit_counts[, 1]
 }
 
-df_local_cloaking_k2_LC0 <- as.data.frame(table(rowSums(df_local_cloaking_k2 == 0)))
-df_local_cloaking_k2_LC0["Freq2"] <- paste0(formatC(df_local_cloaking_k2_LC0$Freq/sum(df_local_cloaking_k2_LC0$Freq)*100, format = "f", digits = 1), "%")
+df_local_cloaking_k2_LC0_total <- as.data.frame(table(rowSums(df_local_cloaking_k2 == 0)))
+df_local_cloaking_k2_LC0_total["Freq2"] <- paste0(
+    formatC(df_local_cloaking_k2_LC0_total$Freq/sum(
+        df_local_cloaking_k2_LC0_total$Freq)*100, format = "f", digits = 1), "%")
 
 options(repr.plot.width = 10, repr.plot.height = 7)
-plotBd <- ggplot(df_local_cloaking_k2_LC0, aes(x = Var1, y = Freq)) +
+plotBd <- ggplot(df_local_cloaking_k2_LC0_total, aes(x = Var1, y = Freq)) +
     # histogram
     geom_bar(fill = colors["original", "color"], colour = "black", show.legend = FALSE, stat = "identity") + 
     # adding percentage as text on each bar
-    geom_text(aes(label = sprintf('%.1f%%', after_stat(df_local_cloaking_k2_LC0$Freq / sum(df_local_cloaking_k2_LC0$Freq) * 100))),
+    geom_text(aes(label = sprintf(
+        '%.1f%%', after_stat(df_local_cloaking_k2_LC0_total$Freq / sum(df_local_cloaking_k2_LC0_total$Freq) * 100))),
               vjust = -0.5, size = 6) +
     # axis and theme 
     ylab("Number of individuals") + 
@@ -233,7 +236,7 @@ plotBd <- ggplot(df_local_cloaking_k2_LC0, aes(x = Var1, y = Freq)) +
                                    size = 0.5, 
                                    linetype = "solid", 
                                    arrow = arrow(type = 'closed', length = unit(5,'pt')))) +
-    scale_x_discrete(breaks = c("0", "1", "2", "3", "4", "\U2265 5"), limits = c("0", "1", "2", "3", "4", "\U2265 5"))
+    scale_x_discrete(breaks = c("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "\U2265 10"), limits = c("0", "1", "2", "3", "4",  "5", "6", "7", "8", "9", "\U2265 10"))
 
  
 
