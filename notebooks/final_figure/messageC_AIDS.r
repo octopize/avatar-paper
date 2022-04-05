@@ -24,10 +24,10 @@ librarian::shelf(reticulate,
 py_run_string("import sys")
 py_run_string("sys.path.append('../..')")
 
-py_run_string("from lsg.security_metrics.security_metrics_class import Security_metrics ")
+py_run_string("from lsg.security_metrics import SecurityMetrics")
 py_run_string("from lsg.security_metrics.record_to_avatar_distance import record_to_avatar_distance")
-py_run_string("from lsg.security_metrics.local_cloaking import local_cloaking")
-py_run_string("from lsg.security_metrics.avatars_are_first_hit import avatars_are_first_hit")
+py_run_string("from lsg.security_metrics.local_cloaking import get_local_cloaking")
+py_run_string("from lsg.security_metrics.avatars_are_k_hit import avatars_are_k_hit")
 py_run_string("from lsg.security_metrics.hidden_rate import hidden_rate")
 
 file_data <- "../../datasets/"
@@ -177,7 +177,7 @@ coord_original <- as.data.frame(coord_original$ind$coord)
 
 
 compute <- FALSE
-
+# results are saved in a df 
 if (compute) {
     ## parallele computing (not requiered if you import results datasets)
     library(doParallel)
@@ -247,7 +247,7 @@ if (compute) {
     res_df = bind_rows(res_par)
     tail(res_df)
 } 
-
+# Saved results
 res_df <- read.csv("../../datasets/results_df/hazard_ratio.csv")
 
 res_df["names"] <- paste(res_df$k, res_df$iter, sep = "_")
@@ -363,24 +363,24 @@ for (k in seq_k) {
     avatar <- avatar_tot[avatar_tot$iter_k == iter,]
     avatar_imp <- complete(mice(avatar, m = 1, maxit = 50, seed = 500, printFlag = FALSE), 1)
     avatar$cd496 <- avatar_imp$cd496
-    
-    # Avatar projection
-    coord_avatar <- FAMD(rbind(data, avatar[, 1:(ncol(avatar) - 3)]),
-                           ind.sup = (nrow(data) +1) : (nrow(data) + nrow(avatar)),
-                           ncp = 5, graph = FALSE)
 
-    coord_avatar <- reticulate::r_to_py(as.data.frame(coord_avatar$ind.sup$coord))
+    metrics_tmp <- py$SecurityMetrics()
+    metrics_tmp$fit(data, avatar[, 1:(ncol(avatar) - 3)], nf = 5L)
+
+    hit_counts = r_to_py(metrics_tmp$local_cloaking$hit_counts)
+    avatar_local_cloaking = c()
+
+    for (i  in seq_along(hit_counts)){
+        avatar_local_cloaking = c(avatar_local_cloaking, py_to_r(hit_counts[i-1])[1])
+    } 
     
-    # Local cloaking
-    distances <- py$record_to_avatar_distance(coord_original, coord_avatar)
-    local_cloaking <- py$local_cloaking(coord_original, coord_avatar, distances)
-    df_local_cloaking_k100[paste0("local_cloaking_", k)] <- local_cloaking$hit_counts[, 1]
+    df_local_cloaking_k100[paste0("local_cloaking_", k)] <- avatar_local_cloaking
 }
 
 df_melt <- melt(df_local_cloaking_k100)
 
-options(repr.plot.width = 10, repr.plot.height = 7)
 
+options(repr.plot.width = 10, repr.plot.height = 7)
 plotCe <- ggplot(df_melt, aes(x = variable, y = value)) + 
     geom_violin(trim = TRUE, alpha = 0.12, fill = colors['avatar', 'color']) +
     geom_boxplot(width = 0.4, fill = colors['avatar', 'color'], outlier.size = 0.1,alpha = 0.8) +

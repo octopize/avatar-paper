@@ -20,11 +20,10 @@ librarian::shelf(reticulate,
 py_run_string("import sys")
 py_run_string("sys.path.append('../..')")
 
-py_run_string("from lsg.security_metrics.security_metrics_class import Security_metrics ")
+py_run_string("from lsg.security_metrics import SecurityMetrics")
 py_run_string("from lsg.security_metrics.record_to_avatar_distance import record_to_avatar_distance")
-py_run_string("from lsg.security_metrics.local_cloaking import local_cloaking")
-py_run_string("from lsg.security_metrics.avatars_are_first_hit import avatars_are_first_hit")
-py_run_string("from lsg.security_metrics.hidden_rate import hidden_rate")
+py_run_string("from lsg.security_metrics.local_cloaking import get_local_cloaking")
+py_run_string("from lsg.security_metrics.avatars_are_k_hit import avatars_are_k_hit")
 
 save <- FALSE
 
@@ -173,7 +172,6 @@ plotCd <- ggplot() +
 df_local_cloaking_k100 <- data.frame(row.names = 1:nrow(data))
 data$Class <- as.factor(data$Class)
 
-hidden_rate_list <- c()
 
 # Original projection
 coord_original <- FAMD(data, ncp = 2, graph = FALSE)
@@ -195,32 +193,28 @@ for (k in seq_k) {
                                  sep = ",", header = TRUE)
                         }
     )
+
+    
     avatar <- avatar_tot[avatar_tot$iter_k == iter,]
-    avatar <- subset(avatar, select=-c(k, id_ind, iter_k))    
-    coord_avatar <- FAMD(rbind(data,avatar) , ncp = 2, 
-                         ind.sup = (nrow(data) +1) : (nrow(data) + nrow(avatar)), 
-                         graph = FALSE
-                         )
-    coord_avatar <- as.data.frame(coord_avatar$ind.sup$coord)
-                    
+    avatar <- subset(avatar, select=-c(k, id_ind, iter_k))   
+
+    metrics_tmp <- py$SecurityMetrics()
+    metrics_tmp$fit(data, avatar, nf = 5L)
+
+    hit_counts = r_to_py(metrics_tmp$local_cloaking$hit_counts)
+    avatar_local_cloaking = c()
+
+    for (i  in seq_along(hit_counts)){
+        avatar_local_cloaking = c(avatar_local_cloaking, py_to_r(hit_counts[i-1])[1])
+    } 
     
-    # Local cloaking
-    distances <- py$record_to_avatar_distance(coord_original, coord_avatar)
-    local_cloaking <- py$local_cloaking(coord_original, coord_avatar, distances)
-    df_local_cloaking_k100[paste0("local_cloaking_", k)] <- local_cloaking$hit_counts[,1]
-    
-    # Hidden rate
-    are_first_hit <- py$avatars_are_first_hit (coord_original, coord_avatar, distance_metric = 'euclidean')
-    hidden_rate <- py$hidden_rate(are_first_hit)
-    hidden_rate_list <- c(hidden_rate_list, hidden_rate)
+    df_local_cloaking_k100[paste0("local_cloaking_", k)] <- avatar_local_cloaking
 }
 
 df_local_cloaking_k100["Class"] <- data$Class
 
 df_melt <- melt(df_local_cloaking_k100, id.vars = 'Class')
 
-hidden_rate_list <- rep(hidden_rate_list, each = 683)
-df_melt['hidden_rate'] <- hidden_rate_list
 
 options(repr.plot.width = 10, repr.plot.height = 7)
 

@@ -1,28 +1,28 @@
+import pandas as pd
+from numpy import float_
+from numpy.typing import NDArray
 from sklearn.metrics.pairwise import paired_distances
 
 
-# def record_to_avatar_distance(full_bind_coordinates, nf = None):
-def record_to_avatar_distance(records_set_coordinates, avatars_set_coordinates):
+def record_to_avatar_distance(
+    records: pd.DataFrame, avatars: pd.DataFrame
+) -> NDArray[float_]:
     """Compute the distance between each record and its avatar.
 
     Arguments:
-        records_set_coordinates {dataframe}
-        avatars_set_coordinates {dataframe}
+        records
+        avatars
 
     Returns:
-        dataframe -- a pandas dataframe gathering the distance between each record and its avatar
+        distances
     """
-    if records_set_coordinates.shape[0] != avatars_set_coordinates.shape[0]:
+    if records.shape[0] != avatars.shape[0]:
         raise ValueError(
             "dimension",
-            "Records set and avatars set dataframes must have the same number of observations",
+            "Records and avatars dataframes must have the same number of observations",
         )
 
-    # Compute distance
-
     # Default is Euclidean distance, we need to implement other distances
-    distances = paired_distances(
-        records_set_coordinates, avatars_set_coordinates, metric="euclidean"
-    )
+    distances: NDArray[float_] = paired_distances(records, avatars, metric="euclidean")
 
     return distances
