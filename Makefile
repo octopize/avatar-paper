@@ -7,9 +7,13 @@ MAKEFLAGS += --no-builtin-rules
 
 install:  ## Install everything
 	poetry install
-	Rscript -e 'install.packages(c("IRkernel", "librarian"), repos="https://cloud.r-project.org")'
+	Rscript -e 'install.packages(c("IRkernel", "librarian", "styler"), repos="https://cloud.r-project.org")'
 	RScript -e 'IRkernel::installspec(user = TRUE)'
 .PHONY: install
+
+lint-fix:  ## Format code
+	Rscript -e 'library("styler"); style_dir(".")'
+.PHONY: lint-fix
 
 notebook:  ## Start jupyter notebook
 	poetry run jupyter notebook
