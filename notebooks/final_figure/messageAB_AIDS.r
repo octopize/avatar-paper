@@ -14,7 +14,7 @@ librarian::shelf(
   # Display a corrplot
   corrplot,
   # Save corplot as svg
-  # svglite,
+  svglite,
   # Display a Sankey diagram
   networkD3,
   htmlwidgets,
@@ -439,20 +439,24 @@ table_recap <- as.matrix(round(table_recap / rowSums(table_recap), 3))
 row.names(table_recap) <- paste0(c(as.character(0:4), "\U2265 5"), "  ")
 colnames(table_recap) <- paste0(c(as.character(0:4), "\U2265 5"), "\n")
 
-options(repr.plot.width = 8, repr.plot.height = 8)
-# save = TRUE
 
-# if (save) {svglite("../../figure/aids_Probabilities.svg", width = 8, height = 8)}
+save <- FALSE
+if (save) {
+  svglite("../../figure/aids_Probabilities.svg", width = 8, height = 8)
+}
 
-options(repr.plot.width = 8, repr.plot.height = 8)
+options(repr.plot.width = 10, repr.plot.height = 10)
 corrplot <- corrplot(table_recap,
-  method = "color", is.corr = FALSE, addCoef.col = "black", addCoefasPercent = TRUE, number.cex = 1.2, cl.pos = "n", tl.col = "black", tl.cex = 1.5, tl.srt = 0,
+  method = "color", is.corr = FALSE, addCoef.col = "black", addCoefasPercent = TRUE, number.cex = 1.2, mar = c(7, 7, 7, 7), cl.pos = "n", tl.col = "black", tl.cex = 1.5, tl.srt = 0,
   col = colorRampPalette(c("white", "#f5f5f5", colors["avatar", "color"]))(50)
 )
-mtext(text = "Local cloaking first iteration", side = 2, line = -2, las = 0, cex = 1.9, adj = 0.28)
-mtext(text = "Local cloaking second iteration", side = 3, line = 2, las = 0, cex = 1.8, adj = 0.51)
+mtext(text = "Local cloaking first iteration", side = 2, line = 0, las = 0, cex = 1.9, adj = 0.18, outer = FALSE)
+mtext(text = "Local cloaking second iteration", side = 3, line = 0, las = 0, cex = 1.8, adj = 0.30, outer = FALSE)
 
-# if (save) {dev.off()}
+if (save) {
+  dev.off()
+}
+
 
 df_table <- data.frame()
 for (i in 1:4) {
