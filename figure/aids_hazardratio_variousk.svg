@@ -1215,6 +1215,6 @@
 <text x='644.27' y='477.67' text-anchor='middle' style='font-size: 15.00px; fill: #4D4D4D; font-family: Liberation Sans;' textLength='38.16px' lengthAdjust='spacingAndGlyphs'>1000</text>
 <text x='391.89' y='495.19' text-anchor='middle' style='font-size: 16.00px; font-family: Liberation Sans;' textLength='261.80px' lengthAdjust='spacingAndGlyphs'>Number of nearest neighbors (k)</text>
 <text transform='translate(17.14,233.64) rotate(-90)' text-anchor='middle' style='font-size: 16.00px; font-family: Liberation Sans;' textLength='172.71px' lengthAdjust='spacingAndGlyphs'>Hazard ratio between</text>
-<text transform='translate(34.42,233.64) rotate(-90)' text-anchor='middle' style='font-size: 16.00px; font-family: Liberation Sans;' textLength='150.85px' lengthAdjust='spacingAndGlyphs'>arms 0 and arms 1</text>
+<text transform='translate(34.42,233.64) rotate(-90)' text-anchor='middle' style='font-size: 16.00px; font-family: Liberation Sans;' textLength='150.85px' lengthAdjust='spacingAndGlyphs'>arm 0 and arm 1</text>
 </g>
 </svg>

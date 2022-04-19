@@ -142,7 +142,7 @@ ggsurv <- ggsurvplot(surv,
   xlab = "Time (week)",
   ylab = "Proportion not reaching\nprimary end point",
   censor.shape = "",
-  legend.labs = c("Arms 0", "Arms 0", "Arms 1", "Arms 1"),
+  legend.labs = c("Arm 0", "Arm 0", "Arm 1", "Arm 1"),
   palette = color
 )
 
@@ -206,7 +206,7 @@ ggsurv <- ggsurvplot(surv,
   xlab = "Time (week)",
   ylab = "Proportion not reaching\nprimary end point",
   censor.shape = "",
-  legend.labs = c("Arms 0", "Arms 0", "Arms 1", "Arms 1", "Arms 2", "Arms 2", "Arms 3", "Arms 3"),
+  legend.labs = c("Arm 0", "Arm 0", "Arm 1", "Arm 1", "Arm 2", "Arm 2", "Arm 3", "Arm 3"),
   palette = color
 )
 
@@ -233,7 +233,7 @@ res_concat["Hazard Ratio"] <- formatC(res_concat[, 1], format = "f", digits = 2)
 res_concat["95% Confidence Interval"] <- paste0(formatC(res_concat[, 3], format = "f", digits = 2), "-", formatC(res_concat[, 4], format = "f", digits = 2))
 res_concat["p-value"] <- formatC(res_concat[, 2], format = "e", digits = 2)
 res_concat <- res_concat[c(1, 4, 2, 5, 3, 6), 5:7]
-row.names(res_concat) <- c("Original arms 1", "Avatar arms 1", "Original arms 2", "Avatar arms 2", "Original arms 3", "Avatar arms 3")
+row.names(res_concat) <- c("Original arm 1", "Avatar arm 1", "Original arm 2", "Avatar arm 2", "Original arm 3", "Avatar arm 3")
 res_concat
 
 metrics_aids <- py$SecurityMetrics()

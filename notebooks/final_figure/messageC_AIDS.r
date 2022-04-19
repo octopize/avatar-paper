@@ -360,7 +360,7 @@ plotCc <- ggplot() +
   ) +
 
   # labs theme and axis
-  ylab("Hazard ratio between\narms 0 and arms 1") +
+  ylab("Hazard ratio between\narm 0 and arm 1") +
   xlab("Number of nearest neighbors (k)") +
   ylim(0.35, 1) +
   # xlim(4, )

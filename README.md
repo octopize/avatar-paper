@@ -2,7 +2,7 @@
 
 ## Description
 
-Avatar paper is an analysis project that allows researchers to see, re do, or explore figure and data of the "PAPER_NAME".
+Avatar paper is an analysis project that allows researchers to see, re do, or explore figure and data of the "Patient-centric synthetic data generation, no reason to risk re-identification the analysis of biomedical  pseudonymised data".
 The aim of the paper is to present the avatarization method.
 
 We really recommend to have a look to the scientific paper (link) before to explore the repository.

@@ -7854,7 +7854,7 @@
 <text x='631.11' y='994.08' text-anchor='middle' style='font-size: 15.00px;fill: #4D4D4D; font-family: "Arial";' textLength='33.38px' lengthAdjust='spacingAndGlyphs'>1000</text>
 <text x='383.20' y='1011.60' text-anchor='middle' style='font-size: 16.00px; font-family: "Arial";' textLength='230.32px' lengthAdjust='spacingAndGlyphs'>Number of nearest neighbors (k)</text>
 <text transform='translate(16.96,760.31) rotate(-90)' text-anchor='middle' style='font-size: 16.00px; font-family: "Arial";' textLength='152.09px' lengthAdjust='spacingAndGlyphs'>Hazard ratio between</text>
-<text transform='translate(34.24,760.31) rotate(-90)' text-anchor='middle' style='font-size: 16.00px; font-family: "Arial";' textLength='133.37px' lengthAdjust='spacingAndGlyphs'>arms 0 and arms 1</text>
+<text transform='translate(34.24,760.31) rotate(-90)' text-anchor='middle' style='font-size: 16.00px; font-family: "Arial";' textLength='133.37px' lengthAdjust='spacingAndGlyphs'>arm 0 and arm 1</text>
 </g>
 <defs>
   <clipPath id='cpNzM0LjQwfDE0NDAuMDB8NTM2Ljc2fDEwMjAuNjA='>

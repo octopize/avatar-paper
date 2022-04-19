@@ -7258,8 +7258,8 @@
 <text x='103.38' y='216.17' style='font-size: 14.00px; font-weight: bold; font-family: Arial;' textLength='89.60px' lengthAdjust='spacingAndGlyphs'>Treatments</text>
 <line x1='105.11' y1='233.23' x2='118.93' y2='233.23' style='stroke-width: 1.49; stroke: #7155C8; stroke-linecap: butt;' />
 <line x1='105.11' y1='250.51' x2='118.93' y2='250.51' style='stroke-width: 1.49; stroke: #C85573; stroke-linecap: butt;' />
-<text x='127.64' y='238.34' style='font-size: 14.00px; font-family: Arial;' textLength='49.37px' lengthAdjust='spacingAndGlyphs'>Arms 0</text>
-<text x='127.64' y='255.62' style='font-size: 14.00px; font-family: Arial;' textLength='49.37px' lengthAdjust='spacingAndGlyphs'>Arms 1</text>
+<text x='127.64' y='238.34' style='font-size: 14.00px; font-family: Arial;' textLength='49.37px' lengthAdjust='spacingAndGlyphs'>Arm 0</text>
+<text x='127.64' y='255.62' style='font-size: 14.00px; font-family: Arial;' textLength='49.37px' lengthAdjust='spacingAndGlyphs'>Arm 1</text>
 <rect x='97.90' y='275.59' width='105.64' height='65.60' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
 <text x='103.38' y='292.73' style='font-size: 14.00px; font-weight: bold; font-family: Arial;' textLength='94.68px' lengthAdjust='spacingAndGlyphs'>Data source</text>
 <line x1='105.11' y1='309.80' x2='118.93' y2='309.80' style='stroke-width: 1.49; stroke-linecap: butt;' />
