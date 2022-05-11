@@ -19,10 +19,6 @@ notebook:  ## Start jupyter notebook
 	poetry run jupyter notebook
 .PHONY: notebook
 
-compress:  ## Compress large csv
-	find . -name '*.csv' -size +10M -exec tar -cvf {}.tar.bz2 {} \; 
-	find . -name '*.csv' -size +10M -exec rm {} \;  
-.PHONY: compress
 
 .DEFAULT_GOAL := help
 help: Makefile
