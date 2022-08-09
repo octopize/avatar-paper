@@ -106,7 +106,7 @@ plotAd <- ggplot(data = df_scores_70, aes(x = reorder(feature, order), y = mean,
   xlab(NULL) +
   scale_fill_manual(name = NULL, values = c(colors["original", "color"], colors["avatar", "color"]), breaks = c(paste0("Original (AUC = ", round(mean(auc_original) * 100, 2), ")"), paste0("Avatar (AUC = ", round(mean(auc_avatar) * 100, 2), ")"))) +
   theme(
-    legend.position = c(0.75, 0.1),
+    legend.position = c(0.72, 0.1),
     legend.title = element_blank(),
     legend.key.size = unit(0.8, "cm"),
     legend.text = element_text(size = legend_text_size, color = "black", family = ""),

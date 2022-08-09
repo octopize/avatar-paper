@@ -150,7 +150,7 @@ plotAc <- ggsurv$plot <- ggsurv$plot +
   theme_minimal() +
   scale_linetype_discrete(name = c("Data source"), labels = c("Original", "Avatar")) +
   geom_label(aes(x = 11, y = 0.625, label = "Hazard ratio"), size = 6, family = "sans", fontface = "bold", label.size = NA) +
-  geom_label(aes(x = 52.5, y = 0.58, label = paste0(
+  geom_label(aes(x = 59.5, y = 0.58, label = paste0(
     "Original: HR [CI: 95%] = ", formatC(res_original_01[2], format = "f", digits = 2),
     " [", formatC(res_original_01[8], format = "f", digits = 2),
     "-", formatC(res_original_01[9], format = "f", digits = 2),
@@ -250,13 +250,12 @@ for (i in seq_along(hit_counts)) {
 df_ref_local_cloaking_aids <- data.frame(avatar = avatar_local_cloaking, original = original_local_cloaking)
 
 color_vector <- c(rep("#c14f4f", 2), rep(colors["avatar", "color"], 98))
-intersect_median_density_aids <- 42
 
 axis_title_size <- 21
 axis_text_size <- 22
 legend_text_size <- 19
 legend_title_size <- 19
-
+intersect_median_density_aids <- 52
 
 options(repr.plot.width = 10, repr.plot.height = 7)
 plotBa <- ggplot(df_ref_local_cloaking_aids, aes(avatar)) +
@@ -265,7 +264,7 @@ plotBa <- ggplot(df_ref_local_cloaking_aids, aes(avatar)) +
   #  add density
   geom_density(aes(y = ..count..), lwd = 1.5, color = "#1D1D1B") +
   # add median
-  geom_segment(aes(x = median(avatar), y = 0, xend = median(avatar), yend = 45), color = "#1D1D1B", size = 1.5) +
+  geom_segment(aes(x = median(avatar), y = 0, xend = median(avatar), yend = intersect_median_density_aids), color = "#1D1D1B", size = 2) +
   # theme, axis, legend
   theme_minimal() +
   xlab("Local cloaking") +
@@ -278,18 +277,10 @@ plotBa <- ggplot(df_ref_local_cloaking_aids, aes(avatar)) +
   xlim(c(-1, 100)) +
 
   # add arrow and text
-  ## segment median
-  geom_segment(aes(
-    x = median(avatar),
-    y = 0, xend = median(avatar),
-    yend = intersect_median_density_aids
-  ),
-  color = "#1D1D1B", size = 2
-  ) +
   ## arrow median
   geom_segment(aes(
     x = median(avatar) + 25,
-    y = intersect_median_density_aids + 100,
+    y = intersect_median_density_aids + 50,
     xend = median(avatar) + 1,
     yend = intersect_median_density_aids
   ),
@@ -299,7 +290,7 @@ plotBa <- ggplot(df_ref_local_cloaking_aids, aes(avatar)) +
   ## text median
   geom_label(aes(
     x = median(avatar) + 39.,
-    y = intersect_median_density_aids + 100,
+    y = intersect_median_density_aids + 50,
     label = paste0("Median = ", median(avatar))
   ),
   size = 9,
@@ -309,7 +300,7 @@ plotBa <- ggplot(df_ref_local_cloaking_aids, aes(avatar)) +
   ## arrow hidden rate
   geom_segment(aes(
     x = median(avatar) + 25,
-    y = intersect_median_density_aids + 138,
+    y = intersect_median_density_aids + 88,
     xend = 1, yend = sum(df_ref_local_cloaking_aids[, 1] == 0)
   ),
   color = "#1D1D1B", size = 0.8,
@@ -321,7 +312,7 @@ plotBa <- ggplot(df_ref_local_cloaking_aids, aes(avatar)) +
   ## text hidden rate
   geom_label(aes(
     x = median(avatar) + 45,
-    y = intersect_median_density_aids + 141,
+    y = intersect_median_density_aids + 88,
     label = paste0("Hidden rate = ", round(metrics_aids$hidden_rate, 0), " %")
   ),
   size = 9,
