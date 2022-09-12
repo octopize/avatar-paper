@@ -41,7 +41,7 @@ data <- data[, -1]
 avatar <- read.csv(paste0("../datasets/AIDS/aids_avatarized_base_k20_nf5.csv"), sep = ",", na.strings = c("NA", "", NA))
 avatar$arms <- as.factor(avatar$arms)
 
-# Synthpop data 
+# Synthpop data
 synthpop <- read.csv(paste0("../datasets/AIDS/aids_synthpop_base.csv"), sep = ",", na.strings = c("NA", "", NA))
 synthpop$arms <- as.factor(synthpop$arms)
 
@@ -289,83 +289,95 @@ plotAc <- ggsurv$plot <- ggsurv$plot +
 
 ##### ORIGINAL - SYNTHPOP comparison
 
-data$arms <- as.factor(data$arms)
-summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = data))
-res_ori <- cbind(summary_cox$coefficients[, c("exp(coef)", "Pr(>|z|)")], summary_cox$conf.int[, c("lower .95", "upper .95")])
+get_survival_results <- function(data, synthetic, names = c("Original", "Synthetic")) {
+  data$arms <- as.factor(data$arms)
+  #
+  summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = data))
+  res_ori <- cbind(summary_cox$coefficients[, c("exp(coef)", "Pr(>|z|)")], summary_cox$conf.int[, c("lower .95", "upper .95")])
 
-data_arms01 <- data[data$arms %in% c(0, 1), ]
-data_arms01$arms <- as.factor(as.character(data_arms01$arms))
-summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = data_arms01))
-res_original_01 <- cbind(summary_cox$coefficients, summary_cox$conf.int)
+  data_arms01 <- data[data$arms %in% c(0, 1), ]
+  data_arms01$arms <- as.factor(as.character(data_arms01$arms))
+  summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = data_arms01))
+  res_original_01 <- cbind(summary_cox$coefficients, summary_cox$conf.int)
 
-summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = synthpop))
-res_avat <- cbind(summary_cox$coefficients[, c("exp(coef)", "Pr(>|z|)")], summary_cox$conf.int[, c("lower .95", "upper .95")])
+  summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = synthetic))
+  res_avat <- cbind(summary_cox$coefficients[, c("exp(coef)", "Pr(>|z|)")], summary_cox$conf.int[, c("lower .95", "upper .95")])
 
-synthpop_arms01 <- synthpop[synthpop$arms %in% c(0, 1), ]
-synthpop_arms01$arms <- as.factor(as.character(synthpop_arms01$arms))
-summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = synthpop_arms01))
-res_synthpop_01 <- cbind(summary_cox$coefficients, summary_cox$conf.int)
+  synthetic_arms01 <- synthetic[synthetic$arms %in% c(0, 1), ]
+  synthetic_arms01$arms <- as.factor(as.character(synthetic_arms01$arms))
+  summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = synthetic_arms01))
+  res_synthetic_01 <- cbind(summary_cox$coefficients, summary_cox$conf.int)
 
-data_arms01$type <- "Original"
-synthpop_arms01$type <- "Synthpop"
-data_concat_01 <- rbind(data_arms01, synthpop_arms01)
-data_concat_01$type <- factor(data_concat_01$type, levels = c("Original", "Synthpop"))
+  data_arms01$type <- names[1]
+  synthetic_arms01$type <- names[2]
+  data_concat <- rbind(data_arms01, synthetic_arms01)
+  data_concat$type <- factor(data_concat$type, levels = c("Original", "synthetic"))
 
-# Survival curve calculation
-surv <- survfit(Surv(time = days / 7, event = cens) ~ factor(arms) + type, data = data_concat_01)
+  # Survival curve computation
+  survival_curve <- survfit(Surv(time = days / 7, event = cens) ~ factor(arms) + type, data = data_concat)
 
+  return(data_concat, survival_curve)
+}
+
+
+get_survival_plot <- function(survival_curve, survival_data, names = c("Original", "Synthetic")) {
+  options(repr.plot.width = 10, repr.plot.height = 7)
+  ggsurv <- ggsurvplot(survival_curve,
+    data = survival_data, conf.int = FALSE,
+    risk.table = FALSE,
+    legend.title = "Treatments",
+    censor.cex = 100,
+    linetype = c("type"),
+    size = 0.7, xlim = c(0, 155), ylim = c(0.5, 1), break.x.by = 40,
+    ggtheme = theme_minimal(),
+    xlab = "Time (week)",
+    ylab = "Proportion not reaching\nprimary end point",
+    censor.shape = "",
+    legend.labs = c("Arm 0", "Arm 0", "Arm 1", "Arm 1"),
+    palette = color
+  )
+  survival_plot <- ggsurv$plot +
+    theme_minimal() +
+    scale_linetype_discrete(name = c("Data source"), labels = c("Original", "Synthpop")) +
+    geom_label(aes(x = 11, y = 0.625, label = "Hazard ratio"), size = 6, family = "sans", fontface = "bold", label.size = NA) +
+    geom_label(aes(x = 59.5, y = 0.58, label = paste0(
+      "Original: HR [CI: 95%] = ", formatC(res_original_01[2], format = "f", digits = 2),
+      " [", formatC(res_original_01[8], format = "f", digits = 2),
+      "-", formatC(res_original_01[9], format = "f", digits = 2),
+      "] ; p-value = ", formatC(res_original_01[5], format = "e", digits = 2),
+      "\nSynthpop: HR [CI: 95%] = ", formatC(res_synthpop_01[2], format = "f", digits = 2),
+      " [", formatC(res_synthpop_01[8], format = "f", digits = 2),
+      "-", formatC(res_synthpop_01[9], format = "f", digits = 2),
+      "] ; p-value = ", formatC(res_synthpop_01[5], format = "e", digits = 2), "  "
+    )),
+    size = 6.2, family = "sans", label.size = NA
+    ) +
+    theme(
+      legend.position = c(0.105, 0.5),
+      legend.background = element_rect(fill = "white", size = 0.5, linetype = "blank"),
+      legend.text = element_text(size = legend_text_size, color = "black", family = "sans"),
+      legend.title = element_text(size = legend_title_size, color = "black", family = "sans", face = "bold"),
+      axis.text = element_text(size = axis_text_size, color = "black", family = "sans"),
+      axis.title.y = element_text(vjust = 2),
+      axis.title = element_text(size = axis_title_size, color = "black", family = "sans"),
+      axis.line = element_line(colour = "black", size = 0.5, linetype = "solid", arrow = arrow(type = "closed", length = unit(5, "pt"))),
+      text = element_text(size = 14)
+    )
+
+  ggsave(file = paste0("../figures/tmp_aids_", names[1], "_survival.svg"), plot = survival_plot, width = 10, height = 7, dpi = 290)
+
+  return(survival_plot)
+}
+
+list[survival_results, survival_curve] <- get_survival_results(data, synthpop, names = c("Original", "Synthpop"))
 # Display time: about 15 seconds
 
 color <- c("#7155c8", "#c85573")
 
-options(repr.plot.width = 10, repr.plot.height = 7)
-ggsurv <- ggsurvplot(surv,
-                     data = data_concat_01, conf.int = FALSE,
-                     risk.table = FALSE,
-                     legend.title = "Treatments",
-                     censor.cex = 100,
-                     linetype = c("type"),
-                     size = 0.7, xlim = c(0, 155), ylim = c(0.5, 1), break.x.by = 40,
-                     ggtheme = theme_minimal(),
-                     xlab = "Time (week)",
-                     ylab = "Proportion not reaching\nprimary end point",
-                     censor.shape = "",
-                     legend.labs = c("Arm 0", "Arm 0", "Arm 1", "Arm 1"),
-                     palette = color
-)
-
-synthpop_plotAc <- ggsurv$plot <- ggsurv$plot +
-  theme_minimal() +
-  scale_linetype_discrete(name = c("Data source"), labels = c("Original", "Synthpop")) +
-  geom_label(aes(x = 11, y = 0.625, label = "Hazard ratio"), size = 6, family = "sans", fontface = "bold", label.size = NA) +
-  geom_label(aes(x = 59.5, y = 0.58, label = paste0(
-    "Original: HR [CI: 95%] = ", formatC(res_original_01[2], format = "f", digits = 2),
-    " [", formatC(res_original_01[8], format = "f", digits = 2),
-    "-", formatC(res_original_01[9], format = "f", digits = 2),
-    "] ; p-value = ", formatC(res_original_01[5], format = "e", digits = 2),
-    "\nSynthpop: HR [CI: 95%] = ", formatC(res_synthpop_01[2], format = "f", digits = 2),
-    " [", formatC(res_synthpop_01[8], format = "f", digits = 2),
-    "-", formatC(res_synthpop_01[9], format = "f", digits = 2),
-    "] ; p-value = ", formatC(res_synthpop_01[5], format = "e", digits = 2), "  "
-  )),
-  size = 6.2, family = "sans", label.size = NA
-  ) +
-  
-  theme(
-    legend.position = c(0.105, 0.5),
-    legend.background = element_rect(fill = "white", size = 0.5, linetype = "blank"),
-    legend.text = element_text(size = legend_text_size, color = "black", family = "sans"),
-    legend.title = element_text(size = legend_title_size, color = "black", family = "sans", face = "bold"),
-    axis.text = element_text(size = axis_text_size, color = "black", family = "sans"),
-    axis.title.y = element_text(vjust = 2),
-    axis.title = element_text(size = axis_title_size, color = "black", family = "sans"),
-    axis.line = element_line(colour = "black", size = 0.5, linetype = "solid", arrow = arrow(type = "closed", length = unit(5, "pt"))),
-    text = element_text(size = 14)
-  )
 
 
 
-# ggsave(file="../figures/aids_synthpop_survival.svg", plot=synthpop_plotAc, width=10, height=7, dpi = 290)
+
 
 ##### ORIGINAL - CTGAN comparison
 
@@ -400,18 +412,18 @@ color <- c("#7155c8", "#c85573")
 
 options(repr.plot.width = 10, repr.plot.height = 7)
 ggsurv <- ggsurvplot(surv,
-                     data = data_concat_01, conf.int = FALSE,
-                     risk.table = FALSE,
-                     legend.title = "Treatments",
-                     censor.cex = 100,
-                     linetype = c("type"),
-                     size = 0.7, xlim = c(0, 155), ylim = c(0.5, 1), break.x.by = 40,
-                     ggtheme = theme_minimal(),
-                     xlab = "Time (week)",
-                     ylab = "Proportion not reaching\nprimary end point",
-                     censor.shape = "",
-                     legend.labs = c("Arm 0", "Arm 0", "Arm 1", "Arm 1"),
-                     palette = color
+  data = data_concat_01, conf.int = FALSE,
+  risk.table = FALSE,
+  legend.title = "Treatments",
+  censor.cex = 100,
+  linetype = c("type"),
+  size = 0.7, xlim = c(0, 155), ylim = c(0.5, 1), break.x.by = 40,
+  ggtheme = theme_minimal(),
+  xlab = "Time (week)",
+  ylab = "Proportion not reaching\nprimary end point",
+  censor.shape = "",
+  legend.labs = c("Arm 0", "Arm 0", "Arm 1", "Arm 1"),
+  palette = color
 )
 
 ctgan_plotAc <- ggsurv$plot <- ggsurv$plot +
@@ -430,7 +442,7 @@ ctgan_plotAc <- ggsurv$plot <- ggsurv$plot +
   )),
   size = 6.2, family = "sans", label.size = NA
   ) +
-  
+
   theme(
     legend.position = c(0.105, 0.5),
     legend.background = element_rect(fill = "white", size = 0.5, linetype = "blank"),
