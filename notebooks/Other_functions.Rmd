@@ -131,6 +131,8 @@ ggplot(aids_results, aes(x = Hazard_Ratio, y = type_f, colour = type)) +
 ```{python}
 
 # Need to import original + avatar + synthpop + CTGAN 
+## IMPORTANT dfs need to have proper 'id' column 
+# run data['id'] = data.index after import
 # Need to specify categorical_val and continous_val upstream
 
 #### AIDS
