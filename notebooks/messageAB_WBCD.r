@@ -28,9 +28,13 @@ py_run_string("from metrics.privacy_metrics.local_cloaking import get_local_cloa
 data <- read.csv("../datasets/WBCD/breast_cancer_wisconsin.csv", sep = ",", na.strings = c("NA", "", NA))
 data <- data[, -1]
 avatar <- read.csv("../datasets/WBCD/breast_cancer_wisconsin_avatarized_k20.csv", sep = ",", na.strings = c("NA", "", NA))
+synthpop <- read.csv("../datasets/WBCD/wbcd_synthpop_base.csv", sep = ",", na.strings = c("NA", "", NA))
+ctgan <- read.csv("../datasets/WBCD/wbcd_CTGAN_base_2.csv", sep = ",", na.strings = c("NA", "", NA))
 
 avatar$Class <- as.factor(avatar$Class)
 data$Class <- as.factor(data$Class)
+synthpop$Class <- as.factor(synthpop$Class)
+ctgan$Class <- as.factor(ctgan$Class)
 
 colors <- read.csv("../color.csv", stringsAsFactors = FALSE)
 rownames(colors) <- colors$type
@@ -39,6 +43,8 @@ axis_title_size <- 20
 axis_text_size <- 20
 legend_text_size <- 20
 legend_title_size <- 20
+
+##### ORIGINAL - AVATAR comparison
 
 # Merge of datasets
 data_tot <- rbind(data, avatar)
@@ -80,6 +86,92 @@ plotAb <- ggplot(res_ind_tot, aes(x = Dim.1, y = Dim.2, fill = type)) +
 
 # ggsave(file="../figures/WBCD_pca_2D.svg", plot=plot, width=10, height=7, dpi = 320)
 
+##### ORIGINAL - SYNTHPOP comparison
+
+# Merge of datasets
+data_tot <- rbind(data, synthpop)
+
+#  Perform FAMD with synthpop as supplemental individuals
+famd <- FAMD(data_tot, ncp = 5, graph = FALSE, ind.sup = (nrow(data_tot) / 2 + 1):nrow(data_tot))
+res_ind <- as.data.frame(famd$ind$coord)
+res_ind_sup <- as.data.frame(famd$ind.sup$coord)
+res_ind["type"] <- "Original"
+res_ind_sup["type"] <- "Synthpop"
+res_ind_tot <- rbind(res_ind, res_ind_sup)
+
+set.seed(43)
+rows <- sample(nrow(res_ind_tot))
+res_ind_tot <- res_ind_tot[rows, ]
+
+options(repr.plot.width = 10, repr.plot.height = 7)
+synthpop_plotAb <- ggplot(res_ind_tot, aes(x = Dim.1, y = Dim.2, fill = type)) +
+  # add points
+  geom_point(size = 3, shape = 21, alpha = 1) +
+  #  fill according data source
+  aes(fill = factor(type)) +
+  scale_fill_manual(values = c(colors["original", "color"], colors["synthpop", "color"])) +
+  # add axis label with explained variability
+  xlab(paste0("Dim. 1 (", round(famd$eig[1, 2], 2), "%)")) +
+  ylab(paste0("Dim. 2 (", round(famd$eig[2, 2], 2), "%)")) +
+  ylim(c(-2.6, 5.3)) +
+  # theme and figure details
+  theme_bw() +
+  theme(
+    legend.position = c(0.9, 0.12),
+    legend.title = element_blank(),
+    legend.key.size = unit(0.8, "cm"),
+    legend.text = element_text(size = legend_text_size, color = "black", family = ""),
+    axis.text = element_text(size = axis_text_size, color = "black", family = ""),
+    axis.title = element_text(size = axis_title_size, color = "black", family = "")
+  )
+
+
+# ggsave(file="../figures/WBCD_synthpop_pca_2D.svg", plot=synthpop_plotAb, width=10, height=7, dpi = 320)
+
+##### ORIGINAL - CTGAN comparison
+
+# Merge of datasets
+data_tot <- rbind(data, ctgan)
+
+#  Perform FAMD with ctgan as supplemental individuals
+famd <- FAMD(data_tot, ncp = 5, graph = FALSE, ind.sup = (nrow(data_tot) / 2 + 1):nrow(data_tot))
+res_ind <- as.data.frame(famd$ind$coord)
+res_ind_sup <- as.data.frame(famd$ind.sup$coord)
+res_ind["type"] <- "Original"
+res_ind_sup["type"] <- "CTGAN"
+res_ind_tot <- rbind(res_ind, res_ind_sup)
+
+set.seed(43)
+rows <- sample(nrow(res_ind_tot))
+res_ind_tot <- res_ind_tot[rows, ]
+
+options(repr.plot.width = 10, repr.plot.height = 7)
+ctgan_plotAb <- ggplot(res_ind_tot, aes(x = Dim.1, y = Dim.2, fill = type)) +
+  # add points
+  geom_point(size = 3, shape = 21, alpha = 1) +
+  #  fill according data source
+  aes(fill = factor(type)) +
+  scale_fill_manual(values = c(colors["ctgan", "color"], colors["original", "color"])) +
+  # add axis label with explained variability
+  xlab(paste0("Dim. 1 (", round(famd$eig[1, 2], 2), "%)")) +
+  ylab(paste0("Dim. 2 (", round(famd$eig[2, 2], 2), "%)")) +
+  ylim(c(-2.6, 5.3)) +
+  # theme and figure details
+  theme_bw() +
+  theme(
+    legend.position = c(0.9, 0.12),
+    legend.title = element_blank(),
+    legend.key.size = unit(0.8, "cm"),
+    legend.text = element_text(size = legend_text_size, color = "black", family = ""),
+    axis.text = element_text(size = axis_text_size, color = "black", family = ""),
+    axis.title = element_text(size = axis_title_size, color = "black", family = "")
+  )
+
+
+# ggsave(file="../figures/WBCD_ctgan_pca_2D.svg", plot=ctgan_plotAb, width=10, height=7, dpi = 320)
+
+
+##### ORIGINAL - AVATAR comparison
 
 ## AUC and F-score results
 df_scores_70 <- read.csv("../datasets/results_df/WBCD_f-score_variousSplit.csv")

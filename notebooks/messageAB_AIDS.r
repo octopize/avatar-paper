@@ -41,6 +41,14 @@ data <- data[, -1]
 avatar <- read.csv(paste0("../datasets/AIDS/aids_avatarized_base_k20_nf5.csv"), sep = ",", na.strings = c("NA", "", NA))
 avatar$arms <- as.factor(avatar$arms)
 
+# Synthpop data 
+synthpop <- read.csv(paste0("../datasets/AIDS/aids_synthpop_base.csv"), sep = ",", na.strings = c("NA", "", NA))
+synthpop$arms <- as.factor(synthpop$arms)
+
+# CTGAN data
+ctgan <- read.csv(paste0("../datasets/AIDS/aids_CTGAN_base_2.csv"), sep = ",", na.strings = c("NA", "", NA))
+ctgan$arms <- as.factor(ctgan$arms)
+
 colors <- read.csv("../color.csv", stringsAsFactors = FALSE)
 rownames(colors) <- colors$type
 
@@ -52,9 +60,15 @@ legend_title_size <- 19
 # input missing data to project the individuals in the multidimensional space
 data_imp <- complete(mice(data, m = 1, maxit = 50, seed = 500, printFlag = FALSE), 1)
 avatar_imp <- complete(mice(avatar, m = 1, maxit = 50, seed = 500, printFlag = FALSE), 1)
+synthpop_imp <- complete(mice(synthpop, m = 1, maxit = 50, seed = 500, printFlag = FALSE), 1)
+ctgan_imp <- complete(mice(ctgan, m = 1, maxit = 50, seed = 500, printFlag = FALSE), 1)
 
 data$cd496 <- data_imp$cd496
 avatar$cd496 <- avatar_imp$cd496
+synthpop$cd496 <- synthpop_imp$cd496
+ctgan$cd496 <- ctgan_imp$cd496
+
+##### ORIGINAL - AVATAR comparison
 
 data_tot <- rbind(data, avatar)
 data_tot_num <- data_tot
@@ -98,8 +112,102 @@ plotAa <- ggplot(res_ind_2D, aes(x = Dim.1, y = Dim.2, fill = factor(type))) +
   )
 
 
-# ggsave(file="../figures/aids_pca2D.svg", plot=plot, width=10, height=7, dpi = 320)
+# ggsave(file="../figures/aids_pca2D.svg", plot=plotAa, width=10, height=7, dpi = 320)
 
+##### ORIGINAL - SYNTHPOP comparison
+
+data_tot <- rbind(data, synthpop)
+data_tot_num <- data_tot
+categorical <- c(
+  "hemo", "homo", "drugs", "karnof", "oprior", "z30", "zprior", "race",
+  "gender", "str2", "strat", "symptom", "treat", "offtrt", "r", "cens", "arms"
+)
+data_tot[categorical] <- lapply(data_tot[categorical], factor)
+
+famd <- FAMD(data_tot, ncp = 5, graph = FALSE, ind.sup = (nrow(data_tot) / 2 + 1):nrow(data_tot))
+res_ind <- as.data.frame(famd$ind$coord)
+res_ind_sup <- as.data.frame(famd$ind.sup$coord)
+
+res_ind_2D <- res_ind[, 1:2]
+res_ind_2D["type"] <- "Original"
+res_ind_sup["type"] <- "Synthpop"
+res_ind_2D <- rbind(res_ind_2D, res_ind_sup[, c("Dim.1", "Dim.2", "type")])
+
+set.seed(42)
+rows <- sample(nrow(res_ind_2D))
+res_ind_2D <- res_ind_2D[rows, ]
+
+options(repr.plot.width = 10, repr.plot.height = 7)
+syntpop_plotAa <- ggplot(res_ind_2D, aes(x = Dim.1, y = Dim.2, fill = factor(type))) +
+  # point
+  geom_point(size = 3, shape = 21, alpha = 1) +
+  # fill by type
+  aes(fill = factor(type)) +
+  scale_fill_manual(values = c(colors["original", "color"], colors["synthpop", "color"])) +
+  # theme and details
+  xlab(paste0("Dim. 1 (", formatC(famd$eig[1, 2], format = "f", digits = 2), "%)")) +
+  ylab(paste0("Dim. 2 (", formatC(famd$eig[2, 2], format = "f", digits = 2), "%)")) +
+  labs(fill = "") +
+  theme_bw() +
+  theme(
+    legend.position = c(0.86, 0.15),
+    legend.text = element_text(size = legend_text_size, color = "black", family = "sans"),
+    axis.text = element_text(size = axis_text_size, color = "black", family = "sans"),
+    axis.title = element_text(size = axis_title_size, color = "black", family = "sans"),
+    legend.background = element_rect(fill = "white", linetype = "solid")
+  )
+
+
+# ggsave(file="../figures/aids_synthpop_pca2D.svg", plot=syntpop_plotAa, width=10, height=7, dpi = 320)
+
+##### ORIGINAL - CTGAN comparison
+
+data_tot <- rbind(data, ctgan)
+data_tot_num <- data_tot
+categorical <- c(
+  "hemo", "homo", "drugs", "karnof", "oprior", "z30", "zprior", "race",
+  "gender", "str2", "strat", "symptom", "treat", "offtrt", "r", "cens", "arms"
+)
+data_tot[categorical] <- lapply(data_tot[categorical], factor)
+
+famd <- FAMD(data_tot, ncp = 5, graph = FALSE, ind.sup = (nrow(data_tot) / 2 + 1):nrow(data_tot))
+res_ind <- as.data.frame(famd$ind$coord)
+res_ind_sup <- as.data.frame(famd$ind.sup$coord)
+
+res_ind_2D <- res_ind[, 1:2]
+res_ind_2D["type"] <- "Original"
+res_ind_sup["type"] <- "CTGAN"
+res_ind_2D <- rbind(res_ind_2D, res_ind_sup[, c("Dim.1", "Dim.2", "type")])
+
+set.seed(42)
+rows <- sample(nrow(res_ind_2D))
+res_ind_2D <- res_ind_2D[rows, ]
+
+options(repr.plot.width = 10, repr.plot.height = 7)
+ctgan_plotAa <- ggplot(res_ind_2D, aes(x = Dim.1, y = Dim.2, fill = factor(type))) +
+  # point
+  geom_point(size = 3, shape = 21, alpha = 1) +
+  # fill by type
+  aes(fill = factor(type)) +
+  scale_fill_manual(values = c(colors["ctgan", "color"], colors["original", "color"])) +
+  # theme and details
+  xlab(paste0("Dim. 1 (", formatC(famd$eig[1, 2], format = "f", digits = 2), "%)")) +
+  ylab(paste0("Dim. 2 (", formatC(famd$eig[2, 2], format = "f", digits = 2), "%)")) +
+  labs(fill = "") +
+  theme_bw() +
+  theme(
+    legend.position = c(0.86, 0.15),
+    legend.text = element_text(size = legend_text_size, color = "black", family = "sans"),
+    axis.text = element_text(size = axis_text_size, color = "black", family = "sans"),
+    axis.title = element_text(size = axis_title_size, color = "black", family = "sans"),
+    legend.background = element_rect(fill = "white", linetype = "solid")
+  )
+
+
+# ggsave(file="../figures/aids_CTGAN_pca2D.svg", plot=ctgan_plotAa, width=10, height=7, dpi = 320)
+
+
+##### ORIGINAL - AVATAR comparison
 
 data$arms <- as.factor(data$arms)
 summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = data))
@@ -177,7 +285,167 @@ plotAc <- ggsurv$plot <- ggsurv$plot +
 
 
 
-# ggsave(file="../figures/aids_avatar_survival.tiff", plot=plotAc, width=10, height=7, dpi = 290)
+# ggsave(file="../figures/aids_avatar_survival.svg", plot=plotAc, width=10, height=7, dpi = 290)
+
+##### ORIGINAL - SYNTHPOP comparison
+
+data$arms <- as.factor(data$arms)
+summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = data))
+res_ori <- cbind(summary_cox$coefficients[, c("exp(coef)", "Pr(>|z|)")], summary_cox$conf.int[, c("lower .95", "upper .95")])
+
+data_arms01 <- data[data$arms %in% c(0, 1), ]
+data_arms01$arms <- as.factor(as.character(data_arms01$arms))
+summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = data_arms01))
+res_original_01 <- cbind(summary_cox$coefficients, summary_cox$conf.int)
+
+summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = synthpop))
+res_avat <- cbind(summary_cox$coefficients[, c("exp(coef)", "Pr(>|z|)")], summary_cox$conf.int[, c("lower .95", "upper .95")])
+
+synthpop_arms01 <- synthpop[synthpop$arms %in% c(0, 1), ]
+synthpop_arms01$arms <- as.factor(as.character(synthpop_arms01$arms))
+summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = synthpop_arms01))
+res_synthpop_01 <- cbind(summary_cox$coefficients, summary_cox$conf.int)
+
+data_arms01$type <- "Original"
+synthpop_arms01$type <- "Synthpop"
+data_concat_01 <- rbind(data_arms01, synthpop_arms01)
+data_concat_01$type <- factor(data_concat_01$type, levels = c("Original", "Synthpop"))
+
+# Survival curve calculation
+surv <- survfit(Surv(time = days / 7, event = cens) ~ factor(arms) + type, data = data_concat_01)
+
+# Display time: about 15 seconds
+
+color <- c("#7155c8", "#c85573")
+
+options(repr.plot.width = 10, repr.plot.height = 7)
+ggsurv <- ggsurvplot(surv,
+                     data = data_concat_01, conf.int = FALSE,
+                     risk.table = FALSE,
+                     legend.title = "Treatments",
+                     censor.cex = 100,
+                     linetype = c("type"),
+                     size = 0.7, xlim = c(0, 155), ylim = c(0.5, 1), break.x.by = 40,
+                     ggtheme = theme_minimal(),
+                     xlab = "Time (week)",
+                     ylab = "Proportion not reaching\nprimary end point",
+                     censor.shape = "",
+                     legend.labs = c("Arm 0", "Arm 0", "Arm 1", "Arm 1"),
+                     palette = color
+)
+
+synthpop_plotAc <- ggsurv$plot <- ggsurv$plot +
+  theme_minimal() +
+  scale_linetype_discrete(name = c("Data source"), labels = c("Original", "Synthpop")) +
+  geom_label(aes(x = 11, y = 0.625, label = "Hazard ratio"), size = 6, family = "sans", fontface = "bold", label.size = NA) +
+  geom_label(aes(x = 59.5, y = 0.58, label = paste0(
+    "Original: HR [CI: 95%] = ", formatC(res_original_01[2], format = "f", digits = 2),
+    " [", formatC(res_original_01[8], format = "f", digits = 2),
+    "-", formatC(res_original_01[9], format = "f", digits = 2),
+    "] ; p-value = ", formatC(res_original_01[5], format = "e", digits = 2),
+    "\nSynthpop: HR [CI: 95%] = ", formatC(res_synthpop_01[2], format = "f", digits = 2),
+    " [", formatC(res_synthpop_01[8], format = "f", digits = 2),
+    "-", formatC(res_synthpop_01[9], format = "f", digits = 2),
+    "] ; p-value = ", formatC(res_synthpop_01[5], format = "e", digits = 2), "  "
+  )),
+  size = 6.2, family = "sans", label.size = NA
+  ) +
+  
+  theme(
+    legend.position = c(0.105, 0.5),
+    legend.background = element_rect(fill = "white", size = 0.5, linetype = "blank"),
+    legend.text = element_text(size = legend_text_size, color = "black", family = "sans"),
+    legend.title = element_text(size = legend_title_size, color = "black", family = "sans", face = "bold"),
+    axis.text = element_text(size = axis_text_size, color = "black", family = "sans"),
+    axis.title.y = element_text(vjust = 2),
+    axis.title = element_text(size = axis_title_size, color = "black", family = "sans"),
+    axis.line = element_line(colour = "black", size = 0.5, linetype = "solid", arrow = arrow(type = "closed", length = unit(5, "pt"))),
+    text = element_text(size = 14)
+  )
+
+
+
+# ggsave(file="../figures/aids_synthpop_survival.svg", plot=synthpop_plotAc, width=10, height=7, dpi = 290)
+
+##### ORIGINAL - CTGAN comparison
+
+data$arms <- as.factor(data$arms)
+summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = data))
+res_ori <- cbind(summary_cox$coefficients[, c("exp(coef)", "Pr(>|z|)")], summary_cox$conf.int[, c("lower .95", "upper .95")])
+
+data_arms01 <- data[data$arms %in% c(0, 1), ]
+data_arms01$arms <- as.factor(as.character(data_arms01$arms))
+summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = data_arms01))
+res_original_01 <- cbind(summary_cox$coefficients, summary_cox$conf.int)
+
+summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = ctgan))
+res_avat <- cbind(summary_cox$coefficients[, c("exp(coef)", "Pr(>|z|)")], summary_cox$conf.int[, c("lower .95", "upper .95")])
+
+ctgan_arms01 <- ctgan[ctgan$arms %in% c(0, 1), ]
+ctgan_arms01$arms <- as.factor(as.character(ctgan_arms01$arms))
+summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = ctgan_arms01))
+res_ctgan_01 <- cbind(summary_cox$coefficients, summary_cox$conf.int)
+
+data_arms01$type <- "Original"
+ctgan_arms01$type <- "CTGAN"
+data_concat_01 <- rbind(data_arms01, ctgan_arms01)
+data_concat_01$type <- factor(data_concat_01$type, levels = c("Original", "CTGAN"))
+
+# Survival curve calculation
+surv <- survfit(Surv(time = days / 7, event = cens) ~ factor(arms) + type, data = data_concat_01)
+
+# Display time: about 15 seconds
+
+color <- c("#7155c8", "#c85573")
+
+options(repr.plot.width = 10, repr.plot.height = 7)
+ggsurv <- ggsurvplot(surv,
+                     data = data_concat_01, conf.int = FALSE,
+                     risk.table = FALSE,
+                     legend.title = "Treatments",
+                     censor.cex = 100,
+                     linetype = c("type"),
+                     size = 0.7, xlim = c(0, 155), ylim = c(0.5, 1), break.x.by = 40,
+                     ggtheme = theme_minimal(),
+                     xlab = "Time (week)",
+                     ylab = "Proportion not reaching\nprimary end point",
+                     censor.shape = "",
+                     legend.labs = c("Arm 0", "Arm 0", "Arm 1", "Arm 1"),
+                     palette = color
+)
+
+ctgan_plotAc <- ggsurv$plot <- ggsurv$plot +
+  theme_minimal() +
+  scale_linetype_discrete(name = c("Data source"), labels = c("Original", "CTGAN")) +
+  geom_label(aes(x = 11, y = 0.625, label = "Hazard ratio"), size = 6, family = "sans", fontface = "bold", label.size = NA) +
+  geom_label(aes(x = 59.5, y = 0.58, label = paste0(
+    "Original: HR [CI: 95%] = ", formatC(res_original_01[2], format = "f", digits = 2),
+    " [", formatC(res_original_01[8], format = "f", digits = 2),
+    "-", formatC(res_original_01[9], format = "f", digits = 2),
+    "] ; p-value = ", formatC(res_original_01[5], format = "e", digits = 2),
+    "\nCTGAN: HR [CI: 95%] = ", formatC(res_ctgan_01[2], format = "f", digits = 2),
+    " [", formatC(res_ctgan_01[8], format = "f", digits = 2),
+    "-", formatC(res_ctgan_01[9], format = "f", digits = 2),
+    "] ; p-value = ", formatC(res_ctgan_01[5], format = "e", digits = 2), "  "
+  )),
+  size = 6.2, family = "sans", label.size = NA
+  ) +
+  
+  theme(
+    legend.position = c(0.105, 0.5),
+    legend.background = element_rect(fill = "white", size = 0.5, linetype = "blank"),
+    legend.text = element_text(size = legend_text_size, color = "black", family = "sans"),
+    legend.title = element_text(size = legend_title_size, color = "black", family = "sans", face = "bold"),
+    axis.text = element_text(size = axis_text_size, color = "black", family = "sans"),
+    axis.title.y = element_text(vjust = 2),
+    axis.title = element_text(size = axis_title_size, color = "black", family = "sans"),
+    axis.line = element_line(colour = "black", size = 0.5, linetype = "solid", arrow = arrow(type = "closed", length = unit(5, "pt"))),
+    text = element_text(size = 14)
+  )
+
+# ggsave(file="../figures/aids_ctgan_survival.svg", plot=ctgan_plotAc, width=10, height=7, dpi = 290)
+
+##### ORIGINAL - AVATAR comparison
 
 data$type <- "Original"
 avatar$type <- "Avatar"
@@ -320,7 +588,7 @@ plotBa <- ggplot(df_ref_local_cloaking_aids, aes(avatar)) +
   ) +
   xlim(c(-1, 100))
 
-# ggsave(file="../figures/aids_local_cloaking.tiff", plot=plot, width=10, height=7, dpi = 290)
+# ggsave(file="../figures/aids_local_cloaking.svg", plot=plot, width=10, height=7, dpi = 290)
 
 
 # Proportion of individuals with a local cloaking under 5
