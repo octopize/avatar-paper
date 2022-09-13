@@ -1,0 +1,3601 @@
+F-score,feature,type
+0.992456262482657,Clump Thickness,Original
+2.0784080573443307,Uniformity of Cell Size,Original
+1.9161834830915643,Uniformity of Cell Shape,Original
+0.8405709971080896,Marginal Adhesion,Original
+0.8361896815995288,Single Epithelial Cell Size,Original
+1.8534793342968627,Bare Nuclei,Original
+1.4604366291375561,Bland Chromatin,Original
+0.8574321779120675,Normal Nucleoli,Original
+0.17876028808048602,Mitoses,Original
+1.130239008229054,Clump Thickness,Original
+1.9006181014849823,Uniformity of Cell Size,Original
+1.9056602839622891,Uniformity of Cell Shape,Original
+0.8513566406946858,Marginal Adhesion,Original
+0.8396151715778841,Single Epithelial Cell Size,Original
+2.0107803102684763,Bare Nuclei,Original
+1.1860808241549463,Bland Chromatin,Original
+0.9422385961878738,Normal Nucleoli,Original
+0.18405359997427367,Mitoses,Original
+1.0640953799034032,Clump Thickness,Original
+1.99847241254104,Uniformity of Cell Size,Original
+2.0634224725901054,Uniformity of Cell Shape,Original
+0.8603887911322903,Marginal Adhesion,Original
+0.9100956560455821,Single Epithelial Cell Size,Original
+2.0030490138665042,Bare Nuclei,Original
+1.3600823007051532,Bland Chromatin,Original
+0.9750738588620096,Normal Nucleoli,Original
+0.1744359206950663,Mitoses,Original
+1.1481119060296787,Clump Thickness,Original
+1.9412915821702756,Uniformity of Cell Size,Original
+1.8481082462455045,Uniformity of Cell Shape,Original
+0.8685965407282167,Marginal Adhesion,Original
+0.7837239028922267,Single Epithelial Cell Size,Original
+1.8172144492687627,Bare Nuclei,Original
+1.309516756412059,Bland Chromatin,Original
+0.9380778342771267,Normal Nucleoli,Original
+0.17255273818778133,Mitoses,Original
+1.1355538163324348,Clump Thickness,Original
+2.043769768784384,Uniformity of Cell Size,Original
+1.9345511348230198,Uniformity of Cell Shape,Original
+0.9312689016426611,Marginal Adhesion,Original
+0.9329781423816131,Single Epithelial Cell Size,Original
+2.01050510194185,Bare Nuclei,Original
+1.331694686928655,Bland Chromatin,Original
+1.024388117926912,Normal Nucleoli,Original
+0.22145381152606644,Mitoses,Original
+1.09840071130604,Clump Thickness,Original
+1.8611669065537513,Uniformity of Cell Size,Original
+1.9153260000450172,Uniformity of Cell Shape,Original
+0.8068436548206513,Marginal Adhesion,Original
+0.795522958880717,Single Epithelial Cell Size,Original
+2.144639558010173,Bare Nuclei,Original
+1.3207560853201292,Bland Chromatin,Original
+0.8190747088442144,Normal Nucleoli,Original
+0.17005519360596327,Mitoses,Original
+1.154931325022255,Clump Thickness,Original
+1.9401341387118922,Uniformity of Cell Size,Original
+1.9786279802956954,Uniformity of Cell Shape,Original
+0.9231430243054727,Marginal Adhesion,Original
+0.8594748565974374,Single Epithelial Cell Size,Original
+2.072233653565386,Bare Nuclei,Original
+1.5343899470125448,Bland Chromatin,Original
+1.007164263230203,Normal Nucleoli,Original
+0.17696166539082211,Mitoses,Original
+1.219154396085224,Clump Thickness,Original
+1.9247723260007812,Uniformity of Cell Size,Original
+1.8747524061320833,Uniformity of Cell Shape,Original
+0.8975322167797098,Marginal Adhesion,Original
+0.85205721736522,Single Epithelial Cell Size,Original
+1.8424273580420363,Bare Nuclei,Original
+1.3435485476935216,Bland Chromatin,Original
+0.9502056656995715,Normal Nucleoli,Original
+0.17732653901707152,Mitoses,Original
+1.0402505590038322,Clump Thickness,Original
+1.716687050878031,Uniformity of Cell Size,Original
+1.839511927065627,Uniformity of Cell Shape,Original
+0.7745229829410232,Marginal Adhesion,Original
+0.7655415078440287,Single Epithelial Cell Size,Original
+1.9292146518882989,Bare Nuclei,Original
+1.1449562451950097,Bland Chromatin,Original
+0.8420095962587,Normal Nucleoli,Original
+0.16902773061595483,Mitoses,Original
+1.1003999624353902,Clump Thickness,Original
+1.8760146309831227,Uniformity of Cell Size,Original
+1.8700256656227565,Uniformity of Cell Shape,Original
+0.8783440467159237,Marginal Adhesion,Original
+0.8390587813613459,Single Epithelial Cell Size,Original
+2.1118215699274527,Bare Nuclei,Original
+1.1644907816154464,Bland Chromatin,Original
+0.9005067020890342,Normal Nucleoli,Original
+0.18345319503844973,Mitoses,Original
+1.0461585839814302,Clump Thickness,Original
+1.949391990688344,Uniformity of Cell Size,Original
+1.9928887105964777,Uniformity of Cell Shape,Original
+0.8153886305296991,Marginal Adhesion,Original
+0.8523663929411667,Single Epithelial Cell Size,Original
+1.652390299496368,Bare Nuclei,Original
+1.1982704485736209,Bland Chromatin,Original
+0.9275415057009813,Normal Nucleoli,Original
+0.21064223081410735,Mitoses,Original
+0.9916888946687222,Clump Thickness,Original
+1.7818878606617383,Uniformity of Cell Size,Original
+1.9204353903698526,Uniformity of Cell Shape,Original
+0.8331775198616646,Marginal Adhesion,Original
+0.9164792342075209,Single Epithelial Cell Size,Original
+2.0055379990225726,Bare Nuclei,Original
+1.3428908727032378,Bland Chromatin,Original
+1.029336072920116,Normal Nucleoli,Original
+0.18957786812896193,Mitoses,Original
+1.0409680735036368,Clump Thickness,Original
+1.8467051728560595,Uniformity of Cell Size,Original
+1.8987186812334693,Uniformity of Cell Shape,Original
+1.01132507769534,Marginal Adhesion,Original
+0.954660187756635,Single Epithelial Cell Size,Original
+2.0608444861530897,Bare Nuclei,Original
+1.2545486614994568,Bland Chromatin,Original
+0.9454708353656696,Normal Nucleoli,Original
+0.20966615405605227,Mitoses,Original
+1.0433367210512006,Clump Thickness,Original
+1.9066166351975424,Uniformity of Cell Size,Original
+2.0820820206372512,Uniformity of Cell Shape,Original
+0.9089393449700632,Marginal Adhesion,Original
+0.8152385014551516,Single Epithelial Cell Size,Original
+2.0528312533212394,Bare Nuclei,Original
+1.127003715688819,Bland Chromatin,Original
+0.8742880441279905,Normal Nucleoli,Original
+0.18316110520267886,Mitoses,Original
+1.0942785886858706,Clump Thickness,Original
+2.006347987570545,Uniformity of Cell Size,Original
+1.942235501332675,Uniformity of Cell Shape,Original
+0.9699104243463235,Marginal Adhesion,Original
+0.8155878912385195,Single Epithelial Cell Size,Original
+2.2213749515433356,Bare Nuclei,Original
+1.3595326533056595,Bland Chromatin,Original
+0.8119288717773239,Normal Nucleoli,Original
+0.228822741882058,Mitoses,Original
+1.0190039825955368,Clump Thickness,Original
+1.8531058454279101,Uniformity of Cell Size,Original
+2.0123966123866293,Uniformity of Cell Shape,Original
+1.0587978425754652,Marginal Adhesion,Original
+0.8313503638502716,Single Epithelial Cell Size,Original
+2.2461918234568183,Bare Nuclei,Original
+1.3134267111624756,Bland Chromatin,Original
+0.8707716228496598,Normal Nucleoli,Original
+0.1704208079047629,Mitoses,Original
+1.2349302205721997,Clump Thickness,Original
+1.8005610653879494,Uniformity of Cell Size,Original
+1.888978183545942,Uniformity of Cell Shape,Original
+0.9190274419764485,Marginal Adhesion,Original
+0.8897088016612638,Single Epithelial Cell Size,Original
+1.829510076617586,Bare Nuclei,Original
+1.4081526599877179,Bland Chromatin,Original
+1.0483328096024078,Normal Nucleoli,Original
+0.191044301177402,Mitoses,Original
+1.1959647145552499,Clump Thickness,Original
+2.053110841547364,Uniformity of Cell Size,Original
+1.9830636747543469,Uniformity of Cell Shape,Original
+0.98490193482303,Marginal Adhesion,Original
+0.8521763328843076,Single Epithelial Cell Size,Original
+1.862387577604283,Bare Nuclei,Original
+1.626830637108714,Bland Chromatin,Original
+1.0487231860253599,Normal Nucleoli,Original
+0.2117481534532472,Mitoses,Original
+1.057878657489222,Clump Thickness,Original
+1.8914045779463318,Uniformity of Cell Size,Original
+1.9110638301220877,Uniformity of Cell Shape,Original
+0.9269403041865838,Marginal Adhesion,Original
+0.8294945431180238,Single Epithelial Cell Size,Original
+1.9585249126176232,Bare Nuclei,Original
+1.194535012062255,Bland Chromatin,Original
+0.8915196097077065,Normal Nucleoli,Original
+0.17084185464524818,Mitoses,Original
+1.0227511244880385,Clump Thickness,Original
+2.142616542135454,Uniformity of Cell Size,Original
+2.1124698638237542,Uniformity of Cell Shape,Original
+1.0604321390155487,Marginal Adhesion,Original
+0.9339536695771739,Single Epithelial Cell Size,Original
+2.0615575340067545,Bare Nuclei,Original
+1.1865130033007039,Bland Chromatin,Original
+0.9622168995350521,Normal Nucleoli,Original
+0.18831942523112025,Mitoses,Original
+0.988584619847561,Clump Thickness,Original
+1.722956318561291,Uniformity of Cell Size,Original
+1.85634789301183,Uniformity of Cell Shape,Original
+0.7998683628965166,Marginal Adhesion,Original
+0.7588339548700844,Single Epithelial Cell Size,Original
+1.9131718560563653,Bare Nuclei,Original
+1.170388433038423,Bland Chromatin,Original
+0.8378202392011996,Normal Nucleoli,Original
+0.18072812534757904,Mitoses,Original
+1.0230366059521132,Clump Thickness,Original
+2.0081907117865327,Uniformity of Cell Size,Original
+2.1093241867984265,Uniformity of Cell Shape,Original
+0.839327858841863,Marginal Adhesion,Original
+0.959869293789683,Single Epithelial Cell Size,Original
+2.1842291791229944,Bare Nuclei,Original
+1.347821483978636,Bland Chromatin,Original
+1.0381306063280369,Normal Nucleoli,Original
+0.1842482908887287,Mitoses,Original
+1.0552925148843821,Clump Thickness,Original
+1.670550936835778,Uniformity of Cell Size,Original
+1.7640156449999438,Uniformity of Cell Shape,Original
+0.824639914665995,Marginal Adhesion,Original
+0.7334316954468906,Single Epithelial Cell Size,Original
+2.093378153595188,Bare Nuclei,Original
+1.2198018029952917,Bland Chromatin,Original
+0.8655590029891934,Normal Nucleoli,Original
+0.188529149505111,Mitoses,Original
+1.0812664389307367,Clump Thickness,Original
+1.9685373626841076,Uniformity of Cell Size,Original
+2.0733071963174257,Uniformity of Cell Shape,Original
+0.9714426249830828,Marginal Adhesion,Original
+0.9114549122036997,Single Epithelial Cell Size,Original
+1.9856598796015594,Bare Nuclei,Original
+1.333337140132302,Bland Chromatin,Original
+0.9851874492028915,Normal Nucleoli,Original
+0.19361270985174125,Mitoses,Original
+1.299099866015387,Clump Thickness,Original
+1.7631699454157443,Uniformity of Cell Size,Original
+1.949128770179767,Uniformity of Cell Shape,Original
+0.8561825895544902,Marginal Adhesion,Original
+0.7865152391628473,Single Epithelial Cell Size,Original
+1.9759911441278737,Bare Nuclei,Original
+1.3045781516844164,Bland Chromatin,Original
+0.9178414774094359,Normal Nucleoli,Original
+0.17658580852919967,Mitoses,Original
+0.9805227293819044,Clump Thickness,Original
+1.777665275924532,Uniformity of Cell Size,Original
+1.7957880845894916,Uniformity of Cell Shape,Original
+0.7784563487988087,Marginal Adhesion,Original
+0.8488139079939392,Single Epithelial Cell Size,Original
+2.0064910299012495,Bare Nuclei,Original
+1.3296903059484533,Bland Chromatin,Original
+0.9173140630812805,Normal Nucleoli,Original
+0.19593005660176327,Mitoses,Original
+1.204579990362638,Clump Thickness,Original
+1.9043277899746638,Uniformity of Cell Size,Original
+1.9132563812077379,Uniformity of Cell Shape,Original
+0.8759336033229502,Marginal Adhesion,Original
+0.8559026941262211,Single Epithelial Cell Size,Original
+1.9456439725946229,Bare Nuclei,Original
+1.2524894060778977,Bland Chromatin,Original
+0.9319821176146497,Normal Nucleoli,Original
+0.2111384426517135,Mitoses,Original
+1.201917749227911,Clump Thickness,Original
+1.9316755062411142,Uniformity of Cell Size,Original
+1.9925757752558118,Uniformity of Cell Shape,Original
+0.992771040523497,Marginal Adhesion,Original
+0.8583638568612969,Single Epithelial Cell Size,Original
+1.9741430927737162,Bare Nuclei,Original
+1.2635036916198947,Bland Chromatin,Original
+0.9640804033789101,Normal Nucleoli,Original
+0.19326681925205624,Mitoses,Original
+1.2273210080220096,Clump Thickness,Original
+1.8329745995703879,Uniformity of Cell Size,Original
+2.0531661890270296,Uniformity of Cell Shape,Original
+0.787616817498629,Marginal Adhesion,Original
+0.7589863936735659,Single Epithelial Cell Size,Original
+2.132841083395279,Bare Nuclei,Original
+1.341594582863846,Bland Chromatin,Original
+0.965414451400706,Normal Nucleoli,Original
+0.17730139633110462,Mitoses,Original
+1.0354613541230624,Clump Thickness,Original
+2.1178317104701554,Uniformity of Cell Size,Original
+2.1106274724568124,Uniformity of Cell Shape,Original
+0.94741228458055,Marginal Adhesion,Original
+0.8701351019510003,Single Epithelial Cell Size,Original
+1.784569262046791,Bare Nuclei,Original
+1.318477658248715,Bland Chromatin,Original
+1.0234512447383983,Normal Nucleoli,Original
+0.19265972105599719,Mitoses,Original
+1.0640821134044098,Clump Thickness,Original
+1.7380570484004327,Uniformity of Cell Size,Original
+1.9466452381995882,Uniformity of Cell Shape,Original
+0.946303787670187,Marginal Adhesion,Original
+0.8257622363179515,Single Epithelial Cell Size,Original
+1.9727667243744518,Bare Nuclei,Original
+1.2452660064959182,Bland Chromatin,Original
+0.9847135061759278,Normal Nucleoli,Original
+0.19785204061574366,Mitoses,Original
+1.1395704829840072,Clump Thickness,Original
+2.0308816107099394,Uniformity of Cell Size,Original
+2.060675065051852,Uniformity of Cell Shape,Original
+0.9355130230830712,Marginal Adhesion,Original
+0.8893388733396802,Single Epithelial Cell Size,Original
+2.1533901095844326,Bare Nuclei,Original
+1.3550863884302793,Bland Chromatin,Original
+1.0168739763612906,Normal Nucleoli,Original
+0.15731567318387474,Mitoses,Original
+1.208563230618581,Clump Thickness,Original
+1.8766467585317725,Uniformity of Cell Size,Original
+1.872353717868249,Uniformity of Cell Shape,Original
+0.9104654079995346,Marginal Adhesion,Original
+0.8122657019275087,Single Epithelial Cell Size,Original
+1.6891723777703604,Bare Nuclei,Original
+1.224405883616571,Bland Chromatin,Original
+0.9733566383139665,Normal Nucleoli,Original
+0.1903090302488336,Mitoses,Original
+1.1960150267006187,Clump Thickness,Original
+1.8082502117681585,Uniformity of Cell Size,Original
+1.9575940895163533,Uniformity of Cell Shape,Original
+0.8304969422680339,Marginal Adhesion,Original
+0.7894879662675653,Single Epithelial Cell Size,Original
+1.7453148468701922,Bare Nuclei,Original
+1.2045803383352744,Bland Chromatin,Original
+0.8804581083190128,Normal Nucleoli,Original
+0.20654453506682238,Mitoses,Original
+1.131469282507357,Clump Thickness,Original
+1.8680332163261295,Uniformity of Cell Size,Original
+1.850151965841284,Uniformity of Cell Shape,Original
+0.8729451885318974,Marginal Adhesion,Original
+0.8464186925444906,Single Epithelial Cell Size,Original
+2.0986278847954223,Bare Nuclei,Original
+1.3243955353937176,Bland Chromatin,Original
+0.8923534589022558,Normal Nucleoli,Original
+0.18215615084503647,Mitoses,Original
+1.0195899938059336,Clump Thickness,Original
+1.745233315401162,Uniformity of Cell Size,Original
+1.856927803500155,Uniformity of Cell Shape,Original
+1.0189398891825032,Marginal Adhesion,Original
+0.7537855977774204,Single Epithelial Cell Size,Original
+2.053538805355553,Bare Nuclei,Original
+1.4676706414402287,Bland Chromatin,Original
+0.9900468738246709,Normal Nucleoli,Original
+0.19217091635655012,Mitoses,Original
+1.0740590624525648,Clump Thickness,Original
+1.9485020766836383,Uniformity of Cell Size,Original
+1.9692969956499333,Uniformity of Cell Shape,Original
+0.8590906440531335,Marginal Adhesion,Original
+0.7949510070832367,Single Epithelial Cell Size,Original
+2.0024016447079207,Bare Nuclei,Original
+1.3635954394836693,Bland Chromatin,Original
+0.9724505580967975,Normal Nucleoli,Original
+0.17867638710587366,Mitoses,Original
+1.0795935567235606,Clump Thickness,Original
+1.9345949648034815,Uniformity of Cell Size,Original
+1.794931737566818,Uniformity of Cell Shape,Original
+0.9156458165237213,Marginal Adhesion,Original
+0.8580627412079059,Single Epithelial Cell Size,Original
+1.818325577183131,Bare Nuclei,Original
+1.4809814949429678,Bland Chromatin,Original
+0.9300441815163826,Normal Nucleoli,Original
+0.19954834882448702,Mitoses,Original
+1.1529891342505676,Clump Thickness,Original
+1.7838875734821684,Uniformity of Cell Size,Original
+1.8049496442320305,Uniformity of Cell Shape,Original
+0.8895278389590202,Marginal Adhesion,Original
+0.753477619266844,Single Epithelial Cell Size,Original
+2.088350669760272,Bare Nuclei,Original
+1.1674058129576985,Bland Chromatin,Original
+0.9124772347799278,Normal Nucleoli,Original
+0.1910785148900855,Mitoses,Original
+1.086089243366618,Clump Thickness,Original
+1.8760131534616868,Uniformity of Cell Size,Original
+1.9150604611433648,Uniformity of Cell Shape,Original
+0.9266276030553878,Marginal Adhesion,Original
+0.8879815906354862,Single Epithelial Cell Size,Original
+1.9813092016277354,Bare Nuclei,Original
+1.4501820753394594,Bland Chromatin,Original
+0.9046590848777749,Normal Nucleoli,Original
+0.20119907836475875,Mitoses,Original
+1.2757929060012614,Clump Thickness,Original
+1.7924706823738308,Uniformity of Cell Size,Original
+1.9280889996745012,Uniformity of Cell Shape,Original
+0.7785707901907097,Marginal Adhesion,Original
+0.8118543563876424,Single Epithelial Cell Size,Original
+2.055116623726236,Bare Nuclei,Original
+1.2155776826124156,Bland Chromatin,Original
+0.9475736034428585,Normal Nucleoli,Original
+0.20624418644702788,Mitoses,Original
+1.0456964465551575,Clump Thickness,Original
+1.7870390265180698,Uniformity of Cell Size,Original
+1.8881914344009552,Uniformity of Cell Shape,Original
+0.927388819789169,Marginal Adhesion,Original
+0.8028550209862214,Single Epithelial Cell Size,Original
+1.8876609795745534,Bare Nuclei,Original
+1.2167366704754716,Bland Chromatin,Original
+0.939860325223213,Normal Nucleoli,Original
+0.18933387549021038,Mitoses,Original
+1.0471097110631016,Clump Thickness,Original
+1.89785815067481,Uniformity of Cell Size,Original
+2.0953953069301674,Uniformity of Cell Shape,Original
+0.8731653907184466,Marginal Adhesion,Original
+0.7509791567211271,Single Epithelial Cell Size,Original
+2.399009298652564,Bare Nuclei,Original
+1.1455361939611834,Bland Chromatin,Original
+0.8569230540470387,Normal Nucleoli,Original
+0.1929038679700024,Mitoses,Original
+1.0132938966391192,Clump Thickness,Original
+1.8056482367270512,Uniformity of Cell Size,Original
+1.97018758251137,Uniformity of Cell Shape,Original
+0.8076702775015275,Marginal Adhesion,Original
+0.8168878918558441,Single Epithelial Cell Size,Original
+1.9475311949192144,Bare Nuclei,Original
+1.3207318892797086,Bland Chromatin,Original
+1.043021696547954,Normal Nucleoli,Original
+0.19254797303854057,Mitoses,Original
+1.2069963011414035,Clump Thickness,Original
+1.6143451829658384,Uniformity of Cell Size,Original
+1.773542614237682,Uniformity of Cell Shape,Original
+0.8804736336991801,Marginal Adhesion,Original
+0.7593122807206905,Single Epithelial Cell Size,Original
+1.9777685764520412,Bare Nuclei,Original
+1.3950006195812785,Bland Chromatin,Original
+1.0189572089006445,Normal Nucleoli,Original
+0.20162581528356519,Mitoses,Original
+1.1676385105879143,Clump Thickness,Original
+1.9329934836088656,Uniformity of Cell Size,Original
+2.092890738632903,Uniformity of Cell Shape,Original
+0.8538427141380792,Marginal Adhesion,Original
+0.8474647017671327,Single Epithelial Cell Size,Original
+1.930456475527399,Bare Nuclei,Original
+1.3132434932754953,Bland Chromatin,Original
+1.0045905151201362,Normal Nucleoli,Original
+0.19179688997992178,Mitoses,Original
+1.069144891748165,Clump Thickness,Original
+1.7671952109571822,Uniformity of Cell Size,Original
+1.7670420758289207,Uniformity of Cell Shape,Original
+0.8961333287718138,Marginal Adhesion,Original
+0.797851853756919,Single Epithelial Cell Size,Original
+1.622469179503465,Bare Nuclei,Original
+1.2160125464229576,Bland Chromatin,Original
+0.8146633038799781,Normal Nucleoli,Original
+0.17338161606576852,Mitoses,Original
+1.1474236527963457,Clump Thickness,Original
+1.7623164722566058,Uniformity of Cell Size,Original
+1.8145773491732138,Uniformity of Cell Shape,Original
+0.946690903257968,Marginal Adhesion,Original
+0.8211230106771256,Single Epithelial Cell Size,Original
+2.2197425439895397,Bare Nuclei,Original
+1.336087463905341,Bland Chromatin,Original
+0.912841608822347,Normal Nucleoli,Original
+0.19678875194697523,Mitoses,Original
+1.1356838650654582,Clump Thickness,Original
+1.9517443285463225,Uniformity of Cell Size,Original
+2.010088603157211,Uniformity of Cell Shape,Original
+0.9073822380297231,Marginal Adhesion,Original
+0.9116785011177115,Single Epithelial Cell Size,Original
+1.8319055529557473,Bare Nuclei,Original
+1.4130856240878056,Bland Chromatin,Original
+0.8895653470371739,Normal Nucleoli,Original
+0.18647331523659977,Mitoses,Original
+1.0476757754317931,Clump Thickness,Original
+2.0441007397586106,Uniformity of Cell Size,Original
+1.9586792983153516,Uniformity of Cell Shape,Original
+0.8012117744102658,Marginal Adhesion,Original
+0.7523250477072566,Single Epithelial Cell Size,Original
+2.0156971381373197,Bare Nuclei,Original
+1.1826363385305372,Bland Chromatin,Original
+0.8306635883402282,Normal Nucleoli,Original
+0.1691382430129228,Mitoses,Original
+1.108217540944013,Clump Thickness,Original
+1.83731842016586,Uniformity of Cell Size,Original
+1.9284675855526743,Uniformity of Cell Shape,Original
+0.9303732439600682,Marginal Adhesion,Original
+0.777633313974315,Single Epithelial Cell Size,Original
+1.8338029564616323,Bare Nuclei,Original
+1.2734372159419234,Bland Chromatin,Original
+0.8251110588399034,Normal Nucleoli,Original
+0.18060169223454262,Mitoses,Original
+1.0591182361037006,Clump Thickness,Original
+1.973366986389046,Uniformity of Cell Size,Original
+2.042432600602622,Uniformity of Cell Shape,Original
+0.8059909961462173,Marginal Adhesion,Original
+0.7835652571266468,Single Epithelial Cell Size,Original
+1.8753256127466997,Bare Nuclei,Original
+1.3086367139381845,Bland Chromatin,Original
+0.9550592895728554,Normal Nucleoli,Original
+0.21564752557378167,Mitoses,Original
+1.0453978618067028,Clump Thickness,Original
+1.9572473141706819,Uniformity of Cell Size,Original
+1.9886210751485722,Uniformity of Cell Shape,Original
+0.8553184492126641,Marginal Adhesion,Original
+0.8461965555915777,Single Epithelial Cell Size,Original
+1.7866715684784038,Bare Nuclei,Original
+1.2910233599612164,Bland Chromatin,Original
+0.9698563405914237,Normal Nucleoli,Original
+0.17136393904207126,Mitoses,Original
+1.0993199586201736,Clump Thickness,Original
+1.7515261088089271,Uniformity of Cell Size,Original
+1.8565785486026942,Uniformity of Cell Shape,Original
+0.8842396312355549,Marginal Adhesion,Original
+0.8075345183508157,Single Epithelial Cell Size,Original
+1.8437681087439264,Bare Nuclei,Original
+1.3520841487934914,Bland Chromatin,Original
+0.9292620403713472,Normal Nucleoli,Original
+0.17525207641153032,Mitoses,Original
+1.216707171729732,Clump Thickness,Original
+1.8224521837711745,Uniformity of Cell Size,Original
+2.0091624451543306,Uniformity of Cell Shape,Original
+0.8515009409766622,Marginal Adhesion,Original
+0.7187462494899562,Single Epithelial Cell Size,Original
+1.7771691523233062,Bare Nuclei,Original
+1.1967042258694363,Bland Chromatin,Original
+1.0888958274995812,Normal Nucleoli,Original
+0.19345672947856793,Mitoses,Original
+1.238101710909482,Clump Thickness,Original
+1.7833607514942316,Uniformity of Cell Size,Original
+1.8585074778640132,Uniformity of Cell Shape,Original
+0.8165276668127979,Marginal Adhesion,Original
+0.8138269380274469,Single Epithelial Cell Size,Original
+2.037361204481071,Bare Nuclei,Original
+1.4784329378716485,Bland Chromatin,Original
+0.9474016469347444,Normal Nucleoli,Original
+0.23395145031311365,Mitoses,Original
+1.0760579992519161,Clump Thickness,Original
+1.7359010570537867,Uniformity of Cell Size,Original
+1.768141676883015,Uniformity of Cell Shape,Original
+0.9439060451850847,Marginal Adhesion,Original
+0.7617908432901047,Single Epithelial Cell Size,Original
+2.0056240950349546,Bare Nuclei,Original
+1.0999651905246077,Bland Chromatin,Original
+0.8840597594959422,Normal Nucleoli,Original
+0.19843702354171255,Mitoses,Original
+1.1329795469232864,Clump Thickness,Original
+1.773777582706435,Uniformity of Cell Size,Original
+1.9113299778556767,Uniformity of Cell Shape,Original
+0.9027968799637255,Marginal Adhesion,Original
+0.7451216736986379,Single Epithelial Cell Size,Original
+2.248386842556591,Bare Nuclei,Original
+1.2649952046964514,Bland Chromatin,Original
+0.9233290712173251,Normal Nucleoli,Original
+0.19149219526285718,Mitoses,Original
+1.1794806092307322,Clump Thickness,Original
+1.7633109105457416,Uniformity of Cell Size,Original
+1.8440224211025456,Uniformity of Cell Shape,Original
+0.8311925647252655,Marginal Adhesion,Original
+0.8293716472505467,Single Epithelial Cell Size,Original
+1.988617920448515,Bare Nuclei,Original
+1.3401194950118298,Bland Chromatin,Original
+0.9453496467539256,Normal Nucleoli,Original
+0.17117556116057636,Mitoses,Original
+1.1000693376003141,Clump Thickness,Original
+1.7594493335058985,Uniformity of Cell Size,Original
+1.8257267380983493,Uniformity of Cell Shape,Original
+0.8712719493714186,Marginal Adhesion,Original
+0.8761444280053249,Single Epithelial Cell Size,Original
+1.78894464880418,Bare Nuclei,Original
+1.2910000627626936,Bland Chromatin,Original
+0.8351651816123284,Normal Nucleoli,Original
+0.17032442638677578,Mitoses,Original
+1.1661815496802435,Clump Thickness,Original
+1.873050062449952,Uniformity of Cell Size,Original
+1.9952921892035773,Uniformity of Cell Shape,Original
+0.8592933694294653,Marginal Adhesion,Original
+0.7443067009883281,Single Epithelial Cell Size,Original
+1.7067117059840975,Bare Nuclei,Original
+1.4259049205170027,Bland Chromatin,Original
+0.8607443457292495,Normal Nucleoli,Original
+0.19071476674383386,Mitoses,Original
+1.1291991031372113,Clump Thickness,Original
+1.946929946064469,Uniformity of Cell Size,Original
+1.9249107974512314,Uniformity of Cell Shape,Original
+0.8787430532985746,Marginal Adhesion,Original
+0.8265538703075921,Single Epithelial Cell Size,Original
+1.952987339298592,Bare Nuclei,Original
+1.444884159763632,Bland Chromatin,Original
+0.9488284176103786,Normal Nucleoli,Original
+0.20395987369483545,Mitoses,Original
+1.2303376228021328,Clump Thickness,Original
+1.861970546024108,Uniformity of Cell Size,Original
+2.0509511915426066,Uniformity of Cell Shape,Original
+0.8398917626362957,Marginal Adhesion,Original
+0.8187174422554298,Single Epithelial Cell Size,Original
+1.7642732750708987,Bare Nuclei,Original
+1.3016939374587972,Bland Chromatin,Original
+1.0249700605897787,Normal Nucleoli,Original
+0.1971398951354836,Mitoses,Original
+1.0872145611112034,Clump Thickness,Original
+1.846557551240776,Uniformity of Cell Size,Original
+1.995947835142943,Uniformity of Cell Shape,Original
+0.8897426110945922,Marginal Adhesion,Original
+0.7660908813109885,Single Epithelial Cell Size,Original
+2.19978687167856,Bare Nuclei,Original
+1.5525707144718188,Bland Chromatin,Original
+0.9954004039423056,Normal Nucleoli,Original
+0.19404631412816903,Mitoses,Original
+1.1371092919210695,Clump Thickness,Original
+1.8831205509949323,Uniformity of Cell Size,Original
+2.006981499485318,Uniformity of Cell Shape,Original
+0.8777204208305924,Marginal Adhesion,Original
+0.8754910928344342,Single Epithelial Cell Size,Original
+1.624582394283317,Bare Nuclei,Original
+1.3726391262428876,Bland Chromatin,Original
+1.008363250301067,Normal Nucleoli,Original
+0.21722121676085127,Mitoses,Original
+1.0955005481704796,Clump Thickness,Original
+1.7897896829300675,Uniformity of Cell Size,Original
+1.8201563734141581,Uniformity of Cell Shape,Original
+0.7746571121408288,Marginal Adhesion,Original
+0.7630860897878243,Single Epithelial Cell Size,Original
+1.9414888854709422,Bare Nuclei,Original
+1.296441959901152,Bland Chromatin,Original
+0.8557855903592039,Normal Nucleoli,Original
+0.17188997080802476,Mitoses,Original
+1.1738228257621641,Clump Thickness,Original
+1.8755443666478764,Uniformity of Cell Size,Original
+1.8554796462542713,Uniformity of Cell Shape,Original
+0.8515274210713317,Marginal Adhesion,Original
+0.8656842878308091,Single Epithelial Cell Size,Original
+2.1223390927133203,Bare Nuclei,Original
+1.3397104569953073,Bland Chromatin,Original
+0.8871115109012665,Normal Nucleoli,Original
+0.18116119013690796,Mitoses,Original
+0.983578609756764,Clump Thickness,Original
+1.7127018512960692,Uniformity of Cell Size,Original
+1.7721994413616757,Uniformity of Cell Shape,Original
+0.8060489106189975,Marginal Adhesion,Original
+0.7734864061347347,Single Epithelial Cell Size,Original
+2.0066629300210725,Bare Nuclei,Original
+1.3165337678305051,Bland Chromatin,Original
+1.0004523602057507,Normal Nucleoli,Original
+0.16668756837113444,Mitoses,Original
+1.0866037500357648,Clump Thickness,Original
+1.7374224701071561,Uniformity of Cell Size,Original
+1.9211146057211843,Uniformity of Cell Shape,Original
+0.9100121343902338,Marginal Adhesion,Original
+0.7946757247393805,Single Epithelial Cell Size,Original
+1.9576083836351201,Bare Nuclei,Original
+1.3599777735307614,Bland Chromatin,Original
+0.9033853469309548,Normal Nucleoli,Original
+0.1927218849329648,Mitoses,Original
+1.0224505069993544,Clump Thickness,Original
+1.7545708648828222,Uniformity of Cell Size,Original
+1.7700731147236648,Uniformity of Cell Shape,Original
+0.8996626894679243,Marginal Adhesion,Original
+0.8388693378003199,Single Epithelial Cell Size,Original
+1.9623624078958508,Bare Nuclei,Original
+1.3433782807257473,Bland Chromatin,Original
+1.004242500104706,Normal Nucleoli,Original
+0.17440635259941215,Mitoses,Original
+1.022773366148731,Clump Thickness,Original
+1.9189209696326714,Uniformity of Cell Size,Original
+1.9203386020223234,Uniformity of Cell Shape,Original
+0.8976877898978073,Marginal Adhesion,Original
+0.8046532902536195,Single Epithelial Cell Size,Original
+2.08944333159777,Bare Nuclei,Original
+1.3061447246180893,Bland Chromatin,Original
+1.0417250438634227,Normal Nucleoli,Original
+0.16661517565756317,Mitoses,Original
+1.270836593804676,Clump Thickness,Original
+1.9325757271003245,Uniformity of Cell Size,Original
+2.0802687009398166,Uniformity of Cell Shape,Original
+0.8782815687455491,Marginal Adhesion,Original
+0.8553005453038193,Single Epithelial Cell Size,Original
+1.8920154451096018,Bare Nuclei,Original
+1.4221800822853001,Bland Chromatin,Original
+0.9617856564536301,Normal Nucleoli,Original
+0.18963139155054953,Mitoses,Original
+1.0814288101137202,Clump Thickness,Original
+1.8497976592557854,Uniformity of Cell Size,Original
+1.9324222165730898,Uniformity of Cell Shape,Original
+0.8343103467926549,Marginal Adhesion,Original
+0.829952423249758,Single Epithelial Cell Size,Original
+1.9753088207226774,Bare Nuclei,Original
+1.2532643351396633,Bland Chromatin,Original
+0.9670593864262675,Normal Nucleoli,Original
+0.17290352337917414,Mitoses,Original
+1.1401470719706233,Clump Thickness,Original
+1.8834804013606763,Uniformity of Cell Size,Original
+1.9754830410042272,Uniformity of Cell Shape,Original
+0.9571882245854901,Marginal Adhesion,Original
+0.8368761579211387,Single Epithelial Cell Size,Original
+1.6880967833755978,Bare Nuclei,Original
+1.4214560926577307,Bland Chromatin,Original
+1.144701460845831,Normal Nucleoli,Original
+0.21988863733894506,Mitoses,Original
+1.0821117342593867,Clump Thickness,Original
+1.8657995214018674,Uniformity of Cell Size,Original
+1.9003628090011377,Uniformity of Cell Shape,Original
+0.8705692258553338,Marginal Adhesion,Original
+0.8130827439057432,Single Epithelial Cell Size,Original
+1.8890235230922825,Bare Nuclei,Original
+1.2278989213536193,Bland Chromatin,Original
+1.1595928442022738,Normal Nucleoli,Original
+0.17552742676733418,Mitoses,Original
+1.0179400530205696,Clump Thickness,Original
+1.8653910378795597,Uniformity of Cell Size,Original
+1.8104310632254157,Uniformity of Cell Shape,Original
+0.855765792370719,Marginal Adhesion,Original
+0.8447888307201595,Single Epithelial Cell Size,Original
+1.8497512996552636,Bare Nuclei,Original
+1.3316826434339002,Bland Chromatin,Original
+0.9112764301381557,Normal Nucleoli,Original
+0.1700815346342157,Mitoses,Original
+1.109498514033416,Clump Thickness,Original
+1.8858518543483704,Uniformity of Cell Size,Original
+1.9047800360859093,Uniformity of Cell Shape,Original
+0.9133241756772034,Marginal Adhesion,Original
+0.9207383434735454,Single Epithelial Cell Size,Original
+1.8247425695641972,Bare Nuclei,Original
+1.3467849368581757,Bland Chromatin,Original
+0.9577513854797135,Normal Nucleoli,Original
+0.20098598427718853,Mitoses,Original
+1.0341355535819796,Clump Thickness,Original
+2.1079749452987713,Uniformity of Cell Size,Original
+2.2822191480579717,Uniformity of Cell Shape,Original
+1.0066873395431886,Marginal Adhesion,Original
+0.9290371353472553,Single Epithelial Cell Size,Original
+2.073796235403571,Bare Nuclei,Original
+1.5032450410642013,Bland Chromatin,Original
+1.0230165785881793,Normal Nucleoli,Original
+0.17791058137854573,Mitoses,Original
+1.1663488368256898,Clump Thickness,Original
+2.0191378614942197,Uniformity of Cell Size,Original
+1.9331339330584545,Uniformity of Cell Shape,Original
+0.9506255370434092,Marginal Adhesion,Original
+0.8772269037193653,Single Epithelial Cell Size,Original
+1.9633099086153305,Bare Nuclei,Original
+1.2321995606697194,Bland Chromatin,Original
+0.9154521162151944,Normal Nucleoli,Original
+0.18858072446725752,Mitoses,Original
+0.9628155053882973,Clump Thickness,Original
+1.8473266115099822,Uniformity of Cell Size,Original
+1.9751993681291786,Uniformity of Cell Shape,Original
+0.8692773026327933,Marginal Adhesion,Original
+0.8525938452008005,Single Epithelial Cell Size,Original
+1.7156710749380502,Bare Nuclei,Original
+1.2540534230354377,Bland Chromatin,Original
+0.9652551718557452,Normal Nucleoli,Original
+0.14646985811447688,Mitoses,Original
+1.1852019279335,Clump Thickness,Original
+1.9471722714224824,Uniformity of Cell Size,Original
+2.020888325679598,Uniformity of Cell Shape,Original
+0.8440916127478532,Marginal Adhesion,Original
+0.867880348972649,Single Epithelial Cell Size,Original
+1.9915268216385815,Bare Nuclei,Original
+1.2687340542077346,Bland Chromatin,Original
+0.9783378601311743,Normal Nucleoli,Original
+0.19185052348500448,Mitoses,Original
+1.0834517409130706,Clump Thickness,Original
+1.70065876576993,Uniformity of Cell Size,Original
+1.8782908214330039,Uniformity of Cell Shape,Original
+0.877627521331876,Marginal Adhesion,Original
+0.8871345637763206,Single Epithelial Cell Size,Original
+1.8021557374027715,Bare Nuclei,Original
+1.202796500577567,Bland Chromatin,Original
+1.029306567890219,Normal Nucleoli,Original
+0.17456237450509515,Mitoses,Original
+1.1874832579548644,Clump Thickness,Original
+1.9314644088224764,Uniformity of Cell Size,Original
+1.908828491909683,Uniformity of Cell Shape,Original
+0.9651963711627599,Marginal Adhesion,Original
+0.7973274960517008,Single Epithelial Cell Size,Original
+2.0538630150398745,Bare Nuclei,Original
+1.281900662768025,Bland Chromatin,Original
+0.8757202972607477,Normal Nucleoli,Original
+0.20384858948441878,Mitoses,Original
+1.1136817743630947,Clump Thickness,Original
+2.0028608709093785,Uniformity of Cell Size,Original
+1.981187969311741,Uniformity of Cell Shape,Original
+0.8133584265305737,Marginal Adhesion,Original
+0.8169208427113603,Single Epithelial Cell Size,Original
+1.7853644177846668,Bare Nuclei,Original
+1.2424178503048606,Bland Chromatin,Original
+1.0062968643332775,Normal Nucleoli,Original
+0.20946492342714373,Mitoses,Original
+1.0257054805928643,Clump Thickness,Original
+1.746070404654973,Uniformity of Cell Size,Original
+1.7842571776691516,Uniformity of Cell Shape,Original
+0.8799851191030235,Marginal Adhesion,Original
+0.7978292320260465,Single Epithelial Cell Size,Original
+2.106264751127736,Bare Nuclei,Original
+1.247924069643679,Bland Chromatin,Original
+0.8690515142357964,Normal Nucleoli,Original
+0.18524117050759667,Mitoses,Original
+1.1559285088920377,Clump Thickness,Original
+2.0338234675776174,Uniformity of Cell Size,Original
+2.0180861403260097,Uniformity of Cell Shape,Original
+1.0077749634497657,Marginal Adhesion,Original
+0.8021094774178908,Single Epithelial Cell Size,Original
+1.8499558599578898,Bare Nuclei,Original
+1.3858418623687438,Bland Chromatin,Original
+0.8816624567904002,Normal Nucleoli,Original
+0.1671425630280056,Mitoses,Original
+1.37185908270725,Clump Thickness,Original
+1.9365384361296332,Uniformity of Cell Size,Original
+1.8853910216518768,Uniformity of Cell Shape,Original
+0.927258152583658,Marginal Adhesion,Original
+0.9249570518032539,Single Epithelial Cell Size,Original
+2.17554007800697,Bare Nuclei,Original
+1.4545149097959489,Bland Chromatin,Original
+1.0521507786445086,Normal Nucleoli,Original
+0.20234684832595676,Mitoses,Original
+1.0416759045887565,Clump Thickness,Original
+1.740925268951707,Uniformity of Cell Size,Original
+1.7438341508473667,Uniformity of Cell Shape,Original
+0.8709402107328846,Marginal Adhesion,Original
+0.8101484700997564,Single Epithelial Cell Size,Original
+2.14906106210927,Bare Nuclei,Original
+1.3907486066370822,Bland Chromatin,Original
+0.8929991994314563,Normal Nucleoli,Original
+0.20237279685589485,Mitoses,Original
+1.2987200119237072,Clump Thickness,Original
+1.84526932844578,Uniformity of Cell Size,Original
+1.8613672232778657,Uniformity of Cell Shape,Original
+0.8586972889615236,Marginal Adhesion,Original
+0.8862351481280296,Single Epithelial Cell Size,Original
+2.010195571458998,Bare Nuclei,Original
+1.3080682214982053,Bland Chromatin,Original
+1.0763211402635915,Normal Nucleoli,Original
+0.2385814379601466,Mitoses,Original
+1.203966344500557,Clump Thickness,Original
+1.8240646962219962,Uniformity of Cell Size,Original
+1.901072527070836,Uniformity of Cell Shape,Original
+0.864316341359361,Marginal Adhesion,Original
+0.9035493760738402,Single Epithelial Cell Size,Original
+1.9159524706859403,Bare Nuclei,Original
+1.3216360045658462,Bland Chromatin,Original
+0.9364644577350031,Normal Nucleoli,Original
+0.1829996509211051,Mitoses,Original
+1.0721547220698318,Clump Thickness,Original
+1.8160656306508143,Uniformity of Cell Size,Original
+1.8466639918052072,Uniformity of Cell Shape,Original
+0.8271121562528765,Marginal Adhesion,Original
+0.7129556164447711,Single Epithelial Cell Size,Original
+1.8731105131803731,Bare Nuclei,Original
+1.3405679301916305,Bland Chromatin,Original
+1.0388147402758097,Normal Nucleoli,Original
+0.1921163708049263,Mitoses,Original
+1.1730646984447555,Clump Thickness,Original
+2.0280459594024234,Uniformity of Cell Size,Original
+2.0351282435998166,Uniformity of Cell Shape,Original
+1.0708103644523228,Marginal Adhesion,Original
+0.8404617069543148,Single Epithelial Cell Size,Original
+1.8888856184751062,Bare Nuclei,Original
+1.4208029965581512,Bland Chromatin,Original
+1.0009352571154568,Normal Nucleoli,Original
+0.16855874490935513,Mitoses,Original
+1.0554264564734974,Clump Thickness,Original
+1.7093109480812583,Uniformity of Cell Size,Original
+1.764737067612695,Uniformity of Cell Shape,Original
+0.8485786167928395,Marginal Adhesion,Original
+0.8490162298754428,Single Epithelial Cell Size,Original
+1.891811761429506,Bare Nuclei,Original
+1.2855276471350756,Bland Chromatin,Original
+0.9241314976555302,Normal Nucleoli,Original
+0.1423658190155022,Mitoses,Original
+1.0245345165707374,Clump Thickness,Original
+1.934293108489099,Uniformity of Cell Size,Original
+1.758637729203042,Uniformity of Cell Shape,Original
+0.952164796492745,Marginal Adhesion,Original
+0.795678441822642,Single Epithelial Cell Size,Original
+1.7774911721669966,Bare Nuclei,Original
+1.35883587961614,Bland Chromatin,Original
+0.9721019395933631,Normal Nucleoli,Original
+0.1858500223064813,Mitoses,Original
+1.1666070302790765,Clump Thickness,Original
+1.9671427767805596,Uniformity of Cell Size,Original
+2.1804156508777712,Uniformity of Cell Shape,Original
+0.8865188114758378,Marginal Adhesion,Original
+0.8676531850053573,Single Epithelial Cell Size,Original
+1.9216333817078617,Bare Nuclei,Original
+1.2735623028104817,Bland Chromatin,Original
+1.104729322050049,Normal Nucleoli,Original
+0.19087080698366798,Mitoses,Original
+1.1686777744451076,Clump Thickness,Original
+1.9431372846754031,Uniformity of Cell Size,Original
+2.0315849723060797,Uniformity of Cell Shape,Original
+1.0652200998190535,Marginal Adhesion,Original
+0.7554321876486617,Single Epithelial Cell Size,Original
+2.2278164088859667,Bare Nuclei,Original
+1.5842246015614139,Bland Chromatin,Original
+1.0141283223747368,Normal Nucleoli,Original
+0.16554383342320525,Mitoses,Original
+0.9541161951892311,Clump Thickness,Original
+1.8797484181001174,Uniformity of Cell Size,Original
+1.8810026255659806,Uniformity of Cell Shape,Original
+0.8719829071041928,Marginal Adhesion,Original
+0.8805672772006343,Single Epithelial Cell Size,Original
+2.02458642483947,Bare Nuclei,Original
+1.288364570363829,Bland Chromatin,Original
+0.8274255283112387,Normal Nucleoli,Original
+0.16678821583339046,Mitoses,Original
+1.0906900736031127,Clump Thickness,Original
+1.8706031597579145,Uniformity of Cell Size,Original
+1.8285417879564898,Uniformity of Cell Shape,Original
+0.8113207712738808,Marginal Adhesion,Original
+0.8498015968467131,Single Epithelial Cell Size,Original
+1.9912193731559997,Bare Nuclei,Original
+1.298778774815094,Bland Chromatin,Original
+0.9355779721519772,Normal Nucleoli,Original
+0.18855778021104758,Mitoses,Original
+1.012944585101256,Clump Thickness,Original
+1.8365351041648383,Uniformity of Cell Size,Original
+1.9544656370495188,Uniformity of Cell Shape,Original
+0.9402472642500219,Marginal Adhesion,Original
+0.8471304955319423,Single Epithelial Cell Size,Original
+1.8657971156953683,Bare Nuclei,Original
+1.4226239176457276,Bland Chromatin,Original
+1.0241559560200852,Normal Nucleoli,Original
+0.19023399661386833,Mitoses,Original
+1.110858817406503,Clump Thickness,Original
+1.7611139044930786,Uniformity of Cell Size,Original
+1.8272074421904894,Uniformity of Cell Shape,Original
+0.8859237583393722,Marginal Adhesion,Original
+0.7867816351577934,Single Epithelial Cell Size,Original
+1.8963056173809565,Bare Nuclei,Original
+1.2697777025920516,Bland Chromatin,Original
+0.9066830821403536,Normal Nucleoli,Original
+0.1931039674182034,Mitoses,Original
+1.0298661982395405,Clump Thickness,Avatar
+2.0788042067765877,Uniformity of Cell Size,Avatar
+1.9919363127946723,Uniformity of Cell Shape,Avatar
+0.7129941411449968,Marginal Adhesion,Avatar
+0.9483874192342199,Single Epithelial Cell Size,Avatar
+2.1557965715191503,Bare Nuclei,Avatar
+1.5356332182467016,Bland Chromatin,Avatar
+0.9679592579568371,Normal Nucleoli,Avatar
+0.1532301754230699,Mitoses,Avatar
+0.9836842984713478,Clump Thickness,Avatar
+2.1683631613456567,Uniformity of Cell Size,Avatar
+2.1944069135740745,Uniformity of Cell Shape,Avatar
+0.7564973456022296,Marginal Adhesion,Avatar
+0.9797745343445201,Single Epithelial Cell Size,Avatar
+2.238110905367788,Bare Nuclei,Avatar
+1.5099676341884798,Bland Chromatin,Avatar
+1.0275165271202298,Normal Nucleoli,Avatar
+0.1619460655176745,Mitoses,Avatar
+1.32586720584677,Clump Thickness,Avatar
+2.009893572210017,Uniformity of Cell Size,Avatar
+2.151930878809691,Uniformity of Cell Shape,Avatar
+0.7707250686020672,Marginal Adhesion,Avatar
+0.9537744491167706,Single Epithelial Cell Size,Avatar
+2.097340934489465,Bare Nuclei,Avatar
+1.449077667264508,Bland Chromatin,Avatar
+1.029537751758517,Normal Nucleoli,Avatar
+0.16669019061900128,Mitoses,Avatar
+0.9877797278385071,Clump Thickness,Avatar
+1.9425989542097908,Uniformity of Cell Size,Avatar
+2.1326501294908957,Uniformity of Cell Shape,Avatar
+0.8050005021930786,Marginal Adhesion,Avatar
+0.9901878322760128,Single Epithelial Cell Size,Avatar
+2.1744733063814246,Bare Nuclei,Avatar
+1.4110449680850028,Bland Chromatin,Avatar
+0.8974052237382341,Normal Nucleoli,Avatar
+0.18420202287636472,Mitoses,Avatar
+1.0444200331512847,Clump Thickness,Avatar
+2.5468078616596608,Uniformity of Cell Size,Avatar
+2.4871536734708664,Uniformity of Cell Shape,Avatar
+0.9876001733857501,Marginal Adhesion,Avatar
+1.1413505204457903,Single Epithelial Cell Size,Avatar
+2.207771063302636,Bare Nuclei,Avatar
+1.637319422016613,Bland Chromatin,Avatar
+1.1021608713252153,Normal Nucleoli,Avatar
+0.1797389861220378,Mitoses,Avatar
+1.0354903956418187,Clump Thickness,Avatar
+1.9663311159632793,Uniformity of Cell Size,Avatar
+2.022601287382413,Uniformity of Cell Shape,Avatar
+0.7489340206190396,Marginal Adhesion,Avatar
+1.0060676601014091,Single Epithelial Cell Size,Avatar
+2.0343481625667903,Bare Nuclei,Avatar
+1.419946143788908,Bland Chromatin,Avatar
+0.9298353775716355,Normal Nucleoli,Avatar
+0.14349870694456626,Mitoses,Avatar
+1.1627980764316868,Clump Thickness,Avatar
+2.4773718192663754,Uniformity of Cell Size,Avatar
+2.366652997536209,Uniformity of Cell Shape,Avatar
+0.8088682128426754,Marginal Adhesion,Avatar
+1.0224034502957668,Single Epithelial Cell Size,Avatar
+2.2234412436015982,Bare Nuclei,Avatar
+1.7196446924998754,Bland Chromatin,Avatar
+1.1994571927254207,Normal Nucleoli,Avatar
+0.1749217822694656,Mitoses,Avatar
+1.051841947173364,Clump Thickness,Avatar
+2.3271280662118357,Uniformity of Cell Size,Avatar
+2.2683687660672853,Uniformity of Cell Shape,Avatar
+0.7103626995113013,Marginal Adhesion,Avatar
+1.0532504073072464,Single Epithelial Cell Size,Avatar
+1.9549905453829504,Bare Nuclei,Avatar
+1.6975966517233552,Bland Chromatin,Avatar
+1.1102016603113494,Normal Nucleoli,Avatar
+0.16957485649394868,Mitoses,Avatar
+0.9878313034474623,Clump Thickness,Avatar
+2.0173647072158447,Uniformity of Cell Size,Avatar
+2.26573945403506,Uniformity of Cell Shape,Avatar
+0.7435611675348843,Marginal Adhesion,Avatar
+0.940726695621361,Single Epithelial Cell Size,Avatar
+1.923913298449816,Bare Nuclei,Avatar
+1.3200123375355968,Bland Chromatin,Avatar
+0.9499355633100628,Normal Nucleoli,Avatar
+0.17114646561307476,Mitoses,Avatar
+1.0674081872351304,Clump Thickness,Avatar
+2.0545217067290964,Uniformity of Cell Size,Avatar
+2.320065384933919,Uniformity of Cell Shape,Avatar
+0.8743605850094567,Marginal Adhesion,Avatar
+0.9795620015523697,Single Epithelial Cell Size,Avatar
+2.05684242223901,Bare Nuclei,Avatar
+1.4120279397690634,Bland Chromatin,Avatar
+0.9519792992009127,Normal Nucleoli,Avatar
+0.16489432037479848,Mitoses,Avatar
+1.1050552625932664,Clump Thickness,Avatar
+2.233244198045103,Uniformity of Cell Size,Avatar
+2.1125744758414813,Uniformity of Cell Shape,Avatar
+0.8048179361956375,Marginal Adhesion,Avatar
+0.9909226785001667,Single Epithelial Cell Size,Avatar
+1.9977471458340748,Bare Nuclei,Avatar
+1.3213177992232732,Bland Chromatin,Avatar
+1.1791309963166376,Normal Nucleoli,Avatar
+0.14612625028008305,Mitoses,Avatar
+1.121897801986359,Clump Thickness,Avatar
+2.2170734709849023,Uniformity of Cell Size,Avatar
+2.269597208804149,Uniformity of Cell Shape,Avatar
+0.8031093661629779,Marginal Adhesion,Avatar
+1.0337304664269535,Single Epithelial Cell Size,Avatar
+1.944690257762146,Bare Nuclei,Avatar
+1.6007445858422713,Bland Chromatin,Avatar
+1.0279500602467069,Normal Nucleoli,Avatar
+0.1581923596833482,Mitoses,Avatar
+1.0904403349065972,Clump Thickness,Avatar
+2.37416555904116,Uniformity of Cell Size,Avatar
+2.2461029737750566,Uniformity of Cell Shape,Avatar
+0.8343986138057523,Marginal Adhesion,Avatar
+1.0081739226563995,Single Epithelial Cell Size,Avatar
+1.9921479475920774,Bare Nuclei,Avatar
+1.4670102249321626,Bland Chromatin,Avatar
+1.054266308701303,Normal Nucleoli,Avatar
+0.1572682579334163,Mitoses,Avatar
+1.126526240861185,Clump Thickness,Avatar
+2.0585206040663224,Uniformity of Cell Size,Avatar
+2.126366151884839,Uniformity of Cell Shape,Avatar
+0.8074176528729268,Marginal Adhesion,Avatar
+0.9234810018372754,Single Epithelial Cell Size,Avatar
+2.1082423935521635,Bare Nuclei,Avatar
+1.397888889628362,Bland Chromatin,Avatar
+0.9893694837476746,Normal Nucleoli,Avatar
+0.16705112003961392,Mitoses,Avatar
+1.0607106331808052,Clump Thickness,Avatar
+2.1752181830404593,Uniformity of Cell Size,Avatar
+1.992624967052237,Uniformity of Cell Shape,Avatar
+0.8411524929059361,Marginal Adhesion,Avatar
+1.054743783180709,Single Epithelial Cell Size,Avatar
+1.926561559415927,Bare Nuclei,Avatar
+1.6899053264368797,Bland Chromatin,Avatar
+1.0796823838528702,Normal Nucleoli,Avatar
+0.16897668274104438,Mitoses,Avatar
+1.13613768512341,Clump Thickness,Avatar
+2.0232898160908794,Uniformity of Cell Size,Avatar
+2.107767436989666,Uniformity of Cell Shape,Avatar
+0.9550437643832763,Marginal Adhesion,Avatar
+0.9033153994928694,Single Epithelial Cell Size,Avatar
+1.9131325650886157,Bare Nuclei,Avatar
+1.462121905310927,Bland Chromatin,Avatar
+0.9007043619452308,Normal Nucleoli,Avatar
+0.16425512226239036,Mitoses,Avatar
+1.1481726826748142,Clump Thickness,Avatar
+2.171102409790682,Uniformity of Cell Size,Avatar
+2.242502136502555,Uniformity of Cell Shape,Avatar
+0.9947722835838166,Marginal Adhesion,Avatar
+0.9765500766562087,Single Epithelial Cell Size,Avatar
+2.070373285526166,Bare Nuclei,Avatar
+1.5461650833833152,Bland Chromatin,Avatar
+1.0184410613057764,Normal Nucleoli,Avatar
+0.19540283684228701,Mitoses,Avatar
+1.1748392573260955,Clump Thickness,Avatar
+2.206401385832078,Uniformity of Cell Size,Avatar
+2.2699789313528833,Uniformity of Cell Shape,Avatar
+0.8147007450259064,Marginal Adhesion,Avatar
+1.073062387567068,Single Epithelial Cell Size,Avatar
+2.12118279670963,Bare Nuclei,Avatar
+1.713203858587676,Bland Chromatin,Avatar
+1.0283815179381912,Normal Nucleoli,Avatar
+0.18175392285656938,Mitoses,Avatar
+0.9920160836838716,Clump Thickness,Avatar
+2.2533965494844654,Uniformity of Cell Size,Avatar
+2.118090065721465,Uniformity of Cell Shape,Avatar
+0.7643833688217272,Marginal Adhesion,Avatar
+0.9213268438619209,Single Epithelial Cell Size,Avatar
+2.018130434862229,Bare Nuclei,Avatar
+1.5389832804450498,Bland Chromatin,Avatar
+0.983621037697687,Normal Nucleoli,Avatar
+0.15535643886624317,Mitoses,Avatar
+1.0768836600679592,Clump Thickness,Avatar
+2.2069423918827753,Uniformity of Cell Size,Avatar
+2.1235012665031814,Uniformity of Cell Shape,Avatar
+0.8228194648010612,Marginal Adhesion,Avatar
+1.0180733657018377,Single Epithelial Cell Size,Avatar
+2.0325817503146784,Bare Nuclei,Avatar
+1.6031513605112309,Bland Chromatin,Avatar
+0.9806162207833811,Normal Nucleoli,Avatar
+0.16824441871109685,Mitoses,Avatar
+1.155221173719549,Clump Thickness,Avatar
+1.9188504997672367,Uniformity of Cell Size,Avatar
+2.261485750439282,Uniformity of Cell Shape,Avatar
+0.7592099769668921,Marginal Adhesion,Avatar
+0.9409534848626794,Single Epithelial Cell Size,Avatar
+2.067882651962107,Bare Nuclei,Avatar
+1.4870264220302545,Bland Chromatin,Avatar
+0.9871534377721679,Normal Nucleoli,Avatar
+0.15000605213820464,Mitoses,Avatar
+1.000298132265955,Clump Thickness,Avatar
+2.1462742777367914,Uniformity of Cell Size,Avatar
+2.2835604831022813,Uniformity of Cell Shape,Avatar
+0.8186721186575104,Marginal Adhesion,Avatar
+1.13047993334605,Single Epithelial Cell Size,Avatar
+2.0922598196146454,Bare Nuclei,Avatar
+1.5191183673427786,Bland Chromatin,Avatar
+1.0924544059473893,Normal Nucleoli,Avatar
+0.16324916181315605,Mitoses,Avatar
+1.0574383098964544,Clump Thickness,Avatar
+1.9806144969844126,Uniformity of Cell Size,Avatar
+2.115602092757704,Uniformity of Cell Shape,Avatar
+0.7229457345667235,Marginal Adhesion,Avatar
+0.9575395782933933,Single Epithelial Cell Size,Avatar
+1.905244009501073,Bare Nuclei,Avatar
+1.2326968150227013,Bland Chromatin,Avatar
+0.8844762604399898,Normal Nucleoli,Avatar
+0.1567890659228681,Mitoses,Avatar
+1.1922939079316506,Clump Thickness,Avatar
+2.324606877071951,Uniformity of Cell Size,Avatar
+2.313521838710496,Uniformity of Cell Shape,Avatar
+0.7520844945335531,Marginal Adhesion,Avatar
+1.1360648616645284,Single Epithelial Cell Size,Avatar
+2.0982929522086353,Bare Nuclei,Avatar
+1.459209686667101,Bland Chromatin,Avatar
+1.0512628642349264,Normal Nucleoli,Avatar
+0.1738498536113048,Mitoses,Avatar
+1.095654742146803,Clump Thickness,Avatar
+1.8790592706552842,Uniformity of Cell Size,Avatar
+2.271581758141665,Uniformity of Cell Shape,Avatar
+0.8438834889559885,Marginal Adhesion,Avatar
+0.9971814161440042,Single Epithelial Cell Size,Avatar
+2.1261413057301177,Bare Nuclei,Avatar
+1.3886003424301645,Bland Chromatin,Avatar
+0.9278130472327574,Normal Nucleoli,Avatar
+0.15151287712198683,Mitoses,Avatar
+1.0240286223179547,Clump Thickness,Avatar
+1.9229094089014023,Uniformity of Cell Size,Avatar
+1.8781906071515095,Uniformity of Cell Shape,Avatar
+0.6986712337325361,Marginal Adhesion,Avatar
+0.97432413841379,Single Epithelial Cell Size,Avatar
+2.140700037102325,Bare Nuclei,Avatar
+1.3850763757530284,Bland Chromatin,Avatar
+0.9345232013386833,Normal Nucleoli,Avatar
+0.14332162220584826,Mitoses,Avatar
+1.2417638341622486,Clump Thickness,Avatar
+2.1751252609752525,Uniformity of Cell Size,Avatar
+2.22828381838568,Uniformity of Cell Shape,Avatar
+0.8115745901405274,Marginal Adhesion,Avatar
+1.0774558728603105,Single Epithelial Cell Size,Avatar
+2.089861889066411,Bare Nuclei,Avatar
+1.444748562905136,Bland Chromatin,Avatar
+1.0179981466693384,Normal Nucleoli,Avatar
+0.16350241986512956,Mitoses,Avatar
+1.1620830269563358,Clump Thickness,Avatar
+2.0532606325101446,Uniformity of Cell Size,Avatar
+2.1177565087830317,Uniformity of Cell Shape,Avatar
+0.8947391867194079,Marginal Adhesion,Avatar
+1.0240056925334644,Single Epithelial Cell Size,Avatar
+2.0305599830950807,Bare Nuclei,Avatar
+1.432923765513835,Bland Chromatin,Avatar
+1.0167916132884025,Normal Nucleoli,Avatar
+0.15322103839386464,Mitoses,Avatar
+1.0538482959518012,Clump Thickness,Avatar
+1.9185632684845826,Uniformity of Cell Size,Avatar
+2.2440768954753074,Uniformity of Cell Shape,Avatar
+0.7921250692153143,Marginal Adhesion,Avatar
+0.9834297316671359,Single Epithelial Cell Size,Avatar
+2.1583525819946034,Bare Nuclei,Avatar
+1.4191870562506321,Bland Chromatin,Avatar
+1.0269063353409256,Normal Nucleoli,Avatar
+0.167493707666854,Mitoses,Avatar
+1.1435197865457853,Clump Thickness,Avatar
+2.289948488816928,Uniformity of Cell Size,Avatar
+2.0708648600901816,Uniformity of Cell Shape,Avatar
+0.7822911870663399,Marginal Adhesion,Avatar
+1.0627541228014965,Single Epithelial Cell Size,Avatar
+2.050998794772172,Bare Nuclei,Avatar
+1.4511027019815588,Bland Chromatin,Avatar
+1.0061094650175617,Normal Nucleoli,Avatar
+0.16310481837603624,Mitoses,Avatar
+0.9914050689714654,Clump Thickness,Avatar
+2.123689826833975,Uniformity of Cell Size,Avatar
+2.10236689906732,Uniformity of Cell Shape,Avatar
+0.8463056162786066,Marginal Adhesion,Avatar
+1.0722720244442057,Single Epithelial Cell Size,Avatar
+2.1298912404451613,Bare Nuclei,Avatar
+1.5912779180406813,Bland Chromatin,Avatar
+1.0950708388016481,Normal Nucleoli,Avatar
+0.14171082856446104,Mitoses,Avatar
+1.1649779918024805,Clump Thickness,Avatar
+2.2771562713076556,Uniformity of Cell Size,Avatar
+2.1108465429246026,Uniformity of Cell Shape,Avatar
+0.7871483777027646,Marginal Adhesion,Avatar
+0.9605079009032679,Single Epithelial Cell Size,Avatar
+2.712708226958101,Bare Nuclei,Avatar
+1.5790953034762079,Bland Chromatin,Avatar
+0.9986893262791933,Normal Nucleoli,Avatar
+0.16680869696606035,Mitoses,Avatar
+1.1764443571772452,Clump Thickness,Avatar
+1.9414442477888612,Uniformity of Cell Size,Avatar
+2.278446703770148,Uniformity of Cell Shape,Avatar
+0.7959138816256528,Marginal Adhesion,Avatar
+1.010309705881913,Single Epithelial Cell Size,Avatar
+2.0269740691204676,Bare Nuclei,Avatar
+1.346208999314642,Bland Chromatin,Avatar
+1.004542186082511,Normal Nucleoli,Avatar
+0.16497734753243523,Mitoses,Avatar
+1.2024929719274466,Clump Thickness,Avatar
+2.00088664639486,Uniformity of Cell Size,Avatar
+2.250768024434877,Uniformity of Cell Shape,Avatar
+0.8610931518531478,Marginal Adhesion,Avatar
+1.0060412349309942,Single Epithelial Cell Size,Avatar
+2.168698899073554,Bare Nuclei,Avatar
+1.333950082028812,Bland Chromatin,Avatar
+0.8209825498864433,Normal Nucleoli,Avatar
+0.16226488836766387,Mitoses,Avatar
+1.1601306440659935,Clump Thickness,Avatar
+2.322210114265702,Uniformity of Cell Size,Avatar
+2.2646521076797965,Uniformity of Cell Shape,Avatar
+0.7317698673309191,Marginal Adhesion,Avatar
+1.1911505285819006,Single Epithelial Cell Size,Avatar
+2.142675200412957,Bare Nuclei,Avatar
+1.5613039885400013,Bland Chromatin,Avatar
+1.1196321138683198,Normal Nucleoli,Avatar
+0.1548021202709389,Mitoses,Avatar
+0.9998540409878686,Clump Thickness,Avatar
+2.099859085443347,Uniformity of Cell Size,Avatar
+2.208719104660228,Uniformity of Cell Shape,Avatar
+0.7983024573067584,Marginal Adhesion,Avatar
+1.0023766552320965,Single Epithelial Cell Size,Avatar
+2.35117725866039,Bare Nuclei,Avatar
+1.3866205473553286,Bland Chromatin,Avatar
+0.964099067738391,Normal Nucleoli,Avatar
+0.16467184568811344,Mitoses,Avatar
+1.0625807929865523,Clump Thickness,Avatar
+2.0980263815881477,Uniformity of Cell Size,Avatar
+2.1889084090589415,Uniformity of Cell Shape,Avatar
+0.8209173989133031,Marginal Adhesion,Avatar
+0.9847831328449121,Single Epithelial Cell Size,Avatar
+1.97140092061514,Bare Nuclei,Avatar
+1.5746859897325243,Bland Chromatin,Avatar
+0.888778915531136,Normal Nucleoli,Avatar
+0.15563399664627092,Mitoses,Avatar
+1.0726712841599144,Clump Thickness,Avatar
+2.021576679425074,Uniformity of Cell Size,Avatar
+2.0873581586626986,Uniformity of Cell Shape,Avatar
+0.8673966244881061,Marginal Adhesion,Avatar
+1.1286703001711311,Single Epithelial Cell Size,Avatar
+2.093889516948518,Bare Nuclei,Avatar
+1.4583563742184895,Bland Chromatin,Avatar
+1.0747726097539627,Normal Nucleoli,Avatar
+0.15072794146197158,Mitoses,Avatar
+1.08506165486738,Clump Thickness,Avatar
+2.0493343837805575,Uniformity of Cell Size,Avatar
+2.0639612237858747,Uniformity of Cell Shape,Avatar
+0.7186239942377523,Marginal Adhesion,Avatar
+1.000222503229041,Single Epithelial Cell Size,Avatar
+2.0681663418130403,Bare Nuclei,Avatar
+1.4082519299248568,Bland Chromatin,Avatar
+0.8882429463233862,Normal Nucleoli,Avatar
+0.174355199523275,Mitoses,Avatar
+1.0571960049734404,Clump Thickness,Avatar
+2.072847447910275,Uniformity of Cell Size,Avatar
+2.1873086856599437,Uniformity of Cell Shape,Avatar
+0.7420155581662558,Marginal Adhesion,Avatar
+0.9799435332974423,Single Epithelial Cell Size,Avatar
+2.0599412084694197,Bare Nuclei,Avatar
+1.514088943902626,Bland Chromatin,Avatar
+1.0732694686698954,Normal Nucleoli,Avatar
+0.16565809047239086,Mitoses,Avatar
+0.9911307366144567,Clump Thickness,Avatar
+1.9959471063159842,Uniformity of Cell Size,Avatar
+2.232310706124325,Uniformity of Cell Shape,Avatar
+0.7265702363180518,Marginal Adhesion,Avatar
+0.9939889623731807,Single Epithelial Cell Size,Avatar
+2.2868056087673,Bare Nuclei,Avatar
+1.4177985535765267,Bland Chromatin,Avatar
+0.9642714303871841,Normal Nucleoli,Avatar
+0.15236932443408527,Mitoses,Avatar
+1.154975859444445,Clump Thickness,Avatar
+2.224934374672432,Uniformity of Cell Size,Avatar
+2.390096752500153,Uniformity of Cell Shape,Avatar
+0.769695513630456,Marginal Adhesion,Avatar
+1.0476496346105841,Single Epithelial Cell Size,Avatar
+1.907133593375778,Bare Nuclei,Avatar
+1.4612201965559684,Bland Chromatin,Avatar
+0.9831925452284459,Normal Nucleoli,Avatar
+0.14909793854598846,Mitoses,Avatar
+1.1333949525310187,Clump Thickness,Avatar
+2.0927099900130615,Uniformity of Cell Size,Avatar
+2.28106981682614,Uniformity of Cell Shape,Avatar
+0.7649318556013961,Marginal Adhesion,Avatar
+0.8828405580838316,Single Epithelial Cell Size,Avatar
+2.505052775499269,Bare Nuclei,Avatar
+1.4929344632678265,Bland Chromatin,Avatar
+1.0173946502990125,Normal Nucleoli,Avatar
+0.16782797363218918,Mitoses,Avatar
+1.024315546607367,Clump Thickness,Avatar
+2.1692743740149476,Uniformity of Cell Size,Avatar
+2.17955692934994,Uniformity of Cell Shape,Avatar
+0.8447737693249024,Marginal Adhesion,Avatar
+1.054466016449722,Single Epithelial Cell Size,Avatar
+2.0413673928689318,Bare Nuclei,Avatar
+1.4560768571664202,Bland Chromatin,Avatar
+0.9753017778061507,Normal Nucleoli,Avatar
+0.13781892076061258,Mitoses,Avatar
+1.1529846808013153,Clump Thickness,Avatar
+1.9399348213828003,Uniformity of Cell Size,Avatar
+1.980778534704154,Uniformity of Cell Shape,Avatar
+0.7779976296531115,Marginal Adhesion,Avatar
+1.0529518444672608,Single Epithelial Cell Size,Avatar
+1.9574456483152398,Bare Nuclei,Avatar
+1.505305490985335,Bland Chromatin,Avatar
+0.9631815807903317,Normal Nucleoli,Avatar
+0.17123356305980889,Mitoses,Avatar
+1.1515025939826304,Clump Thickness,Avatar
+2.1063654755962786,Uniformity of Cell Size,Avatar
+2.1765270005023476,Uniformity of Cell Shape,Avatar
+0.7723471750831552,Marginal Adhesion,Avatar
+1.0482107341379434,Single Epithelial Cell Size,Avatar
+2.1200925435844877,Bare Nuclei,Avatar
+1.523543031154797,Bland Chromatin,Avatar
+0.9483306773700947,Normal Nucleoli,Avatar
+0.1667523967071969,Mitoses,Avatar
+0.9809438332623466,Clump Thickness,Avatar
+1.9928917714615793,Uniformity of Cell Size,Avatar
+1.9920582704955445,Uniformity of Cell Shape,Avatar
+0.7378848939087319,Marginal Adhesion,Avatar
+1.0155138198767137,Single Epithelial Cell Size,Avatar
+2.022669621833615,Bare Nuclei,Avatar
+1.5007825696060555,Bland Chromatin,Avatar
+0.9220644514139302,Normal Nucleoli,Avatar
+0.15342182575478486,Mitoses,Avatar
+1.1024560213823844,Clump Thickness,Avatar
+2.1171058618384078,Uniformity of Cell Size,Avatar
+2.164224692271354,Uniformity of Cell Shape,Avatar
+0.8315367954390549,Marginal Adhesion,Avatar
+1.0970907694556102,Single Epithelial Cell Size,Avatar
+2.272497085349472,Bare Nuclei,Avatar
+1.4732063525337902,Bland Chromatin,Avatar
+1.0884294558968695,Normal Nucleoli,Avatar
+0.17784123187133963,Mitoses,Avatar
+1.1124308128993319,Clump Thickness,Avatar
+2.2578303788998317,Uniformity of Cell Size,Avatar
+2.0666502588893914,Uniformity of Cell Shape,Avatar
+0.8385356490700082,Marginal Adhesion,Avatar
+1.0674818229561143,Single Epithelial Cell Size,Avatar
+1.8555179153955192,Bare Nuclei,Avatar
+1.6291900536513038,Bland Chromatin,Avatar
+1.0417650274656562,Normal Nucleoli,Avatar
+0.1717871997072796,Mitoses,Avatar
+1.116456132099572,Clump Thickness,Avatar
+2.233214614568316,Uniformity of Cell Size,Avatar
+2.232686562403294,Uniformity of Cell Shape,Avatar
+0.7947763215307521,Marginal Adhesion,Avatar
+1.0484882928337633,Single Epithelial Cell Size,Avatar
+2.0862163069004125,Bare Nuclei,Avatar
+1.3559030365587676,Bland Chromatin,Avatar
+0.9531461287941749,Normal Nucleoli,Avatar
+0.15364716191806901,Mitoses,Avatar
+1.081668542870288,Clump Thickness,Avatar
+2.192549747812178,Uniformity of Cell Size,Avatar
+2.0136477918771125,Uniformity of Cell Shape,Avatar
+0.7476166450854408,Marginal Adhesion,Avatar
+1.0482460644402682,Single Epithelial Cell Size,Avatar
+2.321617397980327,Bare Nuclei,Avatar
+1.5515133158876544,Bland Chromatin,Avatar
+0.9452094453710672,Normal Nucleoli,Avatar
+0.13052180873636712,Mitoses,Avatar
+1.2053359325095254,Clump Thickness,Avatar
+2.1119871166857185,Uniformity of Cell Size,Avatar
+2.166288475442157,Uniformity of Cell Shape,Avatar
+0.7829255023330165,Marginal Adhesion,Avatar
+1.0499217045340523,Single Epithelial Cell Size,Avatar
+2.101642568594377,Bare Nuclei,Avatar
+1.5017829883986114,Bland Chromatin,Avatar
+0.9339860594989968,Normal Nucleoli,Avatar
+0.15814812592995792,Mitoses,Avatar
+1.0398111143060682,Clump Thickness,Avatar
+2.2718283627839964,Uniformity of Cell Size,Avatar
+2.103982589652566,Uniformity of Cell Shape,Avatar
+0.776762201494385,Marginal Adhesion,Avatar
+0.9821415047101312,Single Epithelial Cell Size,Avatar
+2.096028240678259,Bare Nuclei,Avatar
+1.5432395352630244,Bland Chromatin,Avatar
+1.0636946881166471,Normal Nucleoli,Avatar
+0.14571843926849753,Mitoses,Avatar
+1.089842830186843,Clump Thickness,Avatar
+2.091120043984921,Uniformity of Cell Size,Avatar
+2.291929185351014,Uniformity of Cell Shape,Avatar
+0.763973425307795,Marginal Adhesion,Avatar
+1.0586312370196327,Single Epithelial Cell Size,Avatar
+1.8682368340203097,Bare Nuclei,Avatar
+1.5481067614807187,Bland Chromatin,Avatar
+1.0429454355173309,Normal Nucleoli,Avatar
+0.1789680335682125,Mitoses,Avatar
+1.0441295180348098,Clump Thickness,Avatar
+1.9529224801758645,Uniformity of Cell Size,Avatar
+2.0468780059615828,Uniformity of Cell Shape,Avatar
+0.7371717354793461,Marginal Adhesion,Avatar
+0.9895341847723602,Single Epithelial Cell Size,Avatar
+2.0941650378316146,Bare Nuclei,Avatar
+1.5322274065898356,Bland Chromatin,Avatar
+1.0012943348259797,Normal Nucleoli,Avatar
+0.15028199451496388,Mitoses,Avatar
+1.0122246202842282,Clump Thickness,Avatar
+2.075344913302489,Uniformity of Cell Size,Avatar
+2.093040245406008,Uniformity of Cell Shape,Avatar
+0.8485029388156969,Marginal Adhesion,Avatar
+0.9649729611462928,Single Epithelial Cell Size,Avatar
+2.123873344012811,Bare Nuclei,Avatar
+1.5272063067010375,Bland Chromatin,Avatar
+1.0304112370486214,Normal Nucleoli,Avatar
+0.17088743419636715,Mitoses,Avatar
+1.0694686424818698,Clump Thickness,Avatar
+2.040570709439143,Uniformity of Cell Size,Avatar
+2.1094913181440114,Uniformity of Cell Shape,Avatar
+0.8078237416828562,Marginal Adhesion,Avatar
+0.9407233304017403,Single Epithelial Cell Size,Avatar
+2.2014214092344475,Bare Nuclei,Avatar
+1.408859508699083,Bland Chromatin,Avatar
+0.8686465032321047,Normal Nucleoli,Avatar
+0.15364342486010296,Mitoses,Avatar
+1.1123413776644189,Clump Thickness,Avatar
+2.0957385234048878,Uniformity of Cell Size,Avatar
+2.171184334390567,Uniformity of Cell Shape,Avatar
+0.8324064368062936,Marginal Adhesion,Avatar
+1.0017715744014393,Single Epithelial Cell Size,Avatar
+2.1810377440224378,Bare Nuclei,Avatar
+1.5939955867844273,Bland Chromatin,Avatar
+0.9220168659902002,Normal Nucleoli,Avatar
+0.16189589963518541,Mitoses,Avatar
+1.1355625113916583,Clump Thickness,Avatar
+2.163836464960729,Uniformity of Cell Size,Avatar
+1.9420440701006152,Uniformity of Cell Shape,Avatar
+0.7256564259085626,Marginal Adhesion,Avatar
+0.9542912478861062,Single Epithelial Cell Size,Avatar
+1.9075076908641666,Bare Nuclei,Avatar
+1.454900382694959,Bland Chromatin,Avatar
+1.0285955942942073,Normal Nucleoli,Avatar
+0.18741242459851068,Mitoses,Avatar
+1.0452156707196256,Clump Thickness,Avatar
+2.072957520029547,Uniformity of Cell Size,Avatar
+2.148768478056933,Uniformity of Cell Shape,Avatar
+0.7139135606359693,Marginal Adhesion,Avatar
+1.1522307233802809,Single Epithelial Cell Size,Avatar
+1.8910215170045155,Bare Nuclei,Avatar
+1.54560776783846,Bland Chromatin,Avatar
+0.9908810214856816,Normal Nucleoli,Avatar
+0.14416272913410408,Mitoses,Avatar
+1.1590128840507576,Clump Thickness,Avatar
+1.969523495239494,Uniformity of Cell Size,Avatar
+1.8738142929495216,Uniformity of Cell Shape,Avatar
+0.7337628388938329,Marginal Adhesion,Avatar
+1.0354021292353073,Single Epithelial Cell Size,Avatar
+2.282668598150356,Bare Nuclei,Avatar
+1.5229607156414375,Bland Chromatin,Avatar
+0.9908327653802281,Normal Nucleoli,Avatar
+0.15731533308743964,Mitoses,Avatar
+1.0704612495741586,Clump Thickness,Avatar
+2.074898403650659,Uniformity of Cell Size,Avatar
+2.1905315673986316,Uniformity of Cell Shape,Avatar
+0.7623747942514365,Marginal Adhesion,Avatar
+1.0022609627663872,Single Epithelial Cell Size,Avatar
+2.073075899395425,Bare Nuclei,Avatar
+1.6176180474266069,Bland Chromatin,Avatar
+0.9390628799922167,Normal Nucleoli,Avatar
+0.17765906688835673,Mitoses,Avatar
+1.1432410268493831,Clump Thickness,Avatar
+2.046829560661644,Uniformity of Cell Size,Avatar
+2.2928546529859113,Uniformity of Cell Shape,Avatar
+0.6957877826921013,Marginal Adhesion,Avatar
+1.0817889675034706,Single Epithelial Cell Size,Avatar
+2.0791412144155816,Bare Nuclei,Avatar
+1.3796462479183271,Bland Chromatin,Avatar
+0.9738402260776573,Normal Nucleoli,Avatar
+0.15422857842307686,Mitoses,Avatar
+1.0204952620839942,Clump Thickness,Avatar
+2.1811618469408103,Uniformity of Cell Size,Avatar
+1.987817918637409,Uniformity of Cell Shape,Avatar
+0.8412376303614358,Marginal Adhesion,Avatar
+1.0295397488809481,Single Epithelial Cell Size,Avatar
+2.253803305358489,Bare Nuclei,Avatar
+1.5805031792354034,Bland Chromatin,Avatar
+1.0134451797664314,Normal Nucleoli,Avatar
+0.13314772351551024,Mitoses,Avatar
+1.074847852753394,Clump Thickness,Avatar
+2.3213702997599874,Uniformity of Cell Size,Avatar
+2.137615564053558,Uniformity of Cell Shape,Avatar
+0.9432422502056412,Marginal Adhesion,Avatar
+1.0716106341117149,Single Epithelial Cell Size,Avatar
+2.554784617781957,Bare Nuclei,Avatar
+1.5563659941004448,Bland Chromatin,Avatar
+0.90683884494005,Normal Nucleoli,Avatar
+0.16744686235009643,Mitoses,Avatar
+1.0461912607678372,Clump Thickness,Avatar
+2.0912074243453684,Uniformity of Cell Size,Avatar
+2.2327131533504554,Uniformity of Cell Shape,Avatar
+0.7859830704960112,Marginal Adhesion,Avatar
+1.078935439563514,Single Epithelial Cell Size,Avatar
+2.2854708228888567,Bare Nuclei,Avatar
+1.4818011286988537,Bland Chromatin,Avatar
+0.8836736798865598,Normal Nucleoli,Avatar
+0.16251036593325274,Mitoses,Avatar
+1.0340530611184442,Clump Thickness,Avatar
+2.3416319695665204,Uniformity of Cell Size,Avatar
+2.2471418226529085,Uniformity of Cell Shape,Avatar
+0.7999295733279267,Marginal Adhesion,Avatar
+1.1068186457837428,Single Epithelial Cell Size,Avatar
+2.1626984091084087,Bare Nuclei,Avatar
+1.5483311919389136,Bland Chromatin,Avatar
+1.0196055321690713,Normal Nucleoli,Avatar
+0.17085575325240995,Mitoses,Avatar
+1.0477280205589714,Clump Thickness,Avatar
+2.0119284820025465,Uniformity of Cell Size,Avatar
+2.380821392798829,Uniformity of Cell Shape,Avatar
+0.7452228203061078,Marginal Adhesion,Avatar
+0.9568938595837272,Single Epithelial Cell Size,Avatar
+2.324436178481693,Bare Nuclei,Avatar
+1.6234950856637165,Bland Chromatin,Avatar
+0.9394429999821478,Normal Nucleoli,Avatar
+0.13859007230923334,Mitoses,Avatar
+1.0612779120543305,Clump Thickness,Avatar
+2.2116611178773433,Uniformity of Cell Size,Avatar
+2.129097188359096,Uniformity of Cell Shape,Avatar
+0.8360615068275571,Marginal Adhesion,Avatar
+0.9978291235698871,Single Epithelial Cell Size,Avatar
+2.0677252578961904,Bare Nuclei,Avatar
+1.4679901120158305,Bland Chromatin,Avatar
+1.0263222100553613,Normal Nucleoli,Avatar
+0.17079407257162652,Mitoses,Avatar
+0.9963137999886653,Clump Thickness,Avatar
+2.2232299282293218,Uniformity of Cell Size,Avatar
+2.0875846648255525,Uniformity of Cell Shape,Avatar
+0.804648649790588,Marginal Adhesion,Avatar
+0.9632439412047433,Single Epithelial Cell Size,Avatar
+2.030514491345439,Bare Nuclei,Avatar
+1.4345308955939666,Bland Chromatin,Avatar
+1.0062374420657143,Normal Nucleoli,Avatar
+0.16900816106579652,Mitoses,Avatar
+0.9897279108062499,Clump Thickness,Avatar
+2.137399256002501,Uniformity of Cell Size,Avatar
+2.199973961269584,Uniformity of Cell Shape,Avatar
+0.8004672728644163,Marginal Adhesion,Avatar
+0.9707511159147403,Single Epithelial Cell Size,Avatar
+2.342693581806956,Bare Nuclei,Avatar
+1.3687051480568597,Bland Chromatin,Avatar
+0.9647432508076319,Normal Nucleoli,Avatar
+0.14771438527678862,Mitoses,Avatar
+1.050049154134255,Clump Thickness,Avatar
+2.179662631198257,Uniformity of Cell Size,Avatar
+2.1908323954130666,Uniformity of Cell Shape,Avatar
+0.868390884264895,Marginal Adhesion,Avatar
+1.0425992649989722,Single Epithelial Cell Size,Avatar
+2.1614669804927753,Bare Nuclei,Avatar
+1.5475234614861477,Bland Chromatin,Avatar
+0.9637025036860547,Normal Nucleoli,Avatar
+0.16301930474589085,Mitoses,Avatar
+1.0868547141245593,Clump Thickness,Avatar
+2.2979722545814867,Uniformity of Cell Size,Avatar
+2.1920012480593294,Uniformity of Cell Shape,Avatar
+0.8562562760177104,Marginal Adhesion,Avatar
+1.1025727825677671,Single Epithelial Cell Size,Avatar
+2.2009074701275715,Bare Nuclei,Avatar
+1.333127342830992,Bland Chromatin,Avatar
+0.9368690163497537,Normal Nucleoli,Avatar
+0.16307842110748527,Mitoses,Avatar
+1.2479607009680338,Clump Thickness,Avatar
+2.258707547688506,Uniformity of Cell Size,Avatar
+2.2151057166458075,Uniformity of Cell Shape,Avatar
+0.8569553168311828,Marginal Adhesion,Avatar
+1.0680524696134002,Single Epithelial Cell Size,Avatar
+2.046219951092414,Bare Nuclei,Avatar
+1.5678492227944407,Bland Chromatin,Avatar
+1.1049184580102565,Normal Nucleoli,Avatar
+0.1731225099548323,Mitoses,Avatar
+1.1623947847426752,Clump Thickness,Avatar
+2.119152983648428,Uniformity of Cell Size,Avatar
+2.499123840078584,Uniformity of Cell Shape,Avatar
+0.8249967090044874,Marginal Adhesion,Avatar
+1.1291406533682533,Single Epithelial Cell Size,Avatar
+1.9518185271205504,Bare Nuclei,Avatar
+1.4214798032645146,Bland Chromatin,Avatar
+0.9838033084970188,Normal Nucleoli,Avatar
+0.16520581846522547,Mitoses,Avatar
+1.1219003550611268,Clump Thickness,Avatar
+1.9448140500467381,Uniformity of Cell Size,Avatar
+2.0986633229291773,Uniformity of Cell Shape,Avatar
+0.6822329789213613,Marginal Adhesion,Avatar
+0.9411219083994943,Single Epithelial Cell Size,Avatar
+2.2058069497394905,Bare Nuclei,Avatar
+1.415353671453604,Bland Chromatin,Avatar
+1.0378165462906788,Normal Nucleoli,Avatar
+0.15133928788440487,Mitoses,Avatar
+1.0384282358160302,Clump Thickness,Avatar
+2.2225222836828626,Uniformity of Cell Size,Avatar
+2.2413428282943455,Uniformity of Cell Shape,Avatar
+0.854243085437148,Marginal Adhesion,Avatar
+0.964659264040393,Single Epithelial Cell Size,Avatar
+1.895857699156469,Bare Nuclei,Avatar
+1.6920059070935136,Bland Chromatin,Avatar
+1.1226255058274484,Normal Nucleoli,Avatar
+0.16745848936075455,Mitoses,Avatar
+1.2805948903489763,Clump Thickness,Avatar
+2.317445992494046,Uniformity of Cell Size,Avatar
+2.495510081585324,Uniformity of Cell Shape,Avatar
+0.8534740456480298,Marginal Adhesion,Avatar
+1.0806320719414475,Single Epithelial Cell Size,Avatar
+2.057240323343186,Bare Nuclei,Avatar
+1.59221166474811,Bland Chromatin,Avatar
+1.0177074245498237,Normal Nucleoli,Avatar
+0.17651653711561055,Mitoses,Avatar
+1.2717526937411572,Clump Thickness,Avatar
+2.09773822575337,Uniformity of Cell Size,Avatar
+2.213452943111941,Uniformity of Cell Shape,Avatar
+0.8249428011896897,Marginal Adhesion,Avatar
+0.9322986747469445,Single Epithelial Cell Size,Avatar
+2.233017742810033,Bare Nuclei,Avatar
+1.4529328870723717,Bland Chromatin,Avatar
+0.9601996461262663,Normal Nucleoli,Avatar
+0.15724322320371342,Mitoses,Avatar
+1.0429095694986446,Clump Thickness,Avatar
+2.1667337901261967,Uniformity of Cell Size,Avatar
+2.483261400508365,Uniformity of Cell Shape,Avatar
+0.6821773243535876,Marginal Adhesion,Avatar
+1.0013839786973284,Single Epithelial Cell Size,Avatar
+1.946164176684401,Bare Nuclei,Avatar
+1.5318217217800807,Bland Chromatin,Avatar
+0.8942933774636396,Normal Nucleoli,Avatar
+0.1617759577538541,Mitoses,Avatar
+1.0927471453187099,Clump Thickness,Avatar
+2.2222928878208106,Uniformity of Cell Size,Avatar
+2.163994504206398,Uniformity of Cell Shape,Avatar
+0.8262572570722256,Marginal Adhesion,Avatar
+1.0082175329270537,Single Epithelial Cell Size,Avatar
+1.8198868698319366,Bare Nuclei,Avatar
+1.483421702696544,Bland Chromatin,Avatar
+1.1536521656788554,Normal Nucleoli,Avatar
+0.14551609258735268,Mitoses,Avatar
+1.079447900717729,Clump Thickness,Avatar
+2.0861686696149535,Uniformity of Cell Size,Avatar
+1.998916684607105,Uniformity of Cell Shape,Avatar
+0.7371553752140307,Marginal Adhesion,Avatar
+0.9739943544543915,Single Epithelial Cell Size,Avatar
+1.9519830485280898,Bare Nuclei,Avatar
+1.6378095416080092,Bland Chromatin,Avatar
+1.0081375377126194,Normal Nucleoli,Avatar
+0.1575458370113051,Mitoses,Avatar
+0.9141754285120931,Clump Thickness,Avatar
+2.1051287218819197,Uniformity of Cell Size,Avatar
+2.2045877081108887,Uniformity of Cell Shape,Avatar
+0.7649279954934549,Marginal Adhesion,Avatar
+1.0809877907261993,Single Epithelial Cell Size,Avatar
+1.8537156445318874,Bare Nuclei,Avatar
+1.4982637816826574,Bland Chromatin,Avatar
+1.064325031697486,Normal Nucleoli,Avatar
+0.15590857668527205,Mitoses,Avatar
+1.101079311789152,Clump Thickness,Avatar
+2.2576603946034335,Uniformity of Cell Size,Avatar
+2.3227438593058953,Uniformity of Cell Shape,Avatar
+0.9113586954547025,Marginal Adhesion,Avatar
+1.122942264421877,Single Epithelial Cell Size,Avatar
+1.91188445673785,Bare Nuclei,Avatar
+1.5500170540872429,Bland Chromatin,Avatar
+1.1644965784575687,Normal Nucleoli,Avatar
+0.14689833170258224,Mitoses,Avatar
+0.9298158155051323,Clump Thickness,Avatar
+2.1091355941917014,Uniformity of Cell Size,Avatar
+2.159664149751589,Uniformity of Cell Shape,Avatar
+0.8021023672246443,Marginal Adhesion,Avatar
+1.0234570049727105,Single Epithelial Cell Size,Avatar
+2.146919712317745,Bare Nuclei,Avatar
+1.4671290629062574,Bland Chromatin,Avatar
+0.9501847314158774,Normal Nucleoli,Avatar
+0.17239069452888744,Mitoses,Avatar
+1.0436510439825646,Clump Thickness,Avatar
+2.4563219656944097,Uniformity of Cell Size,Avatar
+1.9307170797301856,Uniformity of Cell Shape,Avatar
+0.8511177289982973,Marginal Adhesion,Avatar
+1.002484236067629,Single Epithelial Cell Size,Avatar
+2.0926255193340286,Bare Nuclei,Avatar
+1.5461850275381748,Bland Chromatin,Avatar
+1.062760891018276,Normal Nucleoli,Avatar
+0.15752234828719375,Mitoses,Avatar
+1.1706607750658646,Clump Thickness,Avatar
+2.143470421367332,Uniformity of Cell Size,Avatar
+2.3829954870910135,Uniformity of Cell Shape,Avatar
+0.9606651424572011,Marginal Adhesion,Avatar
+1.0326089353132655,Single Epithelial Cell Size,Avatar
+2.1055941659506634,Bare Nuclei,Avatar
+1.5615115396274901,Bland Chromatin,Avatar
+1.0405233544593695,Normal Nucleoli,Avatar
+0.17876664848342375,Mitoses,Avatar
+1.1403963457117157,Clump Thickness,Avatar
+1.9938782693421493,Uniformity of Cell Size,Avatar
+2.1433234139109234,Uniformity of Cell Shape,Avatar
+0.8911401466347942,Marginal Adhesion,Avatar
+1.020655343424558,Single Epithelial Cell Size,Avatar
+1.9900353483543678,Bare Nuclei,Avatar
+1.4994520832302967,Bland Chromatin,Avatar
+0.9132928925795463,Normal Nucleoli,Avatar
+0.1588107000289747,Mitoses,Avatar
+1.2518713110152158,Clump Thickness,Avatar
+2.3752277164521125,Uniformity of Cell Size,Avatar
+2.312779308507564,Uniformity of Cell Shape,Avatar
+0.8060884270179342,Marginal Adhesion,Avatar
+1.0632025152055573,Single Epithelial Cell Size,Avatar
+2.697396506540909,Bare Nuclei,Avatar
+1.515676016114556,Bland Chromatin,Avatar
+1.0650675635498237,Normal Nucleoli,Avatar
+0.1784682225186115,Mitoses,Avatar
+1.1061772871486775,Clump Thickness,Avatar
+2.235212091509677,Uniformity of Cell Size,Avatar
+2.123860176773331,Uniformity of Cell Shape,Avatar
+0.8145724094572399,Marginal Adhesion,Avatar
+0.9433578109805495,Single Epithelial Cell Size,Avatar
+2.071737863849632,Bare Nuclei,Avatar
+1.4750028990936792,Bland Chromatin,Avatar
+0.8931368953410915,Normal Nucleoli,Avatar
+0.16121529978118881,Mitoses,Avatar
+1.0242018815124352,Clump Thickness,Avatar
+2.213183928789064,Uniformity of Cell Size,Avatar
+2.377952078867233,Uniformity of Cell Shape,Avatar
+0.8466148857322435,Marginal Adhesion,Avatar
+0.9518223332551072,Single Epithelial Cell Size,Avatar
+2.173042088465788,Bare Nuclei,Avatar
+1.6627547229625061,Bland Chromatin,Avatar
+0.9128013370470186,Normal Nucleoli,Avatar
+0.16444880692878566,Mitoses,Avatar
+1.098576036038984,Clump Thickness,Avatar
+2.1243116485621467,Uniformity of Cell Size,Avatar
+2.2902658342921924,Uniformity of Cell Shape,Avatar
+0.9096683069913346,Marginal Adhesion,Avatar
+1.0175107692025884,Single Epithelial Cell Size,Avatar
+1.909112603218028,Bare Nuclei,Avatar
+1.4074810672898586,Bland Chromatin,Avatar
+1.1129010370170394,Normal Nucleoli,Avatar
+0.18839589544478078,Mitoses,Avatar
+1.3053045881648058,Clump Thickness,Avatar
+1.9233926315430645,Uniformity of Cell Size,Avatar
+2.1002445938785215,Uniformity of Cell Shape,Avatar
+0.7261974830989877,Marginal Adhesion,Avatar
+0.9579411575314242,Single Epithelial Cell Size,Avatar
+1.8535990625798489,Bare Nuclei,Avatar
+1.3300034587996772,Bland Chromatin,Avatar
+0.9050298720988963,Normal Nucleoli,Avatar
+0.15867095148525429,Mitoses,Avatar
+1.0643343940794314,Clump Thickness,Avatar
+2.1806722718066314,Uniformity of Cell Size,Avatar
+2.1711377798658478,Uniformity of Cell Shape,Avatar
+0.7688912407649637,Marginal Adhesion,Avatar
+1.0160737736285363,Single Epithelial Cell Size,Avatar
+2.1332346915376728,Bare Nuclei,Avatar
+1.6427152787578854,Bland Chromatin,Avatar
+1.0667648945379042,Normal Nucleoli,Avatar
+0.15281711860150157,Mitoses,Avatar
+1.2961809947346337,Clump Thickness,Avatar
+2.1496355267937415,Uniformity of Cell Size,Avatar
+2.173690689633669,Uniformity of Cell Shape,Avatar
+0.9052090177840265,Marginal Adhesion,Avatar
+1.007392823566006,Single Epithelial Cell Size,Avatar
+2.186919850700163,Bare Nuclei,Avatar
+1.4419935788377574,Bland Chromatin,Avatar
+0.9250437234556156,Normal Nucleoli,Avatar
+0.1671712903570623,Mitoses,Avatar
+0.9895330600228456,Clump Thickness,Avatar
+2.05498096440795,Uniformity of Cell Size,Avatar
+2.2952295159940848,Uniformity of Cell Shape,Avatar
+0.8202890466822558,Marginal Adhesion,Avatar
+1.0163987498896503,Single Epithelial Cell Size,Avatar
+2.2176095260620876,Bare Nuclei,Avatar
+1.5300593891580998,Bland Chromatin,Avatar
+0.9851227287596395,Normal Nucleoli,Avatar
+0.17484551270260767,Mitoses,Avatar
+1.0084151858414654,Clump Thickness,Avatar
+2.1177000936894856,Uniformity of Cell Size,Avatar
+2.2850205016515557,Uniformity of Cell Shape,Avatar
+0.7562557422494227,Marginal Adhesion,Avatar
+1.0949315567869677,Single Epithelial Cell Size,Avatar
+2.0279398114977867,Bare Nuclei,Avatar
+1.5254961229547475,Bland Chromatin,Avatar
+1.1612008948674974,Normal Nucleoli,Avatar
+0.14859605674023968,Mitoses,Avatar
+1.032588490405454,Clump Thickness,Avatar
+2.071886609378822,Uniformity of Cell Size,Avatar
+2.361029836001645,Uniformity of Cell Shape,Avatar
+0.8636813108979972,Marginal Adhesion,Avatar
+0.964044945641382,Single Epithelial Cell Size,Avatar
+2.1709987742227894,Bare Nuclei,Avatar
+1.6517622941867809,Bland Chromatin,Avatar
+0.8980971268640509,Normal Nucleoli,Avatar
+0.1706282366886509,Mitoses,Avatar
+1.0742768206356987,Clump Thickness,Avatar
+2.079728743055096,Uniformity of Cell Size,Avatar
+2.1354977073415204,Uniformity of Cell Shape,Avatar
+0.7295647748150386,Marginal Adhesion,Avatar
+1.145758306462621,Single Epithelial Cell Size,Avatar
+1.8820392659455714,Bare Nuclei,Avatar
+1.5848001389030608,Bland Chromatin,Avatar
+1.1302013244613778,Normal Nucleoli,Avatar
+0.1726339615505922,Mitoses,Avatar
+1.2090913301311308,Clump Thickness,Avatar
+2.3883921071545395,Uniformity of Cell Size,Avatar
+2.1869301745798104,Uniformity of Cell Shape,Avatar
+0.8125503450375072,Marginal Adhesion,Avatar
+1.0596808769023727,Single Epithelial Cell Size,Avatar
+2.245388994262613,Bare Nuclei,Avatar
+1.541269464663675,Bland Chromatin,Avatar
+0.9964272214528102,Normal Nucleoli,Avatar
+0.15536117134769067,Mitoses,Avatar
+0.40950824155892224,Clump Thickness,Synthpop
+1.6333252606685478,Uniformity of Cell Size,Synthpop
+1.3175223047871083,Uniformity of Cell Shape,Synthpop
+0.8510985409767793,Marginal Adhesion,Synthpop
+0.8611223585801646,Single Epithelial Cell Size,Synthpop
+1.829931352543064,Bare Nuclei,Synthpop
+1.016627294205084,Bland Chromatin,Synthpop
+0.7370324257683696,Normal Nucleoli,Synthpop
+0.1845680058204262,Mitoses,Synthpop
+0.44870705817267165,Clump Thickness,Synthpop
+1.5135321857697939,Uniformity of Cell Size,Synthpop
+1.2431516714352882,Uniformity of Cell Shape,Synthpop
+0.8295981107350201,Marginal Adhesion,Synthpop
+0.856603069333994,Single Epithelial Cell Size,Synthpop
+1.75685510606149,Bare Nuclei,Synthpop
+1.0713626947204211,Bland Chromatin,Synthpop
+0.7030531768194347,Normal Nucleoli,Synthpop
+0.16722510153421183,Mitoses,Synthpop
+0.42444869724493184,Clump Thickness,Synthpop
+1.6806698075603836,Uniformity of Cell Size,Synthpop
+1.5661762018828096,Uniformity of Cell Shape,Synthpop
+0.9098204553747069,Marginal Adhesion,Synthpop
+0.8640771050366791,Single Epithelial Cell Size,Synthpop
+1.6968847322006313,Bare Nuclei,Synthpop
+1.1793576304044873,Bland Chromatin,Synthpop
+0.8741405159207523,Normal Nucleoli,Synthpop
+0.20107123238343344,Mitoses,Synthpop
+0.3744433493371436,Clump Thickness,Synthpop
+1.6384602594409732,Uniformity of Cell Size,Synthpop
+1.3252011298949535,Uniformity of Cell Shape,Synthpop
+0.8623164993603332,Marginal Adhesion,Synthpop
+0.8573497163052053,Single Epithelial Cell Size,Synthpop
+1.9140936163198496,Bare Nuclei,Synthpop
+0.9747059639503394,Bland Chromatin,Synthpop
+0.7196408903749426,Normal Nucleoli,Synthpop
+0.166042818172573,Mitoses,Synthpop
+0.4151678470828405,Clump Thickness,Synthpop
+1.7934685828336943,Uniformity of Cell Size,Synthpop
+1.5012585872421886,Uniformity of Cell Shape,Synthpop
+0.9357603408007586,Marginal Adhesion,Synthpop
+0.9245280754759033,Single Epithelial Cell Size,Synthpop
+1.7978078386168046,Bare Nuclei,Synthpop
+1.1430350001108878,Bland Chromatin,Synthpop
+0.7817189622281425,Normal Nucleoli,Synthpop
+0.19645396416610975,Mitoses,Synthpop
+0.4222622998759283,Clump Thickness,Synthpop
+1.7358576935511312,Uniformity of Cell Size,Synthpop
+1.4858537173545425,Uniformity of Cell Shape,Synthpop
+0.8892469097021384,Marginal Adhesion,Synthpop
+0.9087889047607338,Single Epithelial Cell Size,Synthpop
+1.6541343159840658,Bare Nuclei,Synthpop
+0.9053019340918823,Bland Chromatin,Synthpop
+0.7989951652187258,Normal Nucleoli,Synthpop
+0.15601672177347933,Mitoses,Synthpop
+0.34703721475006083,Clump Thickness,Synthpop
+1.558781030490072,Uniformity of Cell Size,Synthpop
+1.3058722303403838,Uniformity of Cell Shape,Synthpop
+0.8009257045541979,Marginal Adhesion,Synthpop
+0.9425889714695554,Single Epithelial Cell Size,Synthpop
+1.8654270967001234,Bare Nuclei,Synthpop
+0.9645681621090824,Bland Chromatin,Synthpop
+0.7540628573550325,Normal Nucleoli,Synthpop
+0.17307157251772842,Mitoses,Synthpop
+0.4486591090405448,Clump Thickness,Synthpop
+1.8977383485380208,Uniformity of Cell Size,Synthpop
+1.6216402747144154,Uniformity of Cell Shape,Synthpop
+0.9565186281474298,Marginal Adhesion,Synthpop
+0.8611334670290259,Single Epithelial Cell Size,Synthpop
+1.9989509141774848,Bare Nuclei,Synthpop
+1.169992391051009,Bland Chromatin,Synthpop
+0.7476633164942144,Normal Nucleoli,Synthpop
+0.20214143650818384,Mitoses,Synthpop
+0.4425608258630387,Clump Thickness,Synthpop
+1.6975583715182192,Uniformity of Cell Size,Synthpop
+1.5115682761635478,Uniformity of Cell Shape,Synthpop
+0.8810532356233938,Marginal Adhesion,Synthpop
+0.8450941704929108,Single Epithelial Cell Size,Synthpop
+1.7501687522780052,Bare Nuclei,Synthpop
+1.0754016983585577,Bland Chromatin,Synthpop
+0.807784220978454,Normal Nucleoli,Synthpop
+0.15437215285812134,Mitoses,Synthpop
+0.39239572026561237,Clump Thickness,Synthpop
+1.5196135886148194,Uniformity of Cell Size,Synthpop
+1.2380205761262721,Uniformity of Cell Shape,Synthpop
+0.8384021828595026,Marginal Adhesion,Synthpop
+0.8320141424869282,Single Epithelial Cell Size,Synthpop
+1.7719311541540443,Bare Nuclei,Synthpop
+1.0177739205532612,Bland Chromatin,Synthpop
+0.7098751123109339,Normal Nucleoli,Synthpop
+0.16141594968175385,Mitoses,Synthpop
+0.4247609792097739,Clump Thickness,Synthpop
+1.7116861912440693,Uniformity of Cell Size,Synthpop
+1.4778377158067746,Uniformity of Cell Shape,Synthpop
+0.7538033612912558,Marginal Adhesion,Synthpop
+0.8536755698812177,Single Epithelial Cell Size,Synthpop
+1.7803908961453918,Bare Nuclei,Synthpop
+1.2258650403200522,Bland Chromatin,Synthpop
+0.8010409246404915,Normal Nucleoli,Synthpop
+0.1693531729757645,Mitoses,Synthpop
+0.42814409820985144,Clump Thickness,Synthpop
+1.6315485386002766,Uniformity of Cell Size,Synthpop
+1.532411746783851,Uniformity of Cell Shape,Synthpop
+0.7884162934310642,Marginal Adhesion,Synthpop
+0.8404963740821607,Single Epithelial Cell Size,Synthpop
+1.7720520516364466,Bare Nuclei,Synthpop
+1.065246891357351,Bland Chromatin,Synthpop
+0.7000843011746843,Normal Nucleoli,Synthpop
+0.16081217930118175,Mitoses,Synthpop
+0.4821665317987241,Clump Thickness,Synthpop
+1.7845401831071284,Uniformity of Cell Size,Synthpop
+1.435702306586016,Uniformity of Cell Shape,Synthpop
+0.8618379258135279,Marginal Adhesion,Synthpop
+0.8948625550164598,Single Epithelial Cell Size,Synthpop
+1.9583553274734058,Bare Nuclei,Synthpop
+1.153789263629044,Bland Chromatin,Synthpop
+0.8001798428618737,Normal Nucleoli,Synthpop
+0.14785883129030067,Mitoses,Synthpop
+0.4160295534767708,Clump Thickness,Synthpop
+1.6981708699496851,Uniformity of Cell Size,Synthpop
+1.5089891318037643,Uniformity of Cell Shape,Synthpop
+0.8505980672735377,Marginal Adhesion,Synthpop
+0.7841304698024717,Single Epithelial Cell Size,Synthpop
+1.9760126512367553,Bare Nuclei,Synthpop
+0.9965321978189993,Bland Chromatin,Synthpop
+0.6933591138668279,Normal Nucleoli,Synthpop
+0.15795738595102965,Mitoses,Synthpop
+0.4102582659110823,Clump Thickness,Synthpop
+1.7242999556469605,Uniformity of Cell Size,Synthpop
+1.4493441573082406,Uniformity of Cell Shape,Synthpop
+0.8407328108305695,Marginal Adhesion,Synthpop
+0.8177988951623092,Single Epithelial Cell Size,Synthpop
+2.0810612990152713,Bare Nuclei,Synthpop
+0.9488507670352174,Bland Chromatin,Synthpop
+0.7722803637368304,Normal Nucleoli,Synthpop
+0.14050243951415137,Mitoses,Synthpop
+0.41009884791649887,Clump Thickness,Synthpop
+1.8581216016687563,Uniformity of Cell Size,Synthpop
+1.5664528708991396,Uniformity of Cell Shape,Synthpop
+0.8440246995196865,Marginal Adhesion,Synthpop
+0.9180092981677204,Single Epithelial Cell Size,Synthpop
+1.758994417128432,Bare Nuclei,Synthpop
+1.2679564369274277,Bland Chromatin,Synthpop
+0.7925595796129228,Normal Nucleoli,Synthpop
+0.16449075541114225,Mitoses,Synthpop
+0.4381066946065344,Clump Thickness,Synthpop
+1.7108220001933465,Uniformity of Cell Size,Synthpop
+1.4379831822007874,Uniformity of Cell Shape,Synthpop
+0.7745828424342773,Marginal Adhesion,Synthpop
+0.8250886130752354,Single Epithelial Cell Size,Synthpop
+1.7186295620184289,Bare Nuclei,Synthpop
+1.0669579333131398,Bland Chromatin,Synthpop
+0.8124173187883458,Normal Nucleoli,Synthpop
+0.17830676972478385,Mitoses,Synthpop
+0.5444775807411407,Clump Thickness,Synthpop
+1.8136222595340614,Uniformity of Cell Size,Synthpop
+1.6156519728321326,Uniformity of Cell Shape,Synthpop
+0.7998369083978195,Marginal Adhesion,Synthpop
+0.8700457302960262,Single Epithelial Cell Size,Synthpop
+1.5572662957203167,Bare Nuclei,Synthpop
+0.9308964406594925,Bland Chromatin,Synthpop
+0.7842721354839058,Normal Nucleoli,Synthpop
+0.16658453491825148,Mitoses,Synthpop
+0.49731306436269995,Clump Thickness,Synthpop
+1.7455726375522347,Uniformity of Cell Size,Synthpop
+1.495960310804687,Uniformity of Cell Shape,Synthpop
+0.8247916161593813,Marginal Adhesion,Synthpop
+0.8397191657710682,Single Epithelial Cell Size,Synthpop
+2.0449749289254764,Bare Nuclei,Synthpop
+1.1974124802155326,Bland Chromatin,Synthpop
+0.8584976974342159,Normal Nucleoli,Synthpop
+0.15743950429798786,Mitoses,Synthpop
+0.40308848241088663,Clump Thickness,Synthpop
+1.6010352866542688,Uniformity of Cell Size,Synthpop
+1.428801713856361,Uniformity of Cell Shape,Synthpop
+0.8161812348833835,Marginal Adhesion,Synthpop
+0.7893506983191857,Single Epithelial Cell Size,Synthpop
+1.6080001767247412,Bare Nuclei,Synthpop
+0.9156082986846549,Bland Chromatin,Synthpop
+0.6928613656756238,Normal Nucleoli,Synthpop
+0.15754824905492532,Mitoses,Synthpop
+0.48653785731035787,Clump Thickness,Synthpop
+1.7253157173725173,Uniformity of Cell Size,Synthpop
+1.408706737434408,Uniformity of Cell Shape,Synthpop
+0.8760706767773374,Marginal Adhesion,Synthpop
+0.8565604518450629,Single Epithelial Cell Size,Synthpop
+1.706035917167926,Bare Nuclei,Synthpop
+1.1527343918701227,Bland Chromatin,Synthpop
+0.8126355424783974,Normal Nucleoli,Synthpop
+0.16934039358004702,Mitoses,Synthpop
+0.3743171329957407,Clump Thickness,Synthpop
+1.4646119122717414,Uniformity of Cell Size,Synthpop
+1.2648144716675445,Uniformity of Cell Shape,Synthpop
+0.753678084904096,Marginal Adhesion,Synthpop
+0.8231447263121199,Single Epithelial Cell Size,Synthpop
+1.4212533463827008,Bare Nuclei,Synthpop
+0.9309950644595383,Bland Chromatin,Synthpop
+0.7251798984971367,Normal Nucleoli,Synthpop
+0.12277505767674404,Mitoses,Synthpop
+0.4655949789455028,Clump Thickness,Synthpop
+1.6702566009863946,Uniformity of Cell Size,Synthpop
+1.5182683994912949,Uniformity of Cell Shape,Synthpop
+0.7744885511293979,Marginal Adhesion,Synthpop
+0.9173187189051628,Single Epithelial Cell Size,Synthpop
+1.823026678490505,Bare Nuclei,Synthpop
+1.000643378985695,Bland Chromatin,Synthpop
+0.7959740406264418,Normal Nucleoli,Synthpop
+0.15887550167538078,Mitoses,Synthpop
+0.3608416049929107,Clump Thickness,Synthpop
+1.5014844607421076,Uniformity of Cell Size,Synthpop
+1.2762568041990792,Uniformity of Cell Shape,Synthpop
+0.7930244139161199,Marginal Adhesion,Synthpop
+0.8206579348428092,Single Epithelial Cell Size,Synthpop
+1.6443236600008897,Bare Nuclei,Synthpop
+1.1300715913311858,Bland Chromatin,Synthpop
+0.7115104896052362,Normal Nucleoli,Synthpop
+0.1591134153299992,Mitoses,Synthpop
+0.41426051269542535,Clump Thickness,Synthpop
+1.6669759890787703,Uniformity of Cell Size,Synthpop
+1.4539042334011465,Uniformity of Cell Shape,Synthpop
+0.8663362917004638,Marginal Adhesion,Synthpop
+0.871968310898741,Single Epithelial Cell Size,Synthpop
+1.6043278352624633,Bare Nuclei,Synthpop
+1.064270156565562,Bland Chromatin,Synthpop
+0.7795144494620839,Normal Nucleoli,Synthpop
+0.1600665131696437,Mitoses,Synthpop
+0.44207632673274466,Clump Thickness,Synthpop
+1.794926193153503,Uniformity of Cell Size,Synthpop
+1.419053859161612,Uniformity of Cell Shape,Synthpop
+0.8954789554855594,Marginal Adhesion,Synthpop
+0.9246056148977808,Single Epithelial Cell Size,Synthpop
+1.70948443735275,Bare Nuclei,Synthpop
+1.0794849282369523,Bland Chromatin,Synthpop
+0.7830214934285783,Normal Nucleoli,Synthpop
+0.1655581799131716,Mitoses,Synthpop
+0.4417379393750672,Clump Thickness,Synthpop
+1.8226861254447888,Uniformity of Cell Size,Synthpop
+1.5624479507714162,Uniformity of Cell Shape,Synthpop
+0.8878257532639326,Marginal Adhesion,Synthpop
+0.9792379255444197,Single Epithelial Cell Size,Synthpop
+2.0099005913483015,Bare Nuclei,Synthpop
+1.1502249611706639,Bland Chromatin,Synthpop
+0.8352206752860504,Normal Nucleoli,Synthpop
+0.1821242902979648,Mitoses,Synthpop
+0.4012102705033072,Clump Thickness,Synthpop
+1.8002216687308275,Uniformity of Cell Size,Synthpop
+1.4043742406714028,Uniformity of Cell Shape,Synthpop
+0.9548898146861647,Marginal Adhesion,Synthpop
+0.8621424609810475,Single Epithelial Cell Size,Synthpop
+1.7270319170710626,Bare Nuclei,Synthpop
+1.1647650385874393,Bland Chromatin,Synthpop
+0.7344754679854327,Normal Nucleoli,Synthpop
+0.1855277789034956,Mitoses,Synthpop
+0.500697741656371,Clump Thickness,Synthpop
+1.9190229585707228,Uniformity of Cell Size,Synthpop
+1.6407099795092024,Uniformity of Cell Shape,Synthpop
+0.9043614279901199,Marginal Adhesion,Synthpop
+0.9633078766061784,Single Epithelial Cell Size,Synthpop
+2.069535860739129,Bare Nuclei,Synthpop
+1.1885815038730787,Bland Chromatin,Synthpop
+0.886980693774335,Normal Nucleoli,Synthpop
+0.18660721816034012,Mitoses,Synthpop
+0.4551948345862682,Clump Thickness,Synthpop
+1.6071482550999243,Uniformity of Cell Size,Synthpop
+1.4131426942814198,Uniformity of Cell Shape,Synthpop
+0.7514132151174208,Marginal Adhesion,Synthpop
+0.8042328865176163,Single Epithelial Cell Size,Synthpop
+1.69561021721839,Bare Nuclei,Synthpop
+0.9237896804006642,Bland Chromatin,Synthpop
+0.7751957769215833,Normal Nucleoli,Synthpop
+0.18659065716072432,Mitoses,Synthpop
+0.43483980891627544,Clump Thickness,Synthpop
+1.6381561681895151,Uniformity of Cell Size,Synthpop
+1.4858775405024038,Uniformity of Cell Shape,Synthpop
+0.81545063946093,Marginal Adhesion,Synthpop
+0.8394857733087789,Single Epithelial Cell Size,Synthpop
+1.9836627531509166,Bare Nuclei,Synthpop
+0.9677697534656221,Bland Chromatin,Synthpop
+0.7985533907670463,Normal Nucleoli,Synthpop
+0.16929544880712216,Mitoses,Synthpop
+0.41663794921838454,Clump Thickness,Synthpop
+1.756068133018558,Uniformity of Cell Size,Synthpop
+1.4186145201354718,Uniformity of Cell Shape,Synthpop
+0.7864844416076451,Marginal Adhesion,Synthpop
+0.873359086940673,Single Epithelial Cell Size,Synthpop
+2.030145956321737,Bare Nuclei,Synthpop
+1.0149233029250948,Bland Chromatin,Synthpop
+0.7985096599320782,Normal Nucleoli,Synthpop
+0.18557834632823716,Mitoses,Synthpop
+0.4352443049821304,Clump Thickness,Synthpop
+1.697141271880903,Uniformity of Cell Size,Synthpop
+1.4212769815483906,Uniformity of Cell Shape,Synthpop
+0.7698409507298312,Marginal Adhesion,Synthpop
+0.8560291615297712,Single Epithelial Cell Size,Synthpop
+1.761783741685645,Bare Nuclei,Synthpop
+1.0279006882922717,Bland Chromatin,Synthpop
+0.6894609201715431,Normal Nucleoli,Synthpop
+0.1546132196063207,Mitoses,Synthpop
+0.5278748968571128,Clump Thickness,Synthpop
+1.7375229899961895,Uniformity of Cell Size,Synthpop
+1.4475008241009704,Uniformity of Cell Shape,Synthpop
+0.789344587710108,Marginal Adhesion,Synthpop
+0.881998329873154,Single Epithelial Cell Size,Synthpop
+1.9385608108859815,Bare Nuclei,Synthpop
+1.116310393625689,Bland Chromatin,Synthpop
+0.7107400234966125,Normal Nucleoli,Synthpop
+0.16547991183694521,Mitoses,Synthpop
+0.4283765075434681,Clump Thickness,Synthpop
+1.5865484133346677,Uniformity of Cell Size,Synthpop
+1.38174698457969,Uniformity of Cell Shape,Synthpop
+0.7750380347156547,Marginal Adhesion,Synthpop
+0.8317132067201403,Single Epithelial Cell Size,Synthpop
+1.5122563010210912,Bare Nuclei,Synthpop
+1.1017419405825246,Bland Chromatin,Synthpop
+0.7686836874191662,Normal Nucleoli,Synthpop
+0.13749627483921892,Mitoses,Synthpop
+0.44861693187609897,Clump Thickness,Synthpop
+1.7408211133867466,Uniformity of Cell Size,Synthpop
+1.53970423945846,Uniformity of Cell Shape,Synthpop
+0.7957089926109409,Marginal Adhesion,Synthpop
+0.9199921589093897,Single Epithelial Cell Size,Synthpop
+1.719966818423927,Bare Nuclei,Synthpop
+1.0580316371232306,Bland Chromatin,Synthpop
+0.7626103303772777,Normal Nucleoli,Synthpop
+0.1904381429524792,Mitoses,Synthpop
+0.43607853318052925,Clump Thickness,Synthpop
+1.7390299348503413,Uniformity of Cell Size,Synthpop
+1.4529127741546448,Uniformity of Cell Shape,Synthpop
+0.8862858945324322,Marginal Adhesion,Synthpop
+0.8423147343786286,Single Epithelial Cell Size,Synthpop
+1.7056827423930212,Bare Nuclei,Synthpop
+1.0620978524346092,Bland Chromatin,Synthpop
+0.7163618677752885,Normal Nucleoli,Synthpop
+0.1544616741068752,Mitoses,Synthpop
+0.4244916263554354,Clump Thickness,Synthpop
+1.6325730907276783,Uniformity of Cell Size,Synthpop
+1.3217411303281943,Uniformity of Cell Shape,Synthpop
+0.7594146780753079,Marginal Adhesion,Synthpop
+0.8712058627968772,Single Epithelial Cell Size,Synthpop
+1.8779873386004555,Bare Nuclei,Synthpop
+1.0658506013315034,Bland Chromatin,Synthpop
+0.7651426549807099,Normal Nucleoli,Synthpop
+0.1854397599948861,Mitoses,Synthpop
+0.41751730288837163,Clump Thickness,Synthpop
+1.7447429976935658,Uniformity of Cell Size,Synthpop
+1.581863557366958,Uniformity of Cell Shape,Synthpop
+0.9422938819214204,Marginal Adhesion,Synthpop
+0.9642701314510407,Single Epithelial Cell Size,Synthpop
+1.9468077296545274,Bare Nuclei,Synthpop
+1.0393295610003528,Bland Chromatin,Synthpop
+0.8145446728698065,Normal Nucleoli,Synthpop
+0.16150578456488204,Mitoses,Synthpop
+0.4375591613602367,Clump Thickness,Synthpop
+1.9504339818153067,Uniformity of Cell Size,Synthpop
+1.4891722153249285,Uniformity of Cell Shape,Synthpop
+0.8514678873609947,Marginal Adhesion,Synthpop
+0.9703553915020424,Single Epithelial Cell Size,Synthpop
+1.8156200965142717,Bare Nuclei,Synthpop
+1.1442471402464545,Bland Chromatin,Synthpop
+0.7960733863167062,Normal Nucleoli,Synthpop
+0.18544116982762496,Mitoses,Synthpop
+0.48777218172249415,Clump Thickness,Synthpop
+1.821082177725873,Uniformity of Cell Size,Synthpop
+1.4670688693518,Uniformity of Cell Shape,Synthpop
+0.8887878729827299,Marginal Adhesion,Synthpop
+0.9378549396572001,Single Epithelial Cell Size,Synthpop
+2.162671514745672,Bare Nuclei,Synthpop
+1.0086731489929834,Bland Chromatin,Synthpop
+0.9478654063396968,Normal Nucleoli,Synthpop
+0.14558503424497377,Mitoses,Synthpop
+0.444063096194509,Clump Thickness,Synthpop
+1.6198779176975793,Uniformity of Cell Size,Synthpop
+1.3985099980099336,Uniformity of Cell Shape,Synthpop
+0.8579152778246492,Marginal Adhesion,Synthpop
+0.7967987221761144,Single Epithelial Cell Size,Synthpop
+1.9137818699865654,Bare Nuclei,Synthpop
+1.0811168128780932,Bland Chromatin,Synthpop
+0.6908532485001986,Normal Nucleoli,Synthpop
+0.14268391044375198,Mitoses,Synthpop
+0.43679730310663956,Clump Thickness,Synthpop
+1.7443400596909813,Uniformity of Cell Size,Synthpop
+1.4653561405095246,Uniformity of Cell Shape,Synthpop
+0.8242402128901377,Marginal Adhesion,Synthpop
+0.8753834893729514,Single Epithelial Cell Size,Synthpop
+1.7341631787828793,Bare Nuclei,Synthpop
+0.9407118153525776,Bland Chromatin,Synthpop
+0.816989332709743,Normal Nucleoli,Synthpop
+0.16762884224392435,Mitoses,Synthpop
+0.4792754428218898,Clump Thickness,Synthpop
+1.7148752835886643,Uniformity of Cell Size,Synthpop
+1.407135965062664,Uniformity of Cell Shape,Synthpop
+0.7809756690292312,Marginal Adhesion,Synthpop
+0.8904143010351797,Single Epithelial Cell Size,Synthpop
+1.583864926284533,Bare Nuclei,Synthpop
+1.1042502010725006,Bland Chromatin,Synthpop
+0.8936062810610543,Normal Nucleoli,Synthpop
+0.18941195294586638,Mitoses,Synthpop
+0.4279840131962089,Clump Thickness,Synthpop
+1.7258785062974964,Uniformity of Cell Size,Synthpop
+1.4461821001554938,Uniformity of Cell Shape,Synthpop
+0.7860173704662643,Marginal Adhesion,Synthpop
+0.8803574336636983,Single Epithelial Cell Size,Synthpop
+1.87291477450515,Bare Nuclei,Synthpop
+1.015883247652019,Bland Chromatin,Synthpop
+0.7457519524652715,Normal Nucleoli,Synthpop
+0.2039210809507055,Mitoses,Synthpop
+0.385775916580598,Clump Thickness,Synthpop
+1.7027302382491647,Uniformity of Cell Size,Synthpop
+1.5923988157068671,Uniformity of Cell Shape,Synthpop
+0.830851417141559,Marginal Adhesion,Synthpop
+0.8536717629986094,Single Epithelial Cell Size,Synthpop
+1.8881417812039236,Bare Nuclei,Synthpop
+1.0744984667263966,Bland Chromatin,Synthpop
+0.8563483853688839,Normal Nucleoli,Synthpop
+0.1712547469441638,Mitoses,Synthpop
+0.5120070999677045,Clump Thickness,Synthpop
+1.7397756720370117,Uniformity of Cell Size,Synthpop
+1.5035895296298505,Uniformity of Cell Shape,Synthpop
+0.9371788549922333,Marginal Adhesion,Synthpop
+0.8902522860910292,Single Epithelial Cell Size,Synthpop
+2.106168899032863,Bare Nuclei,Synthpop
+1.0317914821316,Bland Chromatin,Synthpop
+0.8751289323085125,Normal Nucleoli,Synthpop
+0.20155938092472261,Mitoses,Synthpop
+0.4040699872188503,Clump Thickness,Synthpop
+1.720738106811044,Uniformity of Cell Size,Synthpop
+1.4356401545423638,Uniformity of Cell Shape,Synthpop
+0.8585800236566459,Marginal Adhesion,Synthpop
+0.9754994152773971,Single Epithelial Cell Size,Synthpop
+1.9483409147314354,Bare Nuclei,Synthpop
+1.1157169162437826,Bland Chromatin,Synthpop
+0.8316710270973585,Normal Nucleoli,Synthpop
+0.21018440011053469,Mitoses,Synthpop
+0.44868943643575365,Clump Thickness,Synthpop
+1.7342850195161905,Uniformity of Cell Size,Synthpop
+1.5174354767986031,Uniformity of Cell Shape,Synthpop
+0.7992453850715755,Marginal Adhesion,Synthpop
+0.9199222821498703,Single Epithelial Cell Size,Synthpop
+1.6679161463452625,Bare Nuclei,Synthpop
+1.0087505506004397,Bland Chromatin,Synthpop
+0.8375871846088432,Normal Nucleoli,Synthpop
+0.19256998690273042,Mitoses,Synthpop
+0.41354148407892083,Clump Thickness,Synthpop
+1.5361275276592234,Uniformity of Cell Size,Synthpop
+1.2852676560822038,Uniformity of Cell Shape,Synthpop
+0.8001558013060476,Marginal Adhesion,Synthpop
+0.8102080141861833,Single Epithelial Cell Size,Synthpop
+1.8433961241356127,Bare Nuclei,Synthpop
+0.9781960558669202,Bland Chromatin,Synthpop
+0.750509784769948,Normal Nucleoli,Synthpop
+0.194649165666152,Mitoses,Synthpop
+0.48735053494543323,Clump Thickness,Synthpop
+1.9341743662820339,Uniformity of Cell Size,Synthpop
+1.552843698407002,Uniformity of Cell Shape,Synthpop
+0.9135465951285717,Marginal Adhesion,Synthpop
+0.8922881718855715,Single Epithelial Cell Size,Synthpop
+1.9516254472882038,Bare Nuclei,Synthpop
+1.1433574733733909,Bland Chromatin,Synthpop
+0.8287139679577411,Normal Nucleoli,Synthpop
+0.16290778195560407,Mitoses,Synthpop
+0.4346464345760597,Clump Thickness,Synthpop
+1.8151160360781318,Uniformity of Cell Size,Synthpop
+1.5364150213838332,Uniformity of Cell Shape,Synthpop
+1.0280307040883556,Marginal Adhesion,Synthpop
+0.8741339056711622,Single Epithelial Cell Size,Synthpop
+1.7559568531817555,Bare Nuclei,Synthpop
+0.9498224934366138,Bland Chromatin,Synthpop
+0.8072704093041574,Normal Nucleoli,Synthpop
+0.15685826798421923,Mitoses,Synthpop
+0.5008830880401107,Clump Thickness,Synthpop
+2.287295008133261,Uniformity of Cell Size,Synthpop
+1.6942305949825065,Uniformity of Cell Shape,Synthpop
+0.9386378894406983,Marginal Adhesion,Synthpop
+1.03317041856805,Single Epithelial Cell Size,Synthpop
+1.942362838079859,Bare Nuclei,Synthpop
+1.2326270830681993,Bland Chromatin,Synthpop
+0.9469414543310555,Normal Nucleoli,Synthpop
+0.2077837314366802,Mitoses,Synthpop
+0.4198733998452232,Clump Thickness,Synthpop
+1.8125924434832907,Uniformity of Cell Size,Synthpop
+1.6032984428825268,Uniformity of Cell Shape,Synthpop
+0.7902277023939269,Marginal Adhesion,Synthpop
+0.9445764762697341,Single Epithelial Cell Size,Synthpop
+1.8480786738259734,Bare Nuclei,Synthpop
+1.0536139121775474,Bland Chromatin,Synthpop
+0.800193690377085,Normal Nucleoli,Synthpop
+0.1457606224502802,Mitoses,Synthpop
+0.39980500397837665,Clump Thickness,Synthpop
+1.9066955676120174,Uniformity of Cell Size,Synthpop
+1.4253814597152916,Uniformity of Cell Shape,Synthpop
+0.8084283344119609,Marginal Adhesion,Synthpop
+0.9148462182423368,Single Epithelial Cell Size,Synthpop
+1.999080913000172,Bare Nuclei,Synthpop
+1.0289403443336393,Bland Chromatin,Synthpop
+0.799404112197242,Normal Nucleoli,Synthpop
+0.19818940991516526,Mitoses,Synthpop
+0.4325342703335003,Clump Thickness,Synthpop
+1.5906488445279143,Uniformity of Cell Size,Synthpop
+1.3460670855662642,Uniformity of Cell Shape,Synthpop
+0.9173173695841343,Marginal Adhesion,Synthpop
+0.7951004648132968,Single Epithelial Cell Size,Synthpop
+1.9032705265985843,Bare Nuclei,Synthpop
+1.0529667276624202,Bland Chromatin,Synthpop
+0.8020281372880539,Normal Nucleoli,Synthpop
+0.16174331988359117,Mitoses,Synthpop
+0.38006525666266916,Clump Thickness,Synthpop
+1.659807452132874,Uniformity of Cell Size,Synthpop
+1.4232667436581063,Uniformity of Cell Shape,Synthpop
+0.7230018194436284,Marginal Adhesion,Synthpop
+0.864006256847687,Single Epithelial Cell Size,Synthpop
+1.6400162447744269,Bare Nuclei,Synthpop
+1.0356519418590981,Bland Chromatin,Synthpop
+0.7541264222927001,Normal Nucleoli,Synthpop
+0.1833728006675842,Mitoses,Synthpop
+0.48528787885434166,Clump Thickness,Synthpop
+1.7194315632042982,Uniformity of Cell Size,Synthpop
+1.4161982210742396,Uniformity of Cell Shape,Synthpop
+0.853330973225215,Marginal Adhesion,Synthpop
+0.8830211793351788,Single Epithelial Cell Size,Synthpop
+1.905896863804281,Bare Nuclei,Synthpop
+1.0180622715187988,Bland Chromatin,Synthpop
+0.830532815923202,Normal Nucleoli,Synthpop
+0.15611136597230435,Mitoses,Synthpop
+0.3672624600685759,Clump Thickness,Synthpop
+1.671741175601487,Uniformity of Cell Size,Synthpop
+1.4206448197922694,Uniformity of Cell Shape,Synthpop
+0.7946195875141868,Marginal Adhesion,Synthpop
+0.8228907934238235,Single Epithelial Cell Size,Synthpop
+1.49953022521439,Bare Nuclei,Synthpop
+0.9818935010387199,Bland Chromatin,Synthpop
+0.8564288339897003,Normal Nucleoli,Synthpop
+0.157710961695094,Mitoses,Synthpop
+0.4317419720253212,Clump Thickness,Synthpop
+1.7832280406404886,Uniformity of Cell Size,Synthpop
+1.4487138027830713,Uniformity of Cell Shape,Synthpop
+0.8153741309909535,Marginal Adhesion,Synthpop
+0.9219275458552317,Single Epithelial Cell Size,Synthpop
+2.0557051031686835,Bare Nuclei,Synthpop
+1.1296679154319667,Bland Chromatin,Synthpop
+0.8194468276318332,Normal Nucleoli,Synthpop
+0.17199037536490253,Mitoses,Synthpop
+0.4719825537428235,Clump Thickness,Synthpop
+1.870492999396467,Uniformity of Cell Size,Synthpop
+1.5651812610768427,Uniformity of Cell Shape,Synthpop
+0.9018396915793518,Marginal Adhesion,Synthpop
+0.9643472900201459,Single Epithelial Cell Size,Synthpop
+2.1253018092390996,Bare Nuclei,Synthpop
+1.0204130420013127,Bland Chromatin,Synthpop
+0.8486390200824941,Normal Nucleoli,Synthpop
+0.1802134817093609,Mitoses,Synthpop
+0.4237228372738788,Clump Thickness,Synthpop
+1.6434325718670675,Uniformity of Cell Size,Synthpop
+1.3990083681666292,Uniformity of Cell Shape,Synthpop
+0.7702091265577756,Marginal Adhesion,Synthpop
+0.8480842287396162,Single Epithelial Cell Size,Synthpop
+1.6812019135494045,Bare Nuclei,Synthpop
+0.9912416212126787,Bland Chromatin,Synthpop
+0.9008266994720282,Normal Nucleoli,Synthpop
+0.17011642913764047,Mitoses,Synthpop
+0.3784970204474541,Clump Thickness,Synthpop
+1.6654471904282675,Uniformity of Cell Size,Synthpop
+1.463558927574164,Uniformity of Cell Shape,Synthpop
+0.7986260899736403,Marginal Adhesion,Synthpop
+0.920553072270917,Single Epithelial Cell Size,Synthpop
+1.5885823695328536,Bare Nuclei,Synthpop
+1.007289041105908,Bland Chromatin,Synthpop
+0.7769851574964465,Normal Nucleoli,Synthpop
+0.16789751961097005,Mitoses,Synthpop
+0.47415366656697944,Clump Thickness,Synthpop
+1.5880581354013696,Uniformity of Cell Size,Synthpop
+1.4139975819687463,Uniformity of Cell Shape,Synthpop
+0.830980492574536,Marginal Adhesion,Synthpop
+0.8688418363199678,Single Epithelial Cell Size,Synthpop
+1.9335141645059208,Bare Nuclei,Synthpop
+1.0365264627940598,Bland Chromatin,Synthpop
+0.8141033526266298,Normal Nucleoli,Synthpop
+0.16443138590478718,Mitoses,Synthpop
+0.37279399975213745,Clump Thickness,Synthpop
+1.5658874084408012,Uniformity of Cell Size,Synthpop
+1.4653883624992214,Uniformity of Cell Shape,Synthpop
+0.8149278668831244,Marginal Adhesion,Synthpop
+0.7984250521956616,Single Epithelial Cell Size,Synthpop
+1.8103082728491875,Bare Nuclei,Synthpop
+1.0639541390305196,Bland Chromatin,Synthpop
+0.7672066855666622,Normal Nucleoli,Synthpop
+0.19189563215701008,Mitoses,Synthpop
+0.4980204374622956,Clump Thickness,Synthpop
+1.7138534598273503,Uniformity of Cell Size,Synthpop
+1.4505835724823808,Uniformity of Cell Shape,Synthpop
+0.873099343908529,Marginal Adhesion,Synthpop
+0.8457149548051413,Single Epithelial Cell Size,Synthpop
+1.657604986402954,Bare Nuclei,Synthpop
+1.1083710287146071,Bland Chromatin,Synthpop
+0.8004857756669335,Normal Nucleoli,Synthpop
+0.1739072754766963,Mitoses,Synthpop
+0.3914615881545415,Clump Thickness,Synthpop
+1.740969114515225,Uniformity of Cell Size,Synthpop
+1.5896000875070366,Uniformity of Cell Shape,Synthpop
+0.8825722668312501,Marginal Adhesion,Synthpop
+1.0363449733802368,Single Epithelial Cell Size,Synthpop
+1.6693887484314158,Bare Nuclei,Synthpop
+1.0804225295693668,Bland Chromatin,Synthpop
+0.7468204938040842,Normal Nucleoli,Synthpop
+0.18912226859949757,Mitoses,Synthpop
+0.5544950841870057,Clump Thickness,Synthpop
+1.9595798827753983,Uniformity of Cell Size,Synthpop
+1.5446637170812625,Uniformity of Cell Shape,Synthpop
+1.0183049403636955,Marginal Adhesion,Synthpop
+0.9728685657093189,Single Epithelial Cell Size,Synthpop
+1.7842113697618986,Bare Nuclei,Synthpop
+1.1584685485561654,Bland Chromatin,Synthpop
+0.827132536718888,Normal Nucleoli,Synthpop
+0.19808282386989148,Mitoses,Synthpop
+0.48068538189358295,Clump Thickness,Synthpop
+1.5746961627045661,Uniformity of Cell Size,Synthpop
+1.3690140569919593,Uniformity of Cell Shape,Synthpop
+0.8069077884051795,Marginal Adhesion,Synthpop
+0.8516298102770726,Single Epithelial Cell Size,Synthpop
+1.8431405092623656,Bare Nuclei,Synthpop
+1.0365970298120857,Bland Chromatin,Synthpop
+0.788784653253497,Normal Nucleoli,Synthpop
+0.17155562554722065,Mitoses,Synthpop
+0.43557719994329974,Clump Thickness,Synthpop
+1.5679094685404262,Uniformity of Cell Size,Synthpop
+1.3233172193794493,Uniformity of Cell Shape,Synthpop
+0.7917640850573274,Marginal Adhesion,Synthpop
+0.8387811255552052,Single Epithelial Cell Size,Synthpop
+1.5540872352051767,Bare Nuclei,Synthpop
+1.103515119311669,Bland Chromatin,Synthpop
+0.6787492132956134,Normal Nucleoli,Synthpop
+0.16471689088735228,Mitoses,Synthpop
+0.5119833271209931,Clump Thickness,Synthpop
+1.4556952886094492,Uniformity of Cell Size,Synthpop
+1.2784172014613184,Uniformity of Cell Shape,Synthpop
+0.7959358729012651,Marginal Adhesion,Synthpop
+0.8277424198767741,Single Epithelial Cell Size,Synthpop
+1.8199751859179933,Bare Nuclei,Synthpop
+0.9216386686090628,Bland Chromatin,Synthpop
+0.7853639829471285,Normal Nucleoli,Synthpop
+0.1839167156371702,Mitoses,Synthpop
+0.36811604277977805,Clump Thickness,Synthpop
+1.6465208506114049,Uniformity of Cell Size,Synthpop
+1.258761627657242,Uniformity of Cell Shape,Synthpop
+0.8064014955443962,Marginal Adhesion,Synthpop
+0.8455888545644976,Single Epithelial Cell Size,Synthpop
+1.9602130780719829,Bare Nuclei,Synthpop
+1.1405892434061504,Bland Chromatin,Synthpop
+0.7895111687606131,Normal Nucleoli,Synthpop
+0.15321371406465434,Mitoses,Synthpop
+0.4093686864644016,Clump Thickness,Synthpop
+1.7990103166095368,Uniformity of Cell Size,Synthpop
+1.5182691735005418,Uniformity of Cell Shape,Synthpop
+0.843662563030546,Marginal Adhesion,Synthpop
+0.9539781330225019,Single Epithelial Cell Size,Synthpop
+1.7327207858282527,Bare Nuclei,Synthpop
+0.9949311473055841,Bland Chromatin,Synthpop
+0.8248186301550614,Normal Nucleoli,Synthpop
+0.18274859394732293,Mitoses,Synthpop
+0.5201461598108706,Clump Thickness,Synthpop
+1.7660863398971365,Uniformity of Cell Size,Synthpop
+1.4528958729254797,Uniformity of Cell Shape,Synthpop
+0.7487798025128781,Marginal Adhesion,Synthpop
+0.8662100439703037,Single Epithelial Cell Size,Synthpop
+1.9099532626436009,Bare Nuclei,Synthpop
+0.91139817155662,Bland Chromatin,Synthpop
+0.837779820566427,Normal Nucleoli,Synthpop
+0.1600598581614758,Mitoses,Synthpop
+0.48159796811003075,Clump Thickness,Synthpop
+1.5440456052319886,Uniformity of Cell Size,Synthpop
+1.4068491360089472,Uniformity of Cell Shape,Synthpop
+0.8583972600198052,Marginal Adhesion,Synthpop
+0.7632167974438291,Single Epithelial Cell Size,Synthpop
+1.6109825826476798,Bare Nuclei,Synthpop
+1.2467017228491397,Bland Chromatin,Synthpop
+0.6782610059911599,Normal Nucleoli,Synthpop
+0.1654362447403567,Mitoses,Synthpop
+0.4349096016340749,Clump Thickness,Synthpop
+1.6486944430823827,Uniformity of Cell Size,Synthpop
+1.3542607212420172,Uniformity of Cell Shape,Synthpop
+0.7550693452163609,Marginal Adhesion,Synthpop
+0.9113804454049648,Single Epithelial Cell Size,Synthpop
+1.770552285325361,Bare Nuclei,Synthpop
+0.964877440810171,Bland Chromatin,Synthpop
+0.8596077172498162,Normal Nucleoli,Synthpop
+0.176614793188565,Mitoses,Synthpop
+0.475034245105701,Clump Thickness,Synthpop
+1.7207968211123044,Uniformity of Cell Size,Synthpop
+1.4406601078909038,Uniformity of Cell Shape,Synthpop
+0.9644029403507139,Marginal Adhesion,Synthpop
+0.8860788399246672,Single Epithelial Cell Size,Synthpop
+1.632889877273165,Bare Nuclei,Synthpop
+1.0686710542124862,Bland Chromatin,Synthpop
+0.8414383360116637,Normal Nucleoli,Synthpop
+0.16776259949709135,Mitoses,Synthpop
+0.4560586587731803,Clump Thickness,Synthpop
+1.7275544827102227,Uniformity of Cell Size,Synthpop
+1.5995824524395785,Uniformity of Cell Shape,Synthpop
+0.9394789706484159,Marginal Adhesion,Synthpop
+0.8682147264288576,Single Epithelial Cell Size,Synthpop
+1.7967442875413833,Bare Nuclei,Synthpop
+1.151061435927914,Bland Chromatin,Synthpop
+0.7549711182202918,Normal Nucleoli,Synthpop
+0.16603675686653818,Mitoses,Synthpop
+0.3983747339843851,Clump Thickness,Synthpop
+1.7328132588711322,Uniformity of Cell Size,Synthpop
+1.2877298176153815,Uniformity of Cell Shape,Synthpop
+0.8098734244939555,Marginal Adhesion,Synthpop
+0.9629820563049436,Single Epithelial Cell Size,Synthpop
+1.8164430500696578,Bare Nuclei,Synthpop
+0.9591829211156602,Bland Chromatin,Synthpop
+0.781640204380164,Normal Nucleoli,Synthpop
+0.14078008255451324,Mitoses,Synthpop
+0.39023588570778267,Clump Thickness,Synthpop
+1.5995226651886678,Uniformity of Cell Size,Synthpop
+1.3812790142691367,Uniformity of Cell Shape,Synthpop
+0.8093118372604313,Marginal Adhesion,Synthpop
+0.8429229031903749,Single Epithelial Cell Size,Synthpop
+1.4862555518099432,Bare Nuclei,Synthpop
+1.0626526206774374,Bland Chromatin,Synthpop
+0.7143035035405736,Normal Nucleoli,Synthpop
+0.13976153490395796,Mitoses,Synthpop
+0.35345131653023537,Clump Thickness,Synthpop
+1.645737447326821,Uniformity of Cell Size,Synthpop
+1.4081704038714618,Uniformity of Cell Shape,Synthpop
+0.9020748815468719,Marginal Adhesion,Synthpop
+0.9367536031451348,Single Epithelial Cell Size,Synthpop
+1.8379291222004348,Bare Nuclei,Synthpop
+0.9809550141696184,Bland Chromatin,Synthpop
+0.802358149967767,Normal Nucleoli,Synthpop
+0.19377698236928764,Mitoses,Synthpop
+0.43444164648488204,Clump Thickness,Synthpop
+1.5843157457763277,Uniformity of Cell Size,Synthpop
+1.3021144441799317,Uniformity of Cell Shape,Synthpop
+0.703125024086434,Marginal Adhesion,Synthpop
+0.7665718334412991,Single Epithelial Cell Size,Synthpop
+1.8283909270434788,Bare Nuclei,Synthpop
+0.9375425339746137,Bland Chromatin,Synthpop
+0.6478408708709179,Normal Nucleoli,Synthpop
+0.19551181680705865,Mitoses,Synthpop
+0.3835507077077765,Clump Thickness,Synthpop
+1.70378863170866,Uniformity of Cell Size,Synthpop
+1.44526380767571,Uniformity of Cell Shape,Synthpop
+0.9425475519862428,Marginal Adhesion,Synthpop
+0.847348003556522,Single Epithelial Cell Size,Synthpop
+1.8894633520752435,Bare Nuclei,Synthpop
+1.1021827865921978,Bland Chromatin,Synthpop
+0.7948162832990258,Normal Nucleoli,Synthpop
+0.14522027279211705,Mitoses,Synthpop
+0.44063846198841633,Clump Thickness,Synthpop
+1.6869944205751435,Uniformity of Cell Size,Synthpop
+1.3812018012804865,Uniformity of Cell Shape,Synthpop
+0.81717774087449,Marginal Adhesion,Synthpop
+0.8661057748685487,Single Epithelial Cell Size,Synthpop
+1.931436668020084,Bare Nuclei,Synthpop
+1.1752479728795715,Bland Chromatin,Synthpop
+0.7941847563213118,Normal Nucleoli,Synthpop
+0.18689152849320415,Mitoses,Synthpop
+0.4564634003479957,Clump Thickness,Synthpop
+1.6563273317612486,Uniformity of Cell Size,Synthpop
+1.3195630565958405,Uniformity of Cell Shape,Synthpop
+0.8132948972376337,Marginal Adhesion,Synthpop
+0.8947700765389858,Single Epithelial Cell Size,Synthpop
+1.713789921516786,Bare Nuclei,Synthpop
+1.0219456507011773,Bland Chromatin,Synthpop
+0.7115103082497377,Normal Nucleoli,Synthpop
+0.15645009608249283,Mitoses,Synthpop
+0.4500013197557727,Clump Thickness,Synthpop
+1.6688365574308393,Uniformity of Cell Size,Synthpop
+1.4090435542436384,Uniformity of Cell Shape,Synthpop
+0.798574926829082,Marginal Adhesion,Synthpop
+0.8799784073120427,Single Epithelial Cell Size,Synthpop
+1.8813797962417143,Bare Nuclei,Synthpop
+0.9818236199478356,Bland Chromatin,Synthpop
+0.8555116146344307,Normal Nucleoli,Synthpop
+0.17781578316447114,Mitoses,Synthpop
+0.5078868627654454,Clump Thickness,Synthpop
+2.1998110634240375,Uniformity of Cell Size,Synthpop
+1.688959355760028,Uniformity of Cell Shape,Synthpop
+1.0147237886957183,Marginal Adhesion,Synthpop
+0.9304361960998488,Single Epithelial Cell Size,Synthpop
+2.259163257934044,Bare Nuclei,Synthpop
+1.107211032001564,Bland Chromatin,Synthpop
+0.9358444030709482,Normal Nucleoli,Synthpop
+0.203889912001036,Mitoses,Synthpop
+0.5126479896446908,Clump Thickness,Synthpop
+2.00179079643043,Uniformity of Cell Size,Synthpop
+1.7161776845917045,Uniformity of Cell Shape,Synthpop
+0.949905996291556,Marginal Adhesion,Synthpop
+0.9234445103622421,Single Epithelial Cell Size,Synthpop
+1.7239492232385634,Bare Nuclei,Synthpop
+1.1344545639036145,Bland Chromatin,Synthpop
+0.8411582631940403,Normal Nucleoli,Synthpop
+0.17639721765874702,Mitoses,Synthpop
+0.5236204562061894,Clump Thickness,Synthpop
+1.6318969718890637,Uniformity of Cell Size,Synthpop
+1.4048024601049935,Uniformity of Cell Shape,Synthpop
+0.8346275574387657,Marginal Adhesion,Synthpop
+0.9471864231325771,Single Epithelial Cell Size,Synthpop
+1.7147089616732885,Bare Nuclei,Synthpop
+0.9828234694370765,Bland Chromatin,Synthpop
+0.7869480937297144,Normal Nucleoli,Synthpop
+0.1779984381382722,Mitoses,Synthpop
+0.48364142130976484,Clump Thickness,Synthpop
+1.9538065944267142,Uniformity of Cell Size,Synthpop
+1.5384162421605612,Uniformity of Cell Shape,Synthpop
+0.9193930259159062,Marginal Adhesion,Synthpop
+1.0492878413678721,Single Epithelial Cell Size,Synthpop
+1.7859822547307478,Bare Nuclei,Synthpop
+1.1296973015988196,Bland Chromatin,Synthpop
+0.9208389015285104,Normal Nucleoli,Synthpop
+0.18119942295373748,Mitoses,Synthpop
+0.4371555189817846,Clump Thickness,Synthpop
+1.6274339736827421,Uniformity of Cell Size,Synthpop
+1.4318514229823498,Uniformity of Cell Shape,Synthpop
+0.8508875564440407,Marginal Adhesion,Synthpop
+0.8768588572775141,Single Epithelial Cell Size,Synthpop
+1.8480017575617231,Bare Nuclei,Synthpop
+1.0731988629316271,Bland Chromatin,Synthpop
+0.6944623143730467,Normal Nucleoli,Synthpop
+0.17258688361635047,Mitoses,Synthpop
+0.40042214531983555,Clump Thickness,Synthpop
+1.5814645982512001,Uniformity of Cell Size,Synthpop
+1.3240549097071874,Uniformity of Cell Shape,Synthpop
+0.7928047334676992,Marginal Adhesion,Synthpop
+0.857685454893433,Single Epithelial Cell Size,Synthpop
+1.75711303133122,Bare Nuclei,Synthpop
+0.9238424063182764,Bland Chromatin,Synthpop
+0.8588166305647005,Normal Nucleoli,Synthpop
+0.1260643789075225,Mitoses,Synthpop
+0.4285637202534103,Clump Thickness,Synthpop
+1.5792746739421266,Uniformity of Cell Size,Synthpop
+1.4074762279943276,Uniformity of Cell Shape,Synthpop
+0.7447090177039348,Marginal Adhesion,Synthpop
+0.8260479851208735,Single Epithelial Cell Size,Synthpop
+1.7253121037368728,Bare Nuclei,Synthpop
+1.0269760154677328,Bland Chromatin,Synthpop
+0.6935735821165707,Normal Nucleoli,Synthpop
+0.13210945538650476,Mitoses,Synthpop
+0.38390458436976327,Clump Thickness,Synthpop
+1.846568025368907,Uniformity of Cell Size,Synthpop
+1.5062070257755087,Uniformity of Cell Shape,Synthpop
+0.901165139426425,Marginal Adhesion,Synthpop
+0.9593985786953465,Single Epithelial Cell Size,Synthpop
+1.7759361718018873,Bare Nuclei,Synthpop
+1.0931727391919026,Bland Chromatin,Synthpop
+0.7727273776199738,Normal Nucleoli,Synthpop
+0.2023670368706066,Mitoses,Synthpop
+0.4264223010450513,Clump Thickness,Synthpop
+1.8336911562431406,Uniformity of Cell Size,Synthpop
+1.4562534866872368,Uniformity of Cell Shape,Synthpop
+0.863476403436292,Marginal Adhesion,Synthpop
+0.8967741685542495,Single Epithelial Cell Size,Synthpop
+1.6420341997983197,Bare Nuclei,Synthpop
+1.1135730111240567,Bland Chromatin,Synthpop
+0.808754323610772,Normal Nucleoli,Synthpop
+0.14744919081360472,Mitoses,Synthpop
+0.43224103913340717,Clump Thickness,Synthpop
+1.5318425687181914,Uniformity of Cell Size,Synthpop
+1.4142275093657766,Uniformity of Cell Shape,Synthpop
+0.8558515268082336,Marginal Adhesion,Synthpop
+0.919507073709213,Single Epithelial Cell Size,Synthpop
+1.9445542844400046,Bare Nuclei,Synthpop
+0.9686051819045369,Bland Chromatin,Synthpop
+0.838255823129177,Normal Nucleoli,Synthpop
+0.19139966311420936,Mitoses,Synthpop
+0.43776046143691133,Clump Thickness,Synthpop
+1.5005369685510381,Uniformity of Cell Size,Synthpop
+1.236956151993015,Uniformity of Cell Shape,Synthpop
+0.7647473044669797,Marginal Adhesion,Synthpop
+0.8429111238247603,Single Epithelial Cell Size,Synthpop
+1.7124082355137749,Bare Nuclei,Synthpop
+1.0109158141721528,Bland Chromatin,Synthpop
+0.7170892291922935,Normal Nucleoli,Synthpop
+0.16497845521246818,Mitoses,Synthpop
+0.4434973286413616,Clump Thickness,Synthpop
+1.5784375946601614,Uniformity of Cell Size,Synthpop
+1.3109628604937693,Uniformity of Cell Shape,Synthpop
+0.7628657492414581,Marginal Adhesion,Synthpop
+0.8259932851686038,Single Epithelial Cell Size,Synthpop
+1.679993716562289,Bare Nuclei,Synthpop
+1.0774788184325568,Bland Chromatin,Synthpop
+0.7186758438129957,Normal Nucleoli,Synthpop
+0.15740557177829542,Mitoses,Synthpop
+0.40191490428750315,Clump Thickness,Synthpop
+1.6281904767175976,Uniformity of Cell Size,Synthpop
+1.3922229367555075,Uniformity of Cell Shape,Synthpop
+0.7781236190818739,Marginal Adhesion,Synthpop
+0.7888317513530902,Single Epithelial Cell Size,Synthpop
+1.7662979152334368,Bare Nuclei,Synthpop
+1.0449594666907223,Bland Chromatin,Synthpop
+0.6641685626740687,Normal Nucleoli,Synthpop
+0.15345495833971406,Mitoses,Synthpop
+0.48278417572751925,Clump Thickness,Synthpop
+1.886429519068391,Uniformity of Cell Size,Synthpop
+1.682044988578105,Uniformity of Cell Shape,Synthpop
+0.8645012544910504,Marginal Adhesion,Synthpop
+0.9468787925081743,Single Epithelial Cell Size,Synthpop
+1.860012460198415,Bare Nuclei,Synthpop
+1.2137045610674044,Bland Chromatin,Synthpop
+0.8033108105697222,Normal Nucleoli,Synthpop
+0.17017349375300328,Mitoses,Synthpop
+2.2512928457687265,Clump Thickness,CT-GAN
+1.5151515924319507,Uniformity of Cell Size,CT-GAN
+1.4055652594466117,Uniformity of Cell Shape,CT-GAN
+0.5765186013161272,Marginal Adhesion,CT-GAN
+0.8794692667319424,Single Epithelial Cell Size,CT-GAN
+3.4413112781333393,Bare Nuclei,CT-GAN
+0.6671062546894145,Bland Chromatin,CT-GAN
+0.8574630186753033,Normal Nucleoli,CT-GAN
+0.05598905716937206,Mitoses,CT-GAN
+2.2365823238199263,Clump Thickness,CT-GAN
+1.453616888858171,Uniformity of Cell Size,CT-GAN
+1.211780831576798,Uniformity of Cell Shape,CT-GAN
+0.6155849123447013,Marginal Adhesion,CT-GAN
+0.929047300537761,Single Epithelial Cell Size,CT-GAN
+3.1606888776284117,Bare Nuclei,CT-GAN
+0.8310330700794474,Bland Chromatin,CT-GAN
+0.8776346097406452,Normal Nucleoli,CT-GAN
+0.051589858255983924,Mitoses,CT-GAN
+2.4589753101924074,Clump Thickness,CT-GAN
+1.4848754468745553,Uniformity of Cell Size,CT-GAN
+1.2897498321658851,Uniformity of Cell Shape,CT-GAN
+0.5590928191729838,Marginal Adhesion,CT-GAN
+0.8690789075912221,Single Epithelial Cell Size,CT-GAN
+3.797836089338901,Bare Nuclei,CT-GAN
+0.7228116941272195,Bland Chromatin,CT-GAN
+0.8182509888469911,Normal Nucleoli,CT-GAN
+0.06087680004835353,Mitoses,CT-GAN
+2.441550130326021,Clump Thickness,CT-GAN
+1.382665564164581,Uniformity of Cell Size,CT-GAN
+1.1596599239613619,Uniformity of Cell Shape,CT-GAN
+0.5331863149839928,Marginal Adhesion,CT-GAN
+0.8968873383391002,Single Epithelial Cell Size,CT-GAN
+3.3333778901777795,Bare Nuclei,CT-GAN
+0.6941903671249733,Bland Chromatin,CT-GAN
+0.7380926874540632,Normal Nucleoli,CT-GAN
+0.056057085089785894,Mitoses,CT-GAN
+2.4125860679720503,Clump Thickness,CT-GAN
+1.3182542647800888,Uniformity of Cell Size,CT-GAN
+1.2764818102183055,Uniformity of Cell Shape,CT-GAN
+0.5070071244978719,Marginal Adhesion,CT-GAN
+0.9018123218910932,Single Epithelial Cell Size,CT-GAN
+3.1898724820263324,Bare Nuclei,CT-GAN
+0.6289626780978267,Bland Chromatin,CT-GAN
+0.8028137442491051,Normal Nucleoli,CT-GAN
+0.056464354562358945,Mitoses,CT-GAN
+2.3361762063971514,Clump Thickness,CT-GAN
+1.4547392193981483,Uniformity of Cell Size,CT-GAN
+1.1804288220316403,Uniformity of Cell Shape,CT-GAN
+0.5261472623853162,Marginal Adhesion,CT-GAN
+0.8986439513983221,Single Epithelial Cell Size,CT-GAN
+3.6507602615756793,Bare Nuclei,CT-GAN
+0.6056368604642972,Bland Chromatin,CT-GAN
+0.8485627460658615,Normal Nucleoli,CT-GAN
+0.05780717634461276,Mitoses,CT-GAN
+2.204966179010551,Clump Thickness,CT-GAN
+1.369711352440551,Uniformity of Cell Size,CT-GAN
+1.25204808541012,Uniformity of Cell Shape,CT-GAN
+0.5309597935627859,Marginal Adhesion,CT-GAN
+0.8864488169428929,Single Epithelial Cell Size,CT-GAN
+3.823421223038224,Bare Nuclei,CT-GAN
+0.652101686892595,Bland Chromatin,CT-GAN
+0.8362213883112486,Normal Nucleoli,CT-GAN
+0.06366052727732863,Mitoses,CT-GAN
+2.6441041569443797,Clump Thickness,CT-GAN
+1.4192454855548136,Uniformity of Cell Size,CT-GAN
+1.3046306962158416,Uniformity of Cell Shape,CT-GAN
+0.5953450744590392,Marginal Adhesion,CT-GAN
+0.9020753559450215,Single Epithelial Cell Size,CT-GAN
+3.5463514137545427,Bare Nuclei,CT-GAN
+0.715053015996441,Bland Chromatin,CT-GAN
+0.8748631163238327,Normal Nucleoli,CT-GAN
+0.059936746504772605,Mitoses,CT-GAN
+2.440990970285898,Clump Thickness,CT-GAN
+1.3980092491067904,Uniformity of Cell Size,CT-GAN
+1.2422121953966667,Uniformity of Cell Shape,CT-GAN
+0.6203962423356157,Marginal Adhesion,CT-GAN
+0.9101593699365317,Single Epithelial Cell Size,CT-GAN
+3.6677386825757914,Bare Nuclei,CT-GAN
+0.6549318247698157,Bland Chromatin,CT-GAN
+0.7623801371837622,Normal Nucleoli,CT-GAN
+0.05393752430510209,Mitoses,CT-GAN
+2.5892594029813885,Clump Thickness,CT-GAN
+1.3702362523967497,Uniformity of Cell Size,CT-GAN
+1.148240276129528,Uniformity of Cell Shape,CT-GAN
+0.5545030737065088,Marginal Adhesion,CT-GAN
+0.8957145918830243,Single Epithelial Cell Size,CT-GAN
+3.5327706745388654,Bare Nuclei,CT-GAN
+0.7805641166368894,Bland Chromatin,CT-GAN
+0.7953154534925192,Normal Nucleoli,CT-GAN
+0.05204033510965093,Mitoses,CT-GAN
+2.7750381349779056,Clump Thickness,CT-GAN
+1.2750211028142533,Uniformity of Cell Size,CT-GAN
+1.301543053821803,Uniformity of Cell Shape,CT-GAN
+0.5809414683040021,Marginal Adhesion,CT-GAN
+0.9074241236865334,Single Epithelial Cell Size,CT-GAN
+3.8540326326412604,Bare Nuclei,CT-GAN
+0.6361724661239884,Bland Chromatin,CT-GAN
+0.8326622736726598,Normal Nucleoli,CT-GAN
+0.06759259479496964,Mitoses,CT-GAN
+2.5432791190499198,Clump Thickness,CT-GAN
+1.3664804471300347,Uniformity of Cell Size,CT-GAN
+1.0986392737972037,Uniformity of Cell Shape,CT-GAN
+0.5171449733060388,Marginal Adhesion,CT-GAN
+1.027464933400647,Single Epithelial Cell Size,CT-GAN
+4.103171661459545,Bare Nuclei,CT-GAN
+0.683912079487387,Bland Chromatin,CT-GAN
+0.8531872705764906,Normal Nucleoli,CT-GAN
+0.06229360435337545,Mitoses,CT-GAN
+2.613480093207802,Clump Thickness,CT-GAN
+1.444322380919226,Uniformity of Cell Size,CT-GAN
+1.3067606100769231,Uniformity of Cell Shape,CT-GAN
+0.4980142995516343,Marginal Adhesion,CT-GAN
+0.906283756302506,Single Epithelial Cell Size,CT-GAN
+3.5420098636413146,Bare Nuclei,CT-GAN
+0.7283359810403003,Bland Chromatin,CT-GAN
+0.8536891872340742,Normal Nucleoli,CT-GAN
+0.06826047121955114,Mitoses,CT-GAN
+2.6280314609675353,Clump Thickness,CT-GAN
+1.5533555352782644,Uniformity of Cell Size,CT-GAN
+1.176883425983102,Uniformity of Cell Shape,CT-GAN
+0.5992920316397045,Marginal Adhesion,CT-GAN
+0.9158189344184986,Single Epithelial Cell Size,CT-GAN
+4.090529489389998,Bare Nuclei,CT-GAN
+0.7707184046654737,Bland Chromatin,CT-GAN
+0.8634111416140717,Normal Nucleoli,CT-GAN
+0.05038109451286433,Mitoses,CT-GAN
+2.7195674685551534,Clump Thickness,CT-GAN
+1.5412661982376978,Uniformity of Cell Size,CT-GAN
+1.239393453929569,Uniformity of Cell Shape,CT-GAN
+0.5732455335970343,Marginal Adhesion,CT-GAN
+0.8877382974302721,Single Epithelial Cell Size,CT-GAN
+3.4757120923926186,Bare Nuclei,CT-GAN
+0.678985619524538,Bland Chromatin,CT-GAN
+0.8836848439708638,Normal Nucleoli,CT-GAN
+0.04208971225420843,Mitoses,CT-GAN
+2.7538791649027026,Clump Thickness,CT-GAN
+1.2989295804882905,Uniformity of Cell Size,CT-GAN
+1.159970582421166,Uniformity of Cell Shape,CT-GAN
+0.5806969638062863,Marginal Adhesion,CT-GAN
+0.8165910536548249,Single Epithelial Cell Size,CT-GAN
+4.046639962477855,Bare Nuclei,CT-GAN
+0.6468551179440309,Bland Chromatin,CT-GAN
+0.8764427189022164,Normal Nucleoli,CT-GAN
+0.051247559146535906,Mitoses,CT-GAN
+2.4939818818656097,Clump Thickness,CT-GAN
+1.5772890910066928,Uniformity of Cell Size,CT-GAN
+1.2303426606998373,Uniformity of Cell Shape,CT-GAN
+0.6199637478850312,Marginal Adhesion,CT-GAN
+0.8895498323744092,Single Epithelial Cell Size,CT-GAN
+4.260083775465003,Bare Nuclei,CT-GAN
+0.7952963797261616,Bland Chromatin,CT-GAN
+0.8946854531900639,Normal Nucleoli,CT-GAN
+0.0604114407177395,Mitoses,CT-GAN
+2.4510385964760038,Clump Thickness,CT-GAN
+1.3810325578658083,Uniformity of Cell Size,CT-GAN
+1.1387122909974032,Uniformity of Cell Shape,CT-GAN
+0.5719093209969367,Marginal Adhesion,CT-GAN
+0.8347249109135536,Single Epithelial Cell Size,CT-GAN
+4.186452422448069,Bare Nuclei,CT-GAN
+0.6387162251341334,Bland Chromatin,CT-GAN
+0.7284838390433379,Normal Nucleoli,CT-GAN
+0.054652061636055904,Mitoses,CT-GAN
+2.177071054672232,Clump Thickness,CT-GAN
+1.4770443394893307,Uniformity of Cell Size,CT-GAN
+1.245982311116487,Uniformity of Cell Shape,CT-GAN
+0.5401257437946255,Marginal Adhesion,CT-GAN
+0.8819220378106165,Single Epithelial Cell Size,CT-GAN
+3.0888739516738757,Bare Nuclei,CT-GAN
+0.719796119549649,Bland Chromatin,CT-GAN
+0.822328508447346,Normal Nucleoli,CT-GAN
+0.05463572978985504,Mitoses,CT-GAN
+2.7158210914572756,Clump Thickness,CT-GAN
+1.489295948206152,Uniformity of Cell Size,CT-GAN
+1.1585476453607428,Uniformity of Cell Shape,CT-GAN
+0.5345415279067013,Marginal Adhesion,CT-GAN
+0.8713941259458339,Single Epithelial Cell Size,CT-GAN
+4.483803427059259,Bare Nuclei,CT-GAN
+0.7553773314588734,Bland Chromatin,CT-GAN
+0.8387641274024236,Normal Nucleoli,CT-GAN
+0.05279336465277413,Mitoses,CT-GAN
+2.5869511232971116,Clump Thickness,CT-GAN
+1.4289352376969497,Uniformity of Cell Size,CT-GAN
+1.2830981743963141,Uniformity of Cell Shape,CT-GAN
+0.5868480231366062,Marginal Adhesion,CT-GAN
+0.9186541864778774,Single Epithelial Cell Size,CT-GAN
+3.692556198711889,Bare Nuclei,CT-GAN
+0.7143828918761876,Bland Chromatin,CT-GAN
+0.8404332745984276,Normal Nucleoli,CT-GAN
+0.06086142775575778,Mitoses,CT-GAN
+2.521800866833848,Clump Thickness,CT-GAN
+1.4225602529438053,Uniformity of Cell Size,CT-GAN
+1.2535132039870371,Uniformity of Cell Shape,CT-GAN
+0.5536513318611884,Marginal Adhesion,CT-GAN
+1.018438651433318,Single Epithelial Cell Size,CT-GAN
+4.528825268531447,Bare Nuclei,CT-GAN
+0.6657659564477694,Bland Chromatin,CT-GAN
+0.8725514444188406,Normal Nucleoli,CT-GAN
+0.04600441633826254,Mitoses,CT-GAN
+2.362635705493301,Clump Thickness,CT-GAN
+1.3466700272989174,Uniformity of Cell Size,CT-GAN
+1.28004123667156,Uniformity of Cell Shape,CT-GAN
+0.5535623319431044,Marginal Adhesion,CT-GAN
+0.8581766774118397,Single Epithelial Cell Size,CT-GAN
+3.404676240998948,Bare Nuclei,CT-GAN
+0.6809973979210254,Bland Chromatin,CT-GAN
+0.8206781079662795,Normal Nucleoli,CT-GAN
+0.06028001602306613,Mitoses,CT-GAN
+2.484078952211897,Clump Thickness,CT-GAN
+1.2782506260425976,Uniformity of Cell Size,CT-GAN
+1.2029811374518535,Uniformity of Cell Shape,CT-GAN
+0.5316908758521134,Marginal Adhesion,CT-GAN
+0.8889468866997392,Single Epithelial Cell Size,CT-GAN
+3.2549685114966267,Bare Nuclei,CT-GAN
+0.6553854258777245,Bland Chromatin,CT-GAN
+0.726251021624372,Normal Nucleoli,CT-GAN
+0.04910979721491849,Mitoses,CT-GAN
+2.690733751259857,Clump Thickness,CT-GAN
+1.4600340008490682,Uniformity of Cell Size,CT-GAN
+1.3161023081597696,Uniformity of Cell Shape,CT-GAN
+0.5801987076734982,Marginal Adhesion,CT-GAN
+0.8311294774214362,Single Epithelial Cell Size,CT-GAN
+3.510257951076446,Bare Nuclei,CT-GAN
+0.7825941809268844,Bland Chromatin,CT-GAN
+0.8719690958946233,Normal Nucleoli,CT-GAN
+0.06557435058591136,Mitoses,CT-GAN
+2.345208514023582,Clump Thickness,CT-GAN
+1.4404587565369773,Uniformity of Cell Size,CT-GAN
+1.2605829601268905,Uniformity of Cell Shape,CT-GAN
+0.5938346152774276,Marginal Adhesion,CT-GAN
+0.8881459080033209,Single Epithelial Cell Size,CT-GAN
+3.4499606703724357,Bare Nuclei,CT-GAN
+0.6292073914402398,Bland Chromatin,CT-GAN
+0.8666001543155205,Normal Nucleoli,CT-GAN
+0.05514798216747749,Mitoses,CT-GAN
+2.4472499484056662,Clump Thickness,CT-GAN
+1.4841392394923756,Uniformity of Cell Size,CT-GAN
+1.2582885792906604,Uniformity of Cell Shape,CT-GAN
+0.5595217516290576,Marginal Adhesion,CT-GAN
+0.8620848295678225,Single Epithelial Cell Size,CT-GAN
+4.003363822958616,Bare Nuclei,CT-GAN
+0.6778743193661186,Bland Chromatin,CT-GAN
+0.9040468751199948,Normal Nucleoli,CT-GAN
+0.05753504169342479,Mitoses,CT-GAN
+2.580221905025504,Clump Thickness,CT-GAN
+1.4648599695771445,Uniformity of Cell Size,CT-GAN
+1.2498242371372872,Uniformity of Cell Shape,CT-GAN
+0.5706700798995816,Marginal Adhesion,CT-GAN
+0.956536063325399,Single Epithelial Cell Size,CT-GAN
+3.715048682543531,Bare Nuclei,CT-GAN
+0.7127437213393913,Bland Chromatin,CT-GAN
+0.9307669811005345,Normal Nucleoli,CT-GAN
+0.056848568035859054,Mitoses,CT-GAN
+2.3514659738149213,Clump Thickness,CT-GAN
+1.50260694165558,Uniformity of Cell Size,CT-GAN
+1.2832586196472193,Uniformity of Cell Shape,CT-GAN
+0.5691109159631929,Marginal Adhesion,CT-GAN
+0.8535632400768353,Single Epithelial Cell Size,CT-GAN
+3.1529921403070187,Bare Nuclei,CT-GAN
+0.6796259184202006,Bland Chromatin,CT-GAN
+0.8605410113844848,Normal Nucleoli,CT-GAN
+0.06120088207191433,Mitoses,CT-GAN
+2.66247131585677,Clump Thickness,CT-GAN
+1.483017763421983,Uniformity of Cell Size,CT-GAN
+1.2781350087327505,Uniformity of Cell Shape,CT-GAN
+0.5527485596852977,Marginal Adhesion,CT-GAN
+0.8104724306310148,Single Epithelial Cell Size,CT-GAN
+3.4086192378562483,Bare Nuclei,CT-GAN
+0.7072746150710448,Bland Chromatin,CT-GAN
+0.8563440342001806,Normal Nucleoli,CT-GAN
+0.049411524074401816,Mitoses,CT-GAN
+2.5315008457713892,Clump Thickness,CT-GAN
+1.3825418272927614,Uniformity of Cell Size,CT-GAN
+1.2305439168565666,Uniformity of Cell Shape,CT-GAN
+0.5293924881058419,Marginal Adhesion,CT-GAN
+0.9891562646752027,Single Epithelial Cell Size,CT-GAN
+3.673990263800529,Bare Nuclei,CT-GAN
+0.758102818256911,Bland Chromatin,CT-GAN
+0.8759883651259934,Normal Nucleoli,CT-GAN
+0.06532230652134641,Mitoses,CT-GAN
+2.700345838835822,Clump Thickness,CT-GAN
+1.4084158746471822,Uniformity of Cell Size,CT-GAN
+1.2766997132420994,Uniformity of Cell Shape,CT-GAN
+0.5184760786335453,Marginal Adhesion,CT-GAN
+0.9943929118293113,Single Epithelial Cell Size,CT-GAN
+3.597876838657471,Bare Nuclei,CT-GAN
+0.7188299057601448,Bland Chromatin,CT-GAN
+0.7756911334398664,Normal Nucleoli,CT-GAN
+0.049935987268194204,Mitoses,CT-GAN
+2.4677437318381195,Clump Thickness,CT-GAN
+1.4649447563391464,Uniformity of Cell Size,CT-GAN
+1.20639034849647,Uniformity of Cell Shape,CT-GAN
+0.5567012313417632,Marginal Adhesion,CT-GAN
+0.870510863622723,Single Epithelial Cell Size,CT-GAN
+3.5582704047981766,Bare Nuclei,CT-GAN
+0.7386864406124981,Bland Chromatin,CT-GAN
+0.8358305892107061,Normal Nucleoli,CT-GAN
+0.06338943307300714,Mitoses,CT-GAN
+2.4366933607269696,Clump Thickness,CT-GAN
+1.2000532288517876,Uniformity of Cell Size,CT-GAN
+1.2128128944848677,Uniformity of Cell Shape,CT-GAN
+0.5507806567985796,Marginal Adhesion,CT-GAN
+0.8313559333227606,Single Epithelial Cell Size,CT-GAN
+3.2257701013659674,Bare Nuclei,CT-GAN
+0.5999425604016457,Bland Chromatin,CT-GAN
+0.8714160762330934,Normal Nucleoli,CT-GAN
+0.047091015677650436,Mitoses,CT-GAN
+2.618753756334273,Clump Thickness,CT-GAN
+1.3216113488460917,Uniformity of Cell Size,CT-GAN
+1.2013180133161756,Uniformity of Cell Shape,CT-GAN
+0.5773149820627145,Marginal Adhesion,CT-GAN
+0.8601006840083648,Single Epithelial Cell Size,CT-GAN
+3.45919472249527,Bare Nuclei,CT-GAN
+0.6713797285345852,Bland Chromatin,CT-GAN
+0.8337892102109239,Normal Nucleoli,CT-GAN
+0.05238013112950718,Mitoses,CT-GAN
+2.5122799437998924,Clump Thickness,CT-GAN
+1.304739517450955,Uniformity of Cell Size,CT-GAN
+1.2999410164463856,Uniformity of Cell Shape,CT-GAN
+0.5813283859991674,Marginal Adhesion,CT-GAN
+0.9279340370983515,Single Epithelial Cell Size,CT-GAN
+3.4266183558575762,Bare Nuclei,CT-GAN
+0.5775137142908069,Bland Chromatin,CT-GAN
+0.774121564581023,Normal Nucleoli,CT-GAN
+0.050754715922246105,Mitoses,CT-GAN
+2.615433793265714,Clump Thickness,CT-GAN
+1.3427068099655237,Uniformity of Cell Size,CT-GAN
+1.4096821929196859,Uniformity of Cell Shape,CT-GAN
+0.5679521165921605,Marginal Adhesion,CT-GAN
+0.9430613215686949,Single Epithelial Cell Size,CT-GAN
+3.713507668270819,Bare Nuclei,CT-GAN
+0.7366098125736912,Bland Chromatin,CT-GAN
+0.8692813425043961,Normal Nucleoli,CT-GAN
+0.04811447260983287,Mitoses,CT-GAN
+2.41322878992776,Clump Thickness,CT-GAN
+1.5377483384254689,Uniformity of Cell Size,CT-GAN
+1.3006598709345443,Uniformity of Cell Shape,CT-GAN
+0.5176671531759162,Marginal Adhesion,CT-GAN
+0.8841404634225895,Single Epithelial Cell Size,CT-GAN
+3.661167569883685,Bare Nuclei,CT-GAN
+0.7696550305926643,Bland Chromatin,CT-GAN
+0.8228208806829238,Normal Nucleoli,CT-GAN
+0.055985555833278654,Mitoses,CT-GAN
+2.7082860840990746,Clump Thickness,CT-GAN
+1.3169406563602541,Uniformity of Cell Size,CT-GAN
+1.199758604393976,Uniformity of Cell Shape,CT-GAN
+0.5234408181658764,Marginal Adhesion,CT-GAN
+0.8972096474429452,Single Epithelial Cell Size,CT-GAN
+3.278467635996447,Bare Nuclei,CT-GAN
+0.6607762156481094,Bland Chromatin,CT-GAN
+0.8523630516412248,Normal Nucleoli,CT-GAN
+0.06000678303607622,Mitoses,CT-GAN
+2.4640767857777726,Clump Thickness,CT-GAN
+1.2447616109482822,Uniformity of Cell Size,CT-GAN
+1.156471803857203,Uniformity of Cell Shape,CT-GAN
+0.6455334758199063,Marginal Adhesion,CT-GAN
+0.8843268853647205,Single Epithelial Cell Size,CT-GAN
+3.3092654890067457,Bare Nuclei,CT-GAN
+0.617334114843336,Bland Chromatin,CT-GAN
+0.8474256044401914,Normal Nucleoli,CT-GAN
+0.07195988767284964,Mitoses,CT-GAN
+2.349573230221938,Clump Thickness,CT-GAN
+1.4053085635829576,Uniformity of Cell Size,CT-GAN
+1.2412760542946533,Uniformity of Cell Shape,CT-GAN
+0.5257785687768457,Marginal Adhesion,CT-GAN
+0.934486441557655,Single Epithelial Cell Size,CT-GAN
+3.385365620848126,Bare Nuclei,CT-GAN
+0.7019890359375137,Bland Chromatin,CT-GAN
+0.8192775338919759,Normal Nucleoli,CT-GAN
+0.0668444359534265,Mitoses,CT-GAN
+2.613040013231185,Clump Thickness,CT-GAN
+1.4087282197623638,Uniformity of Cell Size,CT-GAN
+1.2154255086292636,Uniformity of Cell Shape,CT-GAN
+0.5695998855197942,Marginal Adhesion,CT-GAN
+0.8939437263563346,Single Epithelial Cell Size,CT-GAN
+3.613549614993329,Bare Nuclei,CT-GAN
+0.6763676135944464,Bland Chromatin,CT-GAN
+0.9214374559428852,Normal Nucleoli,CT-GAN
+0.06321338300621772,Mitoses,CT-GAN
+2.50146729777598,Clump Thickness,CT-GAN
+1.48406910755192,Uniformity of Cell Size,CT-GAN
+1.2503607599566282,Uniformity of Cell Shape,CT-GAN
+0.5671580791737709,Marginal Adhesion,CT-GAN
+0.8679524775748569,Single Epithelial Cell Size,CT-GAN
+3.47274603688164,Bare Nuclei,CT-GAN
+0.6677557313504267,Bland Chromatin,CT-GAN
+0.9538955794799853,Normal Nucleoli,CT-GAN
+0.06740001539026397,Mitoses,CT-GAN
+2.4349329898971694,Clump Thickness,CT-GAN
+1.3631286958183553,Uniformity of Cell Size,CT-GAN
+1.2959945494415723,Uniformity of Cell Shape,CT-GAN
+0.5692957627192416,Marginal Adhesion,CT-GAN
+0.9713927054885868,Single Epithelial Cell Size,CT-GAN
+3.61710884149075,Bare Nuclei,CT-GAN
+0.6884575274352424,Bland Chromatin,CT-GAN
+0.8278764856713575,Normal Nucleoli,CT-GAN
+0.06631676028734629,Mitoses,CT-GAN
+2.4565171888187907,Clump Thickness,CT-GAN
+1.4940271217253587,Uniformity of Cell Size,CT-GAN
+1.2030014033278766,Uniformity of Cell Shape,CT-GAN
+0.6495033337892921,Marginal Adhesion,CT-GAN
+0.8839331513744172,Single Epithelial Cell Size,CT-GAN
+4.140428864462761,Bare Nuclei,CT-GAN
+0.6869818280922503,Bland Chromatin,CT-GAN
+0.7485702609723826,Normal Nucleoli,CT-GAN
+0.05168018168019276,Mitoses,CT-GAN
+2.4390395793173485,Clump Thickness,CT-GAN
+1.5677627288285347,Uniformity of Cell Size,CT-GAN
+1.268870131080034,Uniformity of Cell Shape,CT-GAN
+0.5488338662062665,Marginal Adhesion,CT-GAN
+0.9170608518993737,Single Epithelial Cell Size,CT-GAN
+4.126620688696764,Bare Nuclei,CT-GAN
+0.7099545806233976,Bland Chromatin,CT-GAN
+0.8088485727410472,Normal Nucleoli,CT-GAN
+0.054710521912293364,Mitoses,CT-GAN
+2.78383564881479,Clump Thickness,CT-GAN
+1.5467388480660045,Uniformity of Cell Size,CT-GAN
+1.314538005603453,Uniformity of Cell Shape,CT-GAN
+0.6148592689252806,Marginal Adhesion,CT-GAN
+0.9544849803138953,Single Epithelial Cell Size,CT-GAN
+3.842295010483199,Bare Nuclei,CT-GAN
+0.7463247726221561,Bland Chromatin,CT-GAN
+0.9188112695742788,Normal Nucleoli,CT-GAN
+0.05738650541787459,Mitoses,CT-GAN
+2.514318516136283,Clump Thickness,CT-GAN
+1.4078613382712521,Uniformity of Cell Size,CT-GAN
+1.3678560575094274,Uniformity of Cell Shape,CT-GAN
+0.611378297239186,Marginal Adhesion,CT-GAN
+0.9127997789373855,Single Epithelial Cell Size,CT-GAN
+3.5011972568620937,Bare Nuclei,CT-GAN
+0.7738394557843675,Bland Chromatin,CT-GAN
+0.8869238094902916,Normal Nucleoli,CT-GAN
+0.05612073373770643,Mitoses,CT-GAN
+2.751619942840185,Clump Thickness,CT-GAN
+1.3719406567583705,Uniformity of Cell Size,CT-GAN
+1.2483080705732315,Uniformity of Cell Shape,CT-GAN
+0.5752020235389258,Marginal Adhesion,CT-GAN
+0.876127101651084,Single Epithelial Cell Size,CT-GAN
+3.4069272590609287,Bare Nuclei,CT-GAN
+0.6735161466165026,Bland Chromatin,CT-GAN
+0.7468444066589955,Normal Nucleoli,CT-GAN
+0.055477854625144096,Mitoses,CT-GAN
+2.3357448872709217,Clump Thickness,CT-GAN
+1.4853191362452642,Uniformity of Cell Size,CT-GAN
+1.2923935695891478,Uniformity of Cell Shape,CT-GAN
+0.5329119012242558,Marginal Adhesion,CT-GAN
+0.8712241120849874,Single Epithelial Cell Size,CT-GAN
+3.4016339887466662,Bare Nuclei,CT-GAN
+0.7197783253286001,Bland Chromatin,CT-GAN
+0.8237373886535642,Normal Nucleoli,CT-GAN
+0.046599029627490116,Mitoses,CT-GAN
+2.3612663528102362,Clump Thickness,CT-GAN
+1.3920366288773274,Uniformity of Cell Size,CT-GAN
+1.2866352657959788,Uniformity of Cell Shape,CT-GAN
+0.577889132308329,Marginal Adhesion,CT-GAN
+0.8444692982424273,Single Epithelial Cell Size,CT-GAN
+3.786999135744279,Bare Nuclei,CT-GAN
+0.5802464331251563,Bland Chromatin,CT-GAN
+0.8426153567901903,Normal Nucleoli,CT-GAN
+0.04772156298086882,Mitoses,CT-GAN
+2.5699315863981247,Clump Thickness,CT-GAN
+1.5700675614911304,Uniformity of Cell Size,CT-GAN
+1.3472490132285688,Uniformity of Cell Shape,CT-GAN
+0.5961608032307356,Marginal Adhesion,CT-GAN
+0.815653408016034,Single Epithelial Cell Size,CT-GAN
+4.062589904799015,Bare Nuclei,CT-GAN
+0.6692348790286455,Bland Chromatin,CT-GAN
+0.8051424889590987,Normal Nucleoli,CT-GAN
+0.04994845000391268,Mitoses,CT-GAN
+2.365460625561882,Clump Thickness,CT-GAN
+1.2972708927659644,Uniformity of Cell Size,CT-GAN
+1.2365784393442094,Uniformity of Cell Shape,CT-GAN
+0.599699091978814,Marginal Adhesion,CT-GAN
+0.9535213020529977,Single Epithelial Cell Size,CT-GAN
+3.5733038007234317,Bare Nuclei,CT-GAN
+0.7057382735055548,Bland Chromatin,CT-GAN
+0.8616323973725345,Normal Nucleoli,CT-GAN
+0.05797057914615906,Mitoses,CT-GAN
+2.2674491700985393,Clump Thickness,CT-GAN
+1.445529860567569,Uniformity of Cell Size,CT-GAN
+1.281785843410588,Uniformity of Cell Shape,CT-GAN
+0.5683591579017033,Marginal Adhesion,CT-GAN
+0.8568228917812954,Single Epithelial Cell Size,CT-GAN
+3.7316430471551136,Bare Nuclei,CT-GAN
+0.7075586927762336,Bland Chromatin,CT-GAN
+0.8168901530993531,Normal Nucleoli,CT-GAN
+0.05788633194390419,Mitoses,CT-GAN
+2.3236465759749154,Clump Thickness,CT-GAN
+1.4381473346509503,Uniformity of Cell Size,CT-GAN
+1.334997143320914,Uniformity of Cell Shape,CT-GAN
+0.5718122430415162,Marginal Adhesion,CT-GAN
+0.8995111070922694,Single Epithelial Cell Size,CT-GAN
+3.817505021473516,Bare Nuclei,CT-GAN
+0.6256453806272303,Bland Chromatin,CT-GAN
+0.8339599371901215,Normal Nucleoli,CT-GAN
+0.06120733902623843,Mitoses,CT-GAN
+2.573674076277885,Clump Thickness,CT-GAN
+1.373104210794424,Uniformity of Cell Size,CT-GAN
+1.317241059688649,Uniformity of Cell Shape,CT-GAN
+0.5829746943191018,Marginal Adhesion,CT-GAN
+0.8720516622913713,Single Epithelial Cell Size,CT-GAN
+3.8721324258535468,Bare Nuclei,CT-GAN
+0.7772139466136374,Bland Chromatin,CT-GAN
+0.8443621984379007,Normal Nucleoli,CT-GAN
+0.0483282862218878,Mitoses,CT-GAN
+2.4962711234139205,Clump Thickness,CT-GAN
+1.3721268241498956,Uniformity of Cell Size,CT-GAN
+1.1882655543560683,Uniformity of Cell Shape,CT-GAN
+0.5732908765102054,Marginal Adhesion,CT-GAN
+0.8550746174991198,Single Epithelial Cell Size,CT-GAN
+3.9831862148172723,Bare Nuclei,CT-GAN
+0.7039709257481704,Bland Chromatin,CT-GAN
+0.8229530689750126,Normal Nucleoli,CT-GAN
+0.057366898107542835,Mitoses,CT-GAN
+2.4944466490298143,Clump Thickness,CT-GAN
+1.553684045612782,Uniformity of Cell Size,CT-GAN
+1.3519928914016457,Uniformity of Cell Shape,CT-GAN
+0.5464510058078791,Marginal Adhesion,CT-GAN
+0.9267121253784271,Single Epithelial Cell Size,CT-GAN
+3.728115746406217,Bare Nuclei,CT-GAN
+0.7441143297500457,Bland Chromatin,CT-GAN
+0.8250603334657097,Normal Nucleoli,CT-GAN
+0.052466269760234406,Mitoses,CT-GAN
+2.6005339744725697,Clump Thickness,CT-GAN
+1.3774432557910976,Uniformity of Cell Size,CT-GAN
+1.2131562666318612,Uniformity of Cell Shape,CT-GAN
+0.5397213623069411,Marginal Adhesion,CT-GAN
+0.8310170109723468,Single Epithelial Cell Size,CT-GAN
+4.493430583477723,Bare Nuclei,CT-GAN
+0.7085910870588191,Bland Chromatin,CT-GAN
+0.7725258761876115,Normal Nucleoli,CT-GAN
+0.05349850010491454,Mitoses,CT-GAN
+2.2468343325283917,Clump Thickness,CT-GAN
+1.1528604273613523,Uniformity of Cell Size,CT-GAN
+1.2516385463788904,Uniformity of Cell Shape,CT-GAN
+0.5996873137750488,Marginal Adhesion,CT-GAN
+0.8923402825154367,Single Epithelial Cell Size,CT-GAN
+3.5889948232356352,Bare Nuclei,CT-GAN
+0.8091386305976476,Bland Chromatin,CT-GAN
+0.8207786275023927,Normal Nucleoli,CT-GAN
+0.06050442388651226,Mitoses,CT-GAN
+2.375044649191244,Clump Thickness,CT-GAN
+1.4128713277876885,Uniformity of Cell Size,CT-GAN
+1.3331487081602307,Uniformity of Cell Shape,CT-GAN
+0.5125219251810141,Marginal Adhesion,CT-GAN
+0.9559901851070355,Single Epithelial Cell Size,CT-GAN
+3.644254339685858,Bare Nuclei,CT-GAN
+0.685461574568953,Bland Chromatin,CT-GAN
+0.8072758691896879,Normal Nucleoli,CT-GAN
+0.055792260750660544,Mitoses,CT-GAN
+2.598769708445745,Clump Thickness,CT-GAN
+1.368454205630668,Uniformity of Cell Size,CT-GAN
+1.3387834201107387,Uniformity of Cell Shape,CT-GAN
+0.530415400272035,Marginal Adhesion,CT-GAN
+0.8517486199672895,Single Epithelial Cell Size,CT-GAN
+3.905747044917894,Bare Nuclei,CT-GAN
+0.8236056085231053,Bland Chromatin,CT-GAN
+0.834903997672956,Normal Nucleoli,CT-GAN
+0.0516601960934369,Mitoses,CT-GAN
+2.4638589932754313,Clump Thickness,CT-GAN
+1.3371345682103017,Uniformity of Cell Size,CT-GAN
+1.3510235595152007,Uniformity of Cell Shape,CT-GAN
+0.5619612767416374,Marginal Adhesion,CT-GAN
+0.8996040256376914,Single Epithelial Cell Size,CT-GAN
+3.78087703427571,Bare Nuclei,CT-GAN
+0.7373230454847132,Bland Chromatin,CT-GAN
+0.797685944978171,Normal Nucleoli,CT-GAN
+0.06344842927539213,Mitoses,CT-GAN
+2.243985623251062,Clump Thickness,CT-GAN
+1.3333189874615812,Uniformity of Cell Size,CT-GAN
+1.1294768506323067,Uniformity of Cell Shape,CT-GAN
+0.5764749679762688,Marginal Adhesion,CT-GAN
+0.8151308236902165,Single Epithelial Cell Size,CT-GAN
+3.1632866047443895,Bare Nuclei,CT-GAN
+0.7306943081817746,Bland Chromatin,CT-GAN
+0.7773283369968013,Normal Nucleoli,CT-GAN
+0.06715240210440089,Mitoses,CT-GAN
+2.5181007941173905,Clump Thickness,CT-GAN
+1.4843273904075192,Uniformity of Cell Size,CT-GAN
+1.2665416986194133,Uniformity of Cell Shape,CT-GAN
+0.5621269811059569,Marginal Adhesion,CT-GAN
+0.8704135238311763,Single Epithelial Cell Size,CT-GAN
+3.58627736511908,Bare Nuclei,CT-GAN
+0.7981216708912264,Bland Chromatin,CT-GAN
+0.8615204676787312,Normal Nucleoli,CT-GAN
+0.055974122570079034,Mitoses,CT-GAN
+2.470217110804236,Clump Thickness,CT-GAN
+1.3569592503785661,Uniformity of Cell Size,CT-GAN
+1.277907057052291,Uniformity of Cell Shape,CT-GAN
+0.5704980476824187,Marginal Adhesion,CT-GAN
+0.8847178289219612,Single Epithelial Cell Size,CT-GAN
+3.5482685578549074,Bare Nuclei,CT-GAN
+0.6704662363594033,Bland Chromatin,CT-GAN
+0.7797001977181797,Normal Nucleoli,CT-GAN
+0.05670583693722212,Mitoses,CT-GAN
+2.2702973956659176,Clump Thickness,CT-GAN
+1.326445113680127,Uniformity of Cell Size,CT-GAN
+1.375513404447599,Uniformity of Cell Shape,CT-GAN
+0.5267065670504887,Marginal Adhesion,CT-GAN
+0.9257992782633291,Single Epithelial Cell Size,CT-GAN
+3.5973372874700837,Bare Nuclei,CT-GAN
+0.7331060021177234,Bland Chromatin,CT-GAN
+0.7789531502867472,Normal Nucleoli,CT-GAN
+0.05132554659762051,Mitoses,CT-GAN
+2.715220451940537,Clump Thickness,CT-GAN
+1.5008665206986243,Uniformity of Cell Size,CT-GAN
+1.261509385546106,Uniformity of Cell Shape,CT-GAN
+0.5340880024289759,Marginal Adhesion,CT-GAN
+0.8749746950194296,Single Epithelial Cell Size,CT-GAN
+3.860859725109764,Bare Nuclei,CT-GAN
+0.7512248879245239,Bland Chromatin,CT-GAN
+0.8678760506804264,Normal Nucleoli,CT-GAN
+0.0587978888958703,Mitoses,CT-GAN
+2.3340044591469162,Clump Thickness,CT-GAN
+1.3268400704948986,Uniformity of Cell Size,CT-GAN
+1.2206706673881837,Uniformity of Cell Shape,CT-GAN
+0.5544905127330462,Marginal Adhesion,CT-GAN
+0.8993841223331082,Single Epithelial Cell Size,CT-GAN
+3.5725293601129384,Bare Nuclei,CT-GAN
+0.6717008777852866,Bland Chromatin,CT-GAN
+0.8387515701000412,Normal Nucleoli,CT-GAN
+0.06305341515592429,Mitoses,CT-GAN
+2.524197998690675,Clump Thickness,CT-GAN
+1.5715044052810911,Uniformity of Cell Size,CT-GAN
+1.1289890791594488,Uniformity of Cell Shape,CT-GAN
+0.5718677448803218,Marginal Adhesion,CT-GAN
+0.9887885383612446,Single Epithelial Cell Size,CT-GAN
+3.7155016554937115,Bare Nuclei,CT-GAN
+0.7004031424857081,Bland Chromatin,CT-GAN
+0.8960823049358699,Normal Nucleoli,CT-GAN
+0.055159601842382514,Mitoses,CT-GAN
+2.466503556369038,Clump Thickness,CT-GAN
+1.5144597612300235,Uniformity of Cell Size,CT-GAN
+1.324096388781082,Uniformity of Cell Shape,CT-GAN
+0.5468088793476007,Marginal Adhesion,CT-GAN
+0.9068352063524574,Single Epithelial Cell Size,CT-GAN
+3.6178849279857928,Bare Nuclei,CT-GAN
+0.7512581458417955,Bland Chromatin,CT-GAN
+0.8723084924099744,Normal Nucleoli,CT-GAN
+0.06626931878863049,Mitoses,CT-GAN
+2.797446164728728,Clump Thickness,CT-GAN
+1.4456045177306636,Uniformity of Cell Size,CT-GAN
+1.2479852006174232,Uniformity of Cell Shape,CT-GAN
+0.59010924011138,Marginal Adhesion,CT-GAN
+0.9092293083617483,Single Epithelial Cell Size,CT-GAN
+3.9120350097634073,Bare Nuclei,CT-GAN
+0.6705686738007599,Bland Chromatin,CT-GAN
+0.8751632425144825,Normal Nucleoli,CT-GAN
+0.0556537220950462,Mitoses,CT-GAN
+2.4408199061602915,Clump Thickness,CT-GAN
+1.286655012120126,Uniformity of Cell Size,CT-GAN
+1.181449224881616,Uniformity of Cell Shape,CT-GAN
+0.5433848604732269,Marginal Adhesion,CT-GAN
+0.8623316840435277,Single Epithelial Cell Size,CT-GAN
+3.559871946066295,Bare Nuclei,CT-GAN
+0.7616105029984199,Bland Chromatin,CT-GAN
+0.7266320664659235,Normal Nucleoli,CT-GAN
+0.0645136463324292,Mitoses,CT-GAN
+2.3938468455370447,Clump Thickness,CT-GAN
+1.624780566651548,Uniformity of Cell Size,CT-GAN
+1.3076545661289822,Uniformity of Cell Shape,CT-GAN
+0.568754484526993,Marginal Adhesion,CT-GAN
+0.8578771326059961,Single Epithelial Cell Size,CT-GAN
+3.48999286769315,Bare Nuclei,CT-GAN
+0.6619542360591084,Bland Chromatin,CT-GAN
+0.912969469322258,Normal Nucleoli,CT-GAN
+0.05657601121975052,Mitoses,CT-GAN
+2.762366497965722,Clump Thickness,CT-GAN
+1.422125463785914,Uniformity of Cell Size,CT-GAN
+1.304572365800718,Uniformity of Cell Shape,CT-GAN
+0.535852646983161,Marginal Adhesion,CT-GAN
+0.8781351778973521,Single Epithelial Cell Size,CT-GAN
+3.0275963966745136,Bare Nuclei,CT-GAN
+0.6443567371494953,Bland Chromatin,CT-GAN
+0.9257833489733093,Normal Nucleoli,CT-GAN
+0.06039414809505029,Mitoses,CT-GAN
+2.527189208542335,Clump Thickness,CT-GAN
+1.5362003410845633,Uniformity of Cell Size,CT-GAN
+1.28476005243848,Uniformity of Cell Shape,CT-GAN
+0.5820121537005909,Marginal Adhesion,CT-GAN
+0.8911664317862332,Single Epithelial Cell Size,CT-GAN
+3.636122615053092,Bare Nuclei,CT-GAN
+0.6479387489563285,Bland Chromatin,CT-GAN
+0.9049469766875615,Normal Nucleoli,CT-GAN
+0.07277251770175003,Mitoses,CT-GAN
+2.5420129505378672,Clump Thickness,CT-GAN
+1.480668557299713,Uniformity of Cell Size,CT-GAN
+1.2317752145863217,Uniformity of Cell Shape,CT-GAN
+0.6004274786239344,Marginal Adhesion,CT-GAN
+0.875922717943273,Single Epithelial Cell Size,CT-GAN
+3.647727946763733,Bare Nuclei,CT-GAN
+0.6884174176609051,Bland Chromatin,CT-GAN
+0.8342762008081047,Normal Nucleoli,CT-GAN
+0.05567860570834924,Mitoses,CT-GAN
+2.438189569433842,Clump Thickness,CT-GAN
+1.3284592016970436,Uniformity of Cell Size,CT-GAN
+1.185559604569842,Uniformity of Cell Shape,CT-GAN
+0.5945427337188595,Marginal Adhesion,CT-GAN
+0.8837100213183741,Single Epithelial Cell Size,CT-GAN
+3.9004249676157374,Bare Nuclei,CT-GAN
+0.7388412302879731,Bland Chromatin,CT-GAN
+0.8877262978288317,Normal Nucleoli,CT-GAN
+0.06231715319366488,Mitoses,CT-GAN
+2.455360158004535,Clump Thickness,CT-GAN
+1.3703128583614121,Uniformity of Cell Size,CT-GAN
+1.2966362868048098,Uniformity of Cell Shape,CT-GAN
+0.5745662689625697,Marginal Adhesion,CT-GAN
+0.952944908640422,Single Epithelial Cell Size,CT-GAN
+3.5772507805672547,Bare Nuclei,CT-GAN
+0.691292670154886,Bland Chromatin,CT-GAN
+0.9360358382631588,Normal Nucleoli,CT-GAN
+0.059434383377365264,Mitoses,CT-GAN
+2.385493655626046,Clump Thickness,CT-GAN
+1.4947020066922045,Uniformity of Cell Size,CT-GAN
+1.304349899018556,Uniformity of Cell Shape,CT-GAN
+0.5656535492235543,Marginal Adhesion,CT-GAN
+0.9022972410611091,Single Epithelial Cell Size,CT-GAN
+3.6741506030747346,Bare Nuclei,CT-GAN
+0.6991549905482081,Bland Chromatin,CT-GAN
+0.8141862392610663,Normal Nucleoli,CT-GAN
+0.04850092458905798,Mitoses,CT-GAN
+2.5376226652689353,Clump Thickness,CT-GAN
+1.4394295489256295,Uniformity of Cell Size,CT-GAN
+1.3024421548893947,Uniformity of Cell Shape,CT-GAN
+0.6032644987990465,Marginal Adhesion,CT-GAN
+0.9446081272036185,Single Epithelial Cell Size,CT-GAN
+3.6626555613791942,Bare Nuclei,CT-GAN
+0.7167633258258713,Bland Chromatin,CT-GAN
+0.832036329681605,Normal Nucleoli,CT-GAN
+0.049177116419939756,Mitoses,CT-GAN
+2.615913175229706,Clump Thickness,CT-GAN
+1.486933492949103,Uniformity of Cell Size,CT-GAN
+1.215396216689794,Uniformity of Cell Shape,CT-GAN
+0.5871811933940851,Marginal Adhesion,CT-GAN
+0.8712468601864298,Single Epithelial Cell Size,CT-GAN
+4.268672092697204,Bare Nuclei,CT-GAN
+0.6895665311671197,Bland Chromatin,CT-GAN
+0.896008635611248,Normal Nucleoli,CT-GAN
+0.05817500662133434,Mitoses,CT-GAN
+2.5748305368633786,Clump Thickness,CT-GAN
+1.442545827474065,Uniformity of Cell Size,CT-GAN
+1.2683228042296482,Uniformity of Cell Shape,CT-GAN
+0.5385995978083531,Marginal Adhesion,CT-GAN
+0.8312686705467576,Single Epithelial Cell Size,CT-GAN
+3.5243063932548564,Bare Nuclei,CT-GAN
+0.7683719484314923,Bland Chromatin,CT-GAN
+0.8707466259446416,Normal Nucleoli,CT-GAN
+0.05019980059484065,Mitoses,CT-GAN
+2.9573841172601116,Clump Thickness,CT-GAN
+1.3934817211467405,Uniformity of Cell Size,CT-GAN
+1.3261300177782425,Uniformity of Cell Shape,CT-GAN
+0.5770157053178822,Marginal Adhesion,CT-GAN
+0.9382077492668514,Single Epithelial Cell Size,CT-GAN
+4.358548465646769,Bare Nuclei,CT-GAN
+0.6260574046574308,Bland Chromatin,CT-GAN
+0.8364109938140585,Normal Nucleoli,CT-GAN
+0.05784080263789931,Mitoses,CT-GAN
+2.3882378953551147,Clump Thickness,CT-GAN
+1.243389323762256,Uniformity of Cell Size,CT-GAN
+1.202623400417823,Uniformity of Cell Shape,CT-GAN
+0.5282635647934394,Marginal Adhesion,CT-GAN
+0.9552930970978193,Single Epithelial Cell Size,CT-GAN
+3.683016357171493,Bare Nuclei,CT-GAN
+0.6745799628005343,Bland Chromatin,CT-GAN
+0.7253619525913995,Normal Nucleoli,CT-GAN
+0.06030616532083628,Mitoses,CT-GAN
+2.497808588623679,Clump Thickness,CT-GAN
+1.3458290675432645,Uniformity of Cell Size,CT-GAN
+1.1763285672398192,Uniformity of Cell Shape,CT-GAN
+0.564992992242855,Marginal Adhesion,CT-GAN
+0.9254100375169811,Single Epithelial Cell Size,CT-GAN
+3.3867623882258777,Bare Nuclei,CT-GAN
+0.6389213089921063,Bland Chromatin,CT-GAN
+0.8203065003867278,Normal Nucleoli,CT-GAN
+0.04290346432350525,Mitoses,CT-GAN
+2.7937993432897557,Clump Thickness,CT-GAN
+1.5591801868429287,Uniformity of Cell Size,CT-GAN
+1.2501581660858858,Uniformity of Cell Shape,CT-GAN
+0.6426311606453353,Marginal Adhesion,CT-GAN
+0.8582048031397195,Single Epithelial Cell Size,CT-GAN
+3.9348967731175164,Bare Nuclei,CT-GAN
+0.721976453352524,Bland Chromatin,CT-GAN
+0.9425341551145006,Normal Nucleoli,CT-GAN
+0.045539323751981324,Mitoses,CT-GAN
+2.6411310256784883,Clump Thickness,CT-GAN
+1.5624640401814072,Uniformity of Cell Size,CT-GAN
+1.3272892625682047,Uniformity of Cell Shape,CT-GAN
+0.5418786927062412,Marginal Adhesion,CT-GAN
+0.8949314002100136,Single Epithelial Cell Size,CT-GAN
+3.4063208257124455,Bare Nuclei,CT-GAN
+0.6645011316328816,Bland Chromatin,CT-GAN
+0.919931546586883,Normal Nucleoli,CT-GAN
+0.07871951497455014,Mitoses,CT-GAN
+2.541280771124889,Clump Thickness,CT-GAN
+1.4239013281576887,Uniformity of Cell Size,CT-GAN
+1.3967306009886022,Uniformity of Cell Shape,CT-GAN
+0.5589549800356186,Marginal Adhesion,CT-GAN
+0.8634340755323734,Single Epithelial Cell Size,CT-GAN
+3.615300903599339,Bare Nuclei,CT-GAN
+0.6921328646899222,Bland Chromatin,CT-GAN
+0.8564325532474187,Normal Nucleoli,CT-GAN
+0.05776308975830463,Mitoses,CT-GAN
+2.5073606814808707,Clump Thickness,CT-GAN
+1.4659763380656796,Uniformity of Cell Size,CT-GAN
+1.2470527631670303,Uniformity of Cell Shape,CT-GAN
+0.5332421260288946,Marginal Adhesion,CT-GAN
+0.8699532760307294,Single Epithelial Cell Size,CT-GAN
+4.097100476196768,Bare Nuclei,CT-GAN
+0.7234243204766402,Bland Chromatin,CT-GAN
+0.8990288243517193,Normal Nucleoli,CT-GAN
+0.03896733319617951,Mitoses,CT-GAN
+2.4403144237317274,Clump Thickness,CT-GAN
+1.4678460266338622,Uniformity of Cell Size,CT-GAN
+1.292030749437461,Uniformity of Cell Shape,CT-GAN
+0.5470403170552736,Marginal Adhesion,CT-GAN
+0.9297498815613846,Single Epithelial Cell Size,CT-GAN
+3.87670793256328,Bare Nuclei,CT-GAN
+0.6740024800385674,Bland Chromatin,CT-GAN
+0.8800301994375984,Normal Nucleoli,CT-GAN
+0.0488253740958589,Mitoses,CT-GAN
+2.3052490609519487,Clump Thickness,CT-GAN
+1.4704704774796302,Uniformity of Cell Size,CT-GAN
+1.2566772683023106,Uniformity of Cell Shape,CT-GAN
+0.5395161136426747,Marginal Adhesion,CT-GAN
+0.9525532749853461,Single Epithelial Cell Size,CT-GAN
+3.461506796364869,Bare Nuclei,CT-GAN
+0.6865532474221079,Bland Chromatin,CT-GAN
+0.8376963498108172,Normal Nucleoli,CT-GAN
+0.05876975675360487,Mitoses,CT-GAN
+2.730531716367877,Clump Thickness,CT-GAN
+1.5572027306078868,Uniformity of Cell Size,CT-GAN
+1.2014242611732382,Uniformity of Cell Shape,CT-GAN
+0.5440835298098776,Marginal Adhesion,CT-GAN
+0.9191664124964711,Single Epithelial Cell Size,CT-GAN
+4.447152884239895,Bare Nuclei,CT-GAN
+0.6890579708248937,Bland Chromatin,CT-GAN
+0.9347239549208582,Normal Nucleoli,CT-GAN
+0.054164496584432696,Mitoses,CT-GAN
+2.2981864836038057,Clump Thickness,CT-GAN
+1.4319463295751214,Uniformity of Cell Size,CT-GAN
+1.2452472977159068,Uniformity of Cell Shape,CT-GAN
+0.4924535770681639,Marginal Adhesion,CT-GAN
+0.9007413232548676,Single Epithelial Cell Size,CT-GAN
+3.922257709297196,Bare Nuclei,CT-GAN
+0.7173616968318905,Bland Chromatin,CT-GAN
+0.8121169332590458,Normal Nucleoli,CT-GAN
+0.06358211071398592,Mitoses,CT-GAN
+2.3169118148960077,Clump Thickness,CT-GAN
+1.3590580648635533,Uniformity of Cell Size,CT-GAN
+1.209852791968055,Uniformity of Cell Shape,CT-GAN
+0.5585376793234001,Marginal Adhesion,CT-GAN
+0.9422697915776947,Single Epithelial Cell Size,CT-GAN
+3.1106021185433863,Bare Nuclei,CT-GAN
+0.6474925876875848,Bland Chromatin,CT-GAN
+0.8107929655003236,Normal Nucleoli,CT-GAN
+0.0549670633846948,Mitoses,CT-GAN
+2.476398499626084,Clump Thickness,CT-GAN
+1.419712918520552,Uniformity of Cell Size,CT-GAN
+1.1487594120805633,Uniformity of Cell Shape,CT-GAN
+0.5630051631266466,Marginal Adhesion,CT-GAN
+0.9212288780631938,Single Epithelial Cell Size,CT-GAN
+3.543628722638798,Bare Nuclei,CT-GAN
+0.6720510326185629,Bland Chromatin,CT-GAN
+0.8034235283570474,Normal Nucleoli,CT-GAN
+0.0461778735204189,Mitoses,CT-GAN
+2.4170143529916133,Clump Thickness,CT-GAN
+1.3992072612510866,Uniformity of Cell Size,CT-GAN
+1.241845060327519,Uniformity of Cell Shape,CT-GAN
+0.6405375834618768,Marginal Adhesion,CT-GAN
+0.8466565317625502,Single Epithelial Cell Size,CT-GAN
+3.7172435289599464,Bare Nuclei,CT-GAN
+0.7203677256755862,Bland Chromatin,CT-GAN
+0.9133783583964411,Normal Nucleoli,CT-GAN
+0.06012538065844827,Mitoses,CT-GAN
+2.622463922882829,Clump Thickness,CT-GAN
+1.2949073032315672,Uniformity of Cell Size,CT-GAN
+1.2564531571288426,Uniformity of Cell Shape,CT-GAN
+0.5743687971498923,Marginal Adhesion,CT-GAN
+0.898788923966169,Single Epithelial Cell Size,CT-GAN
+3.611714444977113,Bare Nuclei,CT-GAN
+0.6875879228230526,Bland Chromatin,CT-GAN
+0.8940911484231115,Normal Nucleoli,CT-GAN
+0.05123083204676925,Mitoses,CT-GAN
+2.5642230127809658,Clump Thickness,CT-GAN
+1.5888808284719136,Uniformity of Cell Size,CT-GAN
+1.46583953061867,Uniformity of Cell Shape,CT-GAN
+0.5582396892546434,Marginal Adhesion,CT-GAN
+0.8724051670720137,Single Epithelial Cell Size,CT-GAN
+3.243175629253838,Bare Nuclei,CT-GAN
+0.7182570098337212,Bland Chromatin,CT-GAN
+0.8483304946675563,Normal Nucleoli,CT-GAN
+0.06531221889611273,Mitoses,CT-GAN
+3.0547411749794366,Clump Thickness,CT-GAN
+1.4587198943400974,Uniformity of Cell Size,CT-GAN
+1.2645777320057356,Uniformity of Cell Shape,CT-GAN
+0.5194790417220693,Marginal Adhesion,CT-GAN
+0.9093520018210577,Single Epithelial Cell Size,CT-GAN
+3.432266979102706,Bare Nuclei,CT-GAN
+0.6985210356567945,Bland Chromatin,CT-GAN
+0.8851773757335841,Normal Nucleoli,CT-GAN
+0.051522978981806564,Mitoses,CT-GAN
