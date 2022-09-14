@@ -88,45 +88,57 @@ plotAb <- ggplot(res_ind_tot, aes(x = Dim.1, y = Dim.2, fill = type)) +
 
 ##### ORIGINAL - SYNTHPOP comparison
 
-# Merge of datasets
-data_tot <- rbind(data, synthpop)
+
 
 #  Perform FAMD with synthpop as supplemental individuals
-famd <- FAMD(data_tot, ncp = 5, graph = FALSE, ind.sup = (nrow(data_tot) / 2 + 1):nrow(data_tot))
-res_ind <- as.data.frame(famd$ind$coord)
-res_ind_sup <- as.data.frame(famd$ind.sup$coord)
-res_ind["type"] <- "Original"
-res_ind_sup["type"] <- "Synthpop"
-res_ind_tot <- rbind(res_ind, res_ind_sup)
+get_aids_2D_projection = function(data, synthetic_name = "synthetic"){
+  famd <- FAMD(data, ncp = 5, graph = FALSE, ind.sup = (nrow(data) / 2 + 1):nrow(data))
+  res_ind <- as.data.frame(famd$ind$coord)
+  res_ind_sup <- as.data.frame(famd$ind.sup$coord)
+  res_ind["type"] <- "Original"
+  res_ind_sup["type"] <- synthetic_name
+  res_ind_tot <- rbind(res_ind, res_ind_sup)
 
-set.seed(43)
-rows <- sample(nrow(res_ind_tot))
-res_ind_tot <- res_ind_tot[rows, ]
+  set.seed(43)
+  rows <- sample(nrow(res_ind_tot))
+  res_ind_tot <- res_ind_tot[rows, ]
+  return(list("coord" = res_ind_tot, "model" = famd))
+  }
 
-options(repr.plot.width = 10, repr.plot.height = 7)
-synthpop_plotAb <- ggplot(res_ind_tot, aes(x = Dim.1, y = Dim.2, fill = type)) +
-  # add points
-  geom_point(size = 3, shape = 21, alpha = 1) +
-  #  fill according data source
-  aes(fill = factor(type)) +
-  scale_fill_manual(values = c(colors["original", "color"], colors["synthpop", "color"])) +
-  # add axis label with explained variability
-  xlab(paste0("Dim. 1 (", round(famd$eig[1, 2], 2), "%)")) +
-  ylab(paste0("Dim. 2 (", round(famd$eig[2, 2], 2), "%)")) +
-  ylim(c(-2.6, 5.3)) +
-  # theme and figure details
-  theme_bw() +
-  theme(
-    legend.position = c(0.9, 0.12),
-    legend.title = element_blank(),
-    legend.key.size = unit(0.8, "cm"),
-    legend.text = element_text(size = legend_text_size, color = "black", family = ""),
-    axis.text = element_text(size = axis_text_size, color = "black", family = ""),
-    axis.title = element_text(size = axis_title_size, color = "black", family = "")
-  )
+get_plot_projection = function(projection, name, save = FALSE){
+  options(repr.plot.width = 10, repr.plot.height = 7)
+  projection_plot <- ggplot(res_ind_tot, aes(x = Dim.1, y = Dim.2, fill = type)) +
+    # add points
+    geom_point(size = 3, shape = 21, alpha = 1) +
+    #  fill according data source
+    aes(fill = factor(type)) +
+    scale_fill_manual(values = c(colors["original", "color"], colors[name, "color"])) +
+    # add axis label with explained variability
+    xlab(paste0("Dim. 1 (", round(famd$eig[1, 2], 2), "%)")) +
+    ylab(paste0("Dim. 2 (", round(famd$eig[2, 2], 2), "%)")) +
+    ylim(c(-2.6, 5.3)) +
+    # theme and figure details
+    theme_bw() +
+    theme(
+      legend.position = c(0.9, 0.12),
+      legend.title = element_blank(),
+      legend.key.size = unit(0.8, "cm"),
+      legend.text = element_text(size = legend_text_size, color = "black", family = ""),
+      axis.text = element_text(size = axis_text_size, color = "black", family = ""),
+      axis.title = element_text(size = axis_title_size, color = "black", family = "")
+    )
 
+    if (save){
+      ggsave(file=paste0("../figures/WBCD_",name,"_pca_2D.svg"), plot=projection_plot, width=10, height=7, dpi = 320)
+    }
 
-# ggsave(file="../figures/WBCD_synthpop_pca_2D.svg", plot=synthpop_plotAb, width=10, height=7, dpi = 320)
+    return(projection_plot)
+}
+
+# Merge of datasets
+data_tot <- rbind(data, synthpop)
+projection <- get_aids_2D_projection(data_tot, synthetic_name="Synthpop" )
+projection_plot <- get_plot_projection(projections, name="synthpop")
 
 ##### ORIGINAL - CTGAN comparison
 
