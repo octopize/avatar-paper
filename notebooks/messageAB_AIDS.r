@@ -253,12 +253,13 @@ survival_synthpop <- get_survival_results(data = data, synthetic = synthpop, nam
 # Display time: about 15 seconds
 survival_data <- survival_synthpop$data
 survival_curve <- survival_synthpop$curve
-hazard_ratio_synthetic <- survival_synthpop$hazard_ratio_synthetic
+hazard_ratio_synthpop <- survival_synthpop$hazard_ratio_synthetic
 hazard_ratio_original <- survival_synthpop$hazard_ratio_original
+
 survival_plot_synthpop <- get_survival_plot(
   survival_curve = survival_curve,
   survival_data = survival_data,
-  hazard_ratio_synthetic = hazard_ratio_synthetic,
+  hazard_ratio_synthetic = hazard_ratio_synthpop, 
   hazard_ratio_original = hazard_ratio_original
 )
 
@@ -266,15 +267,42 @@ survival_plot_synthpop <- get_survival_plot(
 survival_ctgan <- get_survival_results(data = data, synthetic = ctgan, names = c("Original", "CT-GAN"))
 survival_data <- survival_ctgan$data
 survival_curve <- survival_ctgan$curve
-hazard_ratio_synthetic <- survival_ctgan$hazard_ratio_synthetic
+hazard_ratio_ctgan <- survival_ctgan$hazard_ratio_synthetic
 hazard_ratio_original <- survival_ctgan$hazard_ratio_original
 
 survival_plot_ctgan <- get_survival_plot(
   survival_curve = survival_curve,
   survival_data = survival_data,
-  hazard_ratio_synthetic = hazard_ratio_synthetic,
+  hazard_ratio_synthetic = hazard_ratio_ctgan, 
   hazard_ratio_original = hazard_ratio_original
 )
+
+## Comparative hazard ratio analysis
+Hazard_Ratio <- c(hazard_ratio_original[2], hazard_ratio_avatar[2], hazard_ratio_synthpop[2], hazard_ratio_ctgan[2])
+ci_high <- c(hazard_ratio_original[9], hazard_ratio_avatar[9], hazard_ratio_synthpop[9], hazard_ratio_ctgan[9])
+ci_low <- c(hazard_ratio_original[8], hazard_ratio_avatar[8], hazard_ratio_synthpop[8], hazard_ratio_ctgan[8])
+type <- c('Original', 'Avatar', 'Synthpop', 'CTGAN')
+
+aids_results <- data.frame(Hazard_Ratio, ci_high, ci_low, type, p_value)
+aids_results$type_f = factor(aids_results$type, levels=c('CTGAN', 'Synthpop', 'Avatar','Original'))
+
+aids_comparative_plot <- ggplot(aids_results, aes(x = Hazard_Ratio, y = type_f, colour = type)) +
+  geom_errorbarh(aes(xmax = ci_high, xmin = ci_low), size = 0.6, height
+                 = 0.15) +
+  geom_point(size = 1) +
+  scale_colour_manual(values = c('Original'="#fd934d",
+                                 'Avatar'="#3bd6b0",
+                                 'Synthpop'="#b03bd6" ,
+                                 'CTGAN'="#4db7fd"),
+                      breaks=c('Original', 'Avatar', 'Synthpop', 'CTGAN')) +
+  theme_bw() +
+  xlim(c(0.1,0.8)) +
+  ylab(NULL) +
+  xlab("Hazard_Ratio (95% CI)") +
+  theme(text = element_text(size = 16))
+
+ggsave(file = "../figures/aids_comparative_plot.svg", plot = aids_comparative_plot, width = 10, height = 7, dpi = 290)
+
 
 ## Supplementary graph : Arms 1-2-3-4 for avatar comparison
 data_typed <- data.frame(data)
