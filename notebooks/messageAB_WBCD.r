@@ -205,7 +205,56 @@ predictions_ctgan <- subset(predictions_comparison, type == "Original" | type ==
 scores_and_auc_ctgan <- reshape_predictions_and_f1score(predictions_ctgan, f1_scores_ctgan, synthetic_name = "CT-GAN")
 f1score_plot_ctgan <- get_f1score_plot(scores_and_auc_ctgan, synthetic_color = "ctgan")
 
+## Comparative utility plot 
+vec <- c("Bare Nuclei", "Uniformity of Cell Shape", "Uniformity of Cell Size",
+         "Bland Chromatin", "Clump Thickness", "Normal Nucleoli", "Marginal Adhesion",
+         "Single Epithelial Cell Size", "Mitoses") 
 
+f1_original <- f1_scores_avatar %>%
+  filter(type=="Original")
+# Reorder data frame
+f1_original <- left_join(data.frame(feature = vec),f1_original,by = "feature")
+
+f1_avatar <- f1_scores_avatar %>%
+  filter(type=="Avatar")
+# Reorder data frame
+f1_avatar <- left_join(data.frame(feature = vec),f1_avatar,by = "feature")
+
+f1_synthpop <- f1_scores_synthpop %>%
+  filter(type=="Synthpop")
+# Reorder data frame
+f1_synthpop <- left_join(data.frame(feature = vec),f1_synthpop,by = "feature")
+
+f1_ctgan <- f1_scores_ctgan %>%
+  filter(type=="CT-GAN")
+# Reorder data frame
+f1_ctgan <- left_join(data.frame(feature = vec),f1_ctgan,by = "feature")
+
+total_results <-rbind(f1_original,f1_avatar,f1_synthpop,f1_ctgan)
+total_results$feature_f = factor(total_results$feature, levels=c("Bare Nuclei", "Uniformity of Cell Shape", "Uniformity of Cell Size",
+                                                                 "Bland Chromatin", "Clump Thickness", "Normal Nucleoli", "Marginal Adhesion",
+                                                                 "Single Epithelial Cell Size", "Mitoses") )
+total_results$type_f = factor(total_results$type, levels=c('CT-GAN', 'Synthpop', 'Avatar', 'Original'))
+total_results$type_g = factor(total_results$type, levels=c('Original', 'Avatar', 'Synthpop', 'CT-GAN'))
+
+wbcd_comparative_utility <- ggplot(total_results, aes(x = F.score, y = type_f, fill = type)) +
+  geom_boxplot(outlier.shape = NA) +
+  scale_fill_manual(values = c('Original'="#fd934d",
+                               'Avatar'="#3bd6b0",
+                               'Synthpop'="#b03bd6" ,
+                               'CT-GAN'="#4db7fd"),
+                    breaks=c('Original', 'Avatar', 'Synthpop', 'CT-GAN')) +
+  theme_bw() +
+  ylab(NULL) +
+  xlab("F scores") +
+  facet_grid(feature_f~.,switch = 'y') +
+  
+  theme(text = element_text(size = 16), strip.text.y.left = element_text(angle = 0))
+
+ggsave(file = "../figures/wbcd_comparative_plot.svg", plot = wbcd_comparative_utility, width = 10, height = 7, dpi = 290)
+
+
+## Specific Privacy metrics computation
 metrics <- py$SecurityMetrics()
 metrics$fit(data, avatar, nf = 2L)
 
