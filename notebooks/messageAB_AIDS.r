@@ -153,7 +153,6 @@ get_survival_results <- function(data, synthetic, names = c("Original", "Synthet
   data_arms01 <- data[data$arms %in% c(0, 1), ]
   data_arms01$arms <- as.factor(as.character(data_arms01$arms))
 
-  print(str(data_arms01))
   summary_cox <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = data_arms01))
   res_original_01 <- cbind(summary_cox$coefficients, summary_cox$conf.int)
 

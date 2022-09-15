@@ -151,8 +151,6 @@ get_f1score_plot <- function(scores_and_auc, synthetic_color) {
   cols <- c(colors["original", "color"], colors[synthetic_color, "color"])
   original_category <- paste0("Original (AUC = ", round(mean(scores_and_auc$auc_original) * 100, 2), ")")
   names(cols) <- c(original_category, category)
-  print(cols)
-  print(stats_f1_scores)
 
   plot <- ggplot(data = stats_f1_scores, aes(x = reorder(feature, order), y = mean, fill = type)) +
     geom_bar(stat = "identity", position = position_dodge(), color = "black") +
