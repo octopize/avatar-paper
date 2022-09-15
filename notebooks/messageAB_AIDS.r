@@ -36,9 +36,9 @@ py_run_string("from metrics.privacy_metrics.local_cloaking import get_local_cloa
 
 ## utils function
 categorical <- c(
-    "hemo", "homo", "drugs", "karnof", "oprior", "z30", "zprior", "race",
-    "gender", "str2", "strat", "symptom", "treat", "offtrt", "r", "cens", "arms"
-  )
+  "hemo", "homo", "drugs", "karnof", "oprior", "z30", "zprior", "race",
+  "gender", "str2", "strat", "symptom", "treat", "offtrt", "r", "cens", "arms"
+)
 
 apply_dtypes <- function(data) {
   data[categorical] <- lapply(data[categorical], factor)
@@ -205,7 +205,7 @@ get_survival_plot <- function(survival_curve, survival_data, hazard_ratio_synthe
       " [", formatC(hazard_ratio_original[8], format = "f", digits = 2),
       "-", formatC(hazard_ratio_original[9], format = "f", digits = 2),
       "] ; p-value = ", formatC(hazard_ratio_original[5], format = "e", digits = 2),
-      paste0("\n",names[1],": HR [CI: 95%] = "), formatC(hazard_ratio_synthetic[2], format = "f", digits = 2),
+      paste0("\n", names[1], ": HR [CI: 95%] = "), formatC(hazard_ratio_synthetic[2], format = "f", digits = 2),
       " [", formatC(hazard_ratio_synthetic[8], format = "f", digits = 2),
       "-", formatC(hazard_ratio_synthetic[9], format = "f", digits = 2),
       "] ; p-value = ", formatC(hazard_ratio_synthetic[5], format = "e", digits = 2), "  "
@@ -241,12 +241,12 @@ hazard_ratio_avatar <- survival_avatar$hazard_ratio_synthetic
 hazard_ratio_original <- survival_avatar$hazard_ratio_original
 
 plotAc <- get_survival_plot(
-  survival_curve = survival_avatar_curve, 
-  survival_data = survival_avatar_data, 
-  hazard_ratio_synthetic = hazard_ratio_avatar, 
+  survival_curve = survival_avatar_curve,
+  survival_data = survival_avatar_data,
+  hazard_ratio_synthetic = hazard_ratio_avatar,
   hazard_ratio_original = hazard_ratio_original,
   names = c("Original", "Avatar")
-  )
+)
 
 # Synthpop
 survival_synthpop <- get_survival_results(data = data, synthetic = synthpop, names = c("Original", "Synthpop"))
@@ -256,11 +256,11 @@ survival_curve <- survival_synthpop$curve
 hazard_ratio_synthetic <- survival_synthpop$hazard_ratio_synthetic
 hazard_ratio_original <- survival_synthpop$hazard_ratio_original
 survival_plot_synthpop <- get_survival_plot(
-  survival_curve = survival_curve, 
-  survival_data = survival_data, 
-  hazard_ratio_synthetic = hazard_ratio_synthetic, 
+  survival_curve = survival_curve,
+  survival_data = survival_data,
+  hazard_ratio_synthetic = hazard_ratio_synthetic,
   hazard_ratio_original = hazard_ratio_original
-  )
+)
 
 # ctgan
 survival_ctgan <- get_survival_results(data = data, synthetic = ctgan, names = c("Original", "CT-GAN"))
@@ -270,11 +270,11 @@ hazard_ratio_synthetic <- survival_ctgan$hazard_ratio_synthetic
 hazard_ratio_original <- survival_ctgan$hazard_ratio_original
 
 survival_plot_ctgan <- get_survival_plot(
-  survival_curve = survival_curve, 
-  survival_data = survival_data, 
-  hazard_ratio_synthetic = hazard_ratio_synthetic, 
+  survival_curve = survival_curve,
+  survival_data = survival_data,
+  hazard_ratio_synthetic = hazard_ratio_synthetic,
   hazard_ratio_original = hazard_ratio_original
-  )
+)
 
 ## Supplementary graph : Arms 1-2-3-4 for avatar comparison
 data_typed <- data.frame(data)
@@ -330,7 +330,7 @@ ggsurv
 # Hazard ratio table  (only avatar dataset)
 data$arms <- as.factor(as.character(data$arms))
 avatar$arms <- as.factor(as.character(avatar$arms))
-summary_cox_original <- summary(coxph(Surv(time = days/7, event = cens) ~ arms, data = data))
+summary_cox_original <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = data))
 res_original <- cbind(summary_cox_original$coefficients[, c("exp(coef)", "Pr(>|z|)")], summary_cox_original$conf.int[, c("lower .95", "upper .95")])
 summary_cox_avatar <- summary(coxph(Surv(time = days / 7, event = cens) ~ arms, data = avatar))
 res_avatar <- cbind(summary_cox_avatar$coefficients[, c("exp(coef)", "Pr(>|z|)")], summary_cox_avatar$conf.int[, c("lower .95", "upper .95")])
@@ -346,7 +346,7 @@ res_concat <- res_concat[c(1, 4, 2, 5, 3, 6), 5:7]
 row.names(res_concat) <- c("Original arm 1", "Avatar arm 1", "Original arm 2", "Avatar arm 2", "Original arm 3", "Avatar arm 3")
 
 
-### PRIVACY METRICS for avatar data 
+### PRIVACY METRICS for avatar data
 
 metrics_aids <- py$SecurityMetrics()
 data <- apply_dtypes(data)
