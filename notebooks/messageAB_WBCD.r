@@ -239,12 +239,14 @@ f1_ctgan <- scores_and_auc_ctgan$f1_score %>%
 f1_ctgan <- left_join(data.frame(feature = vec),f1_ctgan,by = "feature")
 
 levels <- c(f1_original$type[1], f1_avatar$type[1], f1_synthpop$type[1], f1_ctgan$type[1] )
+levels <-gsub('\\(AUC', '\nAUC', levels )
+levels <-gsub(')', '', levels )
 
-F1_scores <-rbind(f1_original, f1_avatar, f1_synthpop, f1_ctgan)
-F1_scores$feature = factor(F1_scores$feature, levels=vec )
+F1_scores <- rbind(f1_original, f1_avatar, f1_synthpop, f1_ctgan)
+F1_scores$feature <- factor(F1_scores$feature, levels=vec )
 F1_scores$type <-gsub('\\(AUC', '\nAUC', F1_scores$type )
 F1_scores$type <-gsub(')', '', F1_scores$type )
-F1_scores$type = factor(F1_scores$type)
+F1_scores$type = factor(F1_scores$type, levels=rev(levels)) # order levels
 
 wrapping_size <- 20
 cols = c(colors['original', 'color'],
@@ -258,7 +260,7 @@ names(cols) <- color_names
 
 wbcd_comparative_utility <- ggplot(F1_scores, aes(x = F.score, y = type , fill = type)) +
   geom_boxplot(outlier.shape = NA) +
-  scale_fill_manual(values = cols ) +
+  scale_fill_manual(values = cols )+
   theme_bw() +
   ylab(NULL) +
   xlab("F scores") +
