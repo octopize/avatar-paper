@@ -12,7 +12,10 @@ librarian::shelf(
   survival,
   survminer,
   # Display a corrplot
-  corrplot
+  corrplot,
+  stringr,
+  tibble,
+  dplyr
 )
 
 
@@ -24,6 +27,14 @@ py_run_string("sys.path.append('..')")
 py_run_string("from metrics.privacy_metrics import SecurityMetrics ")
 py_run_string("from metrics.privacy_metrics.record_to_avatar_distance import record_to_avatar_distance")
 py_run_string("from metrics.privacy_metrics.local_cloaking import get_local_cloaking")
+
+
+axis_title_size <- 20
+axis_text_size <- 20
+legend_text_size <- 20
+legend_title_size <- 20
+save <- FALSE
+
 
 data <- read.csv("../datasets/WBCD/breast_cancer_wisconsin.csv", sep = ",", na.strings = c("NA", "", NA))
 data <- data[, -1]
@@ -39,10 +50,6 @@ ctgan$Class <- as.factor(ctgan$Class)
 colors <- read.csv("../color.csv", stringsAsFactors = FALSE)
 rownames(colors) <- colors$type
 
-axis_title_size <- 20
-axis_text_size <- 20
-legend_text_size <- 20
-legend_title_size <- 20
 
 
 #  Perform FAMD with synthetic as supplemental individuals
@@ -90,9 +97,9 @@ get_plot_projection <- function(projection, name, save = FALSE) {
       legend.position = c(0.9, 0.12),
       legend.title = element_blank(),
       legend.key.size = unit(0.8, "cm"),
-      legend.text = element_text(size = legend_text_size, color = "black", family = ""),
-      axis.text = element_text(size = axis_text_size, color = "black", family = ""),
-      axis.title = element_text(size = axis_title_size, color = "black", family = "")
+      legend.text = element_text(size = legend_text_size, color = "black", family = "sans"),
+      axis.text = element_text(size = axis_text_size, color = "black", family = "sans"),
+      axis.title = element_text(size = axis_title_size, color = "black", family = "sans")
     )
 
   if (save) {
@@ -170,10 +177,10 @@ get_f1score_plot <- function(scores_and_auc, synthetic_color) {
       legend.position = c(0.72, 0.1),
       legend.title = element_blank(),
       legend.key.size = unit(0.8, "cm"),
-      legend.text = element_text(size = legend_text_size, color = "black", family = ""),
-      axis.text.x = element_text(size = axis_text_size, color = "black", family = ""),
-      axis.text.y = element_text(size = axis_text_size, color = "black", family = ""),
-      axis.title = element_text(size = axis_title_size, color = "black", family = ""),
+      legend.text = element_text(size = legend_text_size, color = "black", family = "sans"),
+      axis.text.x = element_text(size = axis_text_size, color = "black", family = "sans"),
+      axis.text.y = element_text(size = axis_text_size, color = "black", family = "sans"),
+      axis.title = element_text(size = axis_title_size, color = "black", family = "sans"),
       axis.ticks.y = element_blank()
     )
   return(plot)
@@ -208,48 +215,71 @@ vec <- c("Bare Nuclei", "Uniformity of Cell Shape", "Uniformity of Cell Size",
          "Bland Chromatin", "Clump Thickness", "Normal Nucleoli", "Marginal Adhesion",
          "Single Epithelial Cell Size", "Mitoses") 
 
-f1_original <- f1_scores_avatar %>%
-  filter(type=="Original")
+
+f1_original <- scores_and_auc_avatar$f1_score %>% 
+  filter(str_detect(type, "^Original"))        
+
 # Reorder data frame
 f1_original <- left_join(data.frame(feature = vec),f1_original,by = "feature")
 
-f1_avatar <- f1_scores_avatar %>%
-  filter(type=="Avatar")
+f1_avatar <- scores_and_auc_avatar$f1_score %>%
+  filter(str_detect(type, "^Avatar")) 
+
 # Reorder data frame
 f1_avatar <- left_join(data.frame(feature = vec),f1_avatar,by = "feature")
 
-f1_synthpop <- f1_scores_synthpop %>%
-  filter(type=="Synthpop")
+f1_synthpop <- scores_and_auc_synthpop$f1_score %>%
+  filter(str_detect(type, "^Synthpop"))        
 # Reorder data frame
 f1_synthpop <- left_join(data.frame(feature = vec),f1_synthpop,by = "feature")
 
-f1_ctgan <- f1_scores_ctgan %>%
-  filter(type=="CT-GAN")
+f1_ctgan <- scores_and_auc_ctgan$f1_score %>%
+  filter(str_detect(type, "^CT-GAN"))        
 # Reorder data frame
 f1_ctgan <- left_join(data.frame(feature = vec),f1_ctgan,by = "feature")
 
-total_results <-rbind(f1_original,f1_avatar,f1_synthpop,f1_ctgan)
-total_results$feature_f = factor(total_results$feature, levels=c("Bare Nuclei", "Uniformity of Cell Shape", "Uniformity of Cell Size",
-                                                                 "Bland Chromatin", "Clump Thickness", "Normal Nucleoli", "Marginal Adhesion",
-                                                                 "Single Epithelial Cell Size", "Mitoses") )
-total_results$type_f = factor(total_results$type, levels=c('CT-GAN', 'Synthpop', 'Avatar', 'Original'))
-total_results$type_g = factor(total_results$type, levels=c('Original', 'Avatar', 'Synthpop', 'CT-GAN'))
+levels <- c(f1_original$type[1], f1_avatar$type[1], f1_synthpop$type[1], f1_ctgan$type[1] )
 
-wbcd_comparative_utility <- ggplot(total_results, aes(x = F.score, y = type_f, fill = type)) +
+F1_scores <-rbind(f1_original, f1_avatar, f1_synthpop, f1_ctgan)
+F1_scores$feature = factor(F1_scores$feature, levels=vec )
+F1_scores$type <-gsub('\\(AUC', '\nAUC', F1_scores$type )
+F1_scores$type <-gsub(')', '', F1_scores$type )
+F1_scores$type = factor(F1_scores$type)
+
+wrapping_size <- 20
+cols = c(colors['original', 'color'],
+         colors['avatar', 'color'],
+         colors['synthpop', 'color'],
+         colors['ctgan', 'color'])
+color_names <-gsub('\\(AUC', '\nAUC', c(levels[1],levels[2],levels[3],levels[4] ))
+color_names <- gsub(')', '', color_names)
+names(cols) <- color_names
+
+
+wbcd_comparative_utility <- ggplot(F1_scores, aes(x = F.score, y = type , fill = type)) +
   geom_boxplot(outlier.shape = NA) +
-  scale_fill_manual(values = c('Original'="#fd934d",
-                               'Avatar'="#3bd6b0",
-                               'Synthpop'="#b03bd6" ,
-                               'CT-GAN'="#4db7fd"),
-                    breaks=c('Original', 'Avatar', 'Synthpop', 'CT-GAN')) +
+  scale_fill_manual(values = cols ) +
   theme_bw() +
   ylab(NULL) +
   xlab("F scores") +
-  facet_grid(feature_f~.,switch = 'y') +
-  
-  theme(text = element_text(size = 16), strip.text.y.left = element_text(angle = 0))
+  facet_grid(feature~.,switch = 'y') +
+  theme(text = element_text(size = 16), 
+        strip.text.y.left = element_text(angle = 0),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        legend.text = element_text(size = legend_text_size -2, color = "black", family = "sans"),
+        axis.text = element_text(size = axis_text_size, color = "black", family = "sans"),
+        axis.title = element_text(size = axis_title_size, color = "black", family = "sans"),
+        legend.background = element_rect(fill = "white", linetype = "solid"),
+        legend.title=element_blank(),
+        strip.text.y =  element_text(size = 11, color = "black", family = "sans"),
+        legend.spacing.y = unit(0.8, 'cm'),
+       ) +
+  guides(fill = guide_legend(byrow = TRUE))
 
-ggsave(file = "../figures/wbcd_comparative_plot.svg", plot = wbcd_comparative_utility, width = 10, height = 7, dpi = 290)
+if (save) {
+  ggsave(file = "../figures/wbcd_comparative_plot.svg", plot = wbcd_comparative_utility, width = 10, height = 7, dpi = 290)
+}
 
 
 ## Specific Privacy metrics computation
@@ -288,8 +318,8 @@ plotBb <- ggplot(df_local_cloaking, aes(avatar)) +
   xlab("Local cloaking") +
   ylab("Number of individuals") +
   theme(
-    axis.title = element_text(size = axis_title_size, family = ""),
-    axis.text = element_text(size = axis_text_size, family = ""),
+    axis.title = element_text(size = axis_title_size, family = "sans"),
+    axis.text = element_text(size = axis_text_size, family = "sans"),
     axis.line = element_line(
       colour = "black",
       size = 0.8,
@@ -325,7 +355,7 @@ plotBb <- ggplot(df_local_cloaking, aes(avatar)) +
     label = paste0("Median = ", median(avatar))
   ),
   size = 9,
-  family = "",
+  family = "sans",
   label.size = NA
   ) +
 
@@ -345,15 +375,16 @@ plotBb <- ggplot(df_local_cloaking, aes(avatar)) +
     label = paste0("Hidden rate = ", round(metrics$hidden_rate, 0), " %")
   ),
   size = 9,
-  family = "",
+  family = "sans",
   label.size = NA
   ) +
   scale_color_manual(name = "statistics", values = c(median = "red"))
 
 
 
-
-# ggsave(file="../figures/WBCD_local_cloaking.svg", plot=plot, width=10, height=7, dpi = 320)
+if (save){
+  ggsave(file="../figures/WBCD_local_cloaking.svg", plot=plot, width=10, height=7, dpi = 320)
+}
 
 # Number of individuals with a local cloaking under 5
 prop_wbcd <- sum(df_local_cloaking$avatar <= 5) / dim(df_local_cloaking)[1] * 100
@@ -412,8 +443,8 @@ plotBd <- ggplot(cum_freq, aes(x = Var1, y = Freq)) +
   xlab("Number of local cloaking at zero over 25 avatarizations") +
   theme_minimal() +
   theme(
-    axis.title = element_text(size = axis_title_size, family = ""),
-    axis.text = element_text(size = axis_text_size, family = ""),
+    axis.title = element_text(size = axis_title_size, family = "sans"),
+    axis.text = element_text(size = axis_text_size, family = "sans"),
     axis.line = element_line(
       colour = "black",
       size = 0.5,
@@ -427,8 +458,9 @@ plotBd <- ggplot(cum_freq, aes(x = Var1, y = Freq)) +
   )
 
 
-
-# ggsave(file="../figures/WBCD_zeroCloaking_percentage.svg", plot=plot, width=10, height=7, dpi = 320)
+if (save) {
+ ggsave(file="../figures/WBCD_zeroCloaking_percentage.svg", plot=plot, width=10, height=7, dpi = 320)
+}
 
 
 print("execution is done")

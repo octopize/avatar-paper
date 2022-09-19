@@ -33,6 +33,7 @@ py_run_string("from metrics.privacy_metrics import SecurityMetrics")
 py_run_string("from metrics.privacy_metrics.record_to_avatar_distance import record_to_avatar_distance")
 py_run_string("from metrics.privacy_metrics.local_cloaking import get_local_cloaking")
 
+save=FALSE
 
 ## utils function
 categorical <- c(
@@ -131,18 +132,18 @@ get_plot_projection <- function(projection, name, save = FALSE) {
 # avatar
 data_avatar <- rbind(data, avatar)
 avatar_projection <- get_aids_2D_projection(data_avatar, synthetic_name = "Avatar")
-plotAa <- get_plot_projection(avatar_projection, name = "avatar", save = TRUE)
+plotAa <- get_plot_projection(avatar_projection, name = "avatar", save = save)
 
 
 # synthpop
 data_synthpop <- rbind(data, synthpop)
 synthpop_projection <- get_aids_2D_projection(data_synthpop, synthetic_name = "Synthpop")
-plotAa_synthpop <- get_plot_projection(synthpop_projection, name = "synthpop", save = TRUE)
+plotAa_synthpop <- get_plot_projection(synthpop_projection, name = "synthpop", save = save)
 
 # ctgan
 data_ctgan <- rbind(data, ctgan)
 ctgan_projection <- get_aids_2D_projection(data_ctgan, synthetic_name = "CT-GAN")
-plotAa_ctgan <- get_plot_projection(ctgan_projection, name = "ctgan", save = TRUE)
+plotAa_ctgan <- get_plot_projection(ctgan_projection, name = "ctgan", save = save)
 
 
 ##### ORIGINAL - SYNTHETIC survival curve analysis
@@ -176,7 +177,7 @@ get_survival_results <- function(data, synthetic, names = c("Original", "Synthet
 }
 
 
-get_survival_plot <- function(survival_curve, survival_data, hazard_ratio_synthetic, hazard_ratio_original, names = c("Original", "Synthetic")) {
+get_survival_plot <- function(survival_curve, survival_data, hazard_ratio_synthetic, hazard_ratio_original, names = c("Original", "Synthetic"), save=FALSE) {
   color <- c("#7155c8", "#c85573")
 
   options(repr.plot.width = 10, repr.plot.height = 7)
@@ -222,8 +223,9 @@ get_survival_plot <- function(survival_curve, survival_data, hazard_ratio_synthe
       axis.line = element_line(colour = "black", size = 0.5, linetype = "solid", arrow = arrow(type = "closed", length = unit(5, "pt"))),
       text = element_text(size = 14)
     )
-
-  ggsave(file = paste0("../figures/tmp_aids_", names[2], "_survival.svg"), plot = survival_plot, width = 10, height = 7, dpi = 290)
+  if (save){
+    ggsave(file = paste0("../figures/tmp_aids_", names[2], "_survival.svg"), plot = survival_plot, width = 10, height = 7, dpi = 290)
+  }
 
   return(survival_plot)
 }
@@ -280,27 +282,47 @@ survival_plot_ctgan <- get_survival_plot(
 Hazard_Ratio <- c(hazard_ratio_original[2], hazard_ratio_avatar[2], hazard_ratio_synthpop[2], hazard_ratio_ctgan[2])
 ci_high <- c(hazard_ratio_original[9], hazard_ratio_avatar[9], hazard_ratio_synthpop[9], hazard_ratio_ctgan[9])
 ci_low <- c(hazard_ratio_original[8], hazard_ratio_avatar[8], hazard_ratio_synthpop[8], hazard_ratio_ctgan[8])
-type <- c('Original', 'Avatar', 'Synthpop', 'CTGAN')
+p_values <- c(hazard_ratio_original[5], hazard_ratio_avatar[5], hazard_ratio_synthpop[5], hazard_ratio_ctgan[5])
 
-aids_results <- data.frame(Hazard_Ratio, ci_high, ci_low, type, p_value)
-aids_results$type_f = factor(aids_results$type, levels=c('CTGAN', 'Synthpop', 'Avatar','Original'))
+p_values_text <- paste0('p-value: ',  format.pval(p_values, digits = 3))
+type <- c('Original', 'Avatar', 'Synthpop', 'CT-GAN')
+
+aids_results <- data.frame(Hazard_Ratio, ci_high, ci_low, type, p_values_text)
+aids_results$type_f = factor(aids_results$type, levels=c('CT-GAN', 'Synthpop', 'Avatar','Original'))
 
 aids_comparative_plot <- ggplot(aids_results, aes(x = Hazard_Ratio, y = type_f, colour = type)) +
   geom_errorbarh(aes(xmax = ci_high, xmin = ci_low), size = 0.6, height
                  = 0.15) +
-  geom_point(size = 1) +
-  scale_colour_manual(values = c('Original'="#fd934d",
-                                 'Avatar'="#3bd6b0",
-                                 'Synthpop'="#b03bd6" ,
-                                 'CTGAN'="#4db7fd"),
-                      breaks=c('Original', 'Avatar', 'Synthpop', 'CTGAN')) +
+  geom_text(
+      aes(label = p_values_text, x = as.numeric(Hazard_Ratio)), 
+      hjust = 0.5,
+      vjust = -2,
+      color = "black", 
+      family = "sans", 
+      size = 4.5,
+           ) +
+  geom_point(size = 2) +
+  scale_colour_manual(values = c('Original'= colors['original', 'color'],
+                                 'Avatar'=colors['avatar', 'color'],
+                                 'Synthpop'=colors['synthpop', 'color'] ,
+                                 'CT-GAN'=colors['ctgan', 'color']),
+                      breaks=c('Original', 'Avatar', 'Synthpop', 'CT-GAN')) +
   theme_bw() +
   xlim(c(0.1,0.8)) +
   ylab(NULL) +
-  xlab("Hazard_Ratio (95% CI)") +
-  theme(text = element_text(size = 16))
+  xlab("Hazard Ratio (95% CI)") +
+  theme(
+      text = element_text(size = 16),
+      legend.position="none",
+      legend.text = element_text(size = legend_text_size, color = "black", family = "sans"),
+      axis.text = element_text(size = axis_text_size, color = "black", family = "sans"),
+      axis.title = element_text(size = axis_title_size, color = "black", family = "sans"),
+      legend.background = element_rect(fill = "white", linetype = "solid")
+  )
 
-ggsave(file = "../figures/aids_comparative_plot.svg", plot = aids_comparative_plot, width = 10, height = 7, dpi = 290)
+if (save){
+  ggsave(file = "../figures/aids_comparative_plot.svg", plot = aids_comparative_plot, width = 10, height = 7, dpi = 290)
+}
 
 
 ## Supplementary graph : Arms 1-2-3-4 for avatar comparison
@@ -435,7 +457,7 @@ plotBa <- ggplot(df_ref_local_cloaking_aids, aes(avatar)) +
     label = paste0("Median = ", median(avatar))
   ),
   size = 9,
-  family = "",
+  family = "sans",
   label.size = NA
   ) +
   ## arrow hidden rate
@@ -461,9 +483,10 @@ plotBa <- ggplot(df_ref_local_cloaking_aids, aes(avatar)) +
   ) +
   xlim(c(-1, 100))
 
-# ggsave(file="../figures/aids_local_cloaking.svg", plot=plot, width=10, height=7, dpi = 290)
-
-
+if (save){
+  ggsave(file="../figures/aids_local_cloaking.svg", plot=plot, width=10, height=7, dpi = 290)
+}
+ 
 # Proportion of individuals with a local cloaking under 5
 prop_aids <- sum(df_ref_local_cloaking_aids$avatar <= 5) / dim(df_ref_local_cloaking_aids)[1] * 100
 
@@ -522,8 +545,8 @@ plotBc <- ggplot(df_local_cloaking_aids_LC0_cum, aes(x = as.factor(Var1), y = Fr
   xlab("Number of local cloaking at zero over 25 avatarizations") +
   theme_minimal() +
   theme(
-    axis.title = element_text(size = axis_title_size, family = ""),
-    axis.text = element_text(size = axis_text_size, family = ""),
+    axis.title = element_text(size = axis_title_size, family = "sans"),
+    axis.text = element_text(size = axis_text_size, family = "sans"),
     axis.line = element_line(
       colour = "black", size = 0.5,
       linetype = "solid",
@@ -538,9 +561,9 @@ plotBc <- ggplot(df_local_cloaking_aids_LC0_cum, aes(x = as.factor(Var1), y = Fr
     limits = c("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "\U2265 10")
   )
 
-
-
-# ggsave(file="../figures/aids_zeroCloaking_percentage.svg", plot=plot, width=10, height=7, dpi = 320)
+if (save){
+  ggsave(file="../figures/aids_zeroCloaking_percentage.svg", plot=plot, width=10, height=7, dpi = 320)
+}
 
 df_localCloaking_plot <- df_local_cloaking_aids
 df_localCloaking_plot[df_localCloaking_plot >= 5] <- 5
@@ -572,7 +595,6 @@ row.names(table_recap) <- paste0(c(as.character(0:4), "\U2265 5"), "  ")
 colnames(table_recap) <- paste0(c(as.character(0:4), "\U2265 5"), "\n")
 
 
-save <- FALSE
 if (save) {
   svglite("../figures/aids_Probabilities.svg", width = 8, height = 8)
 }
@@ -637,8 +659,9 @@ sknetwork <- sankeyNetwork(
   sinksRight = FALSE, colourScale = ColourScal, nodeWidth = 15, fontSize = 13, nodePadding = 20, iteration = 0
 )
 
-
-
-# saveWidget(sknetwork, file="../figures/sankeyBasic_count_A1-A5.html", selfcontained = FALSE)
+if (save){
+  saveWidget(sknetwork, file="../figures/sankeyBasic_count_A1-A5.html", selfcontained = FALSE)
+}
+ 
 
 print("execution is done")
