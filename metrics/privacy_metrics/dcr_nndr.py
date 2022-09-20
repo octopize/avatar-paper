@@ -282,13 +282,12 @@ def _prepare_data_for_privacy_metrics(
             )
 
             # standardize
+            syn_data_p[column_name] = (
+                syn_data_p[column_name] - tgt_data_p[column_name].mean()
+            ) / np.max([tgt_data_p[column_name].std(), smoothing_factor])
             tgt_data_p[column_name] = (
                 tgt_data_p[column_name] - tgt_data_p[column_name].mean()
             ) / np.max([tgt_data_p[column_name].std(), smoothing_factor])
-            syn_data_p[column_name] = (
-                syn_data_p[column_name] - syn_data_p[column_name].mean()
-            ) / np.max([syn_data_p[column_name].std(), smoothing_factor])
-
         else:
             raise Exception(f"{column_type} Type not supported")
 
@@ -331,22 +330,9 @@ def _calculate_dcr_nndr(
     :returns: bins and histograms of dcr and nndr
     """
 
-    # how many columns to include
-    max_features = 50
-    # multiplicative factor for determing sample size from target data size
-    sample_ratio = 0.5
-    # max sample size for querying
-    max_sample_size = 10000
-
-    # bound value to determine quantiles
-    dcr_quantile = 0.95
-    # how many bins should be created for privacy histograms
-    privacy_number_of_bins = 20
-
     # derive model based on sample of features
     model_columns = list(column_dictionary.keys())
-    sample_feature_amount = min(len(model_columns), max_features)
-    feature_columns = np.random.choice(model_columns, sample_feature_amount)
+    feature_columns = model_columns
 
     # shift columns to put category features first for distance metric
     category_columns = [
@@ -365,36 +351,11 @@ def _calculate_dcr_nndr(
         tgt_data.columns == tgt_data.columns
     ), "Train and Syn have mismatched columns"
 
-    # split into tgt_train, tgt_query, and syn_query
-
-    target_size = len(tgt_data)
-    synthetic_size = len(syn_data)
-
-    sample_size = min(max_sample_size, sample_ratio * target_size, synthetic_size)
-
-    shuffled_target_train_index = list(tgt_data.index)
-    np.random.shuffle(shuffled_target_train_index)
-
-    tgt_train, tgt_query = (
-        tgt_data.loc[shuffled_target_train_index[: -int(sample_size)]],
-        tgt_data.loc[shuffled_target_train_index[-int(sample_size) :]],
-    )
-
-    shuffled_target_syn_index = list(syn_data.index)
-    np.random.shuffle(shuffled_target_syn_index)
-
-    # can be omitted since syn_train is not needed
-    # if sample_size = synthetic_size, syn_query is all syn dataset
-    _, syn_query = (
-        syn_data.loc[shuffled_target_syn_index[: -int(sample_size)]],
-        syn_data.loc[shuffled_target_syn_index[-int(sample_size) :]],
-    )
-
     # training model
-    nn_model = _get_nn_model(tgt_train, cat_slice)
+    nn_model = _get_nn_model(tgt_data, cat_slice)
 
-    tgt_query_neighbors = nn_model.kneighbors(tgt_query, n_neighbors=2)
-    syn_query_neightbors = nn_model.kneighbors(syn_query, n_neighbors=2)
+    tgt_query_neighbors = nn_model.kneighbors(tgt_data, n_neighbors=2)
+    syn_query_neightbors = nn_model.kneighbors(syn_data, n_neighbors=2)
 
     # Calculating DCR NNDR
     query_dict = {"tgt": tgt_query_neighbors, "syn": syn_query_neightbors}
@@ -402,150 +363,17 @@ def _calculate_dcr_nndr(
     privacy_data = {}
 
     for label, query in query_dict.items():
-        dcr = query[0][:, 0]
-        nndr = query[0][:, 0] / np.maximum(query[0][:, 1], smoothing_factor)
-        df_privacy = pd.DataFrame({"DCR": dcr, "NNDR": nndr})
-        privacy_data[label] = df_privacy
+        if label == 'syn':
+            dcr = query[0][:, 0]
+            nndr = query[0][:, 0] / np.maximum(query[0][:, 1], smoothing_factor)
+            mask = query[0][:, 1]!=0
+            nndr[~mask]=1
+            df_privacy = pd.DataFrame({"DCR": dcr, "NNDR": nndr})
+            privacy_data[label] = df_privacy
 
-    # get histograms and bins
-    bins = {}
-    histograms = {}
+    return df_privacy
 
-    for type_ in ["DCR", "NNDR"]:
-        histograms[type_] = dict()
-        baseline_data = privacy_data["tgt"][type_].dropna()
-        histograms[type_]["tgt"], bins[type_] = np.histogram(
-            baseline_data, bins=privacy_number_of_bins, density=True
-        )
-
-        data = privacy_data["syn"][type_].dropna()
-        histograms[type_]["syn"], _ = np.histogram(data, bins=bins[type_], density=True)
-
-    # norm results
-    dcr_nndr_data_norm = {key: df.copy() for key, df in privacy_data.items()}
-    baseline_dcr = dcr_nndr_data_norm["tgt"]["DCR"]
-    bound = np.quantile(baseline_dcr[~np.isnan(baseline_dcr)], dcr_quantile)
-    for key in dcr_nndr_data_norm:
-        dcr_nndr_data_norm[key]["DCR"] = np.where(
-            dcr_nndr_data_norm[key]["DCR"] <= bound,
-            dcr_nndr_data_norm[key]["DCR"] / bound,
-            1,
-        )
-
-    # quantile test
-    def _empirical_ci(
-        sample_value: float, boot_values: List[float], alpha: float = 0.05
-    ) -> Tuple[float, float]:
-        """Empirical confidence intervals from bootstrap values.
-        See: https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability
-        -and-statistics-spring-2014/readings/MIT18_05S14_Reading24.pdf
-        """
-
-        boot_diffs = [sample_value - boot_value for boot_value in boot_values]
-        low_diff, high_diff = np.quantile(boot_diffs, [alpha / 2, 1 - alpha / 2])
-
-        return sample_value - high_diff, sample_value - low_diff
-
-    def _bootstrap_func(
-        series: Series,
-        function: Callable[[Series], float],
-        bootstrap_kwargs: Dict,
-    ) -> Tuple[float, float, float]:
-        """Get the empirical full-sample bootstrap estimate for a given function with
-        confidence intervals.
-        """
-
-        sample_size = len(series)
-        sample_value = function(series)
-
-        boot_values = [
-            function(
-                np.random.choice(
-                    series,
-                    sample_size,
-                    replace=bootstrap_kwargs.get(bootstrap_kwargs["repeat"], True),
-                )
-            )
-            for _ in range(bootstrap_kwargs.get(bootstrap_kwargs["repeat"], 1000))
-        ]
-
-        confidence_interval_low, confidence_interval_high = _empirical_ci(
-            sample_value,
-            boot_values,
-            alpha=bootstrap_kwargs.get(bootstrap_kwargs["alpha"], 0.05),
-        )
-
-        return sample_value, confidence_interval_low, confidence_interval_high
-
-    def _bootstrap_quantile(
-        series: Series,
-        quantile: float,
-        bootstrap_kwargs: Dict,
-    ) -> Tuple[float, float, float]:
-        """Bootstrap estimate for a quantile with confidence intervals."""
-
-        return _bootstrap_func(
-            series,
-            lambda series_: np.quantile(series_, quantile),
-            bootstrap_kwargs,
-        )
-
-    def _quantile_test_function(target: Series, synthetic: Series) -> Dict:
-        """
-        * we look at a set of quantiles
-        * we bootstrap each tgt quantile with confidence intervals
-        * we fail the test if any of the synthetic quantiles is below the
-        lower confidence bound of the corresponding tgt quantile.
-        :param target: the target data for testing quantile shift
-        :param synthetic: the synthetic data for testing shift
-        :return: the test result dictionary
-        """
-
-        quantiles = np.linspace(0.05, 0.5, 20)
-
-        bootstrap_kwargs = {"repeat": 1000, "alpha": 0.05}
-        alpha_init = bootstrap_kwargs["alpha"]
-        alpha_adj = alpha_init / len(quantiles)
-        bootstrap_kwargs["alpha"] = alpha_adj
-
-        # boostrap the quantiles
-        bootstrap_results = pd.DataFrame(
-            index=quantiles,
-            columns=[
-                "syn",
-                "tgt",
-                "tgt_ci_low",
-                "tgt_ci_high",
-                "check",
-            ],
-        )
-
-        for quantile in quantiles:
-            bootstrap_results.loc[
-                quantile, ["tgt", "tgt_ci_low", "tgt_ci_high"]
-            ] = _bootstrap_quantile(target, quantile, bootstrap_kwargs)
-            bootstrap_results.loc[quantile, "syn"] = np.quantile(synthetic, quantile)
-
-        bootstrap_results["check"] = (
-            bootstrap_results["syn"] >= bootstrap_results["tgt_ci_low"]
-        )
-        final_check = np.all(bootstrap_results["check"])
-        bootstrap_results_dict = bootstrap_results.to_dict("series")
-
-        return {"check": final_check, "details": bootstrap_results_dict}, bootstrap_results
-
-    privacy_tests = {}
-    checks = {}
-
-    for privacy_type in ["DCR", "NNDR"]:
-        tgt_norm = dcr_nndr_data_norm["tgt"][privacy_type]
-        syn_norm = dcr_nndr_data_norm["syn"][privacy_type]
-        privacy_tests[privacy_type], bootstrap_df = _quantile_test_function(tgt_norm, syn_norm)
-        checks[privacy_type] = (
-            "PASSED" if privacy_tests[privacy_type]["check"] else "FAILED"
-        )
-
-    return checks, privacy_tests, bootstrap_df
+    #return checks, privacy_tests, bootstrap_df
 
 def _calculate_privacy_tests(tgt_data: DataFrame, syn_data: DataFrame):
     """
@@ -571,10 +399,10 @@ def _calculate_privacy_tests(tgt_data: DataFrame, syn_data: DataFrame):
         flat_table_target, flat_table_syn, column_dict, smoothing_factor
     )
 
-    checks, privacy_tests, bootstrap_df = _calculate_dcr_nndr(
+    df_privacy = _calculate_dcr_nndr(
         tgt_data_p, syn_data_p, column_dict, smoothing_factor
     )
-    return checks, privacy_tests, bootstrap_df
+    return df_privacy
 
 
 def compare(
@@ -593,6 +421,6 @@ def compare(
     check_common_data_format(syn_data)
 
     if "privacy-tests" in metrics_to_return:
-        checks, res, bootstrap_df = _calculate_privacy_tests(tgt_data, syn_data)
+        privacy_df = _calculate_privacy_tests(tgt_data, syn_data)
 
-    return checks, res, bootstrap_df
+    return privacy_df
