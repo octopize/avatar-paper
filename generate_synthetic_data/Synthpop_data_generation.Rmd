@@ -1,0 +1,59 @@
+---
+title: "Synthpop_generation"
+output: html_document
+date: "2022-09-12"
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(synthpop)
+```
+
+## Synthetic data generation
+
+```{r cars}
+aids <- read.csv(paste0("../datasets/AIDS/aids_original_data.csv"), sep = ";", na.strings = c("NA", "", NA))
+aids <- aids[, -1]
+categorical <- c(
+  "hemo", "homo", "drugs", "karnof", "oprior", "z30", "zprior", "race",
+  "gender", "str2", "strat", "symptom", "treat", "offtrt", "r", "cens", "arms"
+)
+aids[categorical] <- lapply(aids[categorical], factor)
+
+my.seed <- 123
+
+synthpop_aids_res <- syn(aids, seed = my.seed)
+synthpop_aids_data <- synthpop_aids_res$syn
+
+# write.csv(synthpop_aids_data,"../datasets/AIDS/synthpop_aids_data.csv")
+
+aids <- read.csv(paste0("../datasets/AIDS/aids_original_data.csv"), sep = ";", na.strings = c("NA", "", NA))
+aids <- aids[, -1]
+categorical <- c(
+  "hemo", "homo", "drugs", "karnof", "oprior", "z30", "zprior", "race",
+  "gender", "str2", "strat", "symptom", "treat", "offtrt", "r", "cens", "arms"
+)
+aids[categorical] <- lapply(aids[categorical], factor)
+
+my.seed <- 123
+
+synthpop_aids_res <- syn(aids, seed = my.seed)
+synthpop_aids_data <- synthpop_aids_res$syn
+
+# write.csv(synthpop_aids_data,"../datasets/AIDS/synthpop_aids_data.csv")
+
+```
+
+```{r}
+wbcd <- read.csv("../datasets/WBCD/breast_cancer_wisconsin.csv", sep = ",", na.strings = c("NA", "", NA))
+wbcd <- wbcd[, -1]
+wbcd$Class <- as.factor(wbcd$Class)
+
+my.seed <- 123
+
+synthpop_wbcd_res <- syn(wbcd, seed = my.seed)
+synthpop_wbcd_data <- synthpop_wbcd_res$syn
+
+# write.csv(synthpop_wbcd_data,"../datasets/WBCD/synthpop_wbcd_data.csv")
+```
+
