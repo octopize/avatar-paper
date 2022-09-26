@@ -1,7 +1,10 @@
 import pytest
 import pandas as pd
 import numpy as np
-from metrics.privacy_metrics.dcr_nndr import compare, prepare_common_data_format
+from metrics.privacy_metrics.tmp_dcr_nndr import compare, prepare_common_data_format
+
+from metrics.privacy_metrics.dcr_nndr import get_dcr, get_nndr
+
 
 original_without_duplicates_1 = pd.DataFrame(
     {
@@ -114,4 +117,23 @@ def test_original_synthetic_nndr(original, synthetic, expected_distance) -> None
     prep_syn = prepare_common_data_format(synthetic,cat_columns= categorical_val,num_columns=continuous_val)
     privacy = compare(prep_ori, prep_syn, metrics_to_return="privacy-tests")
     assert privacy["NNDR"].mean() == expected_distance
+
+
+
+def test_get_dcr():
+    df1 = pd.DataFrame({"variable_1": [1,10]})
+    df2 = pd.DataFrame({"variable_1": [1,2]})
+
+    res = get_dcr(df1, df2)
+    expected = (np.array([0.]), np.array([64.]))
+    assert res == expected
+
+
+def test_get_nndr():
+    df1 = pd.DataFrame({"variable_1": [1,10, 1]})
+    df2 = pd.DataFrame({"variable_1": [1, 1, 2]})
+
+    nndr = get_nndr(df1, df2)
+
+    np.testing.assert_almost_equal(nndr, [1, 0.79, 1] , decimal=3)
 
