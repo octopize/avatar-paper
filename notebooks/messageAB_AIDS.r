@@ -22,7 +22,8 @@ librarian::shelf(
   stringr,
   # data table management
   tibble,
-  dplyr
+  dplyr,
+  kableExtra
 )
 
 # import specific function to compute metrics
@@ -324,6 +325,52 @@ if (save){
   ggsave(file = "../figures/aids_comparative_plot.svg", plot = aids_comparative_plot, width = 10, height = 7, dpi = 290)
 }
 
+## Comparative DCR NNDR analysis
+
+get_table_results <- function(data, data_type) {
+  selection <- filter(data, type == data_type)
+  
+  selection_DCR_median <- round(median(selection$Median_DCR),2)
+  selection_Margin_Error_DCR <- abs(qnorm((1-0.95)/2))* sd(selection$Median_DCR)/sqrt(length(selection$Median_DCR))
+  selection_DCR_CI_upper <- round(selection_DCR_median + selection_Margin_Error_DCR,2)
+  selection_DCR_CI_lower <- round(selection_DCR_median - selection_Margin_Error_DCR,2)
+  selection_to_display_DCR <- paste0(selection_DCR_median," [", selection_DCR_CI_lower, " - ", selection_DCR_CI_upper, "]")
+  selection_NNDR_median <- round(median(selection$Median_NNDR),2)
+  selection_Margin_Error_NNDR <- abs(qnorm((1-0.95)/2))* sd(selection$Median_NNDR)/sqrt(length(selection$Median_NNDR))
+  selection_NNDR_CI_upper <- round(selection_NNDR_median + selection_Margin_Error_NNDR,2)
+  selection_NNDR_CI_lower <- round(selection_NNDR_median - selection_Margin_Error_NNDR,2)
+  selection_to_display_NNDR <- paste0(selection_NNDR_median," [", selection_NNDR_CI_lower, " - ", selection_NNDR_CI_upper, "]")
+  
+  return(c(selection_to_display_DCR, selection_to_display_NNDR))
+}
+
+get_table_plot <- function(data, save=FALSE, title = 'Results') {
+
+  condensed_results <- data%>%
+    group_by(type, round)%>% 
+    summarise(Mean_DCR=mean(dcr_values), Median_DCR=median(dcr_values), Std_DCR=sd(dcr_values),
+              Mean_NNDR=mean(nndr_values), Median_NNDR=median(nndr_values), Std_NNDR=sd(nndr_values))
+  
+  original_results <- get_table_results(condensed_results, data_type = "Reference")
+  avatar_results <- get_table_results(condensed_results, data_type = "Avatar")
+  synthpop_results <- get_table_results(condensed_results, data_type = "Synthpop")
+  ctgan_results <- get_table_results(condensed_results, data_type = "CT-GAN")
+  
+  display_results <- data.frame (Type  = c("Original", "Avatar", "Synthpop", "CT-GAN"),
+                                      "DCR median [CI: 95%]" = c(original_results[1], avatar_results[1], synthpop_results[1], ctgan_results[1]),
+                                      "NNDR median [CI: 95%]" = c(original_results[2], avatar_results[2], synthpop_results[2], ctgan_results[2])
+                                      ,check.names=F)
+  
+  comparative_plot <- display_results %>%
+    kbl(caption = title) %>%
+    kable_classic(full_width = F, html_font = "sans-serif")
+  return(comparative_plot)
+}
+
+dcr_nndr_results_aids <- read.csv('../datasets/results_df/AIDS_DCR_NNDR_comparison_results.csv')
+dcr_nndr_results_wbcd <- read.csv('../datasets/results_df/WBCD_DCR_NNDR_comparison_results.csv')
+aids_comparative_privacy <- get_table_plot(dcr_nndr_results_aids, save = TRUE, title = 'AIDS DCR-NNDR Results')
+wbcd_comparative_privacy <- get_table_plot(dcr_nndr_results_wbcd, save = TRUE, title = 'WBCD DCR-NNDR Results')
 
 ## Supplementary graph : Arms 1-2-3-4 for avatar comparison
 data_typed <- data.frame(data)
