@@ -286,6 +286,9 @@ if (save) {
   ggsave(file = "../figures/wbcd_comparative_plot.svg", plot = wbcd_comparative_utility, width = 10, height = 7, dpi = 290)
 }
 
+dcr_nndr_results_wbcd <- read.csv('../datasets/results_df/WBCD_DCR_NNDR_comparison_results.csv')
+wbcd_comparative_privacy <- get_table_plot(dcr_nndr_results_wbcd, save = TRUE, title = 'WBCD DCR-NNDR Results')
+
 
 ## Specific Privacy metrics computation
 metrics <- py$SecurityMetrics()

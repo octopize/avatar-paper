@@ -386,9 +386,7 @@ get_table_plot <- function(data, save=FALSE, title = 'Results') {
 }
 
 dcr_nndr_results_aids <- read.csv('../datasets/results_df/AIDS_DCR_NNDR_comparison_results.csv')
-dcr_nndr_results_wbcd <- read.csv('../datasets/results_df/WBCD_DCR_NNDR_comparison_results.csv')
 aids_comparative_privacy <- get_table_plot(dcr_nndr_results_aids, save = TRUE, title = 'AIDS DCR-NNDR Results')
-wbcd_comparative_privacy <- get_table_plot(dcr_nndr_results_wbcd, save = TRUE, title = 'WBCD DCR-NNDR Results')
 
 ## Supplementary graph : Arms 1-2-3-4 for avatar comparison
 data_typed <- data.frame(data)
