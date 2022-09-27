@@ -103,30 +103,14 @@ get_aids_2D_projection <- function(data, synthetic_name = "synthetic") {
 }
 
 
-
-
 get_plot_projection <- function(projection, name, save = FALSE) {
   options(repr.plot.width = 10, repr.plot.height = 7)
-
-  if (name == "ctgan") {
-    category <- "CT-GAN"
-  }
-  if (name == "avatar") {
-    category <- "Avatar"
-  }
-  if (name == "synthpop") {
-    category <- "Synthpop"
-  }
-  
-  cols <- c(colors["original", "color"], colors[name, "color"])
-  names(cols) <- c("Original", category)
-
   plot <- ggplot(projection$coord, aes(x = Dim.1, y = Dim.2, fill = factor(type))) +
     # point
     geom_point(size = 3, shape = 21, alpha = 1) +
     # fill by type
     aes(fill = factor(type)) +
-    scale_fill_manual(values = cols) +
+    scale_fill_manual(values = c(colors[name, "color"], colors["original", "color"])) +
     # theme and details
     xlab(paste0("Dim. 1 (", formatC(projection$model$eig[1, 2], format = "f", digits = 2), "%)")) +
     ylab(paste0("Dim. 2 (", formatC(projection$model$eig[2, 2], format = "f", digits = 2), "%)")) +
@@ -222,7 +206,7 @@ get_survival_plot <- function(survival_curve, survival_data, hazard_ratio_synthe
       " [", formatC(hazard_ratio_original[8], format = "f", digits = 2),
       "-", formatC(hazard_ratio_original[9], format = "f", digits = 2),
       "] ; p-value = ", formatC(hazard_ratio_original[5], format = "e", digits = 2),
-      paste0("\n", names[2], ": HR [CI: 95%] = "), formatC(hazard_ratio_synthetic[2], format = "f", digits = 2),
+      paste0("\n", names[1], ": HR [CI: 95%] = "), formatC(hazard_ratio_synthetic[2], format = "f", digits = 2),
       " [", formatC(hazard_ratio_synthetic[8], format = "f", digits = 2),
       "-", formatC(hazard_ratio_synthetic[9], format = "f", digits = 2),
       "] ; p-value = ", formatC(hazard_ratio_synthetic[5], format = "e", digits = 2), "  "
@@ -278,8 +262,7 @@ survival_plot_synthpop <- get_survival_plot(
   survival_curve = survival_curve,
   survival_data = survival_data,
   hazard_ratio_synthetic = hazard_ratio_synthpop, 
-  hazard_ratio_original = hazard_ratio_original,
-  name = c("Original", "Synthpop")
+  hazard_ratio_original = hazard_ratio_original
 )
 
 # ctgan
@@ -293,8 +276,7 @@ survival_plot_ctgan <- get_survival_plot(
   survival_curve = survival_curve,
   survival_data = survival_data,
   hazard_ratio_synthetic = hazard_ratio_ctgan, 
-  hazard_ratio_original = hazard_ratio_original, 
-  name = c("Original", "CT-GAN")
+  hazard_ratio_original = hazard_ratio_original
 )
 
 ## Comparative hazard ratio analysis
@@ -348,45 +330,41 @@ if (save){
 get_table_results <- function(data, data_type) {
   selection <- filter(data, type == data_type)
   
-  selection_DCR_median <- round(median(selection$Median_DCR),2)
-  selection_Margin_Error_DCR <- abs(qnorm((1-0.95)/2))* sd(selection$Median_DCR)/sqrt(length(selection$Median_DCR))
-  selection_DCR_CI_upper <- round(selection_DCR_median + selection_Margin_Error_DCR,2)
-  selection_DCR_CI_lower <- round(selection_DCR_median - selection_Margin_Error_DCR,2)
-  selection_to_display_DCR <- paste0(selection_DCR_median," [", selection_DCR_CI_lower, " - ", selection_DCR_CI_upper, "]")
-  selection_NNDR_median <- round(median(selection$Median_NNDR),2)
-  selection_Margin_Error_NNDR <- abs(qnorm((1-0.95)/2))* sd(selection$Median_NNDR)/sqrt(length(selection$Median_NNDR))
-  selection_NNDR_CI_upper <- round(selection_NNDR_median + selection_Margin_Error_NNDR,2)
-  selection_NNDR_CI_lower <- round(selection_NNDR_median - selection_Margin_Error_NNDR,2)
-  selection_to_display_NNDR <- paste0(selection_NNDR_median," [", selection_NNDR_CI_lower, " - ", selection_NNDR_CI_upper, "]")
+  selection_DCR_median <- round(median(selection$dcr_values),2)
+  selection_DCR_5_quantile <- round(quantile(selection$dcr_values, 0.05),2)
+  selection_DCR_95_quantile <- round(quantile(selection$dcr_values, 0.95),2)
+  selection_to_display_DCR <- paste0(selection_DCR_median," [", selection_DCR_5_quantile, " - ", selection_DCR_95_quantile, "]")
+  selection_NNDR_median <- round(median(selection$nndr_values),2)
+  selection_NNDR_5_quantile <- round(quantile(selection$nndr_values, 0.05),2)
+  selection_NNDR_95_quantile <- round(quantile(selection$nndr_values, 0.95),2)
+  selection_to_display_NNDR <- paste0(selection_NNDR_median," [", selection_NNDR_5_quantile, " - ", selection_NNDR_95_quantile, "]")
   
   return(c(selection_to_display_DCR, selection_to_display_NNDR))
 }
 
-get_table_plot <- function(data, save=FALSE, title = 'Results') {
+get_table_plot <- function(data, save=FALSE, title = 'Results', usecase = 'aids') {
 
-  condensed_results <- data%>%
-    group_by(type, round)%>% 
-    summarise(Mean_DCR=mean(dcr_values), Median_DCR=median(dcr_values), Std_DCR=sd(dcr_values),
-              Mean_NNDR=mean(nndr_values), Median_NNDR=median(nndr_values), Std_NNDR=sd(nndr_values))
-  
-  original_results <- get_table_results(condensed_results, data_type = "Reference")
-  avatar_results <- get_table_results(condensed_results, data_type = "Avatar")
-  synthpop_results <- get_table_results(condensed_results, data_type = "Synthpop")
-  ctgan_results <- get_table_results(condensed_results, data_type = "CT-GAN")
+  original_results <- get_table_results(data, data_type = "Reference")
+  avatar_results <- get_table_results(data, data_type = "Avatar")
+  synthpop_results <- get_table_results(data, data_type = "Synthpop")
+  ctgan_results <- get_table_results(data, data_type = "CT-GAN")
   
   display_results <- data.frame (Type  = c("Original", "Avatar", "Synthpop", "CT-GAN"),
-                                      "DCR median [CI: 95%]" = c(original_results[1], avatar_results[1], synthpop_results[1], ctgan_results[1]),
-                                      "NNDR median [CI: 95%]" = c(original_results[2], avatar_results[2], synthpop_results[2], ctgan_results[2])
+                                      "DCR median [q0.05 - q0.95]" = c(original_results[1], avatar_results[1], synthpop_results[1], ctgan_results[1]),
+                                      "NNDR median [q0.05 - q0.95]" = c(original_results[2], avatar_results[2], synthpop_results[2], ctgan_results[2])
                                       ,check.names=F)
   
   comparative_plot <- display_results %>%
     kbl(caption = title) %>%
-    kable_classic(full_width = F, html_font = "sans-serif")
+    kable_classic(full_width = F, html_font = "sans-serif")%>%
+    save_kable(paste0("../figures/",usecase,"_comparative_privacy.png"))
   return(comparative_plot)
 }
 
 dcr_nndr_results_aids <- read.csv('../datasets/results_df/AIDS_DCR_NNDR_comparison_results.csv')
-aids_comparative_privacy <- get_table_plot(dcr_nndr_results_aids, save = TRUE, title = 'AIDS DCR-NNDR Results')
+dcr_nndr_results_wbcd <- read.csv('../datasets/results_df/WBCD_DCR_NNDR_comparison_results.csv')
+aids_comparative_privacy <- get_table_plot(dcr_nndr_results_aids, save = TRUE, title = 'AIDS DCR-NNDR Results', usecase = 'aids')
+wbcd_comparative_privacy <- get_table_plot(dcr_nndr_results_wbcd, save = TRUE, title = 'WBCD DCR-NNDR Results', usecase = 'wbcd')
 
 ## Supplementary graph : Arms 1-2-3-4 for avatar comparison
 data_typed <- data.frame(data)
