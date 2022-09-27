@@ -1,12 +1,11 @@
 import numpy as np
 import pandas as pd
-from numpy.typing import NDArray, List, Tuple
 
 from metrics.faiss_knn import FaissKNeighbors
 
 def get_distances_closest_records(
     records: pd.DataFrame, synthetic: pd.DataFrame, searching_frame: int
-) -> List[Tuple[NDArray[np.int_], NDArray[np.float_]]]:
+):
     """Get index and distances of the closest records.
 
     Arguments
