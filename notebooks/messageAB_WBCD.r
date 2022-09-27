@@ -70,6 +70,7 @@ get_aids_2D_projection <- function(data, synthetic_name = "synthetic") {
 
 get_plot_projection <- function(projection, name, save = FALSE) {
   options(repr.plot.width = 10, repr.plot.height = 7)
+
   if (name == "ctgan") {
     category <- "CT-GAN"
   }
@@ -81,6 +82,8 @@ get_plot_projection <- function(projection, name, save = FALSE) {
   }
   cols <- c(colors["original", "color"], colors[name, "color"])
   names(cols) <- c("Original", category)
+
+  
   projection_plot <- ggplot(projection$coord, aes(x = Dim.1, y = Dim.2, fill = type)) +
     # add points
     geom_point(size = 3, shape = 21, alpha = 1) +
