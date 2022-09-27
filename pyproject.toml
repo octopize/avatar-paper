@@ -14,8 +14,8 @@ matplotlib = "^3.5.1"
 jupyter = "^1.0.0"
 seaborn = "^0.11.2"
 faiss-cpu = "^1.7.2"
-pytest = "^7.1.3"
-saiph = "^1.4.1"
+saiph = "0.2.5"
+sdv = "^0.17.0"
 
 [tool.poetry.dev-dependencies]
 black = {extras = ["jupyter"], version = "^22.3.0"}
