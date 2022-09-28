@@ -23,7 +23,8 @@ librarian::shelf(
   # data table management
   tibble,
   dplyr,
-  kableExtra
+  kableExtra,
+  flextable
 )
 
 # import specific function to compute metrics
@@ -342,7 +343,7 @@ get_table_results <- function(data, data_type) {
   return(c(selection_to_display_DCR, selection_to_display_NNDR))
 }
 
-get_table_plot <- function(data, save=FALSE, title = 'Results', usecase = 'aids') {
+get_table_plot <- function(data) {
 
   original_results <- get_table_results(data, data_type = "Reference")
   avatar_results <- get_table_results(data, data_type = "Avatar")
@@ -354,17 +355,15 @@ get_table_plot <- function(data, save=FALSE, title = 'Results', usecase = 'aids'
                                       "NNDR median [q0.05 - q0.95]" = c(original_results[2], avatar_results[2], synthpop_results[2], ctgan_results[2])
                                       ,check.names=F)
   
-  comparative_plot <- display_results %>%
-    kbl(caption = title) %>%
-    kable_classic(full_width = F, html_font = "sans-serif")%>%
-    save_kable(paste0("../figures/",usecase,"_comparative_privacy.png"))
-  return(comparative_plot)
+  set_flextable_defaults(font.family = 'sans-serif', font.size = 16)
+  ft <- flextable(display_results)
+  ft <- autofit(ft)
+  ft <- flextable::as_raster(bold(ft, bold = TRUE, part = "header"))
+  return(ft)
 }
 
 dcr_nndr_results_aids <- read.csv('../datasets/results_df/AIDS_DCR_NNDR_comparison_results.csv')
-dcr_nndr_results_wbcd <- read.csv('../datasets/results_df/WBCD_DCR_NNDR_comparison_results.csv')
-aids_comparative_privacy <- get_table_plot(dcr_nndr_results_aids, save = TRUE, title = 'AIDS DCR-NNDR Results', usecase = 'aids')
-wbcd_comparative_privacy <- get_table_plot(dcr_nndr_results_wbcd, save = TRUE, title = 'WBCD DCR-NNDR Results', usecase = 'wbcd')
+aids_comparative_privacy <- get_table_plot(dcr_nndr_results_aids)
 
 ## Supplementary graph : Arms 1-2-3-4 for avatar comparison
 data_typed <- data.frame(data)

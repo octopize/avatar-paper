@@ -287,7 +287,7 @@ if (save) {
 }
 
 dcr_nndr_results_wbcd <- read.csv('../datasets/results_df/WBCD_DCR_NNDR_comparison_results.csv')
-wbcd_comparative_privacy <- get_table_plot(dcr_nndr_results_wbcd, save = TRUE, title = 'WBCD DCR-NNDR Results')
+wbcd_comparative_privacy <- get_table_plot(dcr_nndr_results_wbcd)
 
 
 ## Specific Privacy metrics computation
