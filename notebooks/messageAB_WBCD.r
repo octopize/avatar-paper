@@ -70,6 +70,7 @@ get_aids_2D_projection <- function(data, synthetic_name = "synthetic") {
 
 get_plot_projection <- function(projection, name, save = FALSE) {
   options(repr.plot.width = 10, repr.plot.height = 7)
+
   if (name == "ctgan") {
     category <- "CT-GAN"
   }
@@ -81,6 +82,8 @@ get_plot_projection <- function(projection, name, save = FALSE) {
   }
   cols <- c(colors["original", "color"], colors[name, "color"])
   names(cols) <- c("Original", category)
+
+  
   projection_plot <- ggplot(projection$coord, aes(x = Dim.1, y = Dim.2, fill = type)) +
     # add points
     geom_point(size = 3, shape = 21, alpha = 1) +
@@ -282,6 +285,9 @@ wbcd_comparative_utility <- ggplot(F1_scores, aes(x = F.score, y = type , fill =
 if (save) {
   ggsave(file = "../figures/wbcd_comparative_plot.svg", plot = wbcd_comparative_utility, width = 10, height = 7, dpi = 290)
 }
+
+dcr_nndr_results_wbcd <- read.csv('../datasets/results_df/WBCD_DCR_NNDR_comparison_results.csv')
+wbcd_comparative_privacy <- get_table_plot(dcr_nndr_results_wbcd)
 
 
 ## Specific Privacy metrics computation

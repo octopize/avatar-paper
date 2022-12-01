@@ -22,7 +22,9 @@ librarian::shelf(
   stringr,
   # data table management
   tibble,
-  dplyr
+  dplyr,
+  kableExtra,
+  flextable
 )
 
 # import specific function to compute metrics
@@ -324,6 +326,44 @@ if (save){
   ggsave(file = "../figures/aids_comparative_plot.svg", plot = aids_comparative_plot, width = 10, height = 7, dpi = 290)
 }
 
+## Comparative DCR NNDR analysis
+
+get_table_results <- function(data, data_type) {
+  selection <- filter(data, type == data_type)
+  
+  selection_DCR_median <- round(median(selection$dcr_values),2)
+  selection_DCR_5_quantile <- round(quantile(selection$dcr_values, 0.05),2)
+  selection_DCR_95_quantile <- round(quantile(selection$dcr_values, 0.95),2)
+  selection_to_display_DCR <- paste0(selection_DCR_median," [", selection_DCR_5_quantile, " - ", selection_DCR_95_quantile, "]")
+  selection_NNDR_median <- round(median(selection$nndr_values),2)
+  selection_NNDR_5_quantile <- round(quantile(selection$nndr_values, 0.05),2)
+  selection_NNDR_95_quantile <- round(quantile(selection$nndr_values, 0.95),2)
+  selection_to_display_NNDR <- paste0(selection_NNDR_median," [", selection_NNDR_5_quantile, " - ", selection_NNDR_95_quantile, "]")
+  
+  return(c(selection_to_display_DCR, selection_to_display_NNDR))
+}
+
+get_table_plot <- function(data) {
+
+  original_results <- get_table_results(data, data_type = "Reference")
+  avatar_results <- get_table_results(data, data_type = "Avatar")
+  synthpop_results <- get_table_results(data, data_type = "Synthpop")
+  ctgan_results <- get_table_results(data, data_type = "CT-GAN")
+  
+  display_results <- data.frame (Type  = c("Original", "Avatar", "Synthpop", "CT-GAN"),
+                                      "DCR median [q0.05 - q0.95]" = c(original_results[1], avatar_results[1], synthpop_results[1], ctgan_results[1]),
+                                      "NNDR median [q0.05 - q0.95]" = c(original_results[2], avatar_results[2], synthpop_results[2], ctgan_results[2])
+                                      ,check.names=F)
+  
+  set_flextable_defaults(font.family = 'sans-serif', font.size = 16)
+  ft <- flextable(display_results)
+  ft <- autofit(ft)
+  ft <- flextable::as_raster(bold(ft, bold = TRUE, part = "header"))
+  return(ft)
+}
+
+dcr_nndr_results_aids <- read.csv('../datasets/results_df/AIDS_DCR_NNDR_comparison_results.csv')
+aids_comparative_privacy <- get_table_plot(dcr_nndr_results_aids)
 
 ## Supplementary graph : Arms 1-2-3-4 for avatar comparison
 data_typed <- data.frame(data)
