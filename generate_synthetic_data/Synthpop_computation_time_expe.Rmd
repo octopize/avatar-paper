@@ -1,0 +1,77 @@
+---
+title: "Synthpop_generation"
+output: html_document
+date: "2022-09-12"
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(synthpop)
+```
+
+## AIDS
+
+```{r cars}
+my.seed <- 123
+aids <- read.csv(paste0("../datasets/AIDS/aids_original_data.csv"), sep = ";", na.strings = c("NA", "", NA))
+aids <- aids[, -1]
+categorical <- c(
+  "hemo", "homo", "drugs", "karnof", "oprior", "z30", "zprior", "race",
+  "gender", "str2", "strat", "symptom", "treat", "offtrt", "r", "cens", "arms"
+)
+aids[categorical] <- lapply(aids[categorical], factor)
+
+computation_time <- list()
+overall_start <- Sys.time()
+for(i in 1:100) {
+  start_time <- Sys.time()
+  
+  # Generate aids synthetic data using Synthpop
+  synthpop_aids_res <- syn(aids, seed = my.seed)
+  
+  end_time <- Sys.time()
+  time_synth <- (end_time - start_time)
+  len <- length(computation_time)
+  computation_time[[len+1]] <- time_synth
+}
+total_time <- Sys.time()-overall_start
+
+```
+
+## Results
+```{r}
+total_time
+mean(unlist(computation_time))
+sd(unlist(computation_time))
+```
+
+## WBCD
+
+```{r}
+my.seed <- 123
+wbcd <- read.csv("../datasets/WBCD/breast_cancer_wisconsin.csv", sep = ",", na.strings = c("NA", "", NA))
+wbcd <- wbcd[, -1]
+wbcd$Class <- as.factor(wbcd$Class)
+
+computation_time <- list()
+overall_start <- Sys.time()
+for(i in 1:100) {
+  start_time <- Sys.time()
+  
+  # Generate wbcd synthetic data using Synthpop
+  synthpop_wbcd_res <- syn(wbcd, seed = my.seed)
+  
+  end_time <- Sys.time()
+  time_synth <- (end_time - start_time)
+  len <- length(computation_time)
+  computation_time[[len+1]] <- time_synth
+}
+total_time <- Sys.time()-overall_start
+```
+
+## Results
+```{r}
+total_time
+mean(unlist(computation_time))
+sd(unlist(computation_time))
+```
