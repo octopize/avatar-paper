@@ -104,14 +104,14 @@ get_aids_2D_projection <- function(data, synthetic_name = "synthetic") {
 }
 
 
-get_plot_projection <- function(projection, name, save = FALSE) {
+get_plot_projection <- function(projection, name, color_fill, save = FALSE) {
   options(repr.plot.width = 10, repr.plot.height = 7)
   plot <- ggplot(projection$coord, aes(x = Dim.1, y = Dim.2, fill = factor(type))) +
     # point
     geom_point(size = 3, shape = 21, alpha = 1) +
     # fill by type
     aes(fill = factor(type)) +
-    scale_fill_manual(values = c(colors[name, "color"], colors["original", "color"])) +
+    scale_fill_manual(values = color_fill) +
     # theme and details
     xlab(paste0("Dim. 1 (", formatC(projection$model$eig[1, 2], format = "f", digits = 2), "%)")) +
     ylab(paste0("Dim. 2 (", formatC(projection$model$eig[2, 2], format = "f", digits = 2), "%)")) +
@@ -134,19 +134,20 @@ get_plot_projection <- function(projection, name, save = FALSE) {
 # avatar
 data_avatar <- rbind(data, avatar)
 avatar_projection <- get_aids_2D_projection(data_avatar, synthetic_name = "Avatar")
-plotAa <- get_plot_projection(avatar_projection, name = "avatar", save = save)
-
+plotAa <- get_plot_projection(avatar_projection, name = "avatar", color_fill = c(colors["avatar", "color"], colors["original", "color"]), save = save)
+plotAa
 
 # synthpop
 data_synthpop <- rbind(data, synthpop)
 synthpop_projection <- get_aids_2D_projection(data_synthpop, synthetic_name = "Synthpop")
-plotAa_synthpop <- get_plot_projection(synthpop_projection, name = "synthpop", save = save)
+plotAa_synthpop <- get_plot_projection(synthpop_projection, name = "synthpop", color_fill = c(colors["original", "color"], colors["synthpop", "color"]), save = save)
+plotAa_synthpop
 
 # ctgan
 data_ctgan <- rbind(data, ctgan)
 ctgan_projection <- get_aids_2D_projection(data_ctgan, synthetic_name = "CT-GAN")
-plotAa_ctgan <- get_plot_projection(ctgan_projection, name = "ctgan", save = save)
-
+plotAa_ctgan <- get_plot_projection(ctgan_projection, name = "ctgan", color_fill = c(colors["ctgan", "color"], colors["original", "color"]), save = save)
+plotAa_ctgan
 
 ##### ORIGINAL - SYNTHETIC survival curve analysis
 
@@ -207,7 +208,7 @@ get_survival_plot <- function(survival_curve, survival_data, hazard_ratio_synthe
       " [", formatC(hazard_ratio_original[8], format = "f", digits = 2),
       "-", formatC(hazard_ratio_original[9], format = "f", digits = 2),
       "] ; p-value = ", formatC(hazard_ratio_original[5], format = "e", digits = 2),
-      paste0("\n", names[1], ": HR [CI: 95%] = "), formatC(hazard_ratio_synthetic[2], format = "f", digits = 2),
+      paste0("\n", names[2], ": HR [CI: 95%] = "), formatC(hazard_ratio_synthetic[2], format = "f", digits = 2),
       " [", formatC(hazard_ratio_synthetic[8], format = "f", digits = 2),
       "-", formatC(hazard_ratio_synthetic[9], format = "f", digits = 2),
       "] ; p-value = ", formatC(hazard_ratio_synthetic[5], format = "e", digits = 2), "  "
@@ -263,7 +264,8 @@ survival_plot_synthpop <- get_survival_plot(
   survival_curve = survival_curve,
   survival_data = survival_data,
   hazard_ratio_synthetic = hazard_ratio_synthpop, 
-  hazard_ratio_original = hazard_ratio_original
+  hazard_ratio_original = hazard_ratio_original,
+  names = c("Original", "Synthpop")
 )
 
 # ctgan
@@ -277,7 +279,8 @@ survival_plot_ctgan <- get_survival_plot(
   survival_curve = survival_curve,
   survival_data = survival_data,
   hazard_ratio_synthetic = hazard_ratio_ctgan, 
-  hazard_ratio_original = hazard_ratio_original
+  hazard_ratio_original = hazard_ratio_original,
+  names = c("Original", "CT-GAN")
 )
 
 ## Comparative hazard ratio analysis
