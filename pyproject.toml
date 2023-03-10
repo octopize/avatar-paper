@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "avatar-paper"
+version = "0.1.0"
+description = "Analyse the avatarization method"
+authors = ["Octopize <contact@octopize.io>"]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.10"
+scikit-learn = "^1.0.2"
+numpy = "^1.22.0"
+pandas = "^1.3.5"
+matplotlib = "^3.5.1"
+jupyter = "^1.0.0"
+seaborn = "^0.11.2"
+faiss-cpu = "^1.7.2"
+saiph = "0.2.5"
+sdv = "^0.17.0"
+
+[tool.poetry.dev-dependencies]
+black = {extras = ["jupyter"], version = "^22.3.0"}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

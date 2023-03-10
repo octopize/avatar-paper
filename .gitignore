@@ -1,0 +1,9 @@
+# Jupyter Notebook
+.ipynb_checkpoints
+
+figures/*
+
+.Rhistory
+.RData
+__pycache__/
+*.pyc
