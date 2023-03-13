@@ -2,10 +2,10 @@
 
 ## Description
 
-Avatar paper is an analysis project that allows researchers to see, re do, or explore figure and data of the "Patient-centric synthetic data generation, no reason to risk re-identification the analysis of biomedical  pseudonymised data".
+Avatar paper is an analysis project that allows researchers to see, re do, or explore figure and data of the "Patient-centric synthetic data generation, no reason to risk re-identification in biomedical data analysis".
 The aim of the paper is to present the avatarization method.
 
-We really recommend to have a look to the scientific paper (https://doi.org/10.21203/rs.3.rs-1674043/v1) before to explore the repository.
+We really recommend to have a look to the [scientific paper](https://doi.org/10.1038/s41746-023-00771-5) before to explore the repository.
 
 ## Prerequisites
 
@@ -67,3 +67,8 @@ This code is licensed under the Apache-2.0 license.
 - [Olivia Rousseau](https://github.com/oliviarousseau) Olivia.Rousseau@univ-nantes.fr 
 - [Julien Petot](https://github.com/jpetot) julien@octopize.io
 - [Pierre-Antoine Gourraud](https://github.com/gourraud) pierre-antoine.gourraud@univ-nantes.fr, corresponding author.
+
+## Cite this article 
+```bash 
+Guillaudeux, M., Rousseau, O., Petot, J. et al. Patient-centric synthetic data generation, no reason to risk re-identification in biomedical data analysis. npj Digit. Med. 6, 37 (2023). https://doi.org/10.1038/s41746-023-00771-5
+```
